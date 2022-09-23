@@ -1,0 +1,793 @@
+- Name: endpointGuid
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: Host GUID of the endpoint on which the event was detected
+  Sample:
+    - 885fd860-cc63-5c61-9eca-37911c864cc9
+    - fbcf0426-c46b-4fe7-b3a8-e6896de49ea3
+  DL_Searchable: true
+  DL_Type: string
+- Name: endpointHostName
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: Host Name of the endpoint on which the event was detected
+  Sample:
+    - PHILIPSIBE09
+    - WHAM6WK8XG2
+    - MacBook-Pro-del-Meno
+  DL_Searchable: true
+  DL_Type: string
+- Name: endpointIp
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: IP address of the endpoint on which the event was detected
+  Sample:
+    - 127.0.0.1
+    - ::1
+    - fe80::1
+  DL_Searchable: true
+  DL_Type: dynamic
+- Name: eventId
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: Event type
+  Sample: []
+  DL_Searchable: true
+  DL_Type: int
+- Name: eventSubId
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: Access type of an event
+  Sample:
+    - TELEMETRY_PROCESS_CREATE
+    - TELEMETRY_FILE_CREATE
+    - TELEMETRY_CONNECTION_CONNECT_OUTBOUND
+  DL_Searchable: true
+  DL_Type: int
+- Name: eventTime
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: Time recorded when agent detected the event
+  Sample:
+    - 1657781088000
+  DL_Searchable: true
+  DL_Type: real
+- Name: hostName
+  ProductCode:
+    - xes
+    - sds
+    - sao
+  Description_EN: The domain name
+  Sample:
+    - localhost
+    - wpad
+    - settings-win.data.microsoft.com
+  DL_Searchable: true
+  DL_Type: string
+- Name: integrityLevel
+  ProductCode:
+    - xes
+    - sao
+  Description_EN: Integrity level of a process
+  Sample: []
+  DL_Searchable: true
+  DL_Type: int
+- Name: logonUser
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The logon user name
+  Sample:
+    - root
+    - SISTEMA
+    - oracle
+  DL_Searchable: true
+  DL_Type: dynamic
+- Name: objectAppName
+  ProductCode:
+    - xes
+    - sds
+    - sao
+  Description_EN: Name of the app involved in the AMSI event
+  Sample:
+    - Exchange Server 2016
+    - PowerShell_C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe_10.0.19041.1
+    - PowerShell_C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe_10.0.14393.0
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectCmd
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: Command line entry of target process
+  Sample:
+    - wc -l
+    - runc init
+    - docker-init --version
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectFileHashMd5
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The md5 hash of target process image or target file
+  Sample:
+    - 7ac47235c7bb452a03d3afd872f44c9e
+    - c9873d83a969645a97f21adc1b164cc5
+    - 3b32b378c8b288de6f15e1607a8c2145
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectFileHashSha1
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The SHA1 hash of target process image or target file
+  Sample:
+    - ded3833f145989fd86c1f4811b61497298ebc7fd
+    - c4fa06404142f1994431f9eef3df2cbe0f1998f1
+    - 3c01d486ed5aa1ecc2d8f33dc24b0ed59b3e609e
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectFileHashSha256
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The SHA256 hash of target process image or target file
+  Sample:
+    - 39109eef00821658893b45634fe2f4664f880da9242712df907f1327d4ceefb8
+    - 49fa3e206abf6a1f4546417dbe09f3f06b38847866a4a66de75bd90f39cb6c1c
+    - 0969321ad5a0923f0f03896ad2c10e49290515c44b721d773942a37f62a24893
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectFilePath
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: File path location of target process image or target file
+  Sample:
+    - /usr/bin/bash
+    - /bin/bash
+    - /opt/nimsoft/probes/system/processes/processes
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectHostName
+  ProductCode:
+    - sao
+    - xes
+  Description_EN: Server name where Internet event was detected
+  Sample:
+    - 10.1.222.175
+    - alertusupstate.ghs.org
+    - alertusmidlands.palmettohealth.org
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectIntegrityLevel
+  ProductCode:
+    - xes
+    - sao
+  Description_EN: Integrity level of target process
+  Sample: []
+  DL_Searchable: true
+  DL_Type: int
+- Name: objectIp
+  ProductCode:
+    - sao
+    - xes
+  Description_EN: IP address of internet event
+  Sample:
+    - 10.1.222.175
+    - 10.6.32.77
+    - 167.171.82.37
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectIps
+  ProductCode:
+    - xes
+    - sds
+    - sao
+  Description_EN: IP address list of internet event
+  Sample:
+    - ::1
+    - 127.0.0.1
+    - ::ffff:127.0.0.1
+  DL_Searchable: true
+  DL_Type: dynamic
+- Name: objectPid
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The PID of target process
+  Sample: []
+  DL_Searchable: true
+  DL_Type: int
+- Name: objectPort
+  ProductCode:
+    - sao
+    - xes
+  Description_EN: The port number used by internet event
+  Sample: []
+  DL_Searchable: true
+  DL_Type: int
+- Name: objectProcessHashId
+  ProductCode:
+    - sao
+    - xes
+    - sds
+  Description_EN: FNV of target process
+  Sample:
+    - '1415699552492662761'
+    - '-100650285065767982'
+    - '-1139416698673814436'
+  DL_Searchable: true
+  DL_Type: long
+- Name: objectRawDataStr
+  ProductCode:
+    - xes
+    - sds
+    - sao
+  Description_EN: The data contents of the AMSI event
+  Sample:
+    - $global:?
+    - '0'
+    - "$servicename = \"WinRM\"\n$arrService = Get-Service $servicename\n\nif ($arrService.Status\
+      \ -ne \"Running\")\n\n{\n\n\tRestart-Service $servicename\n\n\n}\n"
+  DL_Searchable: true
+  DL_Type: dynamic
+- Name: objectRegistryData
+  ProductCode:
+    - xes
+    - sds
+    - sao
+  Description_EN: The registry value data
+  Sample:
+    - '{00020424-0000-0000-C000-000000000046}'
+    - '1'
+    - '0'
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectRegistryKeyHandle
+  ProductCode:
+    - xes
+    - sds
+    - sao
+  Description_EN: The registry key
+  Sample:
+    - HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
+    - HKLM\system\currentcontrolset\services\w32time\config
+    - HKLM\system\currentcontrolset\services\tcpip\parameters
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectRegistryValue
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: Registry value name
+  Sample:
+    - lastknowngoodtime
+    - threadingmodel
+    - epoch
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectSigner
+  ProductCode:
+    - xes
+    - sao
+    - sds
+  Description_EN: Certificate signer of object process or file
+  Sample:
+    - Microsoft Windows
+    - Software Signing;Apple Code Signing Certification Authority;Apple Root CA;
+    - Microsoft Corporation
+  DL_Searchable: true
+  DL_Type: dynamic
+- Name: objectSignerValid
+  ProductCode:
+    - xes
+    - sao
+    - sds
+  Description_EN: Validity of certificate signer
+  Sample:
+    - 1
+    - 0
+  DL_Searchable: true
+  DL_Type: dynamic
+- Name: objectSubTrueType
+  ProductCode:
+    - xes
+    - sao
+    - sds
+  Description_EN: File object's true sub-type
+  Sample:
+    - 0
+    - 5000
+    - 18000
+    - 28001
+  DL_Searchable: true
+  DL_Type: int
+- Name: objectTrueType
+  ProductCode:
+    - sao
+    - xes
+    - sds
+  Description_EN: File object's true major type
+  Sample:
+    - 7
+    - 5
+    - 18
+    - 4051
+  DL_Searchable: true
+  DL_Type: int
+- Name: objectUser
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The owner name of target process / The logon user name
+  Sample:
+    - root
+    - SYSTEM
+    - oracle
+  DL_Searchable: true
+  DL_Type: string
+- Name: parentCmd
+  ProductCode:
+    - xes
+    - sds
+    - sao
+  Description_EN: Command line entry of parent process
+  Sample:
+    - C:\WINDOWS\system32\services.exe
+    - C:\Windows\system32\services.exe
+    - /sbin/launchd
+  DL_Searchable: true
+  DL_Type: string
+- Name: parentFileHashMd5
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The md5 hash of parent process
+  Sample:
+    - d8e577bf078c45954f4531885478d5a9
+    - cd10cb894be2128fca0bf0e2b0c27c16
+    - cfd65bed18a1fae631091c3a4c4dd533
+  DL_Searchable: true
+  DL_Type: string
+- Name: parentFileHashSha1
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The SHA1 hash of parent process
+  Sample:
+    - d7a213f3cfee2a8a191769eb33847953be51de54
+    - 1f912d4bec338ef10b7c9f19976286f8acc4eb97
+    - 9ad737cbd8bbdddc96726156dbd3bc03936bf02f
+  DL_Searchable: true
+  DL_Type: string
+- Name: parentFileHashSha256
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The SHA256 hash of parent process
+  Sample:
+    - dfbea9e8c316d9bc118b454b0c722cd674c30d0a256340200e2c3a7480cba674
+    - f3feb95e7bcfb0766a694d93fca29eda7e2ca977c2395b4be75242814eb6d881
+    - 00f8cbc5b3a6640af5ac18d01bc5a666f6f583b1379b9491e0bcc28ba78c92e9
+  DL_Searchable: true
+  DL_Type: string
+- Name: parentFilePath
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The file path location of parent process
+  Sample:
+    - c:\windows\system32\services.exe
+    - /usr/bin/bash
+    - c:\windows\system32\svchost.exe
+  DL_Searchable: true
+  DL_Type: string
+- Name: parentPid
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The PID of parent process
+  Sample:
+    - 1
+    - 976
+    - 920
+  DL_Searchable: true
+  DL_Type: int
+- Name: pname
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: Internal product ID (Deprecated, use productCode)
+  Sample:
+    - '2200'
+    - '751'
+    - '533'
+  DL_Searchable: true
+  DL_Type: string
+- Name: processCmd
+  ProductCode:
+    - xes
+    - sds
+    - sao
+  Description_EN: The command line entry of the subject process
+  Sample:
+    - C:\Windows\system32\lsass.exe
+    - C:\WINDOWS\system32\lsass.exe
+    - nimbus(processes)
+  DL_Searchable: true
+  DL_Type: string
+- Name: processFileHashMd5
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The md5 hash of subject process image
+  Sample:
+    - cd10cb894be2128fca0bf0e2b0c27c16
+    - 7ac47235c7bb452a03d3afd872f44c9e
+    - cfd65bed18a1fae631091c3a4c4dd533
+  DL_Searchable: true
+  DL_Type: string
+- Name: processFileHashSha1
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The SHA1 hash of subject process image
+  Sample:
+    - 1f912d4bec338ef10b7c9f19976286f8acc4eb97
+    - ded3833f145989fd86c1f4811b61497298ebc7fd
+    - 9ad737cbd8bbdddc96726156dbd3bc03936bf02f
+  DL_Searchable: true
+  DL_Type: string
+- Name: processFileHashSha256
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The SHA256 hash of subject process image
+  Sample:
+    - f3feb95e7bcfb0766a694d93fca29eda7e2ca977c2395b4be75242814eb6d881
+    - 39109eef00821658893b45634fe2f4664f880da9242712df907f1327d4ceefb8
+    - 00f8cbc5b3a6640af5ac18d01bc5a666f6f583b1379b9491e0bcc28ba78c92e9
+  DL_Searchable: true
+  DL_Type: string
+- Name: processFilePath
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The file path location of subject process image
+  Sample:
+    - /usr/bin/bash
+    - c:\windows\system32\svchost.exe
+    - c:\windows\system32\lsass.exe
+  DL_Searchable: true
+  DL_Type: string
+- Name: processHashId
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The FNV of subject process
+  Sample:
+    - '7114696589795796819'
+    - '1307755369266815004'
+    - '-5015325378148567246'
+  DL_Searchable: true
+  DL_Type: long
+- Name: processName
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The image name of the process which triggered the event
+  Sample:
+    - /usr/bin/bash
+    - c:\windows\system32\svchost.exe
+    - c:\windows\system32\lsass.exe
+  DL_Searchable: true
+  DL_Type: string
+- Name: processPid
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The PID of the subject process
+  Sample:
+    - 4
+    - 1
+    - 784
+    - 792
+  DL_Searchable: true
+  DL_Type: int
+- Name: processUser
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The owner name of subject process image
+  Sample:
+    - root
+    - SYSTEM
+    - SISTEMA
+  DL_Searchable: true
+  DL_Type: string
+- Name: rawDataStr
+  ProductCode:
+    - xes
+    - sao
+  Description_EN: Windows event raw contents
+  Sample:
+    - "{\n   \"EventData\" : {\n      \"LogonType\" : \"\",\n      \"TargetDomainName\"\
+      \ : \"\",\n      \"TargetLogonId\" : \"\",\n      \"TargetUserName\" : \"\"\
+      ,\n      \"TargetUserSid\" : \"\"\n   }\n}\n"
+    - "{\n   \"EventData\" : {\n      \"LogonType\" : \"10\",\n      \"TargetDomainName\"\
+      \ : \"AFASADV\",\n      \"TargetLogonId\" : \"14941011731\",\n      \"TargetUserName\"\
+      \ : \"administrator\",\n      \"TargetUserSid\" : \"S-1-5-21-1507008304-2416677881-2121376573-500\"\
+      \n   }\n}\n"
+    - "{\n   \"EventData\" : {\n      \"LogonType\" : \"10\",\n      \"TargetDomainName\"\
+      \ : \"AIS\",\n      \"TargetLogonId\" : \"216921070\",\n      \"TargetUserName\"\
+      \ : \"MWoodr01\",\n      \"TargetUserSid\" : \"S-1-5-21-1873864278-1756520048-3043165120-15057\"\
+      \n   }\n}\n"
+  DL_Searchable: true
+  DL_Type: string
+- Name: request
+  ProductCode:
+    - sao
+    - xes
+  Description_EN: Request URL
+  Sample:
+    - http://10.1.222.175/Conserver/CommunicationNode
+    - http:///cgi-bin/admin/param.cgi?action=list&group=Alarm.Status
+    - http://search.namequery.com/
+  DL_Searchable: true
+  DL_Type: string
+- Name: dpt
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The destination port number of network connection
+  Sample: []
+  DL_Searchable: true
+  DL_Type: int
+- Name: dst
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The destination IP address of network connection
+  Sample:
+    - '::'
+    - 0.0.0.0
+    - 127.0.0.1
+  DL_Searchable: true
+  DL_Type: string
+- Name: spt
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The source port number of network connection
+  Sample:
+    - 53
+    - 5353
+    - 443
+  DL_Searchable: true
+  DL_Type: int
+- Name: src
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The source address of network connection
+  Sample:
+    - '::'
+    - 172.20.0.10
+    - 192.168.0.10
+  DL_Searchable: true
+  DL_Type: string
+- Name: srcFileHashMd5
+  ProductCode:
+    - sao
+    - xes
+  Description_EN: The md5 hash of source file
+  Sample:
+    - e5d5e9c1f65b8ec7aa5b7f1b1acdd731
+    - a6779bf446db07e4c4ba3516b273c496
+    - 4bb7334fdadc6eccb8e6ab402aae013b
+  DL_Searchable: true
+  DL_Type: string
+- Name: srcFileHashSha1
+  ProductCode:
+    - sao
+    - xes
+  Description_EN: The SHA1 hash of source file
+  Sample:
+    - 5d34902fecc1760138212ada36be1e742bda5e52
+    - dbb14dcda6502ab1d23a7c77d405dafbcbeb439e
+    - 2292f8109cd756e790c068a52d50f1b0858f503b
+  DL_Searchable: true
+  DL_Type: string
+- Name: srcFileHashSha256
+  ProductCode:
+    - sao
+    - xes
+  Description_EN: The SHA256 hash of source file
+  Sample:
+    - 4eaa002225f4ea2dedcd19b7f1337d7c58ea7dd6d4571c12468dde95e6bcfdaf
+    - e30508e2088bc16b2a84233ced64995f738deaef2366ac6c86b35c93bbcd9d80
+    - 16b20a3ad485b4fbbe3028c7e743b226db21ea93cacc8b3d7d7d4a731bf02333
+  DL_Searchable: true
+  DL_Type: string
+- Name: srcFilePath
+  ProductCode:
+    - xes
+    - sao
+    - sds
+  Description_EN: The file path location of source file
+  Sample:
+    - \\cnva-apps\megaclockprod\traveler\travelerprint.accdb
+    - c:\program files\common files\microsoft shared\clicktorun\officesvcmgrschedule.xml
+    - q:\a7_dbs\a4_pkg\a4_packaging.accde
+  DL_Searchable: true
+  DL_Type: string
+- Name: tags
+  ProductCode:
+    - sae
+  Description_EN: Attack technique ID detected by XDR based on alert filter
+  Sample:
+    - MITREV9.T1057
+    - MITREV9.T1059.003
+    - XSAE.F2924
+  DL_Searchable: true
+  DL_Type: dynamic
+- Name: uuid
+  ProductCode:
+    - sae
+  Description_EN: Unique key of the log
+  Sample:
+    - 00000003-be87-4aad-add2-d395e4efad3e
+    - 00000014-0493-459d-9f90-93565402f41e
+    - 0000006b-b5ea-4f5e-8d56-ddec452ef3bd
+  DL_Searchable: true
+  DL_Type: string
+- Name: winEventId
+  ProductCode:
+    - xes
+    - sao
+  Description_EN: Event ID of Windows event
+  Sample:
+    - 11
+    - 4624
+    - 4670
+  DL_Searchable: true
+  DL_Type: int
+- Name: productCode
+  ProductCode:
+    - sae
+  Description_EN: Product which sent the log
+  Sample:
+    - sds
+    - xes
+    - sao
+  DL_Searchable: true
+  DL_Type: string
+- Name: filterRiskLevel
+  ProductCode:
+    - sae
+  Description_EN: Top-level risk level of the event
+  Sample:
+    - info
+    - low
+    - medium
+  DL_Searchable: true
+  DL_Type: string
+- Name: eventDataIpAddress
+  ProductCode:
+    - xes
+    - sao
+  Description_EN: The IP address for Windows event 4624 which is "An account was
+    successfully logged on"
+  Sample:
+    - '-'
+    - 10.37.38.237
+    - 10.5.10.5
+  DL_Searchable: false
+  DL_Type: string
+- Name: eventDataLogonType
+  ProductCode:
+    - xes
+    - sao
+  Description_EN: The logon type for Windows event 4624 which is "An account was
+    successfully logged on"
+  Sample:
+    - '3'
+    - '5'
+    - '2'
+  DL_Searchable: false
+  DL_Type: string
+- Name: eventDataScriptBlockText
+  ProductCode:
+    - sao
+  Description_EN: Windows event 4104, Creating Scriptblock text
+  Sample:
+    - $global:?
+    - '0'
+    - '{ Set-StrictMode -Version 1; $_.PSMessageDetails }'
+  DL_Searchable: true
+  DL_Type: string
+- Name: eventDataOperation
+  ProductCode:
+    - xes
+    - sao
+  Description_EN: Windows event 11
+  Sample:
+    - 'Start IWbemServices::ExecQuery - root\ccm : select * from SMS_Authority'
+    - 'Start IWbemServices::ExecQuery - root\cimv2 : select * from win32_process'
+    - 'Start IWbemServices::ExecQuery - root\ccm : SELECT * FROM SMS_Authority'
+  DL_Searchable: true
+  DL_Type: string
+- Name: objectBmData
+  ProductCode:
+    - sds
+    - xes
+  Description_EN: The data of BM event
+  Sample:
+    - '{"provider":"ORCA","schema_version":1,"data":[{"str":"Access /proc/<pid>/*"}]}'
+    - "{\"provider\":\"ORCA\",\"schema_version\":1,\"data\":[{\"str\":\"source '/etc/profile.d/lang.sh'\"\
+      }]}"
+    - "{\"provider\":\"ORCA\",\"schema_version\":1,\"data\":[{\"str\":\"source '/etc/profile.d/bash_completion.sh'\"\
+      }]}"
+  DL_Searchable: true
+  DL_Type: string
+- Name: osDescription
+  ProductCode:
+    - sds
+    - xes
+    - sao
+  Description_EN: The OS version
+  Sample:
+    - Windows 10 (64 bit)
+    - Windows 10 Pro (64 bit) build 19044
+    - Amazon Linux 2 (64 bit) (5.4.188-104.359.amzn2.x86_64)
+  DL_Searchable: true
+  DL_Type: string
+- Name: receivedTime
+  ProductCode:
+    - sae
+  Description_EN: Time when XDR log was received
+  Sample:
+    - 1657781088000
+  DL_Searchable: false
+  DL_Type: real
