@@ -1,12 +1,12 @@
 # Preview
-- Please be noted that these documents is still in preview stage and does not guarantee any backward compatibility.
+- Please note that these documents are still in preview stage and we do not guarantee any backward compatibility.
 
 # Background
-- These documents provides Trend Micro Vision One log schema detail.
+- These documents provide Trend Micro Vision One log schema details.
 
 # User scenario
-- For now, these documents only try to support the following use cases:
-    1. Support vision one search app UI usage.
+- Currently, these documents only support the following use cases:
+    1. Support Trend Micro Vision One Search app UI usage
 
 # Log Mapping
 | Log                    |  Document                |
