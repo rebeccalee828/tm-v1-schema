@@ -26,9 +26,10 @@
 | DL_Searchable         |  If log is searchable by this field           |
 | DL_Type               |  Data type of this field                      |
 
-# ProductCode Mapping 
+# ProductCode Mapping
 | Code |  Product                                               |
 |------|--------------------------------------------------------|
+| All  | All products                                           |
 | pdi  | Deep Discovery Inspector                               |
 | sds  | Trend Micro Cloud One - Endpoint & Workload Security   |
 | xes  | Endpoint Sensor                                        |
