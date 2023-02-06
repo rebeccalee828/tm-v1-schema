@@ -477,16 +477,6 @@
     - FileFullPath
   DL_Searchable: true
   DL_Aggregable: false
-- Name: quarantineFilePath
-  ProductCode: []
-  Description_EN: OfficeScan server file path for the quarantined file (When a file
-    is quarantined, it is encrypted and copied to the OfficeScan server for post-mortem
-    analysis)
-  Sample: []
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: true
-  DL_Aggregable: false
 - Name: forensicFilePath
   ProductCode:
     - sao
@@ -989,7 +979,7 @@
     - ptn
     - szn
     - pts
-  Description_EN: Event type name # Please refer: https://adc.github.trendmicro.com/XDR/xdr-detection-log-unifier/blob/master/luwak-log-processor/src/main/resources/lookupTable/lookupTable.json#L1146
+  Description_EN: Event type name
   Sample:
     - LOG_INSPECTION_EVENT
     - SECURITY_RISK_DETECTION
@@ -1202,62 +1192,6 @@
     - D07ADD0CE6E000D3CD20193B891E8ED3
     - 1a9ba93ebe4cb60030831f8ce9e7d5f9
     - EEE6691B48D2FB604DDF0CBC90D75B0E
-  DL_Type: string
-  DL_CommonKey:
-    - FileMD5
-  DL_Searchable: true
-  DL_Aggregable: false
-- Name: objectPayloadFileHashSha1
-  ProductCode: []
-  Description_EN: SHA-1 of an object payload file
-  Sample: []
-  DL_Type: string
-  DL_CommonKey:
-    - FileSHA1
-  DL_Searchable: true
-  DL_Aggregable: false
-- Name: objectTargetProcess
-  ProductCode: []
-  Description_EN: File path of the target process that API perform to. For example,
-    process of "a.exe" dumps credential from lsass.exe.
-  Sample:
-    - C:\\Windows\\System32\\lsass.exe
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: true
-  DL_Aggregable: false
-- Name: srcFilePath
-  ProductCode: []
-  Description_EN: File path of a source file
-  Sample:
-    - C:\\temp\\a.exe
-  DL_Type: string
-  DL_CommonKey:
-    - FileFullPath
-  DL_Searchable: true
-  DL_Aggregable: false
-- Name: srcFileHashSha1
-  ProductCode: []
-  Description_EN: SHA-1 of a source file
-  Sample: []
-  DL_Type: string
-  DL_CommonKey:
-    - FileSHA1
-  DL_Searchable: true
-  DL_Aggregable: false
-- Name: srcFileHashSha256
-  ProductCode: []
-  Description_EN: SHA-256 of a source file
-  Sample: []
-  DL_Type: string
-  DL_CommonKey:
-    - FileSHA2
-  DL_Searchable: true
-  DL_Aggregable: false
-- Name: srcFileHashMd5
-  ProductCode: []
-  Description_EN: MD5 of a source file
-  Sample: []
   DL_Type: string
   DL_CommonKey:
     - FileMD5
