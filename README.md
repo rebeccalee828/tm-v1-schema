@@ -29,7 +29,7 @@
 # ProductCode Mapping
 | Code |  Product                                               |
 |------|--------------------------------------------------------|
-| All  | All products                                           |
+| ALL  | All products                                           |
 | pdi  | Deep Discovery Inspector                               |
 | sds  | Trend Micro Cloud One - Endpoint & Workload Security   |
 | xes  | Endpoint Sensor                                        |
