@@ -1254,7 +1254,8 @@
 - Name: productCode
   ProductCode:
   - ALL
-  Description_EN: Product that sent this log
+  Description_EN: Internal product code (sds = Cloud One Workload Security, pdi =
+    Deep Discovery Inspector, sao = Apex One as a Service)
   Sample:
   - sds
   - pdi
@@ -2025,10 +2026,10 @@
   - Suspicious Traffic
   - Authentication
   - Reconnaissance
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
+  DL_Searchable: true
+  DL_Aggregable: true
 - Name: dOSName
   ProductCode:
   - pdi
@@ -3016,7 +3017,7 @@
   - xes
   - pds
   - scs
-  Description_EN: The process that triggered the event
+  Description_EN: The process that triggered by BM event
   Sample:
   - c:\windows\system32\svchost.exe
   - /usr/bin/python2.7
@@ -3638,9 +3639,9 @@
   - 7937cb0b-e598-4c8f-a50f-65c32905ba3a
   - C!7c4433e3-5b2c-449f-b66e-ccaac006b6f1
   - 8d265639-7202-4455-b640-48683aa2b57d
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: ruleUuid
   ProductCode:
