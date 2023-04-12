@@ -8,14 +8,6 @@
 - Currently, these documents only support the following use cases:
     1. Support Trend Micro Vision One Search app UI usage
 
-# Log Mapping
-| Search Method          |  Document                |
-|------------------------|--------------------------|
-| Endpoint Activity Data |  doc/telemetry.yaml      |
-| Detections             |  doc/detection.yaml      |
-| Email Activity Data    |  doc/messaging.yaml      |
-| Cloud Activity Data    |  doc/cloudtrail.yaml     |
-
 # Property Description
 | Property              |  Description                                  |
 |-----------------------|-----------------------------------------------|
