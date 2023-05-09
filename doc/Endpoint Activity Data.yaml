@@ -868,7 +868,9 @@
 - Name: productCode
   ProductCode:
   - ALL
-  Description_EN: Product which sent the log
+  Description_EN: Internal product code (sds = Trend Micro Cloud One Endpoint & Workload
+    Security, xes =  Trend Micro Vision One Endpoint Sensor, sao =  Apex One as a
+    Service)
   Sample:
   - sds
   - xes
@@ -978,6 +980,40 @@
   Sample:
   - 1657781088000
   DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: partitionKey
+  ProductCode:
+  - ALL
+  Description_EN: The partition key for a management scope
+  Sample:
+  - ebb418f0-43b7-fd1e-a8f4-3a1261720071
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: mgmtInstanceId
+  ProductCode:
+  - ALL
+  Description_EN: The instance ID for a management scope, which is the same as tenantGuid.
+  Sample:
+  - f41a9efa-beee-6ff7-319d-e4ffa63f21df
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentName
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The image name of the parent process
+  Sample:
+  - c:\windows\system32\services.exe
+  - /usr/bin/bash
+  - c:\windows\system32\svchost.exe
+  DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false

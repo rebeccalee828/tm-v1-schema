@@ -188,7 +188,8 @@
 - Name: productCode
   ProductCode:
   - ALL
-  Description_EN: Product which sent the log
+  Description_EN: Internal product code (sds = Trend Micro Cloud One Endpoint & Workload
+    Security, xes = Trend Micro Vision One Endpoint Sensor, sao = Apex One as a Service)
   Sample:
   - sds
   - xes
