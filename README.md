@@ -22,14 +22,20 @@
 | Code |  Product                                               |
 |------|--------------------------------------------------------|
 | ALL  | All products                                           |
-| pdi  | Deep Discovery Inspector                               |
+| pdi  | Trend Micro Deep Discovery Inspector                   |
 | sds  | Trend Micro Cloud One - Endpoint & Workload Security   |
 | xes  | Endpoint Sensor                                        |
-| sao  | Apex One as a Service                                  |
-| pds  | Deep Security Software                                 |
-| sca  | Cloud App Security                                     |
+| sao  | Trend Micro Apex One as a Service                      |
+| pds  | Trend Micro Deep Security Software                     |
+| sca  | Trend Micro Cloud App Security                         |
 | ptp  | TippingPoint Security Management System                |
-| stp  | Trend Micro Cloud One - Network Security               |
-| sig  | SASE Secure Web Gateway (Internet Access Gateway)      |
+| stp  | Trend Cloud One - Network Security                     |
+| scs  | Trend Cloud One - Container Security                   |
+| sct  | Trend Cloud One - AWS CloudTrail Integration           |
+| sig  | Zero Trust Secure Access - Internet Access             |
+| szn  | Zero Trust Secure Access - Private Access              |
 | sws  | Trend Micro Web Security                               |
 | sem  | Trend Micro Email Security                             |
+| ams  | Mobile Security                                        |
+| pts  | TXOne Stellar                                          |
+| ptn  | TXOne EdgeOne                                          |
