@@ -9,14 +9,15 @@
     1. Support Trend Micro Vision One Search app UI usage
 
 # Property Description
-| Property              |  Description                                  |
-|-----------------------|-----------------------------------------------|
-| Name                  |  Field name of log                            |
-| ProductCode           |  Products which sends data to this field      |
-| Description_EN        |  Description of this field                    |
-| Sample                |  Sample value of these field                  |
-| DL_Searchable         |  If log is searchable by this field           |
-| DL_Type               |  Data type of this field                      |
+| Property       | Description                             |
+|----------------|-----------------------------------------|
+| Name           | Field name of log                       |
+| ProductCode    | Products which sends data to this field |
+| Description_EN | Description of this field               |
+| Sample         | Sample value of these field             |
+| DL_Searchable  | If log is searchable by this field      |
+| DL_Type        | Data type of this field                 |
+| DL_CommonKey   | Corresponding name in general search    |
 
 # ProductCode Mapping
 | Code |  Product                                               |
