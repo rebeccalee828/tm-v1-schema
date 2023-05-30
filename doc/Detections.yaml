@@ -1842,6 +1842,12 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: policyTreePath
+  ProductCode:
+  - ALL
+  Description_EN: The policy tree path, provided by SAP
+  Sample:
+  - policyname1/policyname2/policyname3
 - Name: aggregatedCount
   ProductCode:
   - pdi
@@ -1868,9 +1874,9 @@
   - DNS Response
   - HTTP
   - CIFS
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: aptRelated
   ProductCode:
@@ -1997,9 +2003,9 @@
   Sample:
   - dst
   - src
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: cnt
   ProductCode:
@@ -2307,9 +2313,9 @@
   - Default
   - Data Center Services DL_Deployed Block
   - Rede Wifi Visitantes-Pacientes
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: dstZone
   ProductCode:
@@ -2605,9 +2611,9 @@
   - Default
   - Rede DATACENTER Lumen/FORTIGATE - AD ESTACIO CORP
   - Data Center Services DL_Deployed Block
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: interestedMacAddress
   ProductCode:
@@ -2729,9 +2735,9 @@
   - OTHERS
   - MALWARE
   - Others
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: malTypeGroup
   ProductCode:
@@ -3004,9 +3010,9 @@
   - Default
   - Rede DATACENTER Lumen/PALOALTO VPNSSL - VPN CLIENT
   - UHS
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: potentialRisk
   ProductCode:
@@ -3388,9 +3394,9 @@
   - Default
   - Rede DATACENTER Lumen/FORTIGATE - AD ESTACIO CORP
   - Rede DATACENTER Lumen/FORTIGATE - AD YDUQS CORP
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: threatName
   ProductCode:
@@ -3703,10 +3709,10 @@
   - user defined
   - sandbox
   - syscall
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
+  DL_Searchable: true
+  DL_Aggregable: true
 - Name: mitreMapping
   ProductCode:
   - pdi
@@ -4076,7 +4082,6 @@
   ProductCode:
   - sds
   - pds
-  - xes
   Description_EN: The target object type
   Sample:
   - File System
@@ -4318,3 +4323,23 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: suspiciousObject
+  ProductCode:
+  - xes
+  Description_EN: The matched suspicious object
+  Sample:
+  - 36ba9de3da9e6f8abfffdda7787ab0ecc16724bb
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: suspiciousObjectType
+  ProductCode:
+  - xes
+  Description_EN: The matched suspicious object type
+  Sample:
+  - sha1
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
