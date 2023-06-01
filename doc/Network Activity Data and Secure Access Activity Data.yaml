@@ -1462,6 +1462,12 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
+- Name: e2eLatency
+  ProductCode:
+  - sig
+  Description_EN: The end-to-end traffic latency time, in milliseconds
+  Sample:
+  - 10000
 - Name: tmFilterRiskLevel
   ProductCode:
   - ALL
