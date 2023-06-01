@@ -1,0 +1,1484 @@
+- Name: eventSourceType
+  ProductCode:
+  - ALL
+  Description_EN: The event source type
+  Sample:
+  - EVENT_SOURCE_NETWORK_ACTIVITY
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: version
+  ProductCode:
+  - ALL
+  Description_EN: The version
+  Sample:
+  - '1.1'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventTime
+  ProductCode:
+  - sig
+  - szn
+  - pdi
+  - xns
+  Description_EN: The time the event was generated
+  Sample:
+  - 1657135700000
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: customerId
+  ProductCode:
+  - ALL
+  Description_EN: The customer ID, CLP ID, or company ID
+  Sample:
+  - df1fd66c-dea3-40fb-a78b-1442d6154ecc
+  - e0f6a485-204f-4988-9253-f02b6481c205
+  - b48f2239-d797-4967-bf8a-d0861ebb94e9
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: tags
+  ProductCode:
+  - ALL
+  Description_EN: The technique ID detected by the Security Analytics Engine based
+    on the alert filter
+  Sample:
+  - MITREV9.T1057
+  - MITREV9.T1059.003
+  - XSAE.F2924
+  DL_Type: dynamic
+  DL_CommonKey:
+  - Technique
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: uuid
+  ProductCode:
+  - ALL
+  Description_EN: The unique key of the log
+  Sample:
+  - 00008a58-5c57-46b2-ad06-335035989d08
+  - 0000ca1e-abfa-4013-9213-2dcf5cf1c4d0
+  - 0001469c-dc16-469f-8e44-3d02d2057250
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: receivedTime
+  ProductCode:
+  - ALL
+  Description_EN: The time the XDR log was received
+  Sample:
+  - 1656324260000
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: productCode
+  ProductCode:
+  - ALL
+  Description_EN: The product which sent the log
+  Sample:
+  - sig
+  - szn
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: packageTraceId
+  ProductCode:
+  - ALL
+  Description_EN: The package trace ID
+  Sample:
+  - 00001008-d7ef-4066-9d93-55c3d450bf76
+  - 0000202f-92ec-4b8d-8df1-5c8551f33e4b
+  - 00002778-c203-4d2e-ac0f-d6c84ea9451b
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: filterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top level filter risk of the event
+  Sample:
+  - info
+  - low
+  - medium
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: groupId
+  ProductCode:
+  - ALL
+  Description_EN: The management scope group ID
+  Sample:
+  - 00000000-0000-0000-0000-000000000000
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: tenantGuid
+  ProductCode:
+  - ALL
+  Description_EN: The management scope tenant GUID
+  Sample:
+  - 00000000-0000-0000-0000-000000000000
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: bitwiseFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The bitwise filter level
+  Sample:
+  - 1
+  - 2
+  - 8
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: partitionKey
+  ProductCode:
+  - ALL
+  Description_EN: The partition key for a management scope (endpoint only)
+  Sample:
+  - ebb418f0-43b7-fd1e-a8f4-3a1261720071
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: mgmtInstanceId
+  ProductCode:
+  - ALL
+  Description_EN: The instance ID for a management scope, which is the same as tenantGuid
+    (endpoint only)
+  Sample:
+  - f41a9efa-beee-6ff7-319d-e4ffa63f21df
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: policyTreePath
+  ProductCode:
+  - ALL
+  Description_EN: The policy tree path, provided by SAP (endpoint only)
+  Sample:
+  - policyname1/policyname2/policyname3
+- Name: endpointHostName
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The device host name
+  Sample:
+  - my_machine
+  - jeremy-mbp
+  DL_Type: string
+  DL_CommonKey:
+  - EndpointName
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: osName
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The OS of the device
+  Sample:
+  - Windows 10
+  - macos 12.1
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: dst
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The destination IP
+  Sample:
+  - 10.10.10.10
+  - 10.206.209.64
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: endpointGuid
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The device GUID
+  Sample:
+  - 66f0cb71-4150-4437-ba8b-91151bb12345
+  - DSP84573ULLJHM5GK2R7
+  DL_Type: string
+  DL_CommonKey:
+  - EndpointID
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: principalName
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The User Principal Name
+  Sample:
+  - millie.hutchinson@etlsystems.com
+  - jeremy_tong@trendmicro.com
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: request
+  ProductCode:
+  - sig
+  - szn
+  - pdi
+  - xns
+  Description_EN: The destination URL that the user is accessing
+  Sample:
+  - https://google.com/
+  - https://api/example/v1/testit
+  DL_Type: string
+  DL_CommonKey:
+  - URL
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: act
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The action
+  Sample:
+  - Allow
+  - Block
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: src
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The connection peer IP address
+  Sample:
+  - 100.100.100.100
+  - 18.162.103.100
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: serverTls
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The TLS version between the Service Gateway and server/website
+  Sample:
+  - TLS 1.2
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: serverProtocol
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The version of the HTTP protocol between the Service Gateway and
+    server/website
+  Sample:
+  - HTTP/1.1
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: userAgent
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The user agent
+  Sample:
+  - Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0)
+  - Chrome/74.0.3729.108 Safari/537.36
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: rt
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The UTC timestamp
+  Sample:
+  - 1599465660
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventName
+  ProductCode:
+  - sig
+  - szn
+  - pdi
+  - xns
+  Description_EN: The log type
+  Sample:
+  - SWG_ACTIVITY_LOG
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: application
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The name of the requested application
+  Sample:
+  - Facebook
+  - wiki
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: ruleName
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The name of the triggered cloud access rule
+  Sample:
+  - ETL_Access Rules_Web_Host
+  - block_wiki_for_guest
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: clientIp
+  ProductCode:
+  - sig
+  - szn
+  - pdi
+  - xns
+  Description_EN: The endpoint IP address
+  Sample:
+  - 10.64.23.45
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: requestBase
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The URL domain
+  Sample:
+  - www.facebook.com
+  - gary.webserver64.com
+  DL_Type: string
+  DL_CommonKey:
+  - DomainName
+  - HostDomain
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: score
+  ProductCode:
+  - sig
+  Description_EN: The WRS score
+  Sample:
+  - 81
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: userDomain
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: Active directory domain, domain of username for logging in TMAS
+    adminportal adminportal
+  Sample:
+  - etlsystems.com
+  DL_Type: string
+  DL_CommonKey:
+  - DomainName
+  - AccountDomain
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: suid
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The user name or IP address (IPv4)
+  Sample:
+  - Millie Hutchinson
+  - 18.162.103.100
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: duration
+  ProductCode:
+  - sig
+  Description_EN: The time it took the scanner to complete the scan, in milliseconds
+  Sample:
+  - 1599465660123
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventSubName
+  ProductCode:
+  - sig
+  Description_EN: The cloud app action caused by user control via Zero Trust Secure
+    Access - Internet Access
+  Sample:
+  - OneDrive download file
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: fileHash
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The SHA-1 of the file that violated the policy
+  Sample:
+  - 1e15bf99022a9164708cebb3eace8fd61ad45cba
+  DL_Type: string
+  DL_CommonKey:
+  - FileSHA1
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: fileHashSha256
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The SHA-256 of the file that violated the policy
+  Sample:
+  - ba9edecdd09de1307714564c24409bd25508e22fe11c768053a08f173f263e93
+  DL_Type: string
+  DL_CommonKey:
+  - FileSHA2
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: fileName
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The name of the file that violated the policy
+  Sample:
+  - word.doc
+  DL_Type: string
+  DL_CommonKey:
+  - FileName
+  - FileFullPath
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: fileSize
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The size of the file that is violating the policy
+  Sample:
+  - 12134
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: fileType
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The type of file which is violating the policy
+  Sample:
+  - Microsoft Words
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: malName
+  ProductCode:
+  - sig
+  Description_EN: The name of the detected malware
+  Sample:
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: mimeType
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The MIME type or content type of the response body
+  Sample:
+  - text/html
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: sender
+  ProductCode:
+  - sig
+  Description_EN: The roaming users or Trend Micro Web Security gateway where the
+    web traffic passed
+  Sample:
+  - ETL VPN
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: detectionType
+  ProductCode:
+  - sig
+  - szn
+  Description_EN: The scan type
+  Sample:
+  - Not match any rule
+  - Access control
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: profile
+  ProductCode:
+  - sig
+  Description_EN: The name of the triggered Threat Protection template or Data Loss
+    Prevention profile triggered
+  Sample:
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: userDepartment
+  ProductCode:
+  - sig
+  Description_EN: The user department request method
+  Sample:
+  - Sales
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: requestMethod
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The network protocol request method
+  Sample:
+  - POST
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: pname
+  ProductCode:
+  - sig
+  Description_EN: The product name
+  Sample:
+  - Secure Web Gateway
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: pver
+  ProductCode:
+  - sig
+  Description_EN: The product version
+  Sample:
+  - 1.0
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: deviceGUID
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The non-endpoint object such as a network appliance
+  Sample:
+  - d1142f61-5bdf-4a48-bee8-b35f7b6c2376
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: requestMimeType
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The type of request content
+  Sample:
+  - application/json; charset=utf-8
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: failedHTTPSInspection
+  ProductCode:
+  - sig
+  Description_EN: HTTPS traffic inspection failure
+  Sample:
+  - true
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: tlsJA3Fingerprint
+  ProductCode:
+  - sig
+  - pdi
+  - xns
+  Description_EN: The JA3 fingerprint
+  Sample:
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: responseSize
+  ProductCode:
+  - sig
+  Description_EN: The response length
+  Sample:
+  - 1324
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: clientProtocol
+  ProductCode:
+  - sig
+  Description_EN: The client protocol
+  Sample:
+  - HTTP/1.1
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: clientTls
+  ProductCode:
+  - sig
+  Description_EN: The transport layer security of the client
+  Sample:
+  - TLS 1.2
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: contentEncoding
+  ProductCode:
+  - sig
+  Description_EN: The content encoding of the request or the response
+  Sample:
+  - gzip
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: authType
+  ProductCode:
+  - sig
+  Description_EN: The authorization type
+  Sample:
+  - Cookie
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: requestSize
+  ProductCode:
+  - sig
+  Description_EN: The request length
+  Sample:
+  - 1324
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: serverRespTime
+  ProductCode:
+  - sig
+  Description_EN: The time the server took to respond to the request, in milliseconds
+  Sample:
+  - 1599465660123
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: trafficType
+  ProductCode:
+  - sig
+  Description_EN: The traffic type
+  Sample:
+  - Forward
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: urlCat
+  ProductCode:
+  - sig
+  Description_EN: The URL category
+  Sample:
+  - Social Networking
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: ruleType
+  ProductCode:
+  - szn
+  Description_EN: The rule type which is applied to the traffic
+  Sample:
+  - access
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: ruleUuid
+  ProductCode:
+  - szn
+  Description_EN: The risk assessment and control design that is defined by Zero Trust
+    Secure Access risk control rules
+  Sample:
+  - 12340518-abd7-43e1-9b73-2f55c4c95a8e
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectId
+  ProductCode:
+  - szn
+  Description_EN: The UUID of the Zero Trust Secure Access private access application
+  Sample:
+  - 6f1fe071-9636-4c99-9a4d-c9f6d409a4c8
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: spt
+  ProductCode:
+  - szn
+  Description_EN: The virtual port assigned to the Zero Trust Secure Access agent
+  Sample:
+  - 57763
+  DL_Type: int
+  DL_CommonKey:
+  - Port
+  DL_Searchable: false
+  DL_Aggregable: true
+- Name: policyUuid
+  ProductCode:
+  - szn
+  Description_EN: The UUID of the Zero Trust Secure Access private access or risk
+    control rule
+  Sample:
+  - afef0518-abd7-43e1-9b73-2f55c4c95a8e
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: dpt
+  ProductCode:
+  - szn
+  Description_EN: The service port of the private application server
+  Sample:
+  - 443
+  DL_Type: int
+  DL_CommonKey:
+  - Port
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: companyName
+  ProductCode:
+  - szn
+  Description_EN: The company name
+  Sample:
+  - Trend Micro
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: start
+  ProductCode:
+  - szn
+  Description_EN: The start time, in milliseconds
+  Sample:
+  - 1575462989
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: sessionStart
+  ProductCode:
+  - szn
+  - pdi
+  - xns
+  Description_EN: The session start time, in seconds
+  Sample:
+  - 1575462989
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: sessionEnd
+  ProductCode:
+  - szn
+  - pdi
+  - xns
+  Description_EN: The session end time, in seconds
+  Sample:
+  - 1575462989
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: policyTemplate
+  ProductCode:
+  - sig
+  Description_EN: The Data Loss Prevention template name
+  Sample:
+  - 'Australia, New Zealand: Healthcare Template,Germany: Banking and Financial Information'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: serverIp
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The server IP address
+  Sample:
+  - 104.210.35.94
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: clientPort
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The client port number
+  Sample:
+  - 5566
+  DL_Type: int
+  DL_CommonKey:
+  - Port
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: serverPort
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The server port number
+  Sample:
+  - 443
+  DL_Type: int
+  DL_CommonKey:
+  - Port
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: clientMAC
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The client MAC address
+  Sample:
+  - 00-08-e3-ff-fd-90
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: serverMAC
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The server MAC address
+  Sample:
+  - 58-35-d9-de-4a-42
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: flowId
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The network analysis flow ID
+  Sample:
+  - '6837014561409730558'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: status
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The network analysis flow session status
+  Sample:
+  - '2'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: app
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The application layer protocol
+  Sample:
+  - HTTP
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: httpReferer
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The HTTP referrer header
+  Sample:
+  - www.google.com.tw
+  DL_Type: string
+  DL_CommonKey:
+  - URL
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: httpXForwardedFor
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The HTTP x-forwarded-for header
+  Sample:
+  - 192.168.1.103, 192.168.1.104, 192.168.1.106
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: requestClientApplication
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The HTTP user agent
+  Sample:
+  - Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100
+    Safari/537.36
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: requestDate
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The HTTP date header
+  Sample:
+  - Fri, 20 Oct 2017 06:02:09 GMT
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: requestHeaders
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: All HTTP headers without sensitive information
+  Sample:
+  - "Host: 192.168.1.201:8080\r\nUser-Agent: curl/7.78.0\r\nAccept: */*\r\n"
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: overSsl
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: SSL protocol connection
+  Sample:
+  - YES
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: respCode
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The network protocol response code
+  Sample:
+  - '200'
+  - '25'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: respDate
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The HTTP response date header
+  Sample:
+  - Fri, 20 Oct 2017 06:02:09 GMT
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: httpLocation
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The HTTP location header
+  Sample:
+  - www.google.com.tw
+  DL_Type: string
+  DL_CommonKey:
+  - URL
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: respHeaders
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: All HTTP response headers without sensitive information
+  Sample:
+  - "Accept-Ranges: bytes\r\nContent-Length: 68\r\nContent-Type: text/plain; charset=utf-8\r\
+    \nLast-Modified: Thu, 19 Aug 2021 06:23:54 GMT\r\nDate: Thu, 19 Aug 2021 06:24:00\
+    \ GMT\r\n"
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: respFileHash
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The SHA-1 of the file detected in the response direction
+  Sample:
+  - f17d9c55dea88f9aec8f74363f01e918cffb4142
+  DL_Type: string
+  DL_CommonKey:
+  - FileSHA1
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: respFileHashSha256
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The SHA-256 of the file detected in the response direction
+  Sample:
+  - 5ad4396d67f0c9d54572f051e28e9e62f4010c269a953d25259b17ad5fab4fd5
+  DL_Type: string
+  DL_CommonKey:
+  - FileSHA2
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: respFileType
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The file type detected in the response direction
+  Sample:
+  - PKZIP
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: respArchFiles
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The file information extracted from files detected in response direction
+  Sample:
+  - 
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: httpXForwardedForIp
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The x-forwarded-for IP used by the network appliance
+  Sample:
+  - 192.168.1.103
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: httpXForwardedForPort
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The patched HTTP server port when the network appliance selects
+    an x-forwarded-for IP address to use
+  Sample:
+  - 65535
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: resolvedUrlIp
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The IP address of the FQDN
+  Sample:
+  - 142.251.43.3
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: resolvedUrlPort
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The HTTP server port
+  Sample:
+  - 443
+  DL_Type: int
+  DL_CommonKey:
+  - Port
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: respMethod
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The response method
+  Sample:
+  - KRB_ERROR
+  - AS_REP
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: msgId
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The service provider message ID
+  Sample:
+  - <b03cf177d9bf4e2f834cd3a005b2cc4b@12345.com.tw>
+  DL_Type: string
+  DL_CommonKey:
+  - EmailMessageID
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: mailMsgSubject
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The email subject
+  Sample:
+  - test
+  DL_Type: string
+  DL_CommonKey:
+  - EmailSubject
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: suser
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The email sender
+  Sample:
+  - P1234567_C12345@12345.com.tw
+  DL_Type: string
+  DL_CommonKey:
+  - EmailSender
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: duser
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The email recipient
+  Sample:
+  - p1234567@xxxxxx.tw
+  DL_Type: dynamic
+  DL_CommonKey:
+  - EmailRecipient
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: requests
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The URLs of the request
+  Sample:
+  - www.google.com.tw
+  - www.12345micro.com
+  DL_Type: dynamic
+  DL_CommonKey:
+  - URL
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: direction
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The object transfer direction
+  Sample:
+  - Download
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: archFiles
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The file information extracted from detected files
+  Sample:
+  - 
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: hostName
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The host name
+  Sample:
+  - NJ-EFFY-ZHAO1
+  DL_Type: string
+  DL_CommonKey:
+  - DomainName
+  - HostDomain
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: tlsSelectedCipher
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The selected cipher of the TLS protocol
+  Sample:
+  - c02f
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: sslCertCommonName
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The certificate common name
+  Sample:
+  - '*.www.yahoo.com'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: sslCertIssuer
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The issuer of the certificate
+  Sample:
+  - /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert SHA2 High Assurance Server
+    CA
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: sslCertValidFrom
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The certificate validity start time
+  Sample:
+  - '2014-11-21T02:43:28'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: sslCertValidUntil
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The certificate validity end time
+  Sample:
+  - '2018-11-21T02:43:28'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: sslCertSerialNumber
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The certificate serial number
+  Sample:
+  - 0888b1ad2a593310593f47565a5a5a4a
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: sslCertSANs
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The Subject Alternative Name of the certificate
+  Sample:
+  - '*.www.yahoo.com'
+  - add.my.yahoo.com
+  - au.yahoo.com
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: sslCertFingerprint
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The certificate fingerprint
+  Sample:
+  - 3914af80223c833f26df001cbf342eff8a31aba1
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: ja3Hash
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The JA3 hash
+  Sample:
+  - 478e74fad764c966f19c5232c7cdfc5a
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: ja3sHash
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The JA3S hash
+  Sample:
+  - 6d37fb1b3306d6e9f875650d8eb74b4f
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: tlsJA3SFingerprint
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The raw JA3S
+  Sample:
+  - 771,157,65281-15
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: ftpTrans
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The transaction information of the FTP protocol
+  Sample:
+  - 
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: dnsQueryType
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The record type requested by the DNS protocol
+  Sample:
+  - A
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectIps
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The IP address resolved by the DNS protocol
+  Sample:
+  - 192.168.1.10
+  - 104.210.35.94
+  DL_Type: dynamic
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: customFilterTags
+  ProductCode:
+  - ALL
+  Description_EN: The detection filter that matched data based on custom filters
+  Sample:
+  - XCUS.CF0131
+  - USER.HELLOWORLD
+  DL_Type: dynamic
+  DL_CommonKey:
+  - Technique
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: customFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The event top-level risk level by custom filter
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: e2eLatency
+  ProductCode:
+  - sig
+  Description_EN: The end-to-end traffic latency time, in milliseconds
+  Sample:
+  - 10000
+- Name: tmFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The event top-level risk level by Security Analytics Engine filter
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
