@@ -100,7 +100,7 @@
   ProductCode:
   - xes
   - sao
-  Description_EN: Integrity level of a process
+  Description_EN: The integrity level of a process
   Sample: []
   DL_Type: int
   DL_CommonKey:
@@ -149,6 +149,20 @@
   DL_CommonKey:
   - CLICommand
   DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectCmdNormalized
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The normalized command line entry of the target process
+  Sample:
+  - wc -l
+  - runc init
+  - docker-init --version
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: false
   DL_Aggregable: false
 - Name: objectFileHashMd5
   ProductCode:
@@ -449,6 +463,20 @@
   - CLICommand
   DL_Searchable: true
   DL_Aggregable: false
+- Name: parentCmdNormalized
+  ProductCode:
+  - xes
+  - sds
+  - sao
+  Description_EN: The normalized command line entry of the parent process
+  Sample:
+  - C:\WINDOWS\system32\services.exe
+  - C:\Windows\system32\services.exe
+  - /sbin/launchd
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: parentFileHashMd5
   ProductCode:
   - sds
@@ -552,6 +580,20 @@
   DL_CommonKey:
   - CLICommand
   DL_Searchable: true
+  DL_Aggregable: false
+- Name: processCmdNormalized
+  ProductCode:
+  - xes
+  - sds
+  - sao
+  Description_EN: The normalized command line entry of the subject process
+  Sample:
+  - C:\Windows\system32\lsass.exe
+  - C:\WINDOWS\system32\lsass.exe
+  - nimbus(processes)
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
   DL_Aggregable: false
 - Name: processFileHashMd5
   ProductCode:
@@ -973,6 +1015,38 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: eventSourceType
+  ProductCode:
+  - ALL
+  Description_EN: The event source type
+  Sample:
+  - EVENT_SOURCE_TELEMETRY
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: version
+  ProductCode:
+  - ALL
+  Description_EN: The schema version
+  Sample:
+  - '1.0'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: customerId
+  ProductCode:
+  - ALL
+  Description_EN: The assigned unique customer ID
+  Sample:
+  - 9011075d-a2d7-4ff0-8660-47645735d0e7
+  - afa7768a-f34d-4ee3-b1db-8dd3592127b7
+  - 7ba4af7b-91f7-4589-9710-5acfd0e70406
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: receivedTime
   ProductCode:
   - ALL
@@ -980,6 +1054,30 @@
   Sample:
   - 1657781088000
   DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: packageTraceId
+  ProductCode:
+  - ALL
+  Description_EN: The event package trace ID
+  Sample:
+  - 353e1e1e-4a80-4f3c-aec1-113d425a28e1
+  - 11b8ae4f-dc54-4c23-9011-7d8cc3be3a7d
+  - d084fed4-67fd-4135-b08e-654c9cdaf709
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: bitwiseFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The bitwise filter level
+  Sample:
+  - 1
+  - 2
+  - 3
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1003,6 +1101,502 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: policyTreePath
+  ProductCode:
+  - ALL
+  Description_EN: The policy tree path, provided by SAP
+  Sample:
+  - policyname1/policyname2/policyname3
+- Name: instanceId
+  ProductCode:
+  - sds
+  Description_EN: The virtual machine instance ID on the cloud platform
+  Sample:
+  - i-0b22a22eec53b9321
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: cloudProvider
+  ProductCode:
+  - sds
+  Description_EN: The cloud provider of the endpoint
+  Sample:
+  - aws
+  - azure
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: vpcId
+  ProductCode:
+  - sds
+  Description_EN: The virtual private cloud of the endpoint
+  Sample:
+  - vpc-01234567890abcdef
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: regionId
+  ProductCode:
+  - sds
+  Description_EN: The endpoint region
+  Sample:
+  - us-east-1
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: eventHashId
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The event hash ID
+  Sample:
+  - '-8406473586387535914'
+  - '138486453338666581'
+  - '-7909265752378976284'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: firstSeen
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The first time the event was seen
+  Sample:
+  - 1656355418449
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: lastSeen
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The last time the event was seen
+  Sample:
+  - 1656355418449
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: endpointMacAddress
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The host MAC address
+  Sample:
+  - 00:00:00:00:00:00:00:e0
+  - 0-0-0-0-0-0-0-e0
+  - 00:09:0f:fe:00:01
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: userDomain
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The user domain name
+  Sample:
+  - CORP
+  - AUTORIDADE NT
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: timezone
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The host time zone
+  Sample:
+  - UTC+00:00
+  - UTC-05:00
+  - UTC-03:00
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: pver
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The product version
+  Sample:
+  - 1.2.0.2752
+  - 1.0.345
+  - 1.2.0.2657
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: plang
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The product language
+  Sample:
+  - 1
+  - 0
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: pplat
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The product platform
+  Sample:
+  - 5889
+  - 9217
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: osName
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The name of the host operating system
+  Sample:
+  - Windows
+  - Linux
+  - macOS
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: osVer
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The version of the host operating system
+  Sample:
+  - Amazon Linux 2
+  - 10.0.19044
+  - 10.0.19042
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: osType
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The host operating system type
+  Sample:
+  - '0x00000030'
+  - '4'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: sessionId
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The session ID
+  Sample:
+  - 0
+  - 1
+  - 2
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processUserDomain
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The process user domain
+  Sample:
+  - NT AUTHORITY
+  - AUTORIDADE NT
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processLaunchTime
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The time the process was launched
+  Sample:
+  - '1653614775212'
+  - '1656118626642'
+  - '1652098160298'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: authId
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The authorization ID
+  Sample:
+  - '999'
+  - '996'
+  - '997'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileHashId
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The file hash of the process
+  Sample:
+  - '2141057820373638746'
+  - '-821808160829839906'
+  - '5222963427542927736'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processSigner
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The process file signer
+  Sample:
+  - Microsoft Windows
+  - Microsoft Windows Publisher
+  - Microsoft Corporation
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processSignerValid
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The validity of the process signer
+  Sample:
+  - 1
+  - 0
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileSize
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The file size of the process file
+  Sample:
+  - '59952'
+  - '59456'
+  - '47024'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileCreation
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The time the process file was created
+  Sample:
+  - '1652131848000'
+  - '1577865600000'
+  - '1635172906000'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileModifiedTime
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The time the process file was modified
+  Sample:
+  - '1652131848000'
+  - '1633413236462'
+  - '1414554708877'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processTrueType
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The true file type of the process
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processSubTrueType
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The true file subtype of the process
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileCurrentOwnerSid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The owner of the process file current security identifier
+  Sample:
+  - S-1-5-18
+  - S-1-5-32-544
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileCurrentOwnerName
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The current owner name of the process file
+  Sample:
+  - NT AUTHORITY\SYSTEM
+  - BUILTIN\Administrators
+  - BUILTIN\Administradores
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileOwnerSid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The security identifier of the process file owner
+  Sample:
+  - S-1-5-32-544
+  - S-1-5-18
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileOwnerName
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The process file owner name
+  Sample:
+  - root
+  - cit
+  - BUILTIN\Administrators
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileGroupSid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The security identifier of the process file group
+  Sample:
+  - S-1-5-18
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  - S-1-5-32-544
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileGroupName
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The name of the process file user group
+  Sample:
+  - wheel
+  - admin
+  - staff
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileSaclString
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The system access control list of the process file
+  Sample:
+  - S:(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
+  - S:(AU;IDSAFA;DCLCRPSDWDWO;;;AU)
+  - S:NO_ACCESS_CONTROL
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileDaclString
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The discretionary access control list of the process file
+  Sample:
+  - D:(A;ID;0x1200a9;;;AC)(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;BU)(A;ID;0x1200a9;;;S-1-15-2-2)
+  - D:(A;ID;FA;;;SY)
+  - D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processFileRemoteAccess
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The remote access to the process file
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentHashId
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The parent hash ID
+  Sample:
+  - '-865367326691173681'
+  - '-2903238741593506113'
+  - '-4358168316031740439'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: parentName
   ProductCode:
   - sds
@@ -1014,6 +1608,1445 @@
   - /usr/bin/bash
   - c:\windows\system32\svchost.exe
   DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentSessionId
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The parent session ID
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentUser
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The type of user that executed the parent process
+  Sample:
+  - root
+  - SYSTEM
+  - SISTEMA
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentUserDomain
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The user domain of the parent process
+  Sample:
+  - NT AUTHORITY
+  - AUTORIDADE NT
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentLaunchTime
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The time the parent process was launched
+  Sample:
+  - '1653614773895'
+  - '1656118625928'
+  - '0'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentAuthId
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The parent authorization ID
+  Sample:
+  - '999'
+  - '996'
+  - '997'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentIntegrityLevel
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The integrity level of a parent
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileHashId
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The parent file hash ID
+  Sample:
+  - '-4092577940452904134'
+  - '2141057820373638746'
+  - '-821808160829839906'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentSigner
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The signer of the parent file
+  Sample:
+  - Microsoft Windows Publisher
+  - Microsoft Windows
+  - Software Signing;Apple Code Signing Certification Authority;Apple Root CA;
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentSignerValid
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The validity of the parent signer
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileSize
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The file size of the parent file
+  Sample:
+  - '714856'
+  - '59952'
+  - '5114880'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileCreation
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The time the parent file was created
+  Sample:
+  - '1652131848000'
+  - '1577865600000'
+  - '1635172968000'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileModifiedTime
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The time the parent file was modified
+  Sample:
+  - '1652131848000'
+  - '1577865600000'
+  - '1635172968000'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentTrueType
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The true file type of the parent file
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentSubTrueType
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The true file subtype of the parent file
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileCurrentOwnerSid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The current security identifier owner of the parent file
+  Sample:
+  - S-1-5-32-544
+  - S-1-5-18
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileCurrentOwnerName
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The current owner name of the parent file
+  Sample:
+  - NT AUTHORITY\SYSTEM
+  - BUILTIN\Administradores
+  - BUILTIN\Administrators
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileOwnerSid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The security identifier of the parent file owner
+  Sample:
+  - S-1-5-32-544
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  - S-1-5-18
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileOwnerName
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The owner name of the parent file
+  Sample:
+  - root
+  - cit
+  - BUILTIN\Administrators
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileGroupSid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The security identifier of the parent process file group
+  Sample:
+  - S-1-5-18
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  - S-1-5-32-544
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileGroupName
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The name of the parent file user group
+  Sample:
+  - wheel
+  - admin
+  - staff
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileSaclString
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The system access control list of the parent file
+  Sample:
+  - S:(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
+  - S:NO_ACCESS_CONTROL
+  - S:(AU;IDSAFA;DCLCRPSDWDWO;;;AU)
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileDaclString
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The discretionary access control list of the parent file
+  Sample:
+  - D:(A;;FA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;0x1200a9;;;BA)(A;;0x1200a9;;;SY)(A;;0x1200a9;;;BU)(A;;0x1200a9;;;AC)(A;;0x1200a9;;;S-1-15-2-2)
+  - D:(A;OICI;GA;;;SY)(A;OICI;0xa0120000;;;WD)(A;OICI;GA;;;BA)
+  - D:(A;ID;0x1200a9;;;AC)(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;BU)(A;ID;0x1200a9;;;S-1-15-2-2)
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentFileRemoteAccess
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The remote access to the parent file
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectHashId
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The object hash ID
+  Sample:
+  - '8576474808125313522'
+  - '-599270888483415002'
+  - '2177864258235728980'
+  DL_Type: long
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileSize
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The file size of the object file
+  Sample:
+  - '0'
+  - '59456'
+  - '60'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileCreation
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The time the object file was created
+  Sample:
+  - '1652131848000'
+  - '1577865600000'
+  - '1648279273000'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileModifiedTime
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The time the object file was modified
+  Sample:
+  - '1652131848000'
+  - '1577865600000'
+  - '1648279273000'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileCurrentOwnerSid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The current security identifier owner of the object file
+  Sample:
+  - S-1-5-18
+  - S-1-5-32-544
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileCurrentOwnerName
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The current owner name of the object file
+  Sample:
+  - NT AUTHORITY\SYSTEM
+  - BUILTIN\Administrators
+  - BUILTIN\Administradores
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileOwnerSid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The security identifier of the object file owner
+  Sample:
+  - S-1-5-32-544
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  - S-1-5-18
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileOwnerName
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The object file owner name
+  Sample:
+  - root
+  - NT SERVICE\TrustedInstaller
+  - BUILTIN\Administrators
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileGroupSid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The security identifier of the object file group
+  Sample:
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  - S-1-5-18
+  - S-1-5-21-397955417-626881126-188441444-513
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileGroupName
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The object file user group name
+  Sample:
+  - wheel
+  - staff
+  - admin
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileSaclString
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The system access control list of the object file
+  Sample:
+  - S:NO_ACCESS_CONTROL
+  - S:(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
+  - S:(AU;SAFA;0x1f0116;;;WD)
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileDaclString
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The discretionary access control list of the object file
+  Sample:
+  - D:(A;;FA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;0x1200a9;;;BA)(A;;0x1200a9;;;SY)(A;;0x1200a9;;;BU)(A;;0x1200a9;;;AC)(A;;0x1200a9;;;S-1-15-2-2)
+  - D:(A;OICI;GA;;;SY)(A;OICI;0xa0120000;;;WD)(A;OICI;GA;;;BA)
+  - D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;BU)(A;ID;0x1200a9;;;AC)(A;ID;0x1200a9;;;S-1-15-2-2)
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileIsRemoteAccess
+  ProductCode:
+  - sao
+  - xes
+  - sds
+  Description_EN: The remote access to the object file
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFirstSeen
+  ProductCode:
+  - xes
+  - sds
+  - sao
+  Description_EN: The first time the object was seen
+  Sample:
+  - '1656458063638'
+  - '1656260547165'
+  - '0'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectLastSeen
+  ProductCode:
+  - xes
+  - sds
+  - sao
+  Description_EN: The last time the object was seen
+  Sample:
+  - '1656458354730'
+  - '1656260580722'
+  - '0'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileHashId
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The source file hash ID
+  Sample:
+  - '1102079405020678318'
+  - '-6926286289273504319'
+  - '8528955148329941480'
+  DL_Type: long
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcSigner
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The signer of the source process file
+  Sample:
+  - Microsoft Windows
+  - Microsoft Corporation
+  - Google LLC
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcSignerValid
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The validity of the source process signer
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileSize
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The file size of the source file
+  Sample:
+  - '0'
+  - '131072'
+  - '196608'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileCreation
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The time the source file was created
+  Sample:
+  - '1577865600000'
+  - '1626201752000'
+  - '1626201750000'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileModifiedTime
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The time the source file was modified
+  Sample:
+  - '1626201752000'
+  - '1626201750000'
+  - '1577865600000'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcTrueType
+  ProductCode:
+  - sao
+  - xes
+  - sds
+  Description_EN: The true file type of the source file
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcSubTrueType
+  ProductCode:
+  - sao
+  - xes
+  - sds
+  Description_EN: The true file subtype of the source file
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileCurrentOwnerSid
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The current security identifier owner of the source file
+  Sample:
+  - S-1-5-18
+  - S-1-5-32-544
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileCurrentOwnerName
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The current owner name of the source file
+  Sample:
+  - NT AUTHORITY\SYSTEM
+  - BUILTIN\Administrators
+  - AUTORIDADE NT\SISTEMA
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileOwnerSid
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The security identifier of the source file owner
+  Sample:
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  - S-1-5-18
+  - S-1-5-32-544
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileOwnerName
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The source file owner name
+  Sample:
+  - root
+  - NT SERVICE\TrustedInstaller
+  - NT AUTHORITY\SYSTEM
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileGroupSid
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The security identifier of the source file group
+  Sample:
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  - S-1-5-18
+  - S-1-5-21-3770350686-3666354711-3866293128-513
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileGroupName
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The source file user group name
+  Sample:
+  - wheel
+  - staff
+  - NT SERVICE\TrustedInstaller
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileSaclString
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The system access control list of the source file
+  Sample:
+  - S:NO_ACCESS_CONTROL
+  - S:(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
+  - S:(AU;IDSAFA;DCLCRPSDWDWO;;;AU)
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileDaclString
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The discretionary access control list of the source file
+  Sample:
+  - D:(A;;FA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;0x1200a9;;;BA)(A;;0x1200a9;;;SY)(A;;0x1200a9;;;BU)(A;;0x1200a9;;;AC)(A;;0x1200a9;;;S-1-15-2-2)
+  - D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;BU)(A;ID;0x1200a9;;;AC)(A;ID;0x1200a9;;;S-1-15-2-2)
+  - D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFileIsRemoteAccess
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The remote access of the source file
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcFirstSeen
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The first time the source file was seen
+  Sample:
+  - '0'
+  - '1656355418449'
+  - '1656714760440'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcLastSeen
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The last time the source file was seen
+  Sample:
+  - '0'
+  - '1656355418449'
+  - '1656715147313'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: hookId
+  ProductCode:
+  - sao
+  Description_EN: The hook ID
+  Sample:
+  - '-1'
+  - '5'
+  - '4'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectThreadId
+  ProductCode:
+  - sao
+  Description_EN: The object process thread ID
+  Sample:
+  - '10196'
+  - '10104'
+  - '10004'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: moduleName
+  ProductCode:
+  - sao
+  Description_EN: The module where a hook procedure was set up
+  Sample:
+  - c:\program files (x86)\desktopcentral_agent\bin\dcusbsummary.exe
+  - c:\program files\common files\microsoft shared\clicktorun\officesvcmgr.exe
+  - c:\program files (x86)\sharp\sharp pen software\prsnspttool.exe
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: proxy
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The proxy address
+  Sample:
+  - prx.pro.edenor:8080
+  - 10.10.25.199:8080
+  - 172.16.3.42
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileHashId
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The object file hash ID
+  Sample:
+  - '2141057820373638746'
+  - '-6516669617381620295'
+  - '-4912169863817247597'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileRemoteAccess
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The remote access for the object file
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: providerName
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The name of the Windows event provider
+  Sample:
+  - Microsoft-Windows-Security-Auditing
+  - Microsoft-Windows-WMI-Activity
+  - Microsoft-Windows-TaskScheduler
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: providerGUID
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The GUID of the Windows event provider
+  Sample:
+  - '{54849625-5478-4994-A5BA-3E3B0328C30D}'
+  - '{1418EF04-B0B4-4623-BF7E-D74AB47BBDAA}'
+  - '{DE7B24EA-73C8-4A09-985D-5BDADCFA9017}'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: channel
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The Windows event channel
+  Sample:
+  - Security
+  - Microsoft-Windows-WMI-Activity/Trace
+  - Microsoft-Windows-TaskScheduler/Operational
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: rt
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The event time
+  Sample:
+  - 1657781088000
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: rawDataSize
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The size of the Windows event log
+  Sample:
+  - '1128'
+  - '1129'
+  - '1127'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: correlationData
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The data for correlation
+  Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataProviderPath
+  ProductCode:
+  - xes
+  Description_EN: The file path of the Windows event data provider
+  Sample:
+  - '%systemroot%\system32\wbem\ntevt.dll'
+  - '%systemroot%\system32\wbem\stdprov.dll'
+  - C:\WINDOWS\CCM\smsclient.dll
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataProviderName
+  ProductCode:
+  - xes
+  Description_EN: The name of the Windows event data provider
+  Sample:
+  - SmsClientMethodProvider
+  - MS_NT_EVENTLOG_PROVIDER
+  - RegProv
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataLogonProcessName
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The name of the Windows event sign in process name
+  Sample:
+  - 'NtLmSsp '
+  - 'Advapi  '
+  - Advapi
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataAuthenticationPackageName
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The authentication package name of the Windows event data
+  Sample:
+  - NTLM
+  - Negotiate
+  - MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataStatus
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The Windows event data status
+  Sample:
+  - '0xc000006d'
+  - '-1073741715'
+  - '0xc000006e'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataSubStatus
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The Windows event data sub status
+  Sample:
+  - '0xc0000064'
+  - '0xc000006a'
+  - '-1073741724'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataJobOwner
+  ProductCode:
+  - sao
+  Description_EN: The name of the account that initiated the event
+  Sample:
+  - BEI\holdej
+  - NT AUTHORITY\SYSTEM
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataProcessPath
+  ProductCode:
+  - sao
+  Description_EN: The process path that initiated the event
+  Sample:
+  - C:\Program Files\Microsoft Office\Office15\OUTLOOK.EXE
+  - C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe
+  - C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataTargetUserName
+  ProductCode:
+  - sao
+  Description_EN: The user name of the Windows event data target
+  Sample:
+  - Offer Remote Assistance Helpers
+  - Administrators
+  - Administradores
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataConsumer
+  ProductCode:
+  - xes
+  Description_EN: The recipient of the reported event
+  Sample:
+  - HealthDriverEventConsumer="Health Event Consumer"
+  - MemoryEventConsumer="Memory Event Consumer"
+  - SysEventConsumer="System Event Consumer"
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataActionName
+  ProductCode:
+  - sao
+  - xes
+  Description_EN: The action performed
+  Sample:
+  - Language Components Installer
+  - Group Policy Background Processing
+  - C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataTaskName
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The task name logged by the Windows event
+  Sample:
+  - \Microsoft\Windows\LanguageComponentsInstaller\Installation
+  - \Microsoft\Office\Office Serviceability Manager
+  - \MicrosoftEdgeUpdateTaskMachineUA
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataUserContext
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The user context of the Windows event data
+  Sample:
+  - MP\MPBSA179345$
+  - MP\MPBSASPU179370$
+  - MP\MPBSA4025625$
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventDataPath
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The path of the Windows event data
+  Sample:
+  - C:\Program Files\Common Files\Microsoft Shared\ClickToRun\officesvcmgr.exe
+  - taskhostw.exe
+  - gpupdate.exe
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectName
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The object name
+  Sample:
+  - /usr/bin/bash
+  - /bin/bash
+  - /opt/nimsoft/probes/system/processes/processes
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectSessionId
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The object session ID
+  Sample:
+  - '0'
+  - '1'
+  - '2'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectLaunchTime
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The object launch time of the Windows event
+  Sample:
+  - '1616412892557'
+  - '1620778597056'
+  - '1616414113105'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectAuthId
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The object authorization ID
+  Sample:
+  - '999'
+  - '996'
+  - '997'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectUserDomain
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The object user domain
+  Sample:
+  - NT AUTHORITY
+  - AUTORIDADE NT
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectUserGroup
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: The user group name
+  Sample:
+  - staff
+  - _spotlight
+  - wheel
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcHashId
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The source hash ID
+  Sample:
+  - '4070054759888344851'
+  - '2177864258235728980'
+  - '3476454206648023552'
+  DL_Type: long
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: proto
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The telemetry connection protocol type
+  Sample:
+  - TELEMETRY_CONNECTION_TCP
+  - TELEMETRY_CONNECTION_UDP
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: app
+  ProductCode:
+  - xes
+  Description_EN: The layer-7 network protocol being exploited protocol
+  Sample:
+  - SMB
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: objectContentName
+  ProductCode:
+  - xes
+  - sds
+  - sao
+  Description_EN: The AMSI object content name
+  Sample:
+  - C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
+  - c:\synclog\BLAST_SCAN.vbs
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectRawDataSize
+  ProductCode:
+  - xes
+  - sds
+  - sao
+  Description_EN: The raw data size of the Windows event object
+  Sample:
+  - '9'
+  - '1'
+  - '564'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectRunAsLocalAccount
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The "runas" command uses a local account
+  Sample:
+  - 0
+  - 1
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectApiName
+  ProductCode:
+  - xes
+  Description_EN: The name of the executed API
+  Sample:
+  - GetIpNetTable
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectApiHookNum
+  ProductCode:
+  - xes
+  Description_EN: The API hook number of the object
+  Sample:
+  - 1
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectApiRvInNum
+  ProductCode:
+  - xes
+  Description_EN: The API telemetry return value
+  Sample:
+  - '0'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectRegistryRoot
+  ProductCode:
+  - xes
+  - sds
+  - sao
+  Description_EN: The Windows Registry Root ID
+  Sample:
+  - '3'
+  - '1'
+  - '2'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectRegType
+  ProductCode:
+  - sds
+  - xes
+  - sao
+  Description_EN: The Windows Registry Type ID
+  Sample:
+  - 1
+  - 11
+  - 4
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileAttributesHashId
+  ProductCode:
+  - xes
+  Description_EN: The hash ID of the file attribute meta information
+  Sample:
+  - 1626660901647460150
+  - -3744588546027069975
+  - 8709345175736065179
+  DL_Type: Ｎone
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileCurrentAttributes
+  ProductCode:
+  - xes
+  Description_EN: The original file attributes
+  Sample:
+  - 0
+  - 34
+  - 8224
+  DL_Type: Ｎone
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectFileAttributes
+  ProductCode:
+  - xes
+  Description_EN: The new file attributes
+  Sample:
+  - 2
+  - 32
+  - 8192
+  DL_Type: Ｎone
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: nativeDeviceCharacteristics
+  ProductCode:
+  - xes
+  Description_EN: Additional driver device information
+  Sample:
+  - 393217
+  - 131072
+  - 131088
+  DL_Type: Ｎone
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: nativeDeviceType
+  ProductCode:
+  - xes
+  Description_EN: The underlying hardware type of the driver
+  Sample:
+  - 2
+  - 7
+  - 20
+  DL_Type: Ｎone
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: nativeStorageDeviceBusType
+  ProductCode:
+  - xes
+  Description_EN: The bus type to which the device is connected
+  Sample:
+  - 0
+  - 2
+  - 17
+  DL_Type: Ｎone
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: deviceType
+  ProductCode:
+  - xes
+  Description_EN: The disk drive type
+  Sample:
+  - TELEMETRY_DEVICE_TYPE_UNKNOWN
+  - TELEMETRY_DEVICE_TYPE_REMOVABLE
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: smbSharedName
+  ProductCode:
+  - xes
+  Description_EN: The shared folder name for the server that contains the files
+  Sample:
+  - sharedfolder
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: importTableFileName
+  ProductCode:
+  - xes
+  Description_EN: The library file name which has imported functions
+  Sample:
+  - KERNEL32.dll
+  - ADVAPI32.dll
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: importTableFunctionName
+  ProductCode:
+  - xes
+  Description_EN: The imported function file name
+  Sample:
+  - SwitchToThread/GetSystemInfo
+  - OpenProcessToken
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: importTable
+  ProductCode:
+  - xes
+  Description_EN: The imported table information
+  Sample: []
+- Name: customFilterTags
+  ProductCode:
+  - ALL
+  Description_EN: The detection filter that matched data based on custom filters
+  Sample:
+  - XCUS.CF0131
+  - USER.HELLOWORLD
+  DL_Type: dynamic
+  DL_CommonKey:
+  - Technique
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: customFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top-level risk level of the event by custom filters
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: tmFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top-level risk level of the event by SAE filters
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false

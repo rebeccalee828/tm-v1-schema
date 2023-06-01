@@ -220,3 +220,30 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: partitionKey
+  ProductCode:
+  - ALL
+  Description_EN: The partition key for a management scope (endpoint only)
+  Sample:
+  - ebb418f0-43b7-fd1e-a8f4-3a1261720071
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: mgmtInstanceId
+  ProductCode:
+  - ALL
+  Description_EN: The instance ID for a management scope, which is the same as tenantGuid
+    (endpoint only)
+  Sample:
+  - f41a9efa-beee-6ff7-319d-e4ffa63f21df
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: policyTreePath
+  ProductCode:
+  - ALL
+  Description_EN: The policy tree path, provided by SAP (endpoint only)
+  Sample:
+  - policyname1/policyname2/policyname3
