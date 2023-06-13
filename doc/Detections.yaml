@@ -696,6 +696,22 @@
   - CLICommand
   DL_Searchable: true
   DL_Aggregable: false
+- Name: processCmdNormalized
+  ProductCode:
+  - sds
+  - xes
+  - pds
+  - sao
+  - scs
+  Description_EN: The normalized subject process command line
+  Sample:
+  - 'C:\Program Files (x86)\AADM\AADM.exe '
+  - /usr/lib/inet/sendmail -bl -q15m
+  - ComDir
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: objectCmd
   ProductCode:
   - sao
@@ -711,6 +727,21 @@
   DL_CommonKey:
   - CLICommand
   DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectCmdNormalized
+  ProductCode:
+  - sao
+  - sds
+  - xes
+  Description_EN: The normalized object process command line
+  Sample:
+  - C:\WINDOWS\system32\wbem\wmiprvse.exe -Embedding
+  - C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell.exe -NoLogo -Noninteractive
+    -NoProfile  -ExecutionPolicy Bypass & 'C:\WINDOWS\CCM\SystemTemp\afd6f0e5-e491-4764-a20a-9f1d9edf3cce.ps1'
+  - C:\WINDOWS\system32\lsass.exe
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: false
   DL_Aggregable: false
 - Name: objectRegistryData
   ProductCode:
@@ -1104,6 +1135,19 @@
   - CLICommand
   DL_Searchable: true
   DL_Aggregable: false
+- Name: parentCmdNormalized
+  ProductCode:
+  - xes
+  - scs
+  Description_EN: The normalized command line of the subject parent process
+  Sample:
+  - 'C:\Tiburon\CommandCAD\Test\Startup.exe '
+  - C:\WINDOWS\Explorer.EXE
+  - C:\WINDOWS\system32\svchost.exe -k netsvcs -p -s Appinfo
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: parentFilePath
   ProductCode:
   - xes
@@ -1216,6 +1260,18 @@
   - '003'
   - apiPostedPolicy-20k8uSUpUtTcLbvkrbBeALP0YEf
   DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: act
+  ProductCode:
+  - scs
+  Description_EN: The actions taken to mitigate the event
+  Sample:
+  - log
+  - isolate
+  - terminate
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
@@ -1848,6 +1904,37 @@
   Description_EN: The policy tree path, provided by SAP
   Sample:
   - policyname1/policyname2/policyname3
+- Name: cloudProvider
+  ProductCode:
+  - sds
+  Description_EN: The cloud provider of the endpoint
+  Sample:
+  - aws
+  - azure
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: vpcId
+  ProductCode:
+  - sds
+  Description_EN: The virtual private cloud of the endpoint
+  Sample:
+  - vpc-01234567890abcdef
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: regionId
+  ProductCode:
+  - sds
+  Description_EN: The region of the endpoint
+  Sample:
+  - us-east-1
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: aggregatedCount
   ProductCode:
   - pdi
@@ -2462,6 +2549,19 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: fileOperation
+  ProductCode:
+  - sds
+  - pds
+  Description_EN: The operation of the file
+  Sample:
+  - Created
+  - Updated
+  - Deleted
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: fileSize
   ProductCode:
   - pdi
@@ -2695,6 +2795,18 @@
   - sem
   Description_EN: The mail received timestamp
   Sample: []
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: mailFolder
+  ProductCode:
+  - sca
+  Description_EN: The email folder name
+  Sample:
+  - CATEGORY_PROMOTIONS, UNREAD, INBOX
+  - UNREAD, CATEGORY_PERSONAL, INBOX
+  - UNREAD, CATEGORY_UPDATES, INBOX
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
@@ -3288,6 +3400,18 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: sOSName
+  ProductCode:
+  - pdi
+  Description_EN: The source operating system
+  Sample:
+  - Windows
+  - Windows 10
+  - Windows XP
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: scanTs
   ProductCode:
   - sca
@@ -3397,6 +3521,18 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcZone
+  ProductCode:
+  - pdi
+  Description_EN: The network zone defined by the source administrator
+  Sample:
+  - '1'
+  - '0'
+  - '2'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
   DL_Aggregable: false
 - Name: threatName
   ProductCode:
@@ -4153,6 +4289,28 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: firstSeen
+  ProductCode:
+  - sca
+  - pts
+  Description_EN: The first time the XDR log appeared
+  Sample:
+  - 1657195233000
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: lastSeen
+  ProductCode:
+  - sca
+  - pts
+  Description_EN: The last time the XDR log appeared
+  Sample:
+  - 1657195233000
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: attachmentFileHashs
   ProductCode:
   - sca
@@ -4161,6 +4319,36 @@
   Sample:
   - 056a2975edffe7188c03c324ae4335f9380b57e3
   - 05fd3ac8f9d8407e6637e0f91cd2ff5ab076658a
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: schemaVersion
+  ProductCode:
+  - sca
+  Description_EN: The schema version
+  Sample:
+  - '1.0'
+  DL_Type:
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: reportGUID
+  ProductCode:
+  - sca
+  Description_EN: The GUID for Workbench to request report page data
+  Sample:
+  - 959eaca0-bd45-41a1-9fa2-6a80d2642215
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: indicatorCount
+  ProductCode:
+  - sca
+  Description_EN: The number of report indicators
+  Sample:
+  - 2
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
@@ -4308,6 +4496,393 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: ruleId64
+  ProductCode:
+  - ptn
+  Description_EN: The TXOne OT Defense Console IPS Rule ID
+  Sample:
+  - '1134268'
+  - '4026531849'
+  - '4026531852'
+  DL_Type: long
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: smbSharedName
+  ProductCode:
+  - xes
+  Description_EN: The shared folder name for the server that contains the files to
+    be opened
+  Sample:
+  - C:\sharedfolder
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: sessionStart
+  ProductCode:
+  - szn
+  Description_EN: The session start time, in seconds
+  Sample:
+  - 1575462989
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: sessionEnd
+  ProductCode:
+  - szn
+  Description_EN: The session end time, in seconds
+  Sample:
+  - 1575462989
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: originUUID
+  ProductCode:
+  - ALL
+  Description_EN: The UUID of the original events which matches the Security Analytics
+    Engine filter
+  Sample:
+  - 5b3a70cb-f338-40fe-b17b-ab8f9aeedee7
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: originPackageTraceId
+  ProductCode:
+  - ALL
+  Description_EN: The package trace ID of the original events which matches the Security
+    Analytics Engine filter
+  Sample:
+  - 5b3a70cb-f338-40fe-b17b-ab8f9aeedee7
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: originEventSourceType
+  ProductCode:
+  - ALL
+  Description_EN: The event source type of the original events which matches the Security
+    Analytics Engine filter
+  Sample:
+  - EVENT_SOURCE_TELEMETRY
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: isRetroScan
+  ProductCode:
+  - ALL
+  Description_EN: If the event matches the Security Analytics Engine filter
+  Sample:
+  - true
+  DL_Type: bool
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: logonUsers
+  ProductCode:
+  - ALL
+  Description_EN: The telemetry events match the Security Analytics Engine filter,
+    and logonUsers stores the logonUsers value of the original events
+  Sample:
+  - BHBShortJ
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: userDomains
+  ProductCode:
+  - ALL
+  Description_EN: The telemetry events match the Security Analytics Engine filter,
+    and userDomains stores the userDomains value of the original events
+  Sample:
+  - CORP
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: pcapUUID
+  ProductCode:
+  - pdi
+  Description_EN: The PCAP file UUID
+  Sample:
+  - c9ebd33e-4e69-4dff-bd5c-907081e8492c
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: quarantineFileName
+  ProductCode:
+  - pts
+  Description_EN: The file path of the quarantined object
+  Sample:
+  - C:\Program Files\TXOne\StellarProtect\private\quarantine\4429d703-9845-4dff-af25-aab707fb0f19
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: peerEndpointGUID
+  ProductCode:
+  - pdi
+  - stp
+  - ptp
+  Description_EN: The endpoint GUID of the agent peer host
+  Sample:
+  - 7a45e787-ab13-41d2-87b5-6e2eb972d6b0
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: customTags
+  ProductCode:
+  - scs
+  Description_EN: The event tags
+  Sample:
+  - network
+  - mitre_discovery
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: clusterId
+  ProductCode:
+  - scs
+  Description_EN: The container cluster ID
+  Sample:
+  - ben_eks_test-20k90A3jGa4d3YMYfrdGIgs7g9u
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: clusterName
+  ProductCode:
+  - scs
+  Description_EN: The container cluster name
+  Sample:
+  - ben_eks_test
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: k8sNamespace
+  ProductCode:
+  - scs
+  Description_EN: The Kubernetes namespace for the container
+  Sample:
+  - default
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: k8sPodName
+  ProductCode:
+  - scs
+  Description_EN: The Kubernetes Pod name for the container
+  Sample:
+  - ubuntu-ds-fp2jk
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: k8sPodId
+  ProductCode:
+  - scs
+  Description_EN: The Kubernetes Pod ID for the container
+  Sample:
+  - fc550ed4-3b54-402a-a56d-46096c285660
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: containerName
+  ProductCode:
+  - scs
+  Description_EN: The container name
+  Sample:
+  - k8s_ubuntu_ubuntu-ds-fp2jk_default_fc550ed4-3b54-402a-a56d-46096c285660_2
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: containerId
+  ProductCode:
+  - scs
+  Description_EN: The container ID
+  Sample:
+  - 4102001853b8
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: containerImage
+  ProductCode:
+  - scs
+  Description_EN: The container image URI
+  Sample:
+  - dockerhub.io/ubuntu:latest
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: containerImageDigest
+  ProductCode:
+  - scs
+  Description_EN: The container image digest
+  Sample:
+  - sha256:626ffe58f6e7566e00254b638eb7e0f3b11d4da9675088f4781a50ae288f3322
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: ruleSetName
+  ProductCode:
+  - scs
+  Description_EN: The rule set name
+  Sample:
+  - AllRules
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: ruleSetId
+  ProductCode:
+  - scs
+  Description_EN: The rule set ID
+  Sample:
+  - AllRules-1zSSZPsDqfqkcOt5vNsD6f383HN
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: ruleIdStr
+  ProductCode:
+  - scs
+  Description_EN: The rule ID string
+  Sample:
+  - TM-00000043
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: highlightedFileHashes
+  ProductCode:
+  - sca
+  - sem
+  Description_EN: The SHA-1 hashes of the highlighted file
+  Sample:
+  - C9877617DB6715792F9D5C959C1E8D4E56D0C281
+  - 0340A8EE3AD2990E3EDCDB2E471EAA45B4286722
+  - 0E56D9540B07ED15EF745348D35C72A6A00A0BD9
+  DL_Type: dynamic
+  DL_CommonKey:
+  - FileSHA1
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processSigner
+  ProductCode:
+  - xes
+  - sds
+  Description_EN: The signer name list of the subject process
+  Sample:
+  - Microsoft Windows
+  - Microsoft Windows Publisher
+- Name: parentUser
+  ProductCode:
+  - sds
+  Description_EN: The account name of the parent process
+  Sample:
+  - Administrator
+- Name: parentUserDomain
+  ProductCode:
+  - sds
+  Description_EN: The domain name of the parent process
+  Sample:
+  - builtindomain
+- Name: rawSrcIp
+  ProductCode:
+  - pdi
+  Description_EN: The source IP without replacement
+  Sample:
+  - 108.111.231.95
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: rawDstIp
+  ProductCode:
+  - pdi
+  Description_EN: The destination IP without replacement
+  Sample:
+  - 182.223.158.84
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: rawSrcPort
+  ProductCode:
+  - pdi
+  Description_EN: The source port number without replacement
+  Sample:
+  - 80
+  DL_Type: int
+  DL_CommonKey:
+  - Port
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: rawDstPort
+  ProductCode:
+  - pdi
+  Description_EN: The destination port number without replacement
+  Sample:
+  - 33186
+  DL_Type: int
+  DL_CommonKey:
+  - Port
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: cloudAppName
+  ProductCode:
+  - sca
+  Description_EN: The cloud app name
+  Sample:
+  - teams
+  - sharepoint
+  - exchange
+  - gmail
+- Name: customFilterTags
+  ProductCode:
+  - ALL
+  Description_EN: The detection filter that matched data based on custom filters
+  Sample:
+  - XCUS.CF0131
+  - USER.HELLOWORLD
+  DL_Type: dynamic
+  DL_CommonKey:
+  - Technique
+  - Tactic
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: customFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top-level risk level of the event by custom filter
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
 - Name: processImagePath
   ProductCode:
   - sds
@@ -4323,6 +4898,36 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: vendor
+  ProductCode:
+  - sao
+  Description_EN: The device vendor
+  Sample:
+  - adata
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: deviceModel
+  ProductCode:
+  - sao
+  Description_EN: The device model number
+  Sample:
+  - c96a
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: deviceSerial
+  ProductCode:
+  - sao
+  Description_EN: The device serial ID
+  Sample:
+  - 000000063a2e8f
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
 - Name: suspiciousObject
   ProductCode:
   - xes
@@ -4343,3 +4948,18 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
+- Name: tmFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top-level risk level of the event by Security Analytics Engine
+    filter
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
