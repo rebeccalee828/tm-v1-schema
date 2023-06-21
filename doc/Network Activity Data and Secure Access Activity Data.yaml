@@ -159,8 +159,7 @@
 - Name: mgmtInstanceId
   ProductCode:
   - ALL
-  Description_EN: The instance ID for a management scope, which is the same as tenantGuid
-    (endpoint only)
+  Description_EN: The management scope instance ID
   Sample:
   - f41a9efa-beee-6ff7-319d-e4ffa63f21df
   DL_Type: string
@@ -594,12 +593,14 @@
 - Name: pname
   ProductCode:
   - sig
+  - pdi
+  - xns
   Description_EN: The product name
   Sample:
   - Secure Web Gateway
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: pver
   ProductCode:
@@ -1113,7 +1114,7 @@
   - xns
   Description_EN: The file information extracted from files detected in response direction
   Sample:
-  - 
+  -
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
@@ -1258,7 +1259,7 @@
   - xns
   Description_EN: The file information extracted from detected files
   Sample:
-  - 
+  -
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
@@ -1406,7 +1407,7 @@
   - xns
   Description_EN: The transaction information of the FTP protocol
   Sample:
-  - 
+  -
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
@@ -1446,8 +1447,8 @@
   DL_Type: dynamic
   DL_CommonKey:
   - Technique
-  DL_Searchable: true
-  DL_Aggregable: true
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: customFilterRiskLevel
   ProductCode:
   - ALL
@@ -1460,8 +1461,8 @@
   - critical
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: true
-  DL_Aggregable: true
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: e2eLatency
   ProductCode:
   - sig

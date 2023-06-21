@@ -233,8 +233,7 @@
 - Name: mgmtInstanceId
   ProductCode:
   - ALL
-  Description_EN: The instance ID for a management scope, which is the same as tenantGuid
-    (endpoint only)
+  Description_EN: The management scope instance ID
   Sample:
   - f41a9efa-beee-6ff7-319d-e4ffa63f21df
   DL_Type: string
