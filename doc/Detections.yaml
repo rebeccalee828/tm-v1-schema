@@ -1744,7 +1744,8 @@
   - sws
   - sig
   - szn
-  Description_EN: Name of the requested application
+  - sao
+  Description_EN: The name of the requested application
   Sample:
   - HyperText Transfer Protocol
   - DoubleClick
@@ -3155,7 +3156,8 @@
   - xes
   - pds
   - scs
-  Description_EN: The process triggered by a behavior monitoring event
+  - sao
+  Description_EN: The process triggered by an event
   Sample:
   - c:\windows\system32\svchost.exe
   - /usr/bin/python2.7
@@ -3596,9 +3598,9 @@
   - policyName:Monitoreo All Files, template:Managed - All files
   - policyName:HSS DLP, template:All File Extension
   - 'India: Mobile Numbers'
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: computerDomain
   ProductCode:
@@ -4781,6 +4783,13 @@
   - FileSHA1
   DL_Searchable: true
   DL_Aggregable: false
+- Name: mailMsgDirection
+  ProductCode:
+  - sca
+  - sem
+  Description_EN: The direction of the email message
+  Sample:
+  - 1
 - Name: processSigner
   ProductCode:
   - xes
@@ -4963,3 +4972,107 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: objectPayloadFileHashSha1
+  ProductCode: []
+  Description_EN: The SHA-1 of the object payload file
+  Sample: []
+  DL_Type: string
+  DL_CommonKey:
+  - FileSHA1
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectTargetProcess
+  ProductCode: []
+  Description_EN: The file path of the target process that the API performs. For example,
+    process of "a.exe" dumps credential from lsass.exe.
+  Sample:
+  - C:\\Windows\\System32\\lsass.exe
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcFilePath
+  ProductCode: []
+  Description_EN: The file path of the source file
+  Sample:
+  - C:\\temp\\a.exe
+  DL_Type: string
+  DL_CommonKey:
+  - FileFullPath
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcFileHashSha1
+  ProductCode: []
+  Description_EN: The SHA-1 of the source file
+  Sample: []
+  DL_Type: string
+  DL_CommonKey:
+  - FileSHA1
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcFileHashSha256
+  ProductCode: []
+  Description_EN: The SHA-256 of the source file
+  Sample: []
+  DL_Type: string
+  DL_CommonKey:
+  - FileSHA2
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcFileHashMd5
+  ProductCode: []
+  Description_EN: The MD5 of the source file
+  Sample: []
+  DL_Type: string
+  DL_CommonKey:
+  - FileMD5
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: quarantineFilePath
+  ProductCode: []
+  Description_EN: The OfficeScan server file path for the quarantined file (When a
+    file is quarantined, it is encrypted and copied to the OfficeScan server for post-mortem
+    analysis)
+  Sample: []
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: clientStatus
+  ProductCode:
+  - sao
+  Description_EN: The client status when the event occurred
+  Sample:
+  - Rebuilding database
+  - Online
+  - Offline
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: dacDeviceType
+  ProductCode:
+  - sao
+  Description_EN: The device type
+  Sample:
+  - USB storage device
+  - Mobile devices
+  - Floppy disks
+  - Network driver
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: accessPermission
+  ProductCode:
+  - sao
+  Description_EN: The access permission type
+  Sample:
+  - Modify
+  - Read and execute
+  - List device content only
+  - Block
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true

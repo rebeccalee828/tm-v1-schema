@@ -861,9 +861,9 @@
   Description_EN: The Data Loss Prevention template name
   Sample:
   - 'Australia, New Zealand: Healthcare Template,Germany: Banking and Financial Information'
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: serverIp
   ProductCode:
