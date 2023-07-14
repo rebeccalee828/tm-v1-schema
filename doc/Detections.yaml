@@ -1073,12 +1073,15 @@
   ProductCode:
   - sds
   - pds
-  Description_EN: Subrule name
+  - sca
+  - sem
+  Description_EN: The subrule name
   Sample:
   - Pre-authentication failed.
   - 'ATTACK T1070.002,T1070.004: Indicator Removal on Host : Clear Linux or Mac System
     Logs,File Deletion '
   - 'ATTACK T1110: Multiple Windows Logon Failures'
+  - invisible_url_domain
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
@@ -2657,6 +2660,19 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: groups
+  ProductCode:
+  - sds
+  - pds
+  Description_EN: The OSSEC rule group names
+  Sample:
+  - auditd,audit,
+  - dirservice_log,authentication_failure,
+  - windows,authentication_failures,
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: hasdtasres
   ProductCode:
   - pdi
@@ -2675,6 +2691,18 @@
   Sample:
   - 0
   - 1
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: hostId
+  ProductCode:
+  - sds
+  - pds
+  Description_EN: The host ID
+  Sample:
+  - 20548
+  - 967
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
@@ -3052,6 +3080,19 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: out
+  ProductCode:
+  - sds
+  - pds
+  Description_EN: The IP datagram length (in bytes)
+  Sample:
+  - '0'
+  - '439'
+  - '1314'
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: pAttackPhase
   ProductCode:
   - pdi
@@ -3202,6 +3243,19 @@
   - TCP
   - '17'
   DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: protoFlag
+  ProductCode:
+  - sds
+  - pds
+  Description_EN: The data flags
+  Sample:
+  - ACK PSH DF=1
+  - ACK DF=1
+  - DF=1
+  DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3508,6 +3562,19 @@
   - a8:d0:e5:5c:cb:c5
   - 00:50:56:b2:93:46
   - 00:09:0f:09:00:06
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: sproc
+  ProductCode:
+  - sds
+  - pds
+  Description_EN: The OSSEC program name
+  Sample:
+  - postfix/sendmail
+  - CRON
+  - sshd
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
@@ -4321,6 +4388,19 @@
   Sample:
   - 056a2975edffe7188c03c324ae4335f9380b57e3
   - 05fd3ac8f9d8407e6637e0f91cd2ff5ab076658a
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: attachmentFileTlshs
+  ProductCode:
+  - sca
+  - sem
+  Description_EN: The TLSH hash value of the attachment file
+  Sample:
+  - ''
+  - 0FE18E0807B75799EF3ADD7A98D62411FEB31DAB419C913C058068A3A6B33BD114EA39
+  - 97D18E86E87A85D1D4137E6DA6FD00580E4CF06F65DB2B2937815E4F3A3013042A2189
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false

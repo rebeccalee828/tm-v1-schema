@@ -103,6 +103,42 @@
   Description_EN: The policy tree path, provided by SAP (endpoint only)
   Sample:
   - policyname1/policyname2/policyname3
+- Name: customerId
+  ProductCode:
+  - ALL
+  Description_EN: The unique Customer ID
+  Sample:
+  - f1239ee8-be7f-4245-a248-8e2fb161f41b
+  - dcf53bea-fa92-44fa-b1c5-da7ce3c1329e
+  - ee210d23-d5cd-485d-9595-39e1e5ea1705
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventCase
+  ProductCode:
+  - ALL
+  Description_EN: The AWS service that the request was made to
+  Sample:
+  - workspaces.amazonaws.com
+  - sts.amazonaws.com
+  - kms.amazonaws.com
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventSubId
+  ProductCode:
+  - ALL
+  Description_EN: The access type of the event
+  Sample:
+  - PutObject
+  - GetObject
+  - DescribeTable
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: eventID
   ProductCode:
   - sct
@@ -382,6 +418,46 @@
   Sample:
   - '{"lifecycleEventPolicy":{"policyVersion":1,"policyId":"00bf7b21-eab1-39e0-b664-d0acfda1009d"}}'
   DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: customFilterTags
+  ProductCode:
+  - ALL
+  Description_EN: The detection filter that matched data based on custom filters
+  Sample:
+  - XCUS.CF0131
+  - USER.HELLOWORLD
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: customFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top-level risk level of the event by custom filter
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: tmFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top-level risk level of the event by Security Analytics Engine
+    filter
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
