@@ -2392,9 +2392,9 @@
   - 00:09:0f:09:e6:18
   - 01:00:5E:7F:FF:FA
   - 00:00:0c:9f:f0:0a
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: dstGroup
   ProductCode:
@@ -3562,9 +3562,9 @@
   - a8:d0:e5:5c:cb:c5
   - 00:50:56:b2:93:46
   - 00:09:0f:09:00:06
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: sproc
   ProductCode:
