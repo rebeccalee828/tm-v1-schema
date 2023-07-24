@@ -493,7 +493,7 @@
   - gateway_mailmetadata
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailFolder
   ProductCode:

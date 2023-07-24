@@ -909,9 +909,9 @@
   Description_EN: The client MAC address
   Sample:
   - 00-08-e3-ff-fd-90
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: serverMAC
   ProductCode:
@@ -920,9 +920,9 @@
   Description_EN: The server MAC address
   Sample:
   - 58-35-d9-de-4a-42
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: flowId
   ProductCode:
