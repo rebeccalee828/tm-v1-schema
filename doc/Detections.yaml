@@ -5156,3 +5156,43 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
+- Name: sslCertIssuerCommonName
+  ProductCode:
+  - pdi
+  Description_EN: The issuer common name
+  Sample:
+  - Microsoft Azure TLS Issuing CA 05
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: sslCertCommonName
+  ProductCode:
+  - pdi
+  Description_EN: The subject common name
+  Sample:
+  - settings-win.data.microsoft.com
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: sslCertIssuerOrgName
+  ProductCode:
+  - pdi
+  Description_EN: The issuer organization name
+  Sample:
+  - Microsoft Corporation
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: sslCertOrgName
+  ProductCode:
+  - pdi
+  Description_EN: The subject organization name
+  Sample:
+  - Microsoft
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
