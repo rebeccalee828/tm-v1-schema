@@ -13,7 +13,7 @@
 - Name: filterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Event's top level filter risk
+  Description_EN: The top level filter risk of the event
   Sample:
   - info
   - low
@@ -28,8 +28,8 @@
   - sds
   - pds
   - ptn
-  Description_EN: Computer name of the client host (For Deep Discover Inspector, the
-    hostname from the suspicious URL)
+  Description_EN: The computer name of the client host (The hostname from the suspicious
+    URL detected by Deep Discovery Inspector)
   Sample:
   - Let's Encrypt
   - 35.247.144.219
@@ -46,8 +46,9 @@
   - pdi
   - pds
   - sao
-  Description_EN: Endpoint hostname (For example, if an intranet host accesses a suspicious
-    internet host, intranet host will be "peerHost" and internet host will be "interestedHost")
+  Description_EN: The endpoint hostname (For example, if an intranet host accesses
+    a suspicious internet host, the intranet host is the "peerHost" and the internet
+    host is the "interestedHost")
   Sample:
   - 10.124.17.69 (swpos-aws-aza02) [i-0fd28720e80225308]
   - 10.124.21.139 (swpos-aws-azc02) [i-07e2c4a803cd0fa93]
@@ -62,7 +63,7 @@
   - sds
   - pdi
   - pds
-  Description_EN: Source hostname
+  Description_EN: The source hostname
   Sample:
   - dns.google
   - sw_us-east-1a_10-124-17-69
@@ -75,7 +76,7 @@
 - Name: dhost
   ProductCode:
   - pdi
-  Description_EN: Destination hostname
+  Description_EN: The destination hostname
   Sample:
   - 10.46.91.40
   - 200.185.65.108
@@ -88,7 +89,7 @@
 - Name: denyListHost
   ProductCode:
   - pdi
-  Description_EN: Domain of the Virtual Analyzer Suspicious Object
+  Description_EN: The domain of the Virtual Analyzer Suspicious Object
   Sample:
   - 'www.yandex2unitedstated.dns04.com '
   - bingsearchlib.com
@@ -109,7 +110,7 @@
   - szn
   - pts
   - scs
-  Description_EN: Endpoint hostname
+  Description_EN: Host name of the endpoint or node on which the event was detected
   Sample:
   - 10.124.17.69 (swpos-aws-aza02) [i-0fd28720e80225308]
   - 10.124.21.139 (swpos-aws-azc02) [i-07e2c4a803cd0fa93]
@@ -151,7 +152,7 @@
   - szn
   - pts
   - scs
-  Description_EN: GUID of the agent which reported this detection
+  Description_EN: The GUID of the agent which reported the detection
   Sample:
   - ae4d64aa-f8b8-bb36-b265-f59272ed342f
   - 8fb979f6-1376-bed3-227f-f2886e66194e
@@ -174,7 +175,7 @@
   - pds
   - ams
   - szn
-  Description_EN: Notable URL
+  Description_EN: The notable URLs
   Sample:
   - http://detectportal.firefox.com/canonical.html
   - http://35.247.144.219/
@@ -187,7 +188,7 @@
 - Name: botUrl
   ProductCode:
   - pdi
-  Description_EN: Bot URL
+  Description_EN: The bot URL
   Sample:
   - 7?01
   - '0000'
@@ -200,7 +201,7 @@
 - Name: cccaDestination
   ProductCode:
   - pdi
-  Description_EN: Destination domain, IP, URL, or recipient
+  Description_EN: The destination domain, IP, URL, or recipient
   Sample:
   - 157.240.233.61:443
   - www.yandex2unitedstated.dns04.com
@@ -223,7 +224,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: Source IP
+  Description_EN: Source address of the network connection
   Sample:
   - 8.8.8.8
   - 0.0.0.0
@@ -247,7 +248,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: Destination IP
+  Description_EN: Destination IP address of the network connection
   Sample:
   - 239.255.255.250
   - 0.0.0.0
@@ -267,7 +268,7 @@
   - ptp
   - stp
   - ptn
-  Description_EN: IP of interestedHost
+  Description_EN: The IP of the interestedHost
   Sample:
   - 192.168.204.215
   - 192.168.26.167
@@ -286,7 +287,7 @@
   - ptp
   - stp
   - ptn
-  Description_EN: IP of endpointHost (For ptp/stp, client IP)
+  Description_EN: The IP of the endpoint host (For ptp/stp, client IP)
   Sample:
   - 192.168.204.215
   - 192.168.26.167
@@ -301,7 +302,7 @@
   ProductCode:
   - pdi
   - sao
-  Description_EN: IP of peerHost
+  Description_EN: The IP of peerHost
   Sample:
   - 8.8.8.8
   - 0.0.0.0
@@ -315,7 +316,7 @@
 - Name: denyListIp
   ProductCode:
   - pdi
-  Description_EN: IP of the Virtual Analyzer Suspicious Object
+  Description_EN: The IP of the Virtual Analyzer Suspicious Object
   Sample:
   - 146.185.253.132
   - 170.114.10.75
@@ -338,7 +339,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: Destination port
+  Description_EN: Destination port number of the network connection
   Sample:
   - 0
   - 445
@@ -360,7 +361,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: Source port
+  Description_EN: Source port number of the network connection
   Sample:
   - 53
   - 0
@@ -378,7 +379,7 @@
   - pds
   - sig
   - pts
-  Description_EN: File name
+  Description_EN: The file name
   Sample:
   - spoolss
   - hosts
@@ -392,7 +393,7 @@
   ProductCode:
   - sao
   - scs
-  Description_EN: Object file name
+  Description_EN: The object file name
   Sample:
   - powershell.exe
   - wmiprvse.exe
@@ -406,7 +407,7 @@
   ProductCode:
   - pdi
   - sao
-  Description_EN: File name of the compressed file
+  Description_EN: The file name of the compressed file
   Sample:
   - /proc/32058/fd/150
   - NONAMEFL
@@ -421,7 +422,7 @@
   - sca
   - sem
   - pdi
-  Description_EN: File name of an attachment
+  Description_EN: The file name of an attachment
   Sample:
   - Mail Body
   - image001.png
@@ -438,7 +439,7 @@
   - sao
   - pdi
   - pts
-  Description_EN: File path without the file name
+  Description_EN: The file path without the file name
   Sample:
   - security
   - /var/log/audit/audit.log
@@ -454,7 +455,7 @@
   - pdi
   - pds
   - pts
-  Description_EN: File path with the file name
+  Description_EN: The file path with the file name
   Sample:
   - vss
   - spoolss
@@ -470,7 +471,7 @@
   - sds
   - xes
   - scs
-  Description_EN: File path of the target object
+  Description_EN: File path of the target process image or target file
   Sample:
   - c:\windows\system32\windowspowershell\v1.0\powershell.exe
   - zwwritevirtualmemory
@@ -483,9 +484,9 @@
 - Name: forensicFilePath
   ProductCode:
   - sao
-  Description_EN: File path of the forensic file (When a Data Loss Prevention policy
-    is triggered, the file is encrypted and copied to the OfficeScan server for post-mortem
-    analysis)
+  Description_EN: The file path of the forensic file (When a Data Loss Prevention
+    policy is triggered, the file is encrypted and copied to the OfficeScan server
+    for post-mortem analysis)
   Sample:
   - C:\Program Files (x86)\Trend Micro\OfficeScan Client\dlplite\forensic\frnsc_200411DC0594_xml_184956f80d8_20220314_132326281
   - C:\Program Files (x86)\Trend Micro\OfficeScan Client\dlplite\forensic\frnsc_CIL-OPRCOGEN_docx_1f5743ba18c_20211025_225445873
@@ -501,7 +502,7 @@
   - pds
   - sao
   - sig
-  Description_EN: SHA-1 of file that triggered the rule or policy
+  Description_EN: The SHA-1 of the file that triggered the rule or policy
   Sample:
   - DA39A3EE5E6B4B0D3255BFEF95601890AFD80709
   - 89CE26EAD139D52B8A6B61BFFC6AF89AF246580F
@@ -514,7 +515,7 @@
 - Name: attachmentFileHash
   ProductCode:
   - pdi
-  Description_EN: SHA-1 of the email attachment
+  Description_EN: The SHA-1 of the email attachment
   Sample:
   - C9877617DB6715792F9D5C959C1E8D4E56D0C281
   - 0340A8EE3AD2990E3EDCDB2E471EAA45B4286722
@@ -528,7 +529,7 @@
   ProductCode:
   - sca
   - sem
-  Description_EN: SHA-1 of the attached file (attachementFileName)
+  Description_EN: The SHA-1 of the attached file (attachementFileName)
   Sample:
   - d63b1739a2fe56eb412dff1c69b76d4b9aad8ebd
   - 3b923d078ea3bd39489ed6d334c423e4478a8ee3
@@ -541,7 +542,7 @@
 - Name: compressedFileHash
   ProductCode:
   - pdi
-  Description_EN: SHA-1 of the decompressed archive
+  Description_EN: The SHA-1 of the decompressed archive
   Sample:
   - 6E2ECB34B7798E179CC704111FB9733FBAAD5ACA
   - FA71B59F35F0EE44D27F74917EF5A0DA2797E80B
@@ -554,7 +555,7 @@
 - Name: denyListFileHash
   ProductCode:
   - pdi
-  Description_EN: SHA-1 of the Virtual Analyzer Suspicious Object
+  Description_EN: The SHA-1 of the Virtual Analyzer Suspicious Object
   Sample:
   - 746C4D6048A409F33446463B28CA21CB2C5DD941
   - DAA66CE3C1F08144885BB0E99837030C5231DE60
@@ -568,7 +569,7 @@
   - sao
   - xes
   - sds
-  Description_EN: SHA-1 of the objectFilePath object
+  Description_EN: The SHA-1 of the objectFilePath object
   Sample:
   - 51B8646308EE0B68AD1F7F1291B85395434DE49A
   - 36C5D12033B2EAF251BAE61C00690FFB17FDDC87
@@ -582,8 +583,8 @@
   ProductCode:
   - sds
   - pds
-  Description_EN: SHA-1 of the target process image or target file (wasEntity from
-    an IM event)
+  Description_EN: The SHA-1 of the target process image or target file (wasEntity
+    from an IM event)
   Sample:
   - DA39A3EE5E6B4B0D3255BFEF95601890AFD80709
   - 89CE26EAD139D52B8A6B61BFFC6AF89AF246580F
@@ -599,7 +600,7 @@
   - sao
   - sig
   - sds
-  Description_EN: SHA-256 of the file (fileName)
+  Description_EN: The SHA-256 of the file (fileName)
   Sample:
   - 6A6EB2D717CEA041B4444193B45EDFB6CA1287518203B7230B3C4B8FFB031EAB
   - BFF703FF836196644586014DA13A097C2EE9A08E4D596DFB7C8E0F685FE01294
@@ -613,7 +614,7 @@
   ProductCode:
   - pdi
   - sem
-  Description_EN: SHA-256 of the attached file (attachementFileName)
+  Description_EN: The SHA-256 of the attached file (attachementFileName)
   Sample:
   - D81D4C14DDEB8CA390FFADA69265AAD46CDEDD72CDD332CB8AA17D924626B397
   - 01DE1FC697D2D0850F0468474A3E1E0BF4D78B23F0633908CF82E504E0DCBFF9
@@ -626,7 +627,7 @@
 - Name: compressedFileHashSha256
   ProductCode:
   - pdi
-  Description_EN: SHA-256 of compressed suspicious file
+  Description_EN: The SHA-256 of compressed suspicious file
   Sample:
   - 60C7C5924DD09F7C6B150120FB92DCEE00AE82DB75C7402FA4D9152CF487A94F
   - 482FFC4F87B78C3C7073983CF65B593D9F13F0A3D6DC54B4A3F616F79838F3CE
@@ -641,7 +642,7 @@
   - sao
   - xes
   - sds
-  Description_EN: SHA-256 of the object (objectFilePath)
+  Description_EN: The SHA-256 of the object (objectFilePath)
   Sample:
   - A75C85F3B089993E9C042FB82ECB7757E8F460ED8065FC7991CAA38A6DE0F50C
   - 908B64B1971A979C7E3E8CE4621945CBA84854CB98D76367B791A6E22B5F6D53
@@ -654,7 +655,7 @@
 - Name: attachmentFileHashMd5
   ProductCode:
   - sca
-  Description_EN: MD5 of the attached file (attachementFileName)
+  Description_EN: The MD5 of the attached file (attachementFileName)
   Sample:
   - RSjbNuJB0hx39ZpzwLdipg==
   - +TmuTNLw3FMQlaTbPwjD8g==
@@ -669,7 +670,7 @@
   - sao
   - xes
   - sds
-  Description_EN: MD5 of the object
+  Description_EN: The MD5 of the object
   Sample:
   - 801E8003C257C8F540B20F1E0DECD3A6
   - CDA48FC75952AD12D99E526D0B6BF70A
@@ -686,7 +687,7 @@
   - pds
   - sao
   - scs
-  Description_EN: Subject process command line
+  Description_EN: The subject process command line
   Sample:
   - '"C:\Program Files (x86)\AADM\AADM.exe" '
   - /usr/lib/inet/sendmail -bl -q15m
@@ -717,7 +718,7 @@
   - sao
   - sds
   - xes
-  Description_EN: Object process command line
+  Description_EN: The object process command line
   Sample:
   - C:\WINDOWS\system32\wbem\wmiprvse.exe -Embedding
   - "\"C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\PowerShell.exe\" -NoLogo -Noninteractive\
@@ -748,7 +749,7 @@
   - xes
   - sao
   - sds
-  Description_EN: Registry data contents
+  Description_EN: The registry data contents
   Sample:
   - 07EFCDAB010001007CE21B54433A0CD356BCEA7C1C5DEE683999E759484BD7E82BDE5B3F598057F5AFCBB15B2C6EFB679F0744879657
   - C:\Program Files\AlertMedia\AlertMedia Desktop Notifications\AlertMedia.exe
@@ -762,7 +763,7 @@
   - xes
   - sds
   - sao
-  Description_EN: Registry key path
+  Description_EN: The registry key path
   Sample:
   - HKCR\CID\{42003200-2F00-6400-6800-4E0034003800}
   - HKLM\SOFTWARE\WOW6432Node\Eos
@@ -777,7 +778,7 @@
   - xes
   - sao
   - sds
-  Description_EN: Registry value name
+  Description_EN: The registry value name
   Sample:
   - '1'
   - key
@@ -794,7 +795,7 @@
   - sao
   - sem
   - xes
-  Description_EN: Object type
+  Description_EN: The object type
   Sample:
   - file
   - process
@@ -808,7 +809,7 @@
   - sao
   - sds
   - xes
-  Description_EN: Image path of the subject process
+  Description_EN: File path of the subject process
   Sample:
   - c:\windows\system32\svchost.exe
   - c:\windows\system32\windowspowershell\v1.0\powershell.exe
@@ -864,7 +865,7 @@
   - sem
   - pdi
   - sao
-  Description_EN: Email receipient
+  Description_EN: The email recipient
   Sample:
   - (no user)
   - SYSTEM
@@ -880,7 +881,7 @@
   - pdi
   - sem
   - sao
-  Description_EN: Message subject
+  Description_EN: The message subject
   Sample:
   - mail.dhr-rgv.com
   - ManageEngine
@@ -895,7 +896,7 @@
   - sem
   - pdi
   - sao
-  Description_EN: Internet message ID
+  Description_EN: The internet message ID
   Sample:
   - 11.2.00.0007
   - mail.dhr-rgv.com
@@ -918,7 +919,7 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: Technique ID detected by XDR base on an alert filter
+  Description_EN: Attack technique ID detected by VisionOne based on the alert filter
   Sample:
   - MITREV9.T1090
   - MITRE.T1071
@@ -957,7 +958,7 @@
   - stp
   - szn
   - scs
-  Description_EN: Name of the rule that triggered the event
+  Description_EN: The name of the rule that triggered the event
   Sample:
   - Directory Server - Microsoft Windows Active Directory
   - Microsoft Windows Events
@@ -973,7 +974,7 @@
   - pdi
   - pds
   - sao
-  Description_EN: ID of a rule
+  Description_EN: The ID of the rule
   Sample:
   - 1002795
   - 1003802
@@ -989,7 +990,7 @@
   - pds
   - sws
   - pts
-  Description_EN: Name of the malware detected
+  Description_EN: The name of the detected malware
   Sample:
   - SecurityLevelDrop
   - Regla Logs All
@@ -1013,7 +1014,7 @@
   - ptn
   - szn
   - pts
-  Description_EN: Event type name
+  Description_EN: The event type name
   Sample:
   - LOG_INSPECTION_EVENT
   - SECURITY_RISK_DETECTION
@@ -1046,7 +1047,7 @@
   - sem
   - xes
   - sig
-  Description_EN: Event type subName
+  Description_EN: The event type sub-name
   Sample:
   - IPS Detection
   - Personal Firewall
@@ -1096,7 +1097,7 @@
   - sem
   - stp
   - ptn
-  Description_EN: Additional information
+  Description_EN: The additional information
   Sample:
   - 'warning: fork: Resource temporarily unavailable'
   - 'pam_unix(cron:session): session opened for user root by (uid=0)'
@@ -1114,7 +1115,7 @@
   - pdi
   - pds
   - pts
-  Description_EN: A combination of the file path and file name, introduced by SAE
+  Description_EN: The combination of the file path and the file name
   Sample:
   - \etc\hosts
   - c:\windows\system32\tasks\microsoft\windows\softwareprotectionplatform\svcrestarttask
@@ -1128,7 +1129,7 @@
   ProductCode:
   - xes
   - scs
-  Description_EN: Command line of a subject's parent process
+  Description_EN: The command line of the subject parent process
   Sample:
   - '"C:\Tiburon\CommandCAD\Test\Startup.exe" '
   - C:\WINDOWS\Explorer.EXE
@@ -1154,7 +1155,7 @@
 - Name: parentFilePath
   ProductCode:
   - xes
-  Description_EN: Full path of a subject's parent process
+  Description_EN: Full file path of the parent process
   Sample:
   - c:\windows\explorer.exe
   - c:\tiburon\commandcad\test\startup.exe
@@ -1167,7 +1168,7 @@
 - Name: parentFileHashSha1
   ProductCode:
   - xes
-  Description_EN: SHA-1 of a subject's parent process
+  Description_EN: The SHA-1 of the subject parent process
   Sample:
   - 9CF40F19A625F7033689D04F4C8E1CC6A8FA4F5B
   - 799AB02945EDB9A37A42A3F742DE73165F4A9665
@@ -1181,7 +1182,7 @@
   ProductCode:
   - xes
   - pts
-  Description_EN: SHA-256 of a subject's parent process
+  Description_EN: The SHA-256 of the subject parent process
   Sample:
   - 14A1223722D486ABBC88682AB49AF8E56DC65AC4E153027985BFFFF7C815C0EC
   - 2EF51284CA9211ADEC3E8E095F386FEC742E0532075894AE99024C65949F935E
@@ -1194,7 +1195,7 @@
 - Name: parentFileHashMd5
   ProductCode:
   - xes
-  Description_EN: MD5 of a subject's parent process
+  Description_EN: The MD5 of the subject parent process
   Sample:
   - 7B9E6D992AA86F0D2ECDF8F65A6BB792
   - 2B47C89252BB932B292122E54C3DAF25
@@ -1209,7 +1210,7 @@
   - sds
   - xes
   - sao
-  Description_EN: SHA-1 of a subject process
+  Description_EN: The SHA-1 of the subject process
   Sample:
   - C0885381EBAC94AB20E78936434FA208F6B65352
   - ac373ed32b491da22924e2e11e36574e5d582a35
@@ -1223,7 +1224,7 @@
   ProductCode:
   - sds
   - xes
-  Description_EN: SHA-256 of a subject process
+  Description_EN: The SHA-256 of the subject process
   Sample:
   - 4314A869B8DAE1BD3FFF810B1366E90FB7C961D4A3424260692377FDD87361D2
   - 7824c45fc033696603fe97d8f193a1872dfb2b5db75f0cda21df27017b3cb623
@@ -1237,7 +1238,7 @@
   ProductCode:
   - sds
   - xes
-  Description_EN: MD5 of a subject process
+  Description_EN: The MD5 of the subject process
   Sample:
   - D07ADD0CE6E000D3CD20193B891E8ED3
   - 1a9ba93ebe4cb60030831f8ce9e7d5f9
@@ -1256,7 +1257,7 @@
   - sds
   - pds
   - scs
-  Description_EN: ID of a policy
+  Description_EN: ID of the policy on which the event was detected
   Sample:
   - 00000001-0001-0001-0001-000000007610
   - '007'
@@ -1285,7 +1286,7 @@
   - sds
   - pds
   - pts
-  Description_EN: Result of an action
+  Description_EN: The result of an action
   Sample:
   - Dropped
   - Successful
@@ -1301,7 +1302,7 @@
   - sds
   - sao
   - pds
-  Description_EN: Scan type
+  Description_EN: The scan type
   Sample:
   - realtime_mailmeta-exchange
   - exchange_mailbox_realtime_detection_logs
@@ -1313,8 +1314,8 @@
 - Name: productCode
   ProductCode:
   - ALL
-  Description_EN: Internal product code (sds = Cloud One Workload Security, pdi =
-    Deep Discovery Inspector, sao = Apex One as a Service)
+  Description_EN: The internal product code (sds=Cloud One Workload Security, pdi=Deep
+    Discovery Inspector, sao=Apex One as a Service)
   Sample:
   - sds
   - pdi
@@ -1326,7 +1327,7 @@
 - Name: malSrc
   ProductCode:
   - sao
-  Description_EN: Malware infection source
+  Description_EN: The malware infection source
   Sample:
   - \\10.172.1.33\kortiz
   - \\10.240.0.148\wbind
@@ -1339,7 +1340,7 @@
 - Name: malDst
   ProductCode:
   - sao
-  Description_EN: Malware infection destination
+  Description_EN: The malware infection destination
   Sample:
   - 3334_02W3P7
   - 2666_02N413
@@ -1363,7 +1364,7 @@
   - sig
   - ams
   - scs
-  Description_EN: Internal product ID
+  Description_EN: The internal product ID
   Sample:
   - Trend Micro Deep Security
   - Deep Discovery Inspector
@@ -1387,6 +1388,7 @@
   - sig
   - ptn
   - szn
+  - xms
   Description_EN: Action taken for the violation
   Sample:
   - not blocked
@@ -1404,7 +1406,7 @@
   - xes
   - stp
   - sig
-  Description_EN: GUID of the agent which reported this detection
+  Description_EN: The GUID of the agent which reported the detection
   Sample:
   - 2C3208D7F62B-4C4C89CF-8D08-8F3F-8642
   - 0A8F141278A6-413487AF-70E4-FD28-8141
@@ -1417,7 +1419,7 @@
   ProductCode:
   - pdi
   - sao
-  Description_EN: Whether to show this detection log generated for a grey rule match
+  Description_EN: Whether the detection log generated a grey rule match
   Sample:
   - Yes
   DL_Type: string
@@ -1446,7 +1448,7 @@
 - Name: objectIp
   ProductCode:
   - sds
-  Description_EN: IP address of a domain
+  Description_EN: The IP address of the domain
   Sample:
   - 10.10.23.240
   - 0.0.0.0
@@ -1462,7 +1464,7 @@
   - pdi
   - sao
   - sca
-  Description_EN: Detected domain name
+  Description_EN: The detected domain name
   Sample:
   - http://35.247.144.219
   - Zoho Corporation
@@ -1475,7 +1477,7 @@
 - Name: peerHost
   ProductCode:
   - pdi
-  Description_EN: Hostname of peerIp
+  Description_EN: The hostname of peerIp
   Sample:
   - dns.google
   - resolver1.level3.net
@@ -1488,7 +1490,7 @@
 - Name: httpReferer
   ProductCode:
   - pdi
-  Description_EN: HTTP referer
+  Description_EN: The HTTP referer
   Sample:
   - http://201.174.161.181/
   - http://info2/home/
@@ -1501,7 +1503,7 @@
 - Name: data1
   ProductCode:
   - pdi
-  Description_EN: Deep Discover Inspector correlation log metadata
+  Description_EN: The Deep Discover Inspector correlation log metadata
   Sample:
   - 2.57.122.209
   - 204.79.197.200
@@ -1527,7 +1529,7 @@
 - Name: botCmd
   ProductCode:
   - pdi
-  Description_EN: Bot command
+  Description_EN: The bot command
   Sample:
   - '1068'
   - indows
@@ -1540,7 +1542,7 @@
 - Name: objectName
   ProductCode:
   - xes
-  Description_EN: Base name of an object file or process
+  Description_EN: The base name of the object file or process
   Sample:
   - net.exe
   DL_Type: string
@@ -1563,7 +1565,7 @@
   ProductCode:
   - sds
   - sao
-  Description_EN: User name of the process or file creator
+  Description_EN: The user name of the process or the file creator
   Sample:
   - SYSTEM
   - SVC_JENKINS_CODE_DEV
@@ -1576,7 +1578,7 @@
 - Name: sUser1
   ProductCode:
   - pdi
-  Description_EN: The latest logon user of the source
+  Description_EN: The latest sign in user of the source
   Sample:
   - corp.uhsinc.biz\altsvc
   - 000c29edef58
@@ -1589,7 +1591,7 @@
   ProductCode:
   - sca
   - sem
-  Description_EN: Unique email ID
+  Description_EN: The unique email ID
   Sample:
   - 00027ac3-f8f2-cc8f-d078-3a57f12f3d55
   - 0005ab64-3992-644c-3592-503c3610cec9
@@ -1601,7 +1603,7 @@
 - Name: orgId
   ProductCode:
   - sca
-  Description_EN: Cloud App Security organization ID
+  Description_EN: The Cloud App Security organization ID
   Sample:
   - 182a3fa0-a3a7-11eb-8590-8d526fa1feaa
   - 29273bd0-133d-11e8-8330-21b547e8c0e0
@@ -1613,7 +1615,7 @@
 - Name: cve
   ProductCode:
   - pdi
-  Description_EN: CVE identifier
+  Description_EN: The CVE identifier
   Sample:
   - MS17-010
   - CVE-2021-45046
@@ -1626,7 +1628,7 @@
   ProductCode:
   - ptp
   - sds
-  Description_EN: CVEs associated with this filter
+  Description_EN: The CVEs associated with this filter
   Sample:
   - CVE-2014-3567
   - CVE-2016-6304
@@ -1640,7 +1642,7 @@
   - sws
   - sig
   - szn
-  Description_EN: Domain of the 'request' URL
+  Description_EN: The domain of the request URL
   Sample:
   - weather.service.msn.com
   - activity.windows.com
@@ -1685,7 +1687,7 @@
   ProductCode:
   - sws
   - sig
-  Description_EN: Roaming users or the gateway where the web traffic passed
+  Description_EN: The roaming users or the gateway where the web traffic passed
   Sample:
   - roaming user
   - VE C&W - 201.224.85.210
@@ -1703,7 +1705,7 @@
   - sig
   - ptn
   - scs
-  Description_EN: Name of the triggered policy
+  Description_EN: Name of the policy on which the event was detected
   Sample:
   - Steelcase
   - Cabot
@@ -1719,7 +1721,7 @@
   - sig
   - sca
   - szn
-  Description_EN: User principal name used to log on to the proxy
+  Description_EN: The user principal name used to sign in to the proxy
   Sample:
   - chin.shun@multibank.com.pa
   - leonelc@edsitrend.com
@@ -1732,8 +1734,8 @@
   ProductCode:
   - sws
   - sig
-  Description_EN: Name of the Threat Protection template or Data Loss Prevention profile
-    triggered
+  Description_EN: The name of the triggered Threat Protection template or Data Loss
+    Prevention profile
   Sample:
   - Primary Protection Rule
   - Multibak Scaner Threat
@@ -1766,7 +1768,7 @@
   - ptn
   - xes
   - scs
-  Description_EN: Network protocol being exploited
+  Description_EN: The network protocol being exploited
   Sample:
   - DNS Response
   - TCP
@@ -1782,7 +1784,7 @@
   - ams
   - ptn
   - pts
-  Description_EN: Virus type
+  Description_EN: The virus type
   Sample:
   - Virus
   - Suspicious Activity
@@ -1818,7 +1820,7 @@
 - Name: eventTime
   ProductCode:
   - ALL
-  Description_EN: Event generation time on the agent side
+  Description_EN: Time recorded when the agent detected the event
   Sample:
   - 1656324260000
   DL_Type: real
@@ -1828,7 +1830,7 @@
 - Name: customerId
   ProductCode:
   - ALL
-  Description_EN: Customer ID, CLP ID, or Company ID
+  Description_EN: Assigned unique customer ID, CLP ID, company ID, or business ID
   Sample:
   - dcf53bea-fa92-44fa-b1c5-da7ce3c1329e
   - fd70962d-386e-4bd1-9f18-6ec68fe9dc52
@@ -1840,7 +1842,7 @@
 - Name: receivedTime
   ProductCode:
   - ALL
-  Description_EN: XDR log received time
+  Description_EN: Time when the XDR log was received
   Sample:
   - 1656324260000
   DL_Type: real
@@ -1850,7 +1852,7 @@
 - Name: packageTraceId
   ProductCode:
   - ALL
-  Description_EN: Package trace id
+  Description_EN: Event package trace ID
   Sample:
   - 0008797f-3836-4cab-90c8-0d6ed56ad139
   - 0054663e-76a7-4ef6-a027-0a8140b09387
@@ -1873,7 +1875,7 @@
 - Name: bitwiseFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Bitwise filter level (to help search performance)
+  Description_EN: Bitwise filter risk level
   Sample:
   - 1
   - 2
@@ -2289,7 +2291,7 @@
   ProductCode:
   - sao
   - ams
-  Description_EN: A general name for the detection
+  Description_EN: The general name for the detection
   Sample:
   - Troj.Win32.TRX.XXPE50F13017
   - Troj.Win32.TRX.XXPE50FFF059
@@ -2411,7 +2413,7 @@
 - Name: dstZone
   ProductCode:
   - pdi
-  Description_EN: The network zone defined by the administrator of the destination
+  Description_EN: The network zone defined by the destination administrator
   Sample:
   - '1'
   - '0'
@@ -2520,7 +2522,7 @@
   - sem
   - pts
   - scs
-  Description_EN: The event ID from each product's logs
+  Description_EN: The event ID from the logs of each product
   Sample:
   - 100116
   - 100117
@@ -2870,8 +2872,7 @@
   - sds
   - sao
   - pds
-  Description_EN: The risk type for NCCE (Network Content Correlation Engine) rules.
-    This field comes from NCCP (Network Content Correlation Pattern) rule type definitions.
+  Description_EN: The risk type for Network Content Correlation Engine rules
   Sample:
   - OTHERS
   - MALWARE
@@ -3044,7 +3045,7 @@
   ProductCode:
   - sao
   - sds
-  Description_EN: The owner of the target process
+  Description_EN: Owner name of the target process or the login user name
   Sample:
   - Système
   - SYSTEM
@@ -3071,7 +3072,7 @@
   - sig
   - ams
   - szn
-  Description_EN: The operating system of the device
+  Description_EN: Host operating system name
   Sample:
   - windows 10.0.22000
   - windows 10.0.19044
@@ -3198,7 +3199,7 @@
   - pds
   - scs
   - sao
-  Description_EN: The process triggered by an event
+  Description_EN: Image name of the process that triggered the event
   Sample:
   - c:\windows\system32\svchost.exe
   - /usr/bin/python2.7
@@ -3213,7 +3214,7 @@
   - sds
   - xes
   - scs
-  Description_EN: The subject process PID
+  Description_EN: PID of the subject process
   Sample: []
   DL_Type: int
   DL_CommonKey:
@@ -3237,7 +3238,7 @@
   - pds
   - ptn
   - scs
-  Description_EN: The exploited layer network protocol
+  Description_EN: Exploited layer network protocol type
   Sample:
   - '6'
   - TCP
@@ -3270,7 +3271,7 @@
   - sig
   - ams
   - scs
-  Description_EN: The product version
+  Description_EN: Product version
   Sample:
   - 20.0.0.4726
   - 20.0.0.4416
@@ -3737,7 +3738,8 @@
   - sao
   - xes
   - sds
-  Description_EN: The ID of the instance that indicates the VM of cloud-meta or data-center
+  Description_EN: The ID of the instance that indicates the meta-cloud or data center
+    VM
   Sample:
   - 52294e7b-f732-c6e9-b2c3-7a6b6f50d101
   - 00030912-c5e7-4348-9012-7c684751c531
@@ -3865,7 +3867,7 @@
   - sig
   - szn
   Description_EN: The UUID of the cloud access or risk control policy, or the hard-coded
-    string that indicates the rule of the global blocked/approved URL list
+    string that indicates the rule of the global blocked/ approved URL list
   Sample:
   - 7937cb0b-e598-4c8f-a50f-65c32905ba3a
   - C!7c4433e3-5b2c-449f-b66e-ccaac006b6f1
@@ -3934,7 +3936,7 @@
   ProductCode:
   - xes
   - scs
-  Description_EN: The base name of the parent process
+  Description_EN: Image name of the parent of the process that triggered the event
   Sample:
   - explorer.exe
   - startup.exe
@@ -3949,7 +3951,7 @@
   - xes
   - pds
   - scs
-  Description_EN: The PID of the subject process's parent process
+  Description_EN: PID of the parent process
   Sample: []
   DL_Type: int
   DL_CommonKey:
@@ -4312,7 +4314,7 @@
 - Name: processLaunchTime
   ProductCode:
   - sds
-  Description_EN: The process creation time in unix timestamp format
+  Description_EN: Time when the subject process was launched
   Sample:
   - '1656400286556'
   - '1656566610259'
@@ -4325,7 +4327,7 @@
   ProductCode:
   - sds
   - pts
-  Description_EN: The access type
+  Description_EN: Access type of the event
   Sample:
   - '4'
   - '101'
@@ -4448,7 +4450,7 @@
 - Name: appPkgName
   ProductCode:
   - ams
-  Description_EN: App package name
+  Description_EN: The app package name
   Sample:
   - com.trustport.mobilesecurity_eicar_test_file
   DL_Type: string
@@ -4468,7 +4470,7 @@
 - Name: appVerCode
   ProductCode:
   - ams
-  Description_EN: App version code
+  Description_EN: The app version code
   Sample:
   - 1
   DL_Type: int
@@ -4478,7 +4480,7 @@
 - Name: appDL_DeployedKeySha1
   ProductCode:
   - ams
-  Description_EN: App public key (SHA-1)
+  Description_EN: The app public key (SHA-1)
   Sample:
   - 72080A6B4EB11105B28E31C4753BC91414500AD4
   DL_Type: string
@@ -4489,7 +4491,7 @@
 - Name: appSize
   ProductCode:
   - ams
-  Description_EN: App size in bytes
+  Description_EN: The app size (in bytes)
   Sample:
   - '28461'
   DL_Type: string
@@ -4499,7 +4501,7 @@
 - Name: appDexSha256
   ProductCode:
   - ams
-  Description_EN: App dex encoded using SHA-256
+  Description_EN: The app dex encoded using SHA-256
   Sample:
   - 08736EDDD3682AC26D9FD42DA2A20B0BADB5C85A5456A0AE85B52D60C564F290
   DL_Type: string
@@ -4556,7 +4558,7 @@
   ProductCode:
   - pdi
   - scs
-  Description_EN: JSON string containing of additional information
+  Description_EN: The JSON string that contains additional information
   Sample:
   - '{"TLS version": "0x0303", "Cipher Suite": "0xc030"}'
   - '{"Scanned ports": "23, 80, 443"}'
@@ -4571,7 +4573,7 @@
 - Name: denyListFileHashSha256
   ProductCode:
   - pdi
-  Description_EN: SHA-256 of User-Defined Suspicious Object
+  Description_EN: The SHA-256 of User-Defined Suspicious Object
   Sample:
   - 757E5C8823CAA7406030A7E26AED2A2C95D16F69C5A14C884C8CAA72A0C001C3
   DL_Type: string
@@ -4657,7 +4659,7 @@
 - Name: isRetroScan
   ProductCode:
   - ALL
-  Description_EN: If the event matches the Security Analytics Engine filter
+  Description_EN: Whether the event matches the Security Analytics Engine filter
   Sample:
   - true
   DL_Type: bool
@@ -4842,7 +4844,7 @@
 - Name: ruleIdStr
   ProductCode:
   - scs
-  Description_EN: The rule ID string
+  Description_EN: ID of the C1CS rule on which the event was detected
   Sample:
   - TM-00000043
   DL_Type: string
@@ -4948,7 +4950,7 @@
 - Name: customFilterTags
   ProductCode:
   - ALL
-  Description_EN: The detection filter that matched data based on custom filters
+  Description_EN: Detection filter that matched data based on custom filters
   Sample:
   - XCUS.CF0131
   - USER.HELLOWORLD
@@ -4961,7 +4963,7 @@
 - Name: customFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: The top-level risk level of the event by custom filter
+  Description_EN: Top-level risk level of the event by custom filter
   Sample:
   - info
   - low
@@ -4978,7 +4980,7 @@
   - xes
   - pds
   - scs
-  Description_EN: The process triggered by a file event
+  Description_EN: The process triggered by the file event
   Sample:
   - c:\windows\system32\svchost.exe
   - /usr/bin/python2.7
@@ -5040,7 +5042,7 @@
 - Name: tmFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: The top-level risk level of the event by Security Analytics Engine
+  Description_EN: Top-level risk level of the event by Security Analytics Engine filter
     filter
   Sample:
   - info
@@ -5063,8 +5065,7 @@
   DL_Aggregable: false
 - Name: objectTargetProcess
   ProductCode: []
-  Description_EN: The file path of the target process that the API performs. For example,
-    process of "a.exe" dumps credential from lsass.exe.
+  Description_EN: The file path of the target process that the API performs
   Sample:
   - C:\\Windows\\System32\\lsass.exe
   DL_Type: string
@@ -5073,7 +5074,7 @@
   DL_Aggregable: false
 - Name: srcFilePath
   ProductCode: []
-  Description_EN: The file path of the source file
+  Description_EN: Path of the source file
   Sample:
   - C:\\temp\\a.exe
   DL_Type: string
@@ -5110,9 +5111,8 @@
   DL_Aggregable: false
 - Name: quarantineFilePath
   ProductCode: []
-  Description_EN: The OfficeScan server file path for the quarantined file (When a
-    file is quarantined, it is encrypted and copied to the OfficeScan server for post-mortem
-    analysis)
+  Description_EN: The OfficeScan server file path for the quarantined file (A quarantined
+    file is encrypted and copied to the OfficeScan server for post-mortem analysis)
   Sample: []
   DL_Type: string
   DL_CommonKey:
