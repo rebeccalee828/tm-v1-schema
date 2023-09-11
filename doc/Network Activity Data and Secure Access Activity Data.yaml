@@ -1,7 +1,7 @@
 - Name: eventSourceType
   ProductCode:
   - ALL
-  Description_EN: Event source type
+  Description_EN: The event source type
   Sample:
   - EVENT_SOURCE_NETWORK_ACTIVITY
   DL_Type: None
@@ -11,7 +11,7 @@
 - Name: version
   ProductCode:
   - ALL
-  Description_EN: Schema version
+  Description_EN: The schema version
   Sample:
   - '1.1'
   DL_Type: None
@@ -24,7 +24,7 @@
   - szn
   - pdi
   - xns
-  Description_EN: Time recorded when the agent detected the event
+  Description_EN: The time recorded when the agent detected the event
   Sample:
   - 1657135700000
   DL_Type: real
@@ -34,7 +34,8 @@
 - Name: customerId
   ProductCode:
   - ALL
-  Description_EN: Assigned unique customer ID, CLP ID, company ID, or business ID
+  Description_EN: The assigned unique Customer ID, CLP ID, Company ID, or Business
+    ID
   Sample:
   - df1fd66c-dea3-40fb-a78b-1442d6154ecc
   - e0f6a485-204f-4988-9253-f02b6481c205
@@ -46,7 +47,7 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: Attack technique ID detected by VisionOne based on the alert filter
+  Description_EN: The attack ID detected by Trend Vision One based on the alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -71,7 +72,7 @@
 - Name: receivedTime
   ProductCode:
   - ALL
-  Description_EN: Time when the XDR log was received
+  Description_EN: The time when the XDR log was received
   Sample:
   - 1656324260000
   DL_Type: real
@@ -92,7 +93,7 @@
 - Name: packageTraceId
   ProductCode:
   - ALL
-  Description_EN: Event package trace ID
+  Description_EN: The event package trace ID
   Sample:
   - 00001008-d7ef-4066-9d93-55c3d450bf76
   - 0000202f-92ec-4b8d-8df1-5c8551f33e4b
@@ -136,7 +137,7 @@
 - Name: bitwiseFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Bitwise filter risk level
+  Description_EN: The bitwise filter risk level
   Sample:
   - 1
   - 2
@@ -175,7 +176,7 @@
   ProductCode:
   - sig
   - szn
-  Description_EN: Host name of the device on which the event was detected
+  Description_EN: The host name of the device on which the event was detected
   Sample:
   - my_machine
   - jeremy-mbp
@@ -188,7 +189,7 @@
   ProductCode:
   - sig
   - szn
-  Description_EN: Host operating system name
+  Description_EN: The host operating system name
   Sample:
   - Windows 10
   - macos 12.1
@@ -200,7 +201,7 @@
   ProductCode:
   - sig
   - szn
-  Description_EN: Destination IP address of the network connection
+  Description_EN: The destination IP address of the network connection
   Sample:
   - 10.10.10.10
   - 10.206.209.64
@@ -267,7 +268,7 @@
   ProductCode:
   - sig
   - szn
-  Description_EN: Source address of the network connection
+  Description_EN: The source address of the network connection
   Sample:
   - 100.100.100.100
   - 18.162.103.100
@@ -604,7 +605,7 @@
 - Name: pver
   ProductCode:
   - sig
-  Description_EN: Product version
+  Description_EN: The product version
   Sample:
   - 1.0
   DL_Type: None
@@ -780,8 +781,7 @@
 - Name: spt
   ProductCode:
   - szn
-  Description_EN: Source virtual port number of the network connection assigned to
-    the Zero Trust Secure Access agent
+  Description_EN: The virtual port of the source assigned to the Secure Access Module
   Sample:
   - 57763
   DL_Type: int
@@ -803,7 +803,7 @@
 - Name: dpt
   ProductCode:
   - szn
-  Description_EN: Service destination port number of the private application server
+  Description_EN: The service destination port of the private application server
   Sample:
   - 443
   DL_Type: int
@@ -1114,7 +1114,7 @@
   - xns
   Description_EN: The file information extracted from files detected in response direction
   Sample:
-  -
+  - 
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
@@ -1259,7 +1259,7 @@
   - xns
   Description_EN: The file information extracted from detected files
   Sample:
-  -
+  - 
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
@@ -1407,7 +1407,7 @@
   - xns
   Description_EN: The transaction information of the FTP protocol
   Sample:
-  -
+  - 
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
@@ -1486,7 +1486,7 @@
 - Name: customFilterTags
   ProductCode:
   - ALL
-  Description_EN: Detection filter that matched data based on custom filters
+  Description_EN: The detection filter that matched data based on custom filters
   Sample:
   - XCUS.CF0131
   - USER.HELLOWORLD
@@ -1498,7 +1498,7 @@
 - Name: customFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Top-level risk level of the event by custom filter
+  Description_EN: The top-level risk level of the event by custom filter
   Sample:
   - info
   - low
@@ -1518,7 +1518,8 @@
 - Name: tmFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Top-level risk level of the event by Security Analytics Engine filter
+  Description_EN: The top-level risk level of the event by Security Analytics Engine
+    filter
   Sample:
   - info
   - low

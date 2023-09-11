@@ -1,7 +1,7 @@
 - Name: endpointHostName
   ProductCode:
   - scs
-  Description_EN: Host name of the endpoint or node on which the event was detected
+  Description_EN: The host name of the container on which the event was detected
   Sample:
   - PHILIPSIBE09
   - WHAM6WK8XG2
@@ -22,7 +22,7 @@
 - Name: eventSubId
   ProductCode:
   - scs
-  Description_EN: Access type of the event
+  Description_EN: The access type of the event
   Sample:
   - TELEMETRY_PROCESS_CREATE
   - TELEMETRY_FILE_CREATE
@@ -34,7 +34,7 @@
 - Name: eventTime
   ProductCode:
   - scs
-  Description_EN: Time recorded when the agent detected the event
+  Description_EN: The time recorded when the agent detected the event
   Sample:
   - 1657781088000
   DL_Type: real
@@ -44,7 +44,7 @@
 - Name: objectFilePath
   ProductCode:
   - scs
-  Description_EN: File path of the target process image or target file
+  Description_EN: The file path of the target process image or target file
   Sample:
   - /usr/bin/bash
   - /bin/bash
@@ -58,7 +58,7 @@
 - Name: srcFilePath
   ProductCode:
   - scs
-  Description_EN: Path of the source file
+  Description_EN: The path of the source file
   Sample:
   - \\cnva-apps\megaclockprod\traveler\travelerprint.accdb
   - c:\program files\common files\microsoft shared\clicktorun\officesvcmgrschedule.xml
@@ -73,7 +73,7 @@
   ProductCode:
   - ALL
   - scs
-  Description_EN: Attack technique ID detected by VisionOne based on the alert filter
+  Description_EN: The attack ID detected by Trend Vision One based on the alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -121,7 +121,7 @@
 - Name: eventSourceType
   ProductCode:
   - ALL
-  Description_EN: Event source type
+  Description_EN: The event source type
   Sample:
   - EVENT_SOURCE_CONTAINER_ACTIVITY
   DL_Type: int
@@ -131,7 +131,7 @@
 - Name: version
   ProductCode:
   - ALL
-  Description_EN: Schema version
+  Description_EN: The schema version
   Sample:
   - '1.0'
   DL_Type: string
@@ -141,7 +141,8 @@
 - Name: customerId
   ProductCode:
   - ALL
-  Description_EN: Assigned unique customer ID, CLP ID, company ID, or business ID
+  Description_EN: The assigned unique Customer ID, CLP ID, Company ID, or Business
+    ID
   Sample:
   - 9011075d-a2d7-4ff0-8660-47645735d0e7
   - afa7768a-f34d-4ee3-b1db-8dd3592127b7
@@ -153,7 +154,7 @@
 - Name: receivedTime
   ProductCode:
   - ALL
-  Description_EN: Time when the XDR log was received
+  Description_EN: The time when the XDR log was received
   Sample:
   - 1657781088000
   DL_Type: real
@@ -163,7 +164,7 @@
 - Name: packageTraceId
   ProductCode:
   - ALL
-  Description_EN: Event package trace ID
+  Description_EN: The event package trace ID
   Sample:
   - 353e1e1e-4a80-4f3c-aec1-113d425a28e1
   - 11b8ae4f-dc54-4c23-9011-7d8cc3be3a7d
@@ -175,7 +176,7 @@
 - Name: bitwiseFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Bitwise filter risk level
+  Description_EN: The bitwise filter risk level
   Sample:
   - 1
   - 2
@@ -187,7 +188,7 @@
 - Name: pver
   ProductCode:
   - scs
-  Description_EN: Product version
+  Description_EN: The product version
   Sample:
   - 1.2.0.2752
   - 1.0.345
@@ -199,7 +200,7 @@
 - Name: customFilterTags
   ProductCode:
   - ALL
-  Description_EN: Detection filter that matched data based on custom filters
+  Description_EN: The detection filter that matched data based on custom filters
   Sample:
   - XCUS.CF0131
   - USER.HELLOWORLD
@@ -225,7 +226,8 @@
 - Name: tmFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Top-level risk level of the event by Security Analytics Engine filter
+  Description_EN: The top-level risk level of the event by Security Analytics Engine
+    filter
   Sample:
   - info
   - low
@@ -239,7 +241,7 @@
 - Name: clusterId
   ProductCode:
   - scs
-  Description_EN: Cluster ID of the container on which the event was detected
+  Description_EN: The cluster ID of the container on which the event was detected
   Sample:
   - TestCluster-2HJdImvH6eO1fgTnCBK3xYA7Sph
   DL_Type: string
@@ -249,7 +251,7 @@
 - Name: clusterName
   ProductCode:
   - scs
-  Description_EN: Cluster name of the container on which the event was detected
+  Description_EN: The cluster name of the container on which the event was detected
   Sample:
   - TestCluster
   DL_Type: string
@@ -259,7 +261,8 @@
 - Name: k8sNamespace
   ProductCode:
   - scs
-  Description_EN: Kubernetes namespace of the container on which the event was detected
+  Description_EN: The Kubernetes namespace of the container on which the event was
+    detected
   Sample:
   - default
   DL_Type: string
@@ -269,7 +272,8 @@
 - Name: k8sPodName
   ProductCode:
   - scs
-  Description_EN: Kubernetes pod name of the container on which the event was detected
+  Description_EN: The Kubernetes pod name of the container on which the event was
+    detected
   Sample:
   - longrunl
   DL_Type: string
@@ -279,7 +283,7 @@
 - Name: k8sPodId
   ProductCode:
   - scs
-  Description_EN: Kubernetes pod ID of the container on which the event was detected
+  Description_EN: The Kubernetes pod ID of the container on which the event was detected
   Sample:
   - 09451f51-7124-4aa5-a5c4-ada24efe9da9
   DL_Type: string
@@ -289,7 +293,7 @@
 - Name: containerName
   ProductCode:
   - scs
-  Description_EN: Name of the Kubernetes container on which the event was detected
+  Description_EN: The name of the Kubernetes container on which the event was detected
   Sample:
   - k8s_democon_longrunl_default_09451f51-7124-4aa5-a5c4-ada24efe9da9_0
   DL_Type: string
@@ -299,7 +303,7 @@
 - Name: containerId
   ProductCode:
   - scs
-  Description_EN: ID of the Kubernetes container on which the event was detected
+  Description_EN: The ID of the Kubernetes container on which the event was detected
   Sample:
   - 7d1e00176d78
   DL_Type: string
@@ -309,7 +313,7 @@
 - Name: containerImage
   ProductCode:
   - scs
-  Description_EN: Image of the Kubernetes container on which the event was detected
+  Description_EN: The image of the Kubernetes container on which the event was detected
   Sample:
   - debian:latest
   DL_Type: string
@@ -319,7 +323,8 @@
 - Name: containerImageDigest
   ProductCode:
   - scs
-  Description_EN: Image digest of the Kubernetes on which the event was detected
+  Description_EN: The image digest of the Kubernetes container on which the event
+    was detected
   Sample:
   - sha256:bfe6615d017d1eebe19f349669de58cda36c668ef916e618be78071513c690e5
   DL_Type: string
@@ -329,7 +334,7 @@
 - Name: ruleIdStr
   ProductCode:
   - scs
-  Description_EN: ID of the C1CS rule on which the event was detected
+  Description_EN: The Trend Cloud One - Container Security rule ID
   Sample:
   - TM-00000036
   DL_Type: string
@@ -339,7 +344,7 @@
 - Name: policyId
   ProductCode:
   - scs
-  Description_EN: ID of the C1CS policy on which the event was detected
+  Description_EN: The policy ID of which the event was detected
   Sample:
   - TestPolicy-2HJe25H4GY4upSuNNAG1pci2BIm
   DL_Type: string
@@ -349,7 +354,7 @@
 - Name: policyName
   ProductCode:
   - scs
-  Description_EN: Name of the C1CS policy on which the event was detected
+  Description_EN: The name of the triggered policy
   Sample:
   - TestPolicy
   DL_Type: string
@@ -385,7 +390,7 @@
 - Name: processFilePath
   ProductCode:
   - scs
-  Description_EN: File path of the subject process
+  Description_EN: The file path of the subject process
   Sample:
   - c:\windows\system32\services.exe
   - /usr/bin/bash
@@ -398,7 +403,7 @@
 - Name: parentFilePath
   ProductCode:
   - scs
-  Description_EN: File path of the parent process
+  Description_EN: The file path of the parent process
   Sample:
   - c:\windows\system32\services.exe
   - /usr/bin/bash
@@ -412,7 +417,7 @@
 - Name: processLaunchTime
   ProductCode:
   - scs
-  Description_EN: Time when the subject process was launched
+  Description_EN: The time the subject process was launched
   Sample:
   - '1653614773895'
   - '1656118625928'
@@ -424,7 +429,7 @@
 - Name: processName
   ProductCode:
   - scs
-  Description_EN: Image name of the process that triggered the event
+  Description_EN: The image name of the process that triggered the event
   Sample:
   - /usr/bin/bash
   - c:\windows\system32\svchost.exe
@@ -437,7 +442,7 @@
 - Name: parentName
   ProductCode:
   - scs
-  Description_EN: Image name of the parent of the process that triggered the event
+  Description_EN: The image name of the parent of the process that triggered the event
   Sample:
   - /usr/bin/bash
   - c:\windows\system32\svchost.exe
@@ -449,7 +454,7 @@
 - Name: parentLaunchTime
   ProductCode:
   - scs
-  Description_EN: Time when the parent process was launched
+  Description_EN: The time when the parent process was launched
   Sample:
   - '1653614773895'
   - '1656118625928'
@@ -461,7 +466,7 @@
 - Name: processPid
   ProductCode:
   - scs
-  Description_EN: PID of the subject process
+  Description_EN: The PID of the subject process
   Sample:
   - 4
   - 1
@@ -474,7 +479,7 @@
 - Name: parentPid
   ProductCode:
   - scs
-  Description_EN: PID of the parent process
+  Description_EN: The PID of the parent process
   Sample:
   - 4
   - 1
@@ -487,7 +492,7 @@
 - Name: dpt
   ProductCode:
   - scs
-  Description_EN: Destination port number of the network connection
+  Description_EN: The destination port number of the network connection
   Sample: []
   DL_Type: int
   DL_CommonKey:
@@ -497,7 +502,7 @@
 - Name: dst
   ProductCode:
   - scs
-  Description_EN: Destination IP address of the network connection
+  Description_EN: The destination IP address of the network connection
   Sample:
   - '::'
   - 0.0.0.0
@@ -511,7 +516,7 @@
 - Name: spt
   ProductCode:
   - scs
-  Description_EN: Source port number of the network connection
+  Description_EN: The source port number of the network connection
   Sample:
   - 53
   - 5353
@@ -524,7 +529,7 @@
 - Name: src
   ProductCode:
   - scs
-  Description_EN: Source address of the network connection
+  Description_EN: The source address of the network connection
   Sample:
   - '::'
   - 172.20.0.10
@@ -538,7 +543,7 @@
 - Name: proto
   ProductCode:
   - scs
-  Description_EN: Telemetry connection protocol type
+  Description_EN: The telemetry connection protocol type
   Sample:
   - TELEMETRY_CONNECTION_TCP
   - TELEMETRY_CONNECTION_UDP
@@ -549,7 +554,7 @@
 - Name: objectUser
   ProductCode:
   - scs
-  Description_EN: Owner name of the target process or the login user name
+  Description_EN: The owner name of the target process or the login user name
   Sample:
   - root
   - SYSTEM
@@ -562,7 +567,7 @@
 - Name: osName
   ProductCode:
   - scs
-  Description_EN: Host operating system name
+  Description_EN: The host operating system name
   Sample:
   - Linux
   DL_Type: string

@@ -110,7 +110,7 @@
   - szn
   - pts
   - scs
-  Description_EN: Host name of the endpoint or node on which the event was detected
+  Description_EN: The endpoint host name or node where the event was detected
   Sample:
   - 10.124.17.69 (swpos-aws-aza02) [i-0fd28720e80225308]
   - 10.124.21.139 (swpos-aws-azc02) [i-07e2c4a803cd0fa93]
@@ -224,7 +224,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: Source address of the network connection
+  Description_EN: The source address of the network connection
   Sample:
   - 8.8.8.8
   - 0.0.0.0
@@ -248,7 +248,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: Destination IP address of the network connection
+  Description_EN: The destination IP address of the network connection
   Sample:
   - 239.255.255.250
   - 0.0.0.0
@@ -339,7 +339,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: Destination port number of the network connection
+  Description_EN: The destination port number of the network connection
   Sample:
   - 0
   - 445
@@ -361,7 +361,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: Source port number of the network connection
+  Description_EN: The source port number of the network connection
   Sample:
   - 53
   - 0
@@ -422,6 +422,7 @@
   - sca
   - sem
   - pdi
+  - xms
   Description_EN: The file name of an attachment
   Sample:
   - Mail Body
@@ -471,7 +472,7 @@
   - sds
   - xes
   - scs
-  Description_EN: File path of the target process image or target file
+  Description_EN: The file path of the target process image or target file
   Sample:
   - c:\windows\system32\windowspowershell\v1.0\powershell.exe
   - zwwritevirtualmemory
@@ -515,6 +516,7 @@
 - Name: attachmentFileHash
   ProductCode:
   - pdi
+  - xms
   Description_EN: The SHA-1 of the email attachment
   Sample:
   - C9877617DB6715792F9D5C959C1E8D4E56D0C281
@@ -809,7 +811,7 @@
   - sao
   - sds
   - xes
-  Description_EN: File path of the subject process
+  Description_EN: The file path of the subject process
   Sample:
   - c:\windows\system32\svchost.exe
   - c:\windows\system32\windowspowershell\v1.0\powershell.exe
@@ -847,6 +849,7 @@
   - sem
   - pdi
   - sao
+  - xms
   Description_EN: Email sender
   Sample:
   - WF-BATCH@ngcp.ph
@@ -865,6 +868,7 @@
   - sem
   - pdi
   - sao
+  - xms
   Description_EN: The email recipient
   Sample:
   - (no user)
@@ -881,6 +885,7 @@
   - pdi
   - sem
   - sao
+  - xms
   Description_EN: The message subject
   Sample:
   - mail.dhr-rgv.com
@@ -896,6 +901,7 @@
   - sem
   - pdi
   - sao
+  - xms
   Description_EN: The internet message ID
   Sample:
   - 11.2.00.0007
@@ -919,7 +925,7 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: Attack technique ID detected by VisionOne based on the alert filter
+  Description_EN: The attack ID detected by Trend Vision One based on the alert filter
   Sample:
   - MITREV9.T1090
   - MITRE.T1071
@@ -958,6 +964,7 @@
   - stp
   - szn
   - scs
+  - xms
   Description_EN: The name of the rule that triggered the event
   Sample:
   - Directory Server - Microsoft Windows Active Directory
@@ -990,6 +997,7 @@
   - pds
   - sws
   - pts
+  - xms
   Description_EN: The name of the detected malware
   Sample:
   - SecurityLevelDrop
@@ -1014,6 +1022,7 @@
   - ptn
   - szn
   - pts
+  - xms
   Description_EN: The event type name
   Sample:
   - LOG_INSPECTION_EVENT
@@ -1076,6 +1085,7 @@
   - pds
   - sca
   - sem
+  - xms
   Description_EN: The subrule name
   Sample:
   - Pre-authentication failed.
@@ -1097,6 +1107,7 @@
   - sem
   - stp
   - ptn
+  - xms
   Description_EN: The additional information
   Sample:
   - 'warning: fork: Resource temporarily unavailable'
@@ -1155,7 +1166,7 @@
 - Name: parentFilePath
   ProductCode:
   - xes
-  Description_EN: Full file path of the parent process
+  Description_EN: The full file path of the parent process
   Sample:
   - c:\windows\explorer.exe
   - c:\tiburon\commandcad\test\startup.exe
@@ -1257,7 +1268,7 @@
   - sds
   - pds
   - scs
-  Description_EN: ID of the policy on which the event was detected
+  Description_EN: The policy ID of which the event was detected
   Sample:
   - 00000001-0001-0001-0001-000000007610
   - '007'
@@ -1302,6 +1313,7 @@
   - sds
   - sao
   - pds
+  - xms
   Description_EN: The scan type
   Sample:
   - realtime_mailmeta-exchange
@@ -1364,6 +1376,7 @@
   - sig
   - ams
   - scs
+  - xms
   Description_EN: The internal product ID
   Sample:
   - Trend Micro Deep Security
@@ -1591,6 +1604,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The unique email ID
   Sample:
   - 00027ac3-f8f2-cc8f-d078-3a57f12f3d55
@@ -1603,6 +1617,7 @@
 - Name: orgId
   ProductCode:
   - sca
+  - xms
   Description_EN: The Cloud App Security organization ID
   Sample:
   - 182a3fa0-a3a7-11eb-8590-8d526fa1feaa
@@ -1705,7 +1720,7 @@
   - sig
   - ptn
   - scs
-  Description_EN: Name of the policy on which the event was detected
+  Description_EN: The name of the triggered policy
   Sample:
   - Steelcase
   - Cabot
@@ -1797,7 +1812,7 @@
 - Name: eventSourceType
   ProductCode:
   - ALL
-  Description_EN: Event source type
+  Description_EN: The event source type
   Sample:
   - EVENT_SOURCE_EVENT_LOG
   - EVENT_SOURCE_JAGUAR
@@ -1808,7 +1823,7 @@
 - Name: version
   ProductCode:
   - ALL
-  Description_EN: Version
+  Description_EN: The schema version
   Sample:
   - '1.0'
   - '1.1'
@@ -1820,7 +1835,7 @@
 - Name: eventTime
   ProductCode:
   - ALL
-  Description_EN: Time recorded when the agent detected the event
+  Description_EN: The time recorded when the agent detected the event
   Sample:
   - 1656324260000
   DL_Type: real
@@ -1830,7 +1845,8 @@
 - Name: customerId
   ProductCode:
   - ALL
-  Description_EN: Assigned unique customer ID, CLP ID, company ID, or business ID
+  Description_EN: The assigned unique Customer ID, CLP ID, Company ID, or Business
+    ID
   Sample:
   - dcf53bea-fa92-44fa-b1c5-da7ce3c1329e
   - fd70962d-386e-4bd1-9f18-6ec68fe9dc52
@@ -1842,7 +1858,7 @@
 - Name: receivedTime
   ProductCode:
   - ALL
-  Description_EN: Time when the XDR log was received
+  Description_EN: The time when the XDR log was received
   Sample:
   - 1656324260000
   DL_Type: real
@@ -1852,7 +1868,7 @@
 - Name: packageTraceId
   ProductCode:
   - ALL
-  Description_EN: Event package trace ID
+  Description_EN: The event package trace ID
   Sample:
   - 0008797f-3836-4cab-90c8-0d6ed56ad139
   - 0054663e-76a7-4ef6-a027-0a8140b09387
@@ -1875,7 +1891,7 @@
 - Name: bitwiseFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Bitwise filter risk level
+  Description_EN: The bitwise filter risk level
   Sample:
   - 1
   - 2
@@ -1985,6 +2001,7 @@
 - Name: attachmentFileSize
   ProductCode:
   - pdi
+  - xms
   Description_EN: The file size of the email attachment
   Sample:
   - '190843'
@@ -2522,6 +2539,7 @@
   - sem
   - pts
   - scs
+  - xms
   Description_EN: The event ID from the logs of each product
   Sample:
   - 100116
@@ -3045,7 +3063,7 @@
   ProductCode:
   - sao
   - sds
-  Description_EN: Owner name of the target process or the login user name
+  Description_EN: The owner name of the target process or the login user name
   Sample:
   - Système
   - SYSTEM
@@ -3072,7 +3090,7 @@
   - sig
   - ams
   - szn
-  Description_EN: Host operating system name
+  Description_EN: The host operating system name
   Sample:
   - windows 10.0.22000
   - windows 10.0.19044
@@ -3199,7 +3217,7 @@
   - pds
   - scs
   - sao
-  Description_EN: Image name of the process that triggered the event
+  Description_EN: The image name of the process that triggered the event
   Sample:
   - c:\windows\system32\svchost.exe
   - /usr/bin/python2.7
@@ -3214,7 +3232,7 @@
   - sds
   - xes
   - scs
-  Description_EN: PID of the subject process
+  Description_EN: The PID of the subject process
   Sample: []
   DL_Type: int
   DL_CommonKey:
@@ -3238,7 +3256,7 @@
   - pds
   - ptn
   - scs
-  Description_EN: Exploited layer network protocol type
+  Description_EN: The exploited layer network protocol
   Sample:
   - '6'
   - TCP
@@ -3271,7 +3289,7 @@
   - sig
   - ams
   - scs
-  Description_EN: Product version
+  Description_EN: The product version
   Sample:
   - 20.0.0.4726
   - 20.0.0.4416
@@ -3382,6 +3400,7 @@
   - stp
   - sig
   - szn
+  - xms
   Description_EN: The Unix time of the log generation
   Sample:
   - 1656324260000
@@ -3936,7 +3955,7 @@
   ProductCode:
   - xes
   - scs
-  Description_EN: Image name of the parent of the process that triggered the event
+  Description_EN: The image name of the parent of the process that triggered the event
   Sample:
   - explorer.exe
   - startup.exe
@@ -3951,7 +3970,7 @@
   - xes
   - pds
   - scs
-  Description_EN: PID of the parent process
+  Description_EN: The PID of the parent process
   Sample: []
   DL_Type: int
   DL_CommonKey:
@@ -4179,6 +4198,7 @@
   - sca
   - sem
   - ams
+  - xms
   Description_EN: The mailbox that is protected by Trend Micro Cloud App Security
   Sample:
   - jesada.gonkratoke@scb.co.th
@@ -4303,6 +4323,7 @@
   - sca
   - sds
   - sem
+  - xms
   Description_EN: The rule version
   Sample:
   - '202207060001'
@@ -4314,7 +4335,7 @@
 - Name: processLaunchTime
   ProductCode:
   - sds
-  Description_EN: Time when the subject process was launched
+  Description_EN: The time the subject process was launched
   Sample:
   - '1656400286556'
   - '1656566610259'
@@ -4327,7 +4348,7 @@
   ProductCode:
   - sds
   - pts
-  Description_EN: Access type of the event
+  Description_EN: The access type of the event
   Sample:
   - '4'
   - '101'
@@ -4386,6 +4407,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The SHA-1 hash value of the attachment file
   Sample:
   - 056a2975edffe7188c03c324ae4335f9380b57e3
@@ -4398,6 +4420,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The TLSH hash value of the attachment file
   Sample:
   - ''
@@ -4734,7 +4757,7 @@
 - Name: clusterId
   ProductCode:
   - scs
-  Description_EN: The container cluster ID
+  Description_EN: The cluster ID of the container on which the event was detected
   Sample:
   - ben_eks_test-20k90A3jGa4d3YMYfrdGIgs7g9u
   DL_Type: string
@@ -4744,7 +4767,7 @@
 - Name: clusterName
   ProductCode:
   - scs
-  Description_EN: The container cluster name
+  Description_EN: The cluster name of the container on which the event was detected
   Sample:
   - ben_eks_test
   DL_Type: string
@@ -4754,7 +4777,8 @@
 - Name: k8sNamespace
   ProductCode:
   - scs
-  Description_EN: The Kubernetes namespace for the container
+  Description_EN: The Kubernetes namespace of the container on which the event was
+    detected
   Sample:
   - default
   DL_Type: string
@@ -4764,7 +4788,8 @@
 - Name: k8sPodName
   ProductCode:
   - scs
-  Description_EN: The Kubernetes Pod name for the container
+  Description_EN: The Kubernetes pod name of the container on which the event was
+    detected
   Sample:
   - ubuntu-ds-fp2jk
   DL_Type: string
@@ -4774,7 +4799,7 @@
 - Name: k8sPodId
   ProductCode:
   - scs
-  Description_EN: The Kubernetes Pod ID for the container
+  Description_EN: The Kubernetes pod ID of the container on which the event was detected
   Sample:
   - fc550ed4-3b54-402a-a56d-46096c285660
   DL_Type: None
@@ -4784,7 +4809,7 @@
 - Name: containerName
   ProductCode:
   - scs
-  Description_EN: The container name
+  Description_EN: The name of the Kubernetes container on which the event was detected
   Sample:
   - k8s_ubuntu_ubuntu-ds-fp2jk_default_fc550ed4-3b54-402a-a56d-46096c285660_2
   DL_Type: string
@@ -4794,7 +4819,7 @@
 - Name: containerId
   ProductCode:
   - scs
-  Description_EN: The container ID
+  Description_EN: The ID of the Kubernetes container on which the event was detected
   Sample:
   - 4102001853b8
   DL_Type: None
@@ -4804,7 +4829,7 @@
 - Name: containerImage
   ProductCode:
   - scs
-  Description_EN: The container image URI
+  Description_EN: The image of the Kubernetes container on which the event was detected
   Sample:
   - dockerhub.io/ubuntu:latest
   DL_Type: string
@@ -4814,7 +4839,8 @@
 - Name: containerImageDigest
   ProductCode:
   - scs
-  Description_EN: The container image digest
+  Description_EN: The image digest of the Kubernetes container on which the event
+    was detected
   Sample:
   - sha256:626ffe58f6e7566e00254b638eb7e0f3b11d4da9675088f4781a50ae288f3322
   DL_Type: None
@@ -4844,7 +4870,7 @@
 - Name: ruleIdStr
   ProductCode:
   - scs
-  Description_EN: ID of the C1CS rule on which the event was detected
+  Description_EN: The Trend Cloud One - Container Security rule ID
   Sample:
   - TM-00000043
   DL_Type: string
@@ -4855,6 +4881,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The SHA-1 hashes of the highlighted file
   Sample:
   - C9877617DB6715792F9D5C959C1E8D4E56D0C281
@@ -4869,6 +4896,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The direction of the email message
   Sample:
   - 1
@@ -4950,7 +4978,7 @@
 - Name: customFilterTags
   ProductCode:
   - ALL
-  Description_EN: Detection filter that matched data based on custom filters
+  Description_EN: The detection filter that matched data based on custom filters
   Sample:
   - XCUS.CF0131
   - USER.HELLOWORLD
@@ -4963,7 +4991,7 @@
 - Name: customFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Top-level risk level of the event by custom filter
+  Description_EN: The top-level risk level of the event by custom filter
   Sample:
   - info
   - low
@@ -5042,8 +5070,8 @@
 - Name: tmFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Top-level risk level of the event by Security Analytics Engine filter
-    filter
+  Description_EN: The top-level risk level of the event by Security Analytics Engine
+    filter filter
   Sample:
   - info
   - low
@@ -5074,7 +5102,7 @@
   DL_Aggregable: false
 - Name: srcFilePath
   ProductCode: []
-  Description_EN: Path of the source file
+  Description_EN: The path of the source file
   Sample:
   - C:\\temp\\a.exe
   DL_Type: string
