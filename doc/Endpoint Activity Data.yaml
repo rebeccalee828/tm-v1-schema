@@ -17,7 +17,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Host name of the endpoint on which the event was detected
+  Description_EN: The host name of the endpoint on which the event was detected
   Sample:
   - PHILIPSIBE09
   - WHAM6WK8XG2
@@ -59,7 +59,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Access type of the event
+  Description_EN: The access type
   Sample:
   - TELEMETRY_PROCESS_CREATE
   - TELEMETRY_FILE_CREATE
@@ -73,7 +73,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Time recorded when the agent detected the event
+  Description_EN: The time the agent detected the event
   Sample:
   - 1657781088000
   DL_Type: real
@@ -111,7 +111,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The logon user name
+  Description_EN: The logon user name
   Sample:
   - root
   - SISTEMA
@@ -169,7 +169,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The md5 hash of target process image or target file
+  Description_EN: The md5 hash of target process image or target file
   Sample:
   - 7ac47235c7bb452a03d3afd872f44c9e
   - c9873d83a969645a97f21adc1b164cc5
@@ -199,7 +199,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The SHA256 hash of target process image or target file
+  Description_EN: The SHA256 hash of target process image or target file
   Sample:
   - 39109eef00821658893b45634fe2f4664f880da9242712df907f1327d4ceefb8
   - 49fa3e206abf6a1f4546417dbe09f3f06b38847866a4a66de75bd90f39cb6c1c
@@ -214,7 +214,7 @@
   - sds
   - xes
   - sao
-  Description_EN: File path of the target process image or target file
+  Description_EN: The file path of the target process image or target file
   Sample:
   - /usr/bin/bash
   - /bin/bash
@@ -438,7 +438,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Owner name of the target process or the login user name
+  Description_EN: The owner name of the target process or the login user name
   Sample:
   - root
   - SYSTEM
@@ -527,7 +527,7 @@
   - sds
   - xes
   - sao
-  Description_EN: File path of the parent process
+  Description_EN: The file path of the parent process
   Sample:
   - c:\windows\system32\services.exe
   - /usr/bin/bash
@@ -543,7 +543,7 @@
   - sds
   - xes
   - sao
-  Description_EN: PID of the parent process
+  Description_EN: The PID of the parent process
   Sample:
   - 1
   - 976
@@ -645,7 +645,7 @@
   - sds
   - xes
   - sao
-  Description_EN: File path of the subject process
+  Description_EN: The file path of the subject process
   Sample:
   - /usr/bin/bash
   - c:\windows\system32\svchost.exe
@@ -677,7 +677,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Image name of the process that triggered the event
+  Description_EN: The image name of the process that triggered the event
   Sample:
   - /usr/bin/bash
   - c:\windows\system32\svchost.exe
@@ -692,7 +692,7 @@
   - sds
   - xes
   - sao
-  Description_EN: PID of the subject process
+  Description_EN: The PID of the subject process
   Sample:
   - 4
   - 1
@@ -757,7 +757,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Destination port number of the network connection
+  Description_EN: The destination port number
   Sample: []
   DL_Type: int
   DL_CommonKey:
@@ -769,7 +769,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Destination IP address of the network connection
+  Description_EN: The destination IP address
   Sample:
   - '::'
   - 0.0.0.0
@@ -785,7 +785,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Source port number of the network connection
+  Description_EN: The source port number
   Sample:
   - 53
   - 5353
@@ -800,7 +800,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Source address of the network connection
+  Description_EN: The source address
   Sample:
   - '::'
   - 172.20.0.10
@@ -858,7 +858,7 @@
   - xes
   - sao
   - sds
-  Description_EN: Path of the source file
+  Description_EN: The source file path
   Sample:
   - \\cnva-apps\megaclockprod\traveler\travelerprint.accdb
   - c:\program files\common files\microsoft shared\clicktorun\officesvcmgrschedule.xml
@@ -872,7 +872,8 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: Attack technique ID detected by VisionOne based on the alert filter
+  Description_EN: The attack technique ID detected by Trend Vision One based on the
+    alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -1018,7 +1019,7 @@
 - Name: eventSourceType
   ProductCode:
   - ALL
-  Description_EN: Event source type
+  Description_EN: The event source type
   Sample:
   - EVENT_SOURCE_TELEMETRY
   DL_Type: None
@@ -1028,7 +1029,7 @@
 - Name: version
   ProductCode:
   - ALL
-  Description_EN: Schema version
+  Description_EN: The version
   Sample:
   - '1.0'
   DL_Type: None
@@ -1038,7 +1039,7 @@
 - Name: customerId
   ProductCode:
   - ALL
-  Description_EN: Assigned unique customer ID, CLP ID, company ID, or business ID
+  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
   Sample:
   - 9011075d-a2d7-4ff0-8660-47645735d0e7
   - afa7768a-f34d-4ee3-b1db-8dd3592127b7
@@ -1050,7 +1051,7 @@
 - Name: receivedTime
   ProductCode:
   - ALL
-  Description_EN: Time when the XDR log was received
+  Description_EN: The time when the XDR log was received
   Sample:
   - 1657781088000
   DL_Type: real
@@ -1060,7 +1061,7 @@
 - Name: packageTraceId
   ProductCode:
   - ALL
-  Description_EN: Event package trace ID
+  Description_EN: The package trace ID
   Sample:
   - 353e1e1e-4a80-4f3c-aec1-113d425a28e1
   - 11b8ae4f-dc54-4c23-9011-7d8cc3be3a7d
@@ -1072,7 +1073,7 @@
 - Name: bitwiseFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Bitwise filter risk level
+  Description_EN: The bitwise filter risk level
   Sample:
   - 1
   - 2
@@ -1232,7 +1233,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Product version
+  Description_EN: The product version
   Sample:
   - 1.2.0.2752
   - 1.0.345
@@ -1272,7 +1273,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Host operating system name
+  Description_EN: The host operating system name
   Sample:
   - Windows
   - Linux
@@ -1340,7 +1341,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Time when the subject process was launched
+  Description_EN: The time the subject process was launched
   Sample:
   - '1653614775212'
   - '1656118626642'
@@ -1602,7 +1603,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Image name of the parent of the process that triggered the event
+  Description_EN: The image name of the parent process
   Sample:
   - c:\windows\system32\services.exe
   - /usr/bin/bash
@@ -1654,7 +1655,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Time when the parent process was launched
+  Description_EN: The time when the parent process was launched
   Sample:
   - '1653614773895'
   - '1656118625928'
@@ -2774,7 +2775,7 @@
   - sds
   - xes
   - sao
-  Description_EN: Telemetry connection protocol type
+  Description_EN: The protocol type
   Sample:
   - TELEMETRY_CONNECTION_TCP
   - TELEMETRY_CONNECTION_UDP
@@ -3013,7 +3014,7 @@
 - Name: customFilterTags
   ProductCode:
   - ALL
-  Description_EN: Detection filter that matched data based on custom filters
+  Description_EN: The detection filter that matched data based on custom filters
   Sample:
   - XCUS.CF0131
   - USER.HELLOWORLD
@@ -3025,7 +3026,7 @@
 - Name: customFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Top-level risk level of the event by custom filter
+  Description_EN: The top-level risk level of the event by custom filter
   Sample:
   - info
   - low
@@ -3039,7 +3040,8 @@
 - Name: tmFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Top-level risk level of the event by SAE filter
+  Description_EN: The top-level risk level of the event by Security Analytics Engine
+    filter
   Sample:
   - info
   - low

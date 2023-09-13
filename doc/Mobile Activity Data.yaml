@@ -13,7 +13,7 @@
 - Name: endpointHostName
   ProductCode:
   - ams
-  Description_EN: Host Name of the endpoint on which the event was detected
+  Description_EN: The host name of the endpoint on which the event was detected
   Sample:
   - PHILIPSIBE09
   - WHAM6WK8XG2
@@ -49,7 +49,7 @@
 - Name: eventSubId
   ProductCode:
   - ams
-  Description_EN: Access type of an event
+  Description_EN: The access type
   Sample:
   - TELEMETRY_PROCESS_CREATE
   - TELEMETRY_FILE_CREATE
@@ -61,7 +61,7 @@
 - Name: eventTime
   ProductCode:
   - ams
-  Description_EN: Time recorded when agent detected the event
+  Description_EN: The time the agent detected the event
   Sample:
   - 1657781088000
   DL_Type: real
@@ -71,7 +71,7 @@
 - Name: logonUser
   ProductCode:
   - ams
-  Description_EN: The logon user name
+  Description_EN: The logon user name
   Sample:
   - root
   - SISTEMA
@@ -84,7 +84,7 @@
 - Name: objectFileHashSha256
   ProductCode:
   - ams
-  Description_EN: The SHA256 hash of target process image or target file
+  Description_EN: The SHA256 hash of target process image or target file
   Sample:
   - 39109eef00821658893b45634fe2f4664f880da9242712df907f1327d4ceefb8
   - 49fa3e206abf6a1f4546417dbe09f3f06b38847866a4a66de75bd90f39cb6c1c
@@ -97,7 +97,7 @@
 - Name: objectFilePath
   ProductCode:
   - ams
-  Description_EN: File path location of target process image or target file
+  Description_EN: The file path of the target process image or target file
   Sample:
   - /usr/bin/bash
   - /bin/bash
@@ -149,7 +149,7 @@
 - Name: srcFilePath
   ProductCode:
   - ams
-  Description_EN: The file path location of source file
+  Description_EN: The source file path
   Sample:
   - \\cnva-apps\megaclockprod\traveler\travelerprint.accdb
   - c:\program files\common files\microsoft shared\clicktorun\officesvcmgrschedule.xml
@@ -163,7 +163,8 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: Attack technique ID detected by XDR based on alert filter
+  Description_EN: The attack technique ID detected by Trend Vision One based on the
+    alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -233,7 +234,7 @@
 - Name: customerId
   ProductCode:
   - ALL
-  Description_EN: The Customer ID, CLP ID, or Company ID
+  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
   Sample:
   - 9011075d-a2d7-4ff0-8660-47645735d0e7
   - afa7768a-f34d-4ee3-b1db-8dd3592127b7
@@ -245,7 +246,7 @@
 - Name: receivedTime
   ProductCode:
   - ALL
-  Description_EN: Time when XDR log was received
+  Description_EN: The time when the XDR log was received
   Sample:
   - 1657781088000
   DL_Type: real
@@ -267,7 +268,7 @@
 - Name: bitwiseFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: The bitwise filter level
+  Description_EN: The bitwise filter risk level
   Sample:
   - 1
   - 2
@@ -381,7 +382,7 @@
 - Name: osName
   ProductCode:
   - ams
-  Description_EN: The OS type
+  Description_EN: The host operating system name
   Sample:
   - Windows
   - Linux
@@ -815,7 +816,7 @@
   ProductCode:
   - ALL
   Description_EN: The top-level risk level of the event by Security Analytics Engine
-    filter
+    filter filter
   Sample:
   - info
   - low

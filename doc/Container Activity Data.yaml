@@ -1,0 +1,572 @@
+- Name: endpointHostName
+  ProductCode:
+  - scs
+  Description_EN: The host name of the container or node
+  Sample:
+  - PHILIPSIBE09
+  - WHAM6WK8XG2
+  - MacBook-Pro-del-Meno
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventId
+  ProductCode:
+  - scs
+  Description_EN: Event type
+  Sample: []
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: eventSubId
+  ProductCode:
+  - scs
+  Description_EN: The access type
+  Sample:
+  - TELEMETRY_PROCESS_CREATE
+  - TELEMETRY_FILE_CREATE
+  - TELEMETRY_CONNECTION_CONNECT_OUTBOUND
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: eventTime
+  ProductCode:
+  - scs
+  Description_EN: The time the agent detected the event
+  Sample:
+  - 1657781088000
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectFilePath
+  ProductCode:
+  - scs
+  Description_EN: The file path of the target process image or target file
+  Sample:
+  - /usr/bin/bash
+  - /bin/bash
+  - /opt/nimsoft/probes/system/processes/processes
+  DL_Type: string
+  DL_CommonKey:
+  - FileFullPath
+  - FileName
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcFilePath
+  ProductCode:
+  - scs
+  Description_EN: The source file path
+  Sample:
+  - \\cnva-apps\megaclockprod\traveler\travelerprint.accdb
+  - c:\program files\common files\microsoft shared\clicktorun\officesvcmgrschedule.xml
+  - q:\a7_dbs\a4_pkg\a4_packaging.accde
+  DL_Type: string
+  DL_CommonKey:
+  - FileFullPath
+  - FileName
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: tags
+  ProductCode:
+  - ALL
+  - scs
+  Description_EN: The ID detected by Trend Vision One based on the alert filter
+  Sample:
+  - MITREV9.T1057
+  - MITREV9.T1059.003
+  - XSAE.F2924
+  DL_Type: dynamic
+  DL_CommonKey:
+  - Technique
+  - Tactic
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: uuid
+  ProductCode:
+  - ALL
+  Description_EN: Unique key of the log
+  Sample:
+  - 00000003-be87-4aad-add2-d395e4efad3e
+  - 00000014-0493-459d-9f90-93565402f41e
+  - 0000006b-b5ea-4f5e-8d56-ddec452ef3bd
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: productCode
+  ProductCode:
+  - ALL
+  Description_EN: Internal product code (scs = Trend Micro Cloud One Container Security)
+  Sample:
+  - scs
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: filterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: Top-level risk level of the event
+  Sample:
+  - info
+  - low
+  - medium
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: eventSourceType
+  ProductCode:
+  - ALL
+  Description_EN: The event source type
+  Sample:
+  - EVENT_SOURCE_CONTAINER_ACTIVITY
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: version
+  ProductCode:
+  - ALL
+  Description_EN: The version
+  Sample:
+  - '1.0'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: customerId
+  ProductCode:
+  - ALL
+  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
+  Sample:
+  - 9011075d-a2d7-4ff0-8660-47645735d0e7
+  - afa7768a-f34d-4ee3-b1db-8dd3592127b7
+  - 7ba4af7b-91f7-4589-9710-5acfd0e70406
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: receivedTime
+  ProductCode:
+  - ALL
+  Description_EN: The time when the XDR log was received
+  Sample:
+  - 1657781088000
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: packageTraceId
+  ProductCode:
+  - ALL
+  Description_EN: The package trace ID
+  Sample:
+  - 353e1e1e-4a80-4f3c-aec1-113d425a28e1
+  - 11b8ae4f-dc54-4c23-9011-7d8cc3be3a7d
+  - d084fed4-67fd-4135-b08e-654c9cdaf709
+  DL_Type: None
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: bitwiseFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The bitwise filter risk level
+  Sample:
+  - 1
+  - 2
+  - 3
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: pver
+  ProductCode:
+  - scs
+  Description_EN: The product version
+  Sample:
+  - 1.2.0.2752
+  - 1.0.345
+  - 1.2.0.2657
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: customFilterTags
+  ProductCode:
+  - ALL
+  Description_EN: The detection filter that matched data based on custom filters
+  Sample:
+  - XCUS.CF0131
+  - USER.HELLOWORLD
+  DL_Type: dynamic
+  DL_CommonKey:
+  - Technique
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: customFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: Top-level risk level of the event by custom filter
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: tmFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top-level risk level of the event by Security Analytics Engine
+    filter
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: clusterId
+  ProductCode:
+  - scs
+  Description_EN: The cluster ID of the container
+  Sample:
+  - TestCluster-2HJdImvH6eO1fgTnCBK3xYA7Sph
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: clusterName
+  ProductCode:
+  - scs
+  Description_EN: The cluster name of the container
+  Sample:
+  - TestCluster
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: k8sNamespace
+  ProductCode:
+  - scs
+  Description_EN: The Kubernetes namespace of the container
+  Sample:
+  - default
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: k8sPodName
+  ProductCode:
+  - scs
+  Description_EN: The Kubernetes pod name of the container
+  Sample:
+  - longrunl
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: k8sPodId
+  ProductCode:
+  - scs
+  Description_EN: The Kubernetes pod ID of the container
+  Sample:
+  - 09451f51-7124-4aa5-a5c4-ada24efe9da9
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: containerName
+  ProductCode:
+  - scs
+  Description_EN: The Kubernetes container name
+  Sample:
+  - k8s_democon_longrunl_default_09451f51-7124-4aa5-a5c4-ada24efe9da9_0
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: containerId
+  ProductCode:
+  - scs
+  Description_EN: The Kubernetes container ID
+  Sample:
+  - 7d1e00176d78
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: containerImage
+  ProductCode:
+  - scs
+  Description_EN: The Kubernetes container image
+  Sample:
+  - debian:latest
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: containerImageDigest
+  ProductCode:
+  - scs
+  Description_EN: The Kubernetes container image digest
+  Sample:
+  - sha256:bfe6615d017d1eebe19f349669de58cda36c668ef916e618be78071513c690e5
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: ruleIdStr
+  ProductCode:
+  - scs
+  Description_EN: The Trend Cloud One - Container Security rule ID
+  Sample:
+  - TM-00000036
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: policyId
+  ProductCode:
+  - scs
+  Description_EN: The Trend Cloud One - Container Security policy ID
+  Sample:
+  - TestPolicy-2HJe25H4GY4upSuNNAG1pci2BIm
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: policyName
+  ProductCode:
+  - scs
+  Description_EN: The name of the triggered policy
+  Sample:
+  - TestPolicy
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processCmd
+  ProductCode:
+  - scs
+  Description_EN: Command line entry of subject process
+  Sample:
+  - C:\WINDOWS\system32\services.exe
+  - C:\Windows\system32\services.exe
+  - /sbin/launchd
+  DL_Type: string
+  DL_CommonKey:
+  - CLICommand
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentCmd
+  ProductCode:
+  - scs
+  Description_EN: Command line entry of parent process
+  Sample:
+  - C:\WINDOWS\system32\services.exe
+  - C:\Windows\system32\services.exe
+  - /sbin/launchd
+  DL_Type: string
+  DL_CommonKey:
+  - CLICommand
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processFilePath
+  ProductCode:
+  - scs
+  Description_EN: The file path of the subject process
+  Sample:
+  - c:\windows\system32\services.exe
+  - /usr/bin/bash
+  - c:\windows\system32\svchost.exe
+  DL_Type: string
+  DL_CommonKey:
+  - ProcessFullPath
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentFilePath
+  ProductCode:
+  - scs
+  Description_EN: The file path of the parent process
+  Sample:
+  - c:\windows\system32\services.exe
+  - /usr/bin/bash
+  - c:\windows\system32\svchost.exe
+  DL_Type: string
+  DL_CommonKey:
+  - FileFullPath
+  - FileName
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processLaunchTime
+  ProductCode:
+  - scs
+  Description_EN: The time the subject process was launched
+  Sample:
+  - '1653614773895'
+  - '1656118625928'
+  - '0'
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processName
+  ProductCode:
+  - scs
+  Description_EN: The image name of the process that triggered the event
+  Sample:
+  - /usr/bin/bash
+  - c:\windows\system32\svchost.exe
+  - c:\windows\system32\lsass.exe
+  DL_Type: string
+  DL_CommonKey:
+  - ProcessName
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: parentName
+  ProductCode:
+  - scs
+  Description_EN: The image name of the parent process
+  Sample:
+  - /usr/bin/bash
+  - c:\windows\system32\svchost.exe
+  - c:\windows\system32\lsass.exe
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: parentLaunchTime
+  ProductCode:
+  - scs
+  Description_EN: The time when the parent process was launched
+  Sample:
+  - '1653614773895'
+  - '1656118625928'
+  - '0'
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: processPid
+  ProductCode:
+  - scs
+  Description_EN: The PID of the subject process
+  Sample:
+  - 4
+  - 1
+  - 784
+  - 792
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentPid
+  ProductCode:
+  - scs
+  Description_EN: The PID of the parent process
+  Sample:
+  - 4
+  - 1
+  - 784
+  - 792
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: dpt
+  ProductCode:
+  - scs
+  Description_EN: The destination port number
+  Sample: []
+  DL_Type: int
+  DL_CommonKey:
+  - Port
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: dst
+  ProductCode:
+  - scs
+  Description_EN: The destination IP address
+  Sample:
+  - '::'
+  - 0.0.0.0
+  - 127.0.0.1
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: spt
+  ProductCode:
+  - scs
+  Description_EN: The source port number
+  Sample:
+  - 53
+  - 5353
+  - 443
+  DL_Type: int
+  DL_CommonKey:
+  - Port
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: src
+  ProductCode:
+  - scs
+  Description_EN: The source address
+  Sample:
+  - '::'
+  - 172.20.0.10
+  - 192.168.0.10
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: proto
+  ProductCode:
+  - scs
+  Description_EN: The protocol type
+  Sample:
+  - TELEMETRY_CONNECTION_TCP
+  - TELEMETRY_CONNECTION_UDP
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: objectUser
+  ProductCode:
+  - scs
+  Description_EN: The owner name of the target process or the login user name
+  Sample:
+  - root
+  - SYSTEM
+  - oracle
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: osName
+  ProductCode:
+  - scs
+  Description_EN: The host operating system name
+  Sample:
+  - Linux
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false

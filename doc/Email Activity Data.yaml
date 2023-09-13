@@ -14,7 +14,8 @@
   ProductCode:
   - sca
   - sem
-  Description_EN: Event generation time on the agent endpoint
+  - xms
+  Description_EN: The time the agent detected the event
   Sample:
   - 1657135700000
   DL_Type: real
@@ -24,7 +25,8 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: ID of the MITRE technique detected based on the alert
+  Description_EN: The attack technique ID detected by Trend Vision One based on the
+    alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -60,6 +62,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Internal product code (depricated)
   Sample:
   - '733'
@@ -72,6 +75,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Internal email UUID to identify each email message
   Sample:
   - 00004c28-bda5-496d-ae90-5182d36e9396
@@ -84,6 +88,7 @@
 - Name: mailbox
   ProductCode:
   - sca
+  - xms
   Description_EN: Primary email address
   Sample:
   - luis.sanchezl@arus.com.co
@@ -97,6 +102,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Email traffic direction
   Sample:
   - 1
@@ -110,6 +116,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Mail from address in email header
   Sample:
   - noreply@email.teams.microsoft.com
@@ -124,6 +131,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Mail To address in the email header
   Sample:
   - jesada.gonkratoke@scb.co.th
@@ -138,6 +146,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Email subject
   Sample:
   - Your daily briefing
@@ -151,6 +160,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Email ID
   Sample:
   - <01000181c6c8054d-a28e440d-23d0-4427-845e-a5af5a7aac60-000000@email.amazonses.com>
@@ -164,6 +174,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Mail CC address in the email header
   Sample:
   - <ListaVerdecard-MIS@quero-quero.com.br>
@@ -178,6 +189,7 @@
   ProductCode:
   - sem
   - sca
+  - xms
   Description_EN: Mail BCC address in the email header
   Sample:
   - customermarketing@flowserve.com
@@ -192,6 +204,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Email sender IP address
   Sample:
   - 255.255.255.255
@@ -204,6 +217,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Hash value of the email attachment
   Sample:
   - 02ab50ee0bccadb43d6cc504928f2ff2
@@ -217,6 +231,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: URL extracted from the email content
   Sample:
   - https://aka.ms/JoinTeamsMeeting
@@ -229,6 +244,7 @@
 - Name: mailSourceDomain
   ProductCode:
   - sca
+  - xms
   Description_EN: Email domain of the sender
   Sample:
   - itau-unibanco.com.br
@@ -242,6 +258,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: URL extracted from the email content
   Sample:
   - Unsubscribe
@@ -254,6 +271,7 @@
 - Name: orgId
   ProductCode:
   - sca
+  - xms
   Description_EN: Cloud App Security orgnization ID
   Sample:
   - 182a3fa0-a3a7-11eb-8590-8d526fa1feaa
@@ -267,6 +285,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: File name of the email attachment
   Sample:
   - image001.png
@@ -281,6 +300,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: SHA-1 hash of the email attachment
   Sample:
   - 03d8fb85556edf397d8afcafc0b13f11ecbde50c
@@ -294,6 +314,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: MD5 hash of the email attachment
   Sample:
   - 003fa299ab119219596f952c68029810
@@ -307,6 +328,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: SHA-256 hash of the email attachment
   Sample:
   - 29d72af5608ee5eade7c4346d3c32dfcc6b54f8fb43d977ff0306ad68b255a01
@@ -319,6 +341,7 @@
 - Name: attachmentUrls
   ProductCode:
   - sem
+  - xms
   Description_EN: URLs extracted from the email attachment
   Sample: []
   DL_Type: dynamic
@@ -329,6 +352,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: SHA-1 hash of the email attachment
   Sample:
   - acedb7898338a46f38d148d1d0456e644576d41b
@@ -343,6 +367,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: SHA-256 hash of the email attachment
   Sample:
   - 0570dfd156ee00cb7bc2a94998157cb3a29292b9e9feed82d4b6c7d2c6bdd9d4
@@ -356,6 +381,7 @@
 - Name: mailSmtpOriginalRecipients
   ProductCode:
   - sem
+  - xms
   Description_EN: Original email recipients in the SMTP envelope
   Sample:
   - jesada.gonkratoke@scb.co.th
@@ -368,6 +394,7 @@
 - Name: mailSmtpRecipients
   ProductCode:
   - sem
+  - xms
   Description_EN: Email recipients in the SMTP envelope after scanning
   Sample:
   - jesada.gonkratoke@scb.co.th
@@ -380,7 +407,7 @@
 - Name: version
   ProductCode:
   - ALL
-  Description_EN: The version number
+  Description_EN: The version
   Sample:
   - '1.1'
   DL_Type: None
@@ -391,7 +418,8 @@
   ProductCode:
   - sca
   - sem
-  Description_EN: The Customer ID, CLP ID, or Company ID
+  - xms
+  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
   Sample:
   - df1fd66c-dea3-40fb-a78b-1442d6154ecc
   - e0f6a485-204f-4988-9253-f02b6481c205
@@ -403,7 +431,7 @@
 - Name: receivedTime
   ProductCode:
   - ALL
-  Description_EN: Time the log was received
+  Description_EN: The time when the XDR log was received
   Sample:
   - 1656324260000
   DL_Type: real
@@ -426,6 +454,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The group ID
   Sample:
   - 00000000-0000-0000-0000-000000000000
@@ -437,6 +466,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The tenant GUID
   Sample:
   - 00000000-0000-0000-0000-000000000000
@@ -447,7 +477,7 @@
 - Name: bitwiseFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Bitwise risk-level filter search
+  Description_EN: The bitwise filter risk level
   Sample:
   - 1
   - 2
@@ -486,6 +516,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: Manual or real-time scan
   Sample:
   - realtime_mailmeta-exchange
@@ -498,6 +529,7 @@
 - Name: mailFolder
   ProductCode:
   - sca
+  - xms
   Description_EN: The email folder name
   Sample:
   - Inbox
@@ -510,6 +542,7 @@
 - Name: msgUuidChain
   ProductCode:
   - sem
+  - xms
   Description_EN: The internal UUID chain for each email in Trend Micro Feedback Engine
   Sample:
   - 00004c28-bda5-496d-ae90-5182d36e9396;00004c28-bda5-496d-ae90-5182d36e9396
@@ -522,6 +555,7 @@
 - Name: mailMetaTraceId
   ProductCode:
   - sem
+  - xms
   Description_EN: The trace ID generated by Trend Micro Feedback Engine
   Sample:
   - ''
@@ -532,6 +566,7 @@
 - Name: mExternalUid
   ProductCode:
   - sca
+  - xms
   Description_EN: The unique ID of the email
   Sample:
   - 00001300@jasperengines.com@@<DS7PR19MB62774CC3DB9201971B5BCE63A0909@DS7PR19MB6277.namprd19.prod.outlook.com>@@69cd4d99e0ab75eadd9b987191c66b4e@@1
@@ -545,6 +580,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The email metadata
   Sample:
   - '[{" ":1},{"\n":1}]'
@@ -557,6 +593,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The raw signature hash of the email
   Sample:
   - PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0gY29udGVudD0gY2hhcnNldD0gPjxtZXRhIG5hbWU9IGNvbnRlbnQ9ID48c3R5bGU+PCEtLS0tPjwvc3R5bGU+PC9oZWFkPjxib2R5IGxhbmc9IGxpbms9IHZsaW5rPSBzdHlsZT0gPjxkaXYgY2xhc3M9ID48cCBjbGFzcz0gPjxURVhUPjwvcD48L2Rpdj48L2JvZHk+PC9odG1sPg==
@@ -569,6 +606,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The X-Mailer header of the email
   Sample:
   - Microsoft Outlook 16.0
@@ -581,6 +619,7 @@
   ProductCode:
   - sem
   - sca
+  - xms
   Description_EN: The user agent
   Sample:
   - Mutt/1.4.2.2i
@@ -593,6 +632,7 @@
   ProductCode:
   - sem
   - sca
+  - xms
   Description_EN: The email protocol detected by Trend Micro Anti-Spam Engine
   Sample: []
   DL_Type: None
@@ -603,6 +643,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The rule ID of the matched rule detected by Trend Micro Anti-Spam
     Engine
   Sample:
@@ -617,6 +658,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The email tag hash detected by Trend Micro Anti-Spam Engine
   Sample:
   - 9ce01ebc63f408264876646e20905349
@@ -629,6 +671,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The email text hash detected by Trend Micro Anti-Spam Engine
   Sample:
   - 221bab3766f6d2a2c6fcc37056511d53
@@ -641,6 +684,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The email URL hash detected by Trend Micro Anti-Spam Engine
   Sample:
   - ca52197d96e4a00ce19eaf34b20c8937
@@ -653,6 +697,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The email header hash detected by Trend Micro Anti-Spam Engine
   Sample:
   - 43f8bfc02d8f78f069c254bc17eba80b
@@ -666,6 +711,7 @@
   ProductCode:
   - sem
   - sca
+  - xms
   Description_EN: The score assigned to the email by Trend Micro Anti-Spam Engine
   Sample: []
   DL_Type: None
@@ -676,6 +722,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The WantedHeader key name detected by Trend Micro Anti-Spam Engine
   Sample:
   - CC
@@ -689,6 +736,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The WantedHeader key value detected by Trend Micro Anti-Spam Engine
   Sample:
   - cloud-app-security-5.0
@@ -701,6 +749,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The Reply To address detected by Trend Micro Anti-Spam Engine
   Sample:
   - noreply@fbworkmail.com
@@ -713,6 +762,7 @@
 - Name: mailSmtpFromAddresses
   ProductCode:
   - sem
+  - xms
   Description_EN: The sender email address
   Sample:
   - nullsender@tmes.trendmicro.com
@@ -726,6 +776,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The type of email detected by Trend Micro Anti-Spam Engine
   Sample:
   - suspected
@@ -738,6 +789,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The name and email address of the sender in the From header detected
     by Trend Micro Anti-Spam Engine
   Sample:
@@ -752,6 +804,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The HELO command detected by Trend Micro Anti-Spam Engine
   Sample:
   - HELO inpost.tmes.trendmicro.com
@@ -765,6 +818,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The TLSH hash detected by Trend Micro Anti-Spam Engine
   Sample:
   - 0FE18E0807B75799EF3ADD7A98D62411FEB31DAB419C913C058068A3A6B33BD114EA39
@@ -777,6 +831,7 @@
   ProductCode:
   - sem
   - sca
+  - xms
   Description_EN: The attachment file size
   Sample: []
   DL_Type: None
@@ -787,6 +842,7 @@
   ProductCode:
   - sca
   - sem
+  - xms
   Description_EN: The attachment source
   Sample:
   - TMASE
@@ -798,6 +854,7 @@
 - Name: mailSmtpTls
   ProductCode:
   - sem
+  - xms
   Description_EN: The SMTP TLS version number
   Sample:
   - TLS 1.2
@@ -811,6 +868,7 @@
   ProductCode:
   - sem
   - sca
+  - xms
   Description_EN: The TLSH hash detected by Trend Micro Anti-Spam Engine
   Sample: []
   DL_Type: None
@@ -830,6 +888,7 @@
 - Name: mailMetaText
   ProductCode:
   - sem
+  - xms
   Description_EN: The postman meta text detected by Trend Micro Anti-Spam Engine
   Sample:
   - ''
@@ -841,6 +900,7 @@
   ProductCode:
   - sem
   - sca
+  - xms
   Description_EN: The list of rule IDs scanned by Eureka and detected by Trend Micro
     Anti-Spam Engine
   Sample:
@@ -854,6 +914,7 @@
 - Name: scanTs
   ProductCode:
   - sca
+  - xms
   Description_EN: The time the email was scanned by Cloud App Security
   Sample:
   - 1657135700000
@@ -864,6 +925,7 @@
 - Name: mailCacheId
   ProductCode:
   - sca
+  - xms
   Description_EN: The internal email cache ID to identify emails in the same group
     mails
   Sample:
@@ -901,7 +963,7 @@
   ProductCode:
   - ALL
   Description_EN: The top-level risk level of the event by Security Analytics Engine
-    filter
+    filter filter
   Sample:
   - info
   - low

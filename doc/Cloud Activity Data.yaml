@@ -13,7 +13,7 @@
 - Name: receivedTime
   ProductCode:
   - ALL
-  Description_EN: Time the log was received
+  Description_EN: The time when the XDR log was received
   Sample:
   - 1656324260000
   DL_Type: real
@@ -23,7 +23,7 @@
 - Name: packageTraceId
   ProductCode:
   - ALL
-  Description_EN: Package trace ID
+  Description_EN: The package trace ID
   Sample:
   - 123456789012-us-east-1-2022-07-07T12:50:59.665Z
   DL_Type: None
@@ -43,8 +43,8 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: Technique Id detected by the Security Analytics Engine based on
-    the alert filter
+  Description_EN: The attack technique ID detected by Trend Vision One based on the
+    alert filter
   Sample:
   - MITREV9.T1090
   - MITRE.T1059
@@ -68,7 +68,7 @@
 - Name: bitwiseFilterRiskLevel
   ProductCode:
   - ALL
-  Description_EN: Bitwise risk-level filter search
+  Description_EN: The bitwise filter risk level
   Sample:
   - 1
   - 2
@@ -106,7 +106,7 @@
 - Name: customerId
   ProductCode:
   - ALL
-  Description_EN: The unique Customer ID
+  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
   Sample:
   - f1239ee8-be7f-4245-a248-8e2fb161f41b
   - dcf53bea-fa92-44fa-b1c5-da7ce3c1329e
@@ -130,7 +130,7 @@
 - Name: eventSubId
   ProductCode:
   - ALL
-  Description_EN: The access type of the event
+  Description_EN: The access type
   Sample:
   - PutObject
   - GetObject
@@ -196,7 +196,7 @@
   - '{"durationSeconds": 3600, "roleSessionName":"BackplaneAssumeRoleSession"}'
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: resources
   ProductCode:
@@ -332,8 +332,7 @@
 - Name: eventTime
   ProductCode:
   - sct
-  Description_EN: The date and time the request was made in coordinated universal
-    time (UTC)
+  Description_EN: The time the agent detected the event
   Sample:
   - 2022-07-06T22:28:06Z
   DL_Type: None
@@ -450,7 +449,7 @@
   ProductCode:
   - ALL
   Description_EN: The top-level risk level of the event by Security Analytics Engine
-    filter
+    filter filter
   Sample:
   - info
   - low
