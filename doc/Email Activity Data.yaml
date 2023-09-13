@@ -15,7 +15,7 @@
   - sca
   - sem
   - xms
-  Description_EN: The time recorded when the agent detected the event
+  Description_EN: The time the agent detected the event
   Sample:
   - 1657135700000
   DL_Type: real
@@ -25,7 +25,8 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: The attack ID detected by Trend Vision One based on the alert filter
+  Description_EN: The attack technique ID detected by Trend Vision One based on the
+    alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -406,7 +407,7 @@
 - Name: version
   ProductCode:
   - ALL
-  Description_EN: The schema version
+  Description_EN: The version
   Sample:
   - '1.1'
   DL_Type: None
@@ -418,8 +419,7 @@
   - sca
   - sem
   - xms
-  Description_EN: The assigned unique Customer ID, CLP ID, Company ID, or Business
-    ID
+  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
   Sample:
   - df1fd66c-dea3-40fb-a78b-1442d6154ecc
   - e0f6a485-204f-4988-9253-f02b6481c205
@@ -441,7 +441,7 @@
 - Name: packageTraceId
   ProductCode:
   - ALL
-  Description_EN: The event package trace ID
+  Description_EN: The package trace ID
   Sample:
   - 00001008-d7ef-4066-9d93-55c3d450bf76
   - 0000202f-92ec-4b8d-8df1-5c8551f33e4b

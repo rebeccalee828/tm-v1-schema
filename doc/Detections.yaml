@@ -224,7 +224,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: The source address of the network connection
+  Description_EN: The source address
   Sample:
   - 8.8.8.8
   - 0.0.0.0
@@ -248,7 +248,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: The destination IP address of the network connection
+  Description_EN: The destination IP address
   Sample:
   - 239.255.255.250
   - 0.0.0.0
@@ -339,7 +339,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: The destination port number of the network connection
+  Description_EN: The destination port number
   Sample:
   - 0
   - 445
@@ -361,7 +361,7 @@
   - ptn
   - szn
   - scs
-  Description_EN: The source port number of the network connection
+  Description_EN: The source port number
   Sample:
   - 53
   - 0
@@ -925,7 +925,8 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: The attack ID detected by Trend Vision One based on the alert filter
+  Description_EN: The attack technique ID detected by Trend Vision One based on the
+    alert filter
   Sample:
   - MITREV9.T1090
   - MITRE.T1071
@@ -1823,7 +1824,7 @@
 - Name: version
   ProductCode:
   - ALL
-  Description_EN: The schema version
+  Description_EN: The version
   Sample:
   - '1.0'
   - '1.1'
@@ -1835,7 +1836,7 @@
 - Name: eventTime
   ProductCode:
   - ALL
-  Description_EN: The time recorded when the agent detected the event
+  Description_EN: The time the agent detected the event
   Sample:
   - 1656324260000
   DL_Type: real
@@ -1845,8 +1846,7 @@
 - Name: customerId
   ProductCode:
   - ALL
-  Description_EN: The assigned unique Customer ID, CLP ID, Company ID, or Business
-    ID
+  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
   Sample:
   - dcf53bea-fa92-44fa-b1c5-da7ce3c1329e
   - fd70962d-386e-4bd1-9f18-6ec68fe9dc52
@@ -1868,7 +1868,7 @@
 - Name: packageTraceId
   ProductCode:
   - ALL
-  Description_EN: The event package trace ID
+  Description_EN: The package trace ID
   Sample:
   - 0008797f-3836-4cab-90c8-0d6ed56ad139
   - 0054663e-76a7-4ef6-a027-0a8140b09387
@@ -3955,7 +3955,7 @@
   ProductCode:
   - xes
   - scs
-  Description_EN: The image name of the parent of the process that triggered the event
+  Description_EN: The image name of the parent process
   Sample:
   - explorer.exe
   - startup.exe
@@ -4348,7 +4348,7 @@
   ProductCode:
   - sds
   - pts
-  Description_EN: The access type of the event
+  Description_EN: The access type
   Sample:
   - '4'
   - '101'
@@ -4757,7 +4757,7 @@
 - Name: clusterId
   ProductCode:
   - scs
-  Description_EN: The cluster ID of the container on which the event was detected
+  Description_EN: The cluster ID of the container
   Sample:
   - ben_eks_test-20k90A3jGa4d3YMYfrdGIgs7g9u
   DL_Type: string
@@ -4767,7 +4767,7 @@
 - Name: clusterName
   ProductCode:
   - scs
-  Description_EN: The cluster name of the container on which the event was detected
+  Description_EN: The cluster name of the container
   Sample:
   - ben_eks_test
   DL_Type: string
@@ -4777,8 +4777,7 @@
 - Name: k8sNamespace
   ProductCode:
   - scs
-  Description_EN: The Kubernetes namespace of the container on which the event was
-    detected
+  Description_EN: The Kubernetes namespace of the container
   Sample:
   - default
   DL_Type: string
@@ -4788,8 +4787,7 @@
 - Name: k8sPodName
   ProductCode:
   - scs
-  Description_EN: The Kubernetes pod name of the container on which the event was
-    detected
+  Description_EN: The Kubernetes pod name of the container
   Sample:
   - ubuntu-ds-fp2jk
   DL_Type: string
@@ -4799,7 +4797,7 @@
 - Name: k8sPodId
   ProductCode:
   - scs
-  Description_EN: The Kubernetes pod ID of the container on which the event was detected
+  Description_EN: The Kubernetes pod ID of the container
   Sample:
   - fc550ed4-3b54-402a-a56d-46096c285660
   DL_Type: None
@@ -4809,7 +4807,7 @@
 - Name: containerName
   ProductCode:
   - scs
-  Description_EN: The name of the Kubernetes container on which the event was detected
+  Description_EN: The Kubernetes container name
   Sample:
   - k8s_ubuntu_ubuntu-ds-fp2jk_default_fc550ed4-3b54-402a-a56d-46096c285660_2
   DL_Type: string
@@ -4819,7 +4817,7 @@
 - Name: containerId
   ProductCode:
   - scs
-  Description_EN: The ID of the Kubernetes container on which the event was detected
+  Description_EN: The Kubernetes container ID
   Sample:
   - 4102001853b8
   DL_Type: None
@@ -4829,7 +4827,7 @@
 - Name: containerImage
   ProductCode:
   - scs
-  Description_EN: The image of the Kubernetes container on which the event was detected
+  Description_EN: The Kubernetes container image
   Sample:
   - dockerhub.io/ubuntu:latest
   DL_Type: string
@@ -4839,8 +4837,7 @@
 - Name: containerImageDigest
   ProductCode:
   - scs
-  Description_EN: The image digest of the Kubernetes container on which the event
-    was detected
+  Description_EN: The Kubernetes container image digest
   Sample:
   - sha256:626ffe58f6e7566e00254b638eb7e0f3b11d4da9675088f4781a50ae288f3322
   DL_Type: None
@@ -5102,7 +5099,7 @@
   DL_Aggregable: false
 - Name: srcFilePath
   ProductCode: []
-  Description_EN: The path of the source file
+  Description_EN: The source file path
   Sample:
   - C:\\temp\\a.exe
   DL_Type: string

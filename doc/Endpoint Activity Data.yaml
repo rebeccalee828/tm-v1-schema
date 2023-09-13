@@ -59,7 +59,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The access type of the event
+  Description_EN: The access type
   Sample:
   - TELEMETRY_PROCESS_CREATE
   - TELEMETRY_FILE_CREATE
@@ -73,7 +73,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The time recorded when the agent detected the event
+  Description_EN: The time the agent detected the event
   Sample:
   - 1657781088000
   DL_Type: real
@@ -757,7 +757,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The destination port number of the network connection
+  Description_EN: The destination port number
   Sample: []
   DL_Type: int
   DL_CommonKey:
@@ -769,7 +769,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The destination IP address of the network connection
+  Description_EN: The destination IP address
   Sample:
   - '::'
   - 0.0.0.0
@@ -785,7 +785,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The source port number of the network connection
+  Description_EN: The source port number
   Sample:
   - 53
   - 5353
@@ -800,7 +800,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The source address of the network connection
+  Description_EN: The source address
   Sample:
   - '::'
   - 172.20.0.10
@@ -858,7 +858,7 @@
   - xes
   - sao
   - sds
-  Description_EN: The path of the source file
+  Description_EN: The source file path
   Sample:
   - \\cnva-apps\megaclockprod\traveler\travelerprint.accdb
   - c:\program files\common files\microsoft shared\clicktorun\officesvcmgrschedule.xml
@@ -872,7 +872,8 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: The attack ID detected by Trend Vision One based on the alert filter
+  Description_EN: The attack technique ID detected by Trend Vision One based on the
+    alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -1028,7 +1029,7 @@
 - Name: version
   ProductCode:
   - ALL
-  Description_EN: The schema version
+  Description_EN: The version
   Sample:
   - '1.0'
   DL_Type: None
@@ -1038,8 +1039,7 @@
 - Name: customerId
   ProductCode:
   - ALL
-  Description_EN: The assigned unique Customer ID, CLP ID, Company ID, or Business
-    ID
+  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
   Sample:
   - 9011075d-a2d7-4ff0-8660-47645735d0e7
   - afa7768a-f34d-4ee3-b1db-8dd3592127b7
@@ -1061,7 +1061,7 @@
 - Name: packageTraceId
   ProductCode:
   - ALL
-  Description_EN: The event package trace ID
+  Description_EN: The package trace ID
   Sample:
   - 353e1e1e-4a80-4f3c-aec1-113d425a28e1
   - 11b8ae4f-dc54-4c23-9011-7d8cc3be3a7d
@@ -1603,7 +1603,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The image name of the parent of the process that triggered the event
+  Description_EN: The image name of the parent process
   Sample:
   - c:\windows\system32\services.exe
   - /usr/bin/bash
@@ -2775,7 +2775,7 @@
   - sds
   - xes
   - sao
-  Description_EN: The telemetry connection protocol type
+  Description_EN: The protocol type
   Sample:
   - TELEMETRY_CONNECTION_TCP
   - TELEMETRY_CONNECTION_UDP

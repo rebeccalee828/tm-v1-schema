@@ -23,7 +23,7 @@
 - Name: packageTraceId
   ProductCode:
   - ALL
-  Description_EN: The event package trace ID
+  Description_EN: The package trace ID
   Sample:
   - 123456789012-us-east-1-2022-07-07T12:50:59.665Z
   DL_Type: None
@@ -43,7 +43,8 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: The attack ID detected by Trend Vision One based on the alert filter
+  Description_EN: The attack technique ID detected by Trend Vision One based on the
+    alert filter
   Sample:
   - MITREV9.T1090
   - MITRE.T1059
@@ -105,8 +106,7 @@
 - Name: customerId
   ProductCode:
   - ALL
-  Description_EN: The assigned unique Customer ID, CLP ID, Company ID, or Business
-    ID
+  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
   Sample:
   - f1239ee8-be7f-4245-a248-8e2fb161f41b
   - dcf53bea-fa92-44fa-b1c5-da7ce3c1329e
@@ -130,7 +130,7 @@
 - Name: eventSubId
   ProductCode:
   - ALL
-  Description_EN: The access type of the event
+  Description_EN: The access type
   Sample:
   - PutObject
   - GetObject
@@ -332,7 +332,7 @@
 - Name: eventTime
   ProductCode:
   - sct
-  Description_EN: The time recorded when the agent detected the event
+  Description_EN: The time the agent detected the event
   Sample:
   - 2022-07-06T22:28:06Z
   DL_Type: None
