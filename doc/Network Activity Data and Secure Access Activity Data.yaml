@@ -3,7 +3,7 @@
   - ALL
   Description_EN: The event source type
   Sample:
-  - EVENT_SOURCE_NETWORK_ACTIVITY
+  - 6 - EVENT_SOURCE_NETWORK_ACTIVITY
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false

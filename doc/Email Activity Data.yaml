@@ -880,7 +880,7 @@
   - ALL
   Description_EN: The event source type
   Sample:
-  - EVENT_SOURCE_EMAIL_META
+  - 5 - EVENT_SOURCE_EMAIL_META
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false

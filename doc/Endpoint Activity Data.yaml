@@ -61,9 +61,9 @@
   - sao
   Description_EN: The access type
   Sample:
-  - TELEMETRY_PROCESS_CREATE
-  - TELEMETRY_FILE_CREATE
-  - TELEMETRY_CONNECTION_CONNECT_OUTBOUND
+  - 2 - TELEMETRY_PROCESS_CREATE
+  - 101 - TELEMETRY_FILE_CREATE
+  - 204 - TELEMETRY_CONNECTION_CONNECT_OUTBOUND
   DL_Type: int
   DL_CommonKey:
   DL_Searchable: true
@@ -1021,7 +1021,7 @@
   - ALL
   Description_EN: The event source type
   Sample:
-  - EVENT_SOURCE_TELEMETRY
+  - 1 - EVENT_SOURCE_TELEMETRY
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
