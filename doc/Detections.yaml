@@ -1815,8 +1815,8 @@
   - ALL
   Description_EN: The event source type
   Sample:
-  - EVENT_SOURCE_EVENT_LOG
-  - EVENT_SOURCE_JAGUAR
+  - 3 - EVENT_SOURCE_EVENT_LOG
+  - 2 - EVENT_SOURCE_JAGUAR
   DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
@@ -2011,6 +2011,14 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: attachmentFileSizes
+  ProductCode:
+  - xms
+  Description_EN: The file size of email attachments
+  Sample:
+  - 190843
+  - 104454
+  - 112197
 - Name: attachmentFileType
   ProductCode:
   - pdi
@@ -4403,6 +4411,22 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: attachment
+  ProductCode:
+  - sca
+  - xms
+  Description_EN: The information about the email attachment
+  Sample:
+  - '{"attachmentFileTlsh": "", "attachmentFileName": "testfile.txt","attachmentFileHash":
+    "","attachmentFileSize": "-1"}'
+- Name: highlightedFileName
+  ProductCode:
+  - sca
+  - xms
+  Description_EN: The file names of suspicious attachments
+  Sample:
+  - detect_me.zip
+  - covid.zip
 - Name: attachmentFileHashs
   ProductCode:
   - sca
@@ -4416,6 +4440,15 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: attachmentFileHashes
+  ProductCode:
+  - sca
+  - sem
+  - xms
+  Description_EN: The SHA-1 of the email attachment
+  Sample:
+  - 056a2975edffe7188c03c324ae4335f9380b57e3
+  - 05fd3ac8f9d8407e6637e0f91cd2ff5ab076658a
 - Name: attachmentFileTlshs
   ProductCode:
   - sca
@@ -4430,6 +4463,16 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: attachmentFileTlshes
+  ProductCode:
+  - sca
+  - sem
+  - xms
+  Description_EN: The TLSH of the email attachment
+  Sample:
+  - ''
+  - 0FE18E0807B75799EF3ADD7A98D62411FEB31DAB419C913C058068A3A6B33BD114EA39
+  - 97D18E86E87A85D1D4137E6DA6FD00580E4CF06F65DB2B2937815E4F3A3013042A2189
 - Name: schemaVersion
   ProductCode:
   - sca
@@ -5218,6 +5261,29 @@
   Sample:
   - Microsoft
   DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: aptCampaigns
+  ProductCode:
+  - pdi
+  Description_EN: The related APT campaigns
+  Sample:
+  - POSSIBLE LSTUDIO
+  - WEB LURKER
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: threatNames
+  ProductCode:
+  - pdi
+  Description_EN: The associated threats
+  Sample:
+  - HM_GERAL.MIP00000001
+  - HM_JADTRE.MIP00000001
+  - VAN_BOT.UMXX
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
