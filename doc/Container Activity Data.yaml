@@ -24,9 +24,9 @@
   - scs
   Description_EN: The access type
   Sample:
-  - TELEMETRY_PROCESS_CREATE
-  - TELEMETRY_FILE_CREATE
-  - TELEMETRY_CONNECTION_CONNECT_OUTBOUND
+  - 2 - TELEMETRY_PROCESS_CREATE
+  - 101 - TELEMETRY_FILE_CREATE
+  - 204 - TELEMETRY_CONNECTION_CONNECT_OUTBOUND
   DL_Type: int
   DL_CommonKey:
   DL_Searchable: true
@@ -123,7 +123,7 @@
   - ALL
   Description_EN: The event source type
   Sample:
-  - EVENT_SOURCE_CONTAINER_ACTIVITY
+  - 8 - EVENT_SOURCE_CONTAINER_ACTIVITY
   DL_Type: int
   DL_CommonKey:
   DL_Searchable: false

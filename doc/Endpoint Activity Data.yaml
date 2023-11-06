@@ -1332,9 +1332,9 @@
   Sample:
   - NT AUTHORITY
   - AUTORIDADE NT
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: processLaunchTime
   ProductCode:
@@ -1346,9 +1346,9 @@
   - '1653614775212'
   - '1656118626642'
   - '1652098160298'
-  DL_Type: None
+  DL_Type: real
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: authId
   ProductCode:
@@ -1373,9 +1373,9 @@
   - '2141057820373638746'
   - '-821808160829839906'
   - '5222963427542927736'
-  DL_Type: None
+  DL_Type: long
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: processSigner
   ProductCode:
@@ -1387,9 +1387,9 @@
   - Microsoft Windows
   - Microsoft Windows Publisher
   - Microsoft Corporation
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: processSignerValid
   ProductCode:
@@ -1400,9 +1400,9 @@
   Sample:
   - 1
   - 0
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: processFileSize
   ProductCode:
@@ -1453,9 +1453,9 @@
   - sds
   Description_EN: The true file type of the process
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: processSubTrueType
   ProductCode:
@@ -1464,9 +1464,9 @@
   - sds
   Description_EN: The true file subtype of the process
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: processFileCurrentOwnerSid
   ProductCode:
@@ -1580,9 +1580,9 @@
   - sao
   Description_EN: The remote access to the process file
   Sample: []
-  DL_Type: None
+  DL_Type: bool
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentHashId
   ProductCode:
@@ -1594,9 +1594,9 @@
   - '-865367326691173681'
   - '-2903238741593506113'
   - '-4358168316031740439'
-  DL_Type: None
+  DL_Type: long
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentName
   ProductCode:
@@ -1608,9 +1608,9 @@
   - c:\windows\system32\services.exe
   - /usr/bin/bash
   - c:\windows\system32\svchost.exe
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentSessionId
   ProductCode:
@@ -1633,9 +1633,9 @@
   - root
   - SYSTEM
   - SISTEMA
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentUserDomain
   ProductCode:
@@ -1646,9 +1646,9 @@
   Sample:
   - NT AUTHORITY
   - AUTORIDADE NT
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentLaunchTime
   ProductCode:
@@ -1683,9 +1683,9 @@
   - sao
   Description_EN: The integrity level of a parent
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentFileHashId
   ProductCode:
@@ -1697,9 +1697,9 @@
   - '-4092577940452904134'
   - '2141057820373638746'
   - '-821808160829839906'
-  DL_Type: None
+  DL_Type: long
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentSigner
   ProductCode:
@@ -1711,9 +1711,9 @@
   - Microsoft Windows Publisher
   - Microsoft Windows
   - Software Signing;Apple Code Signing Certification Authority;Apple Root CA;
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentSignerValid
   ProductCode:
@@ -1722,9 +1722,9 @@
   - sds
   Description_EN: The validity of the parent signer
   Sample: []
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentFileSize
   ProductCode:
@@ -1775,9 +1775,9 @@
   - sds
   Description_EN: The true file type of the parent file
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentSubTrueType
   ProductCode:
@@ -1786,9 +1786,9 @@
   - sds
   Description_EN: The true file subtype of the parent file
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: parentFileCurrentOwnerSid
   ProductCode:
@@ -1902,9 +1902,9 @@
   - sao
   Description_EN: The remote access to the parent file
   Sample: []
-  DL_Type: None
+  DL_Type: bool
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectHashId
   ProductCode:

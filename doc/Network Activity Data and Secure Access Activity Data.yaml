@@ -1459,12 +1459,14 @@
   DL_Aggregable: true
 - Name: reqScannedBytes
   ProductCode:
+  - pdi
   - xns
   Description_EN: The data volume transmitted by the client (in bytes)
   Sample:
   - 4655
 - Name: respScannedBytes
   ProductCode:
+  - pdi
   - xns
   Description_EN: The data volume transmitted by the server (in bytes)
   Sample:
