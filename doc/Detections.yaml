@@ -379,6 +379,7 @@
   - pds
   - sig
   - pts
+  - sfs
   Description_EN: The file name
   Sample:
   - spoolss
@@ -407,6 +408,7 @@
   ProductCode:
   - pdi
   - sao
+  - sfs
   Description_EN: The file name of the compressed file
   Sample:
   - /proc/32058/fd/150
@@ -440,6 +442,7 @@
   - sao
   - pdi
   - pts
+  - sfs
   Description_EN: The file path without the file name
   Sample:
   - security
@@ -503,6 +506,7 @@
   - pds
   - sao
   - sig
+  - sfs
   Description_EN: The SHA-1 of the file that triggered the rule or policy
   Sample:
   - DA39A3EE5E6B4B0D3255BFEF95601890AFD80709
@@ -544,6 +548,7 @@
 - Name: compressedFileHash
   ProductCode:
   - pdi
+  - sfs
   Description_EN: The SHA-1 of the decompressed archive
   Sample:
   - 6E2ECB34B7798E179CC704111FB9733FBAAD5ACA
@@ -602,6 +607,7 @@
   - sao
   - sig
   - sds
+  - sfs
   Description_EN: The SHA-256 of the file (fileName)
   Sample:
   - 6A6EB2D717CEA041B4444193B45EDFB6CA1287518203B7230B3C4B8FFB031EAB
@@ -629,6 +635,7 @@
 - Name: compressedFileHashSha256
   ProductCode:
   - pdi
+  - sfs
   Description_EN: The SHA-256 of compressed suspicious file
   Sample:
   - 60C7C5924DD09F7C6B150120FB92DCEE00AE82DB75C7402FA4D9152CF487A94F
@@ -797,6 +804,7 @@
   - sao
   - sem
   - xes
+  - sfs
   Description_EN: The object type
   Sample:
   - file
@@ -999,6 +1007,7 @@
   - sws
   - pts
   - xms
+  - sfs
   Description_EN: The name of the detected malware
   Sample:
   - SecurityLevelDrop
@@ -1024,6 +1033,7 @@
   - szn
   - pts
   - xms
+  - sfs
   Description_EN: The event type name
   Sample:
   - LOG_INSPECTION_EVENT
@@ -1109,6 +1119,7 @@
   - stp
   - ptn
   - xms
+  - sfs
   Description_EN: The additional information
   Sample:
   - 'warning: fork: Resource temporarily unavailable'
@@ -1127,6 +1138,7 @@
   - pdi
   - pds
   - pts
+  - sfs
   Description_EN: The combination of the file path and the file name
   Sample:
   - \etc\hosts
@@ -1315,6 +1327,7 @@
   - sao
   - pds
   - xms
+  - sfs
   Description_EN: The scan type
   Sample:
   - realtime_mailmeta-exchange
@@ -2141,6 +2154,7 @@
 - Name: compressedFileSize
   ProductCode:
   - pdi
+  - sfs
   Description_EN: The file size of decompressed archive file
   Sample:
   - '0'
@@ -2153,6 +2167,7 @@
 - Name: compressedFileType
   ProductCode:
   - pdi
+  - sfs
   Description_EN: The file type of decompressed archive file
   Sample:
   - EXE
@@ -2501,6 +2516,7 @@
 - Name: engType
   ProductCode:
   - sao
+  - sfs
   Description_EN: The engine type
   Sample:
   - Virus Scan Engine (Windows XP/Server 2003, x64)
@@ -2515,6 +2531,7 @@
   - xes
   - sca
   - sao
+  - sfs
   Description_EN: The engine version
   Sample:
   - 1.0.0.1123_1.0.0.1101
@@ -2548,6 +2565,7 @@
   - pts
   - scs
   - xms
+  - sfs
   Description_EN: The event ID from the logs of each product
   Sample:
   - 100116
@@ -2599,6 +2617,7 @@
   - pdi
   - sig
   - sao
+  - sfs
   Description_EN: The file size of the suspicious file
   Sample:
   - '0'
@@ -2612,6 +2631,7 @@
   ProductCode:
   - pdi
   - sig
+  - sfs
   Description_EN: The file type of the suspicious file
   Sample:
   - EXE
@@ -2873,6 +2893,7 @@
   - pdi
   - sao
   - sds
+  - sfs
   Description_EN: The threat family
   Sample:
   - EQUATED
@@ -2885,6 +2906,7 @@
 - Name: malSubType
   ProductCode:
   - sao
+  - sfs
   Description_EN: The subsidiary virus type
   Sample:
   - Unknown
@@ -2898,6 +2920,7 @@
   - sds
   - sao
   - pds
+  - sfs
   Description_EN: The risk type for Network Content Correlation Engine rules
   Sample:
   - OTHERS
@@ -2910,6 +2933,7 @@
 - Name: malTypeGroup
   ProductCode:
   - pdi
+  - sfs
   Description_EN: The risk type group for NCCE (Network Content Correlation Engine)
     rules. This field comes from NCCP (Network Content Correlation Pattern) rule type
     definitions.
@@ -3297,6 +3321,7 @@
   - sig
   - ams
   - scs
+  - sfs
   Description_EN: The product version
   Sample:
   - 20.0.0.4726
@@ -4486,6 +4511,7 @@
 - Name: reportGUID
   ProductCode:
   - sca
+  - sfs
   Description_EN: The GUID for Workbench to request report page data
   Sample:
   - 959eaca0-bd45-41a1-9fa2-6a80d2642215
@@ -4789,6 +4815,7 @@
 - Name: customTags
   ProductCode:
   - scs
+  - sfs
   Description_EN: The event tags
   Sample:
   - network

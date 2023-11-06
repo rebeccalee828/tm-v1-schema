@@ -781,6 +781,7 @@
   Sample:
   - suspected
   - suspected,
+  - suspected, phishing
   DL_Type: None
   DL_CommonKey:
   DL_Searchable: false
