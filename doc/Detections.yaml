@@ -4504,7 +4504,7 @@
   Description_EN: The schema version
   Sample:
   - '1.0'
-  DL_Type:
+  DL_AdxType:
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4843,7 +4843,7 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
-  DL_Aggregable: false
+  DL_Aggregable: true
 - Name: k8sNamespace
   ProductCode:
   - scs
@@ -4853,7 +4853,7 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
-  DL_Aggregable: false
+  DL_Aggregable: true
 - Name: k8sPodName
   ProductCode:
   - scs
