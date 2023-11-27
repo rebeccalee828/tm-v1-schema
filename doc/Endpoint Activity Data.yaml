@@ -2927,6 +2927,32 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: objectPosixPermission
+  ProductCode:
+  - sds
+  Description_EN: The current POSIX permission for the file
+  Sample:
+  - 0x100600
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectCurrentPosixPermission
+  ProductCode:
+  - sds
+  Description_EN: The new POSIX permission file used in file events and CHMOD events
+  Sample:
+  - 0x100644
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectPosixPermissionHashId
+  ProductCode:
+  - sds
+  Description_EN: The POSIX permission hash ID
+  Sample:
+  - -8931783023607715387
 - Name: nativeDeviceCharacteristics
   ProductCode:
   - xes
