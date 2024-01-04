@@ -25,10 +25,13 @@
 | ALL  | All products                                   |
 | pdi  | Trend Micro Deep Discovery Inspector           |
 | sds  | Trend Cloud One - Endpoint & Workload Security |
+| sds_v1es | Server & Workload Protection               |
 | xes  | Endpoint Sensor                                |
 | sao  | Trend Micro Apex One as a Service              |
+| sao_v1es | Standard Endpoint Protection               |
 | pds  | Trend Micro Deep Security Software             |
 | sca  | Trend Micro Cloud App Security                 |
+| sca_v1ecs | Cloud Email and Collaboration Protection  |
 | ptp  | TippingPoint Security Management System        |
 | stp  | Trend Cloud One - Network Security             |
 | scs  | Trend Cloud One - Container Security           |
@@ -37,6 +40,7 @@
 | szn  | Zero Trust Secure Access - Private Access      |
 | sws  | Trend Micro Web Security                       |
 | sem  | Trend Micro Email Security                     |
+| sem_v1ecs | Cloud Email Gateway Protection            |
 | ams  | Mobile Security                                |
 | pts  | TXOne Stellar                                  |
 | ptn  | TXOne EdgeOne                                  |
