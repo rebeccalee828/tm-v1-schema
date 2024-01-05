@@ -261,7 +261,7 @@
   - 353e1e1e-4a80-4f3c-aec1-113d425a28e1
   - 11b8ae4f-dc54-4c23-9011-7d8cc3be3a7d
   - d084fed4-67fd-4135-b08e-654c9cdaf709
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -303,6 +303,7 @@
   Description_EN: The policy tree path, provided by SAP (endpoint only)
   Sample:
   - policyname1/policyname2/policyname3
+  DL_Type: string
 - Name: marsAccount
   ProductCode:
   - ams
@@ -343,7 +344,7 @@
   - '-8406473586387535914'
   - '138486453338666581'
   - '-7909265752378976284'
-  DL_Type: long
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -353,7 +354,7 @@
   Description_EN: The time when the event started (in milliseconds)
   Sample:
   - 1656355418449
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -363,7 +364,7 @@
   Description_EN: The time when the event ended (in milliseconds)
   Sample:
   - 1656355418449
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -412,7 +413,7 @@
   - '-599270888483415002'
   - '2177864258235728980'
   - '2432229257'
-  DL_Type: long
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -424,7 +425,7 @@
   - '0'
   - '59456'
   - '60'
-  DL_Type: long
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -436,7 +437,7 @@
   - '1652131848000'
   - '1577865600000'
   - '1648279273000'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -448,7 +449,7 @@
   - '1652131848000'
   - '1577865600000'
   - '1648279273000'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -460,7 +461,7 @@
   - '1656458063638'
   - '1656260547165'
   - '0'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -472,7 +473,7 @@
   - '1656458354730'
   - '1656260580722'
   - '0'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -484,7 +485,7 @@
   - '1102079405020678318'
   - '-6926286289273504319'
   - '8528955148329941480'
-  DL_Type: long
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -496,7 +497,7 @@
   - '0'
   - '131072'
   - '196608'
-  DL_Type: long
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -508,7 +509,7 @@
   - '1577865600000'
   - '1626201752000'
   - '1626201750000'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -520,7 +521,7 @@
   - '1626201752000'
   - '1626201750000'
   - '1577865600000'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -532,7 +533,7 @@
   - '0'
   - '1656355418449'
   - '1656714760440'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -544,7 +545,7 @@
   - '0'
   - '1656355418449'
   - '1656715147313'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -595,7 +596,7 @@
   Description_EN: The app size (in bytes) if the subject is an app
   Sample:
   - 16906043
-  DL_Type: long
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -615,7 +616,7 @@
   Description_EN: The app version code (if the subject is an app)
   Sample:
   - 0
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -646,7 +647,7 @@
   Description_EN: The time of app installation (in milliseconds)
   Sample:
   - 1607935850
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -698,7 +699,7 @@
   Description_EN: The app size (in bytes)
   Sample:
   - 16906043
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -708,7 +709,7 @@
   Description_EN: Whether the app is a system app
   Sample:
   - true
-  DL_Type: real
+  DL_Type: bool
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false

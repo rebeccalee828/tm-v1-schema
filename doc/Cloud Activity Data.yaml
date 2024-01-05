@@ -26,7 +26,7 @@
   Description_EN: The package trace ID
   Sample:
   - 123456789012-us-east-1-2022-07-07T12:50:59.665Z
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -103,6 +103,7 @@
   Description_EN: The policy tree path, provided by SAP (endpoint only)
   Sample:
   - policyname1/policyname2/policyname3
+  DL_Type: string
 - Name: customerId
   ProductCode:
   - ALL
@@ -111,7 +112,7 @@
   - f1239ee8-be7f-4245-a248-8e2fb161f41b
   - dcf53bea-fa92-44fa-b1c5-da7ce3c1329e
   - ee210d23-d5cd-485d-9595-39e1e5ea1705
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -123,7 +124,7 @@
   - workspaces.amazonaws.com
   - sts.amazonaws.com
   - kms.amazonaws.com
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -135,7 +136,7 @@
   - PutObject
   - GetObject
   - DescribeTable
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -279,7 +280,7 @@
     or response
   Sample:
   - '{"SignatureVersion":"SigV4","CipherSuite":"ECDHE-RSA-AES128-GCM-SHA256"}'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -289,7 +290,7 @@
   Description_EN: API version associated with the AwsApiCall eventType value
   Sample:
   - 2012-08-10
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -301,7 +302,7 @@
   - us-east-1
   - us-east-2
   - us-west-1
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -313,7 +314,7 @@
   - ThrottlingException
   - InvalidParameterValueException
   - NoSuchLifecycleConfiguration
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -325,7 +326,7 @@
   - The specified bucket does not have a website configuration
   - An unknown error occurred
   - The lifecycle configuration does not exist
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -335,7 +336,7 @@
   Description_EN: The time the agent detected the event
   Sample:
   - 2022-07-06T22:28:06Z
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -347,7 +348,7 @@
   - Management
   - Data
   - Insight
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -359,7 +360,7 @@
   - AwsApiCall
   - AwsServiceEvent
   - AwsConsoleAction
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -369,7 +370,7 @@
   Description_EN: Version of the log event format
   Sample:
   - 1.08
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -379,7 +380,7 @@
   Description_EN: Account ID that received the event
   Sample:
   - 123456789012
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -392,7 +393,7 @@
   - 925513dd-ffbf-43ae-bd31-878fc278fa8f
   - b9b5fd99-7bca-455a-a2fa-9c67205469e5
   - 5d975177-e1b8-45f5-8f2e-68bd347f2ec4
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -405,7 +406,7 @@
   - 4be7580e-1ab2-4d06-933f-dea5217fb04b
   - 6cd2a4b9-f6f1-43e4-8b4e-ce656ecd65ae
   - 0d849be3-cfff-495f-b1c0-066ca7928d04
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -416,7 +417,7 @@
     and the result
   Sample:
   - '{"lifecycleEventPolicy":{"policyVersion":1,"policyId":"00bf7b21-eab1-39e0-b664-d0acfda1009d"}}'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false

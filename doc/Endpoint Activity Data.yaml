@@ -160,7 +160,7 @@
   - wc -l
   - runc init
   - docker-init --version
-  DL_Type: dynamic
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -944,9 +944,9 @@
   - '-'
   - 10.37.38.237
   - 10.5.10.5
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventDataLogonType
   ProductCode:
@@ -958,9 +958,9 @@
   - '3'
   - '5'
   - '2'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventDataScriptBlockText
   ProductCode:
@@ -1022,7 +1022,7 @@
   Description_EN: The event source type
   Sample:
   - 1 - EVENT_SOURCE_TELEMETRY
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1032,7 +1032,7 @@
   Description_EN: The version
   Sample:
   - '1.0'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1066,7 +1066,7 @@
   - 353e1e1e-4a80-4f3c-aec1-113d425a28e1
   - 11b8ae4f-dc54-4c23-9011-7d8cc3be3a7d
   - d084fed4-67fd-4135-b08e-654c9cdaf709
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1108,6 +1108,7 @@
   Description_EN: The policy tree path, provided by SAP
   Sample:
   - policyname1/policyname2/policyname3
+  DL_Type: string
 - Name: instanceId
   ProductCode:
   - sds
@@ -1159,7 +1160,7 @@
   - '-8406473586387535914'
   - '138486453338666581'
   - '-7909265752378976284'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1197,7 +1198,7 @@
   - 00:00:00:00:00:00:00:e0
   - 0-0-0-0-0-0-0-e0
   - 00:09:0f:fe:00:01
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1210,7 +1211,7 @@
   Sample:
   - CORP
   - AUTORIDADE NT
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1224,7 +1225,7 @@
   - UTC+00:00
   - UTC-05:00
   - UTC-03:00
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1238,7 +1239,7 @@
   - 1.2.0.2752
   - 1.0.345
   - 1.2.0.2657
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1251,7 +1252,7 @@
   Sample:
   - 1
   - 0
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1264,7 +1265,7 @@
   Sample:
   - 5889
   - 9217
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1278,7 +1279,7 @@
   - Windows
   - Linux
   - macOS
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1292,7 +1293,7 @@
   - Amazon Linux 2
   - 10.0.19044
   - 10.0.19042
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1305,7 +1306,7 @@
   Sample:
   - '0x00000030'
   - '4'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1319,7 +1320,7 @@
   - 0
   - 1
   - 2
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1359,7 +1360,7 @@
   - '999'
   - '996'
   - '997'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1414,7 +1415,7 @@
   - '59952'
   - '59456'
   - '47024'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1428,9 +1429,9 @@
   - '1652131848000'
   - '1577865600000'
   - '1635172906000'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: processFileModifiedTime
   ProductCode:
@@ -1442,7 +1443,7 @@
   - '1652131848000'
   - '1633413236462'
   - '1414554708877'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1477,7 +1478,7 @@
   - S-1-5-18
   - S-1-5-32-544
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1490,7 +1491,7 @@
   - NT AUTHORITY\SYSTEM
   - BUILTIN\Administrators
   - BUILTIN\Administradores
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1503,7 +1504,7 @@
   - S-1-5-32-544
   - S-1-5-18
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1517,9 +1518,9 @@
   - root
   - cit
   - BUILTIN\Administrators
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: processFileGroupSid
   ProductCode:
@@ -1530,7 +1531,7 @@
   - S-1-5-18
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
   - S-1-5-32-544
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1544,7 +1545,7 @@
   - wheel
   - admin
   - staff
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1557,7 +1558,7 @@
   - S:(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
   - S:(AU;IDSAFA;DCLCRPSDWDWO;;;AU)
   - S:NO_ACCESS_CONTROL
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1570,7 +1571,7 @@
   - D:(A;ID;0x1200a9;;;AC)(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;BU)(A;ID;0x1200a9;;;S-1-15-2-2)
   - D:(A;ID;FA;;;SY)
   - D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1619,7 +1620,7 @@
   - sds
   Description_EN: The parent session ID
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1673,7 +1674,7 @@
   - '999'
   - '996'
   - '997'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1736,7 +1737,7 @@
   - '714856'
   - '59952'
   - '5114880'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1750,7 +1751,7 @@
   - '1652131848000'
   - '1577865600000'
   - '1635172968000'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1764,7 +1765,7 @@
   - '1652131848000'
   - '1577865600000'
   - '1635172968000'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1799,7 +1800,7 @@
   - S-1-5-32-544
   - S-1-5-18
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1812,7 +1813,7 @@
   - NT AUTHORITY\SYSTEM
   - BUILTIN\Administradores
   - BUILTIN\Administrators
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1825,7 +1826,7 @@
   - S-1-5-32-544
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
   - S-1-5-18
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1839,7 +1840,7 @@
   - root
   - cit
   - BUILTIN\Administrators
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1852,7 +1853,7 @@
   - S-1-5-18
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
   - S-1-5-32-544
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1866,7 +1867,7 @@
   - wheel
   - admin
   - staff
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1879,7 +1880,7 @@
   - S:(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
   - S:NO_ACCESS_CONTROL
   - S:(AU;IDSAFA;DCLCRPSDWDWO;;;AU)
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1892,7 +1893,7 @@
   - D:(A;;FA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;0x1200a9;;;BA)(A;;0x1200a9;;;SY)(A;;0x1200a9;;;BU)(A;;0x1200a9;;;AC)(A;;0x1200a9;;;S-1-15-2-2)
   - D:(A;OICI;GA;;;SY)(A;OICI;0xa0120000;;;WD)(A;OICI;GA;;;BA)
   - D:(A;ID;0x1200a9;;;AC)(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;BU)(A;ID;0x1200a9;;;S-1-15-2-2)
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1930,7 +1931,7 @@
   - '0'
   - '59456'
   - '60'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1944,7 +1945,7 @@
   - '1652131848000'
   - '1577865600000'
   - '1648279273000'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1958,7 +1959,7 @@
   - '1652131848000'
   - '1577865600000'
   - '1648279273000'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1971,7 +1972,7 @@
   - S-1-5-18
   - S-1-5-32-544
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1984,7 +1985,7 @@
   - NT AUTHORITY\SYSTEM
   - BUILTIN\Administrators
   - BUILTIN\Administradores
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1997,7 +1998,7 @@
   - S-1-5-32-544
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
   - S-1-5-18
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2011,7 +2012,7 @@
   - root
   - NT SERVICE\TrustedInstaller
   - BUILTIN\Administrators
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2024,7 +2025,7 @@
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
   - S-1-5-18
   - S-1-5-21-397955417-626881126-188441444-513
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2038,7 +2039,7 @@
   - wheel
   - staff
   - admin
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2051,7 +2052,7 @@
   - S:NO_ACCESS_CONTROL
   - S:(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
   - S:(AU;SAFA;0x1f0116;;;WD)
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2064,7 +2065,7 @@
   - D:(A;;FA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;0x1200a9;;;BA)(A;;0x1200a9;;;SY)(A;;0x1200a9;;;BU)(A;;0x1200a9;;;AC)(A;;0x1200a9;;;S-1-15-2-2)
   - D:(A;OICI;GA;;;SY)(A;OICI;0xa0120000;;;WD)(A;OICI;GA;;;BA)
   - D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;BU)(A;ID;0x1200a9;;;AC)(A;ID;0x1200a9;;;S-1-15-2-2)
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2075,7 +2076,7 @@
   - sds
   Description_EN: The remote access to the object file
   Sample: []
-  DL_Type: None
+  DL_Type: bool
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2089,7 +2090,7 @@
   - '1656458063638'
   - '1656260547165'
   - '0'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2103,7 +2104,7 @@
   - '1656458354730'
   - '1656260580722'
   - '0'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2130,7 +2131,7 @@
   - Microsoft Windows
   - Microsoft Corporation
   - Google LLC
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2140,7 +2141,7 @@
   - xes
   Description_EN: The validity of the source process signer
   Sample: []
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2154,7 +2155,7 @@
   - '0'
   - '131072'
   - '196608'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2168,7 +2169,7 @@
   - '1577865600000'
   - '1626201752000'
   - '1626201750000'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2182,7 +2183,7 @@
   - '1626201752000'
   - '1626201750000'
   - '1577865600000'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2193,7 +2194,7 @@
   - sds
   Description_EN: The true file type of the source file
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2204,7 +2205,7 @@
   - sds
   Description_EN: The true file subtype of the source file
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2217,7 +2218,7 @@
   - S-1-5-18
   - S-1-5-32-544
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2230,7 +2231,7 @@
   - NT AUTHORITY\SYSTEM
   - BUILTIN\Administrators
   - AUTORIDADE NT\SISTEMA
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2243,7 +2244,7 @@
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
   - S-1-5-18
   - S-1-5-32-544
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2257,7 +2258,7 @@
   - root
   - NT SERVICE\TrustedInstaller
   - NT AUTHORITY\SYSTEM
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2270,7 +2271,7 @@
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
   - S-1-5-18
   - S-1-5-21-3770350686-3666354711-3866293128-513
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2284,7 +2285,7 @@
   - wheel
   - staff
   - NT SERVICE\TrustedInstaller
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2297,7 +2298,7 @@
   - S:NO_ACCESS_CONTROL
   - S:(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
   - S:(AU;IDSAFA;DCLCRPSDWDWO;;;AU)
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2310,7 +2311,7 @@
   - D:(A;;FA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;;0x1200a9;;;BA)(A;;0x1200a9;;;SY)(A;;0x1200a9;;;BU)(A;;0x1200a9;;;AC)(A;;0x1200a9;;;S-1-15-2-2)
   - D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;BU)(A;ID;0x1200a9;;;AC)(A;ID;0x1200a9;;;S-1-15-2-2)
   - D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2321,7 +2322,7 @@
   - sds
   Description_EN: The remote access of the source file
   Sample: []
-  DL_Type: None
+  DL_Type: bool
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2335,7 +2336,7 @@
   - '0'
   - '1656355418449'
   - '1656714760440'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2349,7 +2350,7 @@
   - '0'
   - '1656355418449'
   - '1656715147313'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2361,7 +2362,7 @@
   - '-1'
   - '5'
   - '4'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2373,7 +2374,7 @@
   - '10196'
   - '10104'
   - '10004'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2398,7 +2399,7 @@
   - prx.pro.edenor:8080
   - 10.10.25.199:8080
   - 172.16.3.42
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2412,7 +2413,7 @@
   - '2141057820373638746'
   - '-6516669617381620295'
   - '-4912169863817247597'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2422,7 +2423,7 @@
   - sao
   Description_EN: The remote access for the object file
   Sample: []
-  DL_Type: None
+  DL_Type: bool
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2448,7 +2449,7 @@
   - '{54849625-5478-4994-A5BA-3E3B0328C30D}'
   - '{1418EF04-B0B4-4623-BF7E-D74AB47BBDAA}'
   - '{DE7B24EA-73C8-4A09-985D-5BDADCFA9017}'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2461,7 +2462,7 @@
   - Security
   - Microsoft-Windows-WMI-Activity/Trace
   - Microsoft-Windows-TaskScheduler/Operational
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2472,7 +2473,7 @@
   Description_EN: The event time
   Sample:
   - 1657781088000
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2485,7 +2486,7 @@
   - '1128'
   - '1129'
   - '1127'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2495,7 +2496,7 @@
   - sao
   Description_EN: The data for correlation
   Sample: []
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2507,7 +2508,7 @@
   - '%systemroot%\system32\wbem\ntevt.dll'
   - '%systemroot%\system32\wbem\stdprov.dll'
   - C:\WINDOWS\CCM\smsclient.dll
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2519,7 +2520,7 @@
   - SmsClientMethodProvider
   - MS_NT_EVENTLOG_PROVIDER
   - RegProv
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2532,7 +2533,7 @@
   - 'NtLmSsp '
   - 'Advapi  '
   - Advapi
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2545,7 +2546,7 @@
   - NTLM
   - Negotiate
   - MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2558,7 +2559,7 @@
   - '0xc000006d'
   - '-1073741715'
   - '0xc000006e'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2571,7 +2572,7 @@
   - '0xc0000064'
   - '0xc000006a'
   - '-1073741724'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2582,7 +2583,7 @@
   Sample:
   - BEI\holdej
   - NT AUTHORITY\SYSTEM
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2594,7 +2595,7 @@
   - C:\Program Files\Microsoft Office\Office15\OUTLOOK.EXE
   - C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe
   - C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2606,7 +2607,7 @@
   - Offer Remote Assistance Helpers
   - Administrators
   - Administradores
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2618,7 +2619,7 @@
   - HealthDriverEventConsumer="Health Event Consumer"
   - MemoryEventConsumer="Memory Event Consumer"
   - SysEventConsumer="System Event Consumer"
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2631,7 +2632,7 @@
   - Language Components Installer
   - Group Policy Background Processing
   - C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2644,7 +2645,7 @@
   - \Microsoft\Windows\LanguageComponentsInstaller\Installation
   - \Microsoft\Office\Office Serviceability Manager
   - \MicrosoftEdgeUpdateTaskMachineUA
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2657,7 +2658,7 @@
   - MP\MPBSA179345$
   - MP\MPBSASPU179370$
   - MP\MPBSA4025625$
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2670,7 +2671,7 @@
   - C:\Program Files\Common Files\Microsoft Shared\ClickToRun\officesvcmgr.exe
   - taskhostw.exe
   - gpupdate.exe
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2698,7 +2699,7 @@
   - '0'
   - '1'
   - '2'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2712,7 +2713,7 @@
   - '1616412892557'
   - '1620778597056'
   - '1616414113105'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2725,7 +2726,7 @@
   - '999'
   - '996'
   - '997'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2752,7 +2753,7 @@
   - staff
   - _spotlight
   - wheel
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2779,7 +2780,7 @@
   Sample:
   - TELEMETRY_CONNECTION_TCP
   - TELEMETRY_CONNECTION_UDP
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2816,7 +2817,7 @@
   - '9'
   - '1'
   - '564'
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2829,7 +2830,7 @@
   Sample:
   - 0
   - 1
-  DL_Type: None
+  DL_Type: bool
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2839,7 +2840,7 @@
   Description_EN: The name of the executed API
   Sample:
   - GetIpNetTable
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2849,7 +2850,7 @@
   Description_EN: The API hook number of the object
   Sample:
   - 1
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2859,7 +2860,7 @@
   Description_EN: The API telemetry return value
   Sample:
   - '0'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2873,7 +2874,7 @@
   - '3'
   - '1'
   - '2'
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2887,7 +2888,7 @@
   - 1
   - 11
   - 4
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2899,7 +2900,7 @@
   - 1626660901647460150
   - -3744588546027069975
   - 8709345175736065179
-  DL_Type: Ｎone
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2911,7 +2912,7 @@
   - 0
   - 34
   - 8224
-  DL_Type: Ｎone
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2923,7 +2924,7 @@
   - 2
   - 32
   - 8192
-  DL_Type: Ｎone
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2953,6 +2954,7 @@
   Description_EN: The POSIX permission hash ID
   Sample:
   - -8931783023607715387
+  DL_Type: string
 - Name: nativeDeviceCharacteristics
   ProductCode:
   - xes
@@ -2961,7 +2963,7 @@
   - 393217
   - 131072
   - 131088
-  DL_Type: Ｎone
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2973,7 +2975,7 @@
   - 2
   - 7
   - 20
-  DL_Type: Ｎone
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2985,7 +2987,7 @@
   - 0
   - 2
   - 17
-  DL_Type: Ｎone
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3037,6 +3039,7 @@
   - xes
   Description_EN: The imported table information
   Sample: []
+  DL_Type: dynamic
 - Name: customFilterTags
   ProductCode:
   - ALL
