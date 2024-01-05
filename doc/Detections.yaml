@@ -1294,11 +1294,28 @@
 - Name: act
   ProductCode:
   - scs
+  - pdi
+  - sao
+  - sds
+  - sca
+  - ptp
+  - xes
+  - sws
+  - sem
+  - pds
+  - stp
+  - sig
+  - ptn
+  - szn
+  - xms
   Description_EN: The actions taken to mitigate the event
   Sample:
   - log
   - isolate
   - terminate
+  - not blocked
+  - Block
+  - Reset
   DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: true
@@ -1400,31 +1417,6 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
-- Name: act
-  ProductCode:
-  - pdi
-  - sao
-  - sds
-  - sca
-  - ptp
-  - xes
-  - sws
-  - sem
-  - pds
-  - stp
-  - sig
-  - ptn
-  - szn
-  - xms
-  Description_EN: Action taken for the violation
-  Sample:
-  - not blocked
-  - Block
-  - Reset
-  DL_Type: dynamic
-  DL_CommonKey:
-  DL_Searchable: true
-  DL_Aggregable: true
 - Name: deviceGUID
   ProductCode:
   - pdi
@@ -1886,7 +1878,7 @@
   - 0008797f-3836-4cab-90c8-0d6ed56ad139
   - 0054663e-76a7-4ef6-a027-0a8140b09387
   - c0281438-52d3-4223-8ea1-22ae1b13f682
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1939,6 +1931,7 @@
   Description_EN: The policy tree path, provided by SAP
   Sample:
   - policyname1/policyname2/policyname3
+  DL_Type: string
 - Name: cloudProvider
   ProductCode:
   - sds
@@ -1984,7 +1977,7 @@
   - '1'
   - '2'
   - '3'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2007,7 +2000,7 @@
   Sample:
   - '0'
   - '1'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2020,7 +2013,7 @@
   - '190843'
   - '104454'
   - '112197'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2032,6 +2025,7 @@
   - 190843
   - 104454
   - 112197
+  DL_Type: dynamic
 - Name: attachmentFileType
   ProductCode:
   - pdi
@@ -2040,7 +2034,7 @@
   - PDF
   - TEXT
   - PKZIP
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2055,7 +2049,7 @@
   - Policy Enforcement
   - Grey-Detection
   - Threat-Detection
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2066,7 +2060,7 @@
   Sample:
   - Web reputation
   - Web Server
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2077,7 +2071,7 @@
   - sao
   Description_EN: The weighted priority of the incident
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2088,7 +2082,7 @@
   Sample:
   - IP_DOMAIN
   - URL
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2099,7 +2093,7 @@
   Description_EN: Is this log identified as a C&C callback address detection
   Sample:
   - Yes
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2112,7 +2106,7 @@
   - CCCA_GLOBAL_LIST (0)
   - GLOBAL_INTELLIGENCE
   - USER_DEFINED
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2123,7 +2117,7 @@
   Description_EN: The severity level of the threat actors associated with the C&C
     servers
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2147,7 +2141,7 @@
   - '1'
   - '2'
   - '3'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2160,7 +2154,7 @@
   - '0'
   - '265314'
   - '175864'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2173,7 +2167,7 @@
   - EXE
   - JAVA
   - PDF
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2197,7 +2191,7 @@
   - Windows
   - Windows 10
   - Android
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2209,7 +2203,7 @@
   - '1'
   - USR_SUSPICIOUS_IP.UMXX
   - USR_SUSPICIOUS_URL.UMXX
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2221,7 +2215,7 @@
   - Malware Name
   - Attacked this IP
   - IP Address under Attack
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2233,7 +2227,7 @@
   - Port Used
   - Malicious File Transferred To This IP Address
   - Malware Server IP Address
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2245,7 +2239,7 @@
   - '1'
   - '10003'
   - '2'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2256,7 +2250,7 @@
   Sample:
   - Number of Malware Files Downloaded
   - Protocol
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2268,7 +2262,7 @@
   - '1'
   - 172.17.195.67
   - '23903'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2278,7 +2272,7 @@
   Description_EN: The value of the DDI Correlation log
   Sample:
   - 2.57.122.209
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2289,7 +2283,7 @@
     Trend Micro Threat Mitigation Server is EOL.
   Sample:
   - '0'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2300,7 +2294,7 @@
     Trend Micro Threat Mitigation Server is EOL.
   Sample:
   - '0'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2312,7 +2306,7 @@
   - '*'
   - upgrade.bitdefender.com
   - https://5billionsales.com:443/gfx/flags/ua.png
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2323,7 +2317,7 @@
   Sample:
   - Deny List URL
   - Deny List File SHA1
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2372,7 +2366,7 @@
   Sample:
   - outbound
   - inbound
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2384,7 +2378,7 @@
   - b4:96:91:50:86:48
   - b8:ca:3a:6a:11:3c
   - 24:6e:96:15:1a:0c
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2396,7 +2390,7 @@
   - 0:14343219::F:S
   - '0:94174860::F:'
   - '0:9665982::F:'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2405,7 +2399,7 @@
   - pdi
   Description_EN: The confidence level of device risk
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2418,7 +2412,7 @@
   - Incoming
   - Outgoing
   - Unknown
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2470,7 +2464,7 @@
   - 10.150.26.18
   - 172.16.0.140
   - 10.34.168.133
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2482,7 +2476,7 @@
   Sample:
   - CU-PRO1-9039-2
   - LTPF32PMNN
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2496,7 +2490,7 @@
   - A0-8C-FD-C3-E1-1B
   - 00-05-9A-3C-7A-00
   - 00-09-0F-AA-00-01
-  DL_Type: dynamic
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2509,7 +2503,7 @@
   - Set Key
   - Invoke API
   - Create
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2522,7 +2516,7 @@
   - Virus Scan Engine (Windows XP/Server 2003, x64)
   - Virus Scan NT Kernel Engine
   - Spyware/Grayware Scan Engine v.6 (64-bit)
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2537,7 +2531,7 @@
   - 1.0.0.1123_1.0.0.1101
   - 9.0.1004
   - 22.540.1001
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2583,7 +2577,7 @@
   - DNS
   - Port Mis-use
   - Port Scanning
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2595,7 +2589,7 @@
   - .lnk
   - .exe
   - .EXE
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2608,7 +2602,7 @@
   - Created
   - Updated
   - Deleted
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2623,7 +2617,7 @@
   - '0'
   - '1255856'
   - '1237880'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2652,7 +2646,7 @@
   - ConnectionFilter
   - Virtual Analyzer
   - Data Loss Prevention
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2664,7 +2658,7 @@
   Sample:
   - Spam filter
   - Size filter
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2676,7 +2670,7 @@
   - 2017-12-01 15:05:07-05:00 3.83.1170 5.0.1555
   - 2020-11-13 18:04:29-05:00 5.0.1555 5.5.1200
   - 2020-11-13 18:43:30-05:00 5.5.1200 5.7.1178
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2690,7 +2684,7 @@
   - Pass
   - Quarantine
   - Clean
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2704,7 +2698,7 @@
   - File passed
   - Unable to quarantine file
   - File quarantined
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2717,7 +2711,7 @@
   - auditd,audit,
   - dirservice_log,authentication_failure,
   - windows,authentication_failures,
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2728,7 +2722,7 @@
   Sample:
   - No
   - Yes
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2739,7 +2733,7 @@
   Sample:
   - 0
   - 1
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2751,7 +2745,7 @@
   Sample:
   - 20548
   - 967
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2775,7 +2769,7 @@
   - 2021-07-22 15:08:01+08:00 Hotfix 1042 hfb1042 Apply
   - 2021-12-22 09:03:42-06:00 Hotfix 1211 hfb1211 Apply
   - 2022-03-30 13:16:28-07:00 Hotfix 1218 hfb1218 Apply
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2802,7 +2796,7 @@
   - 00:05:9A:3C:7A:00
   - 00:50:56:9E:8B:EF
   - 00:50:56:87:6F:FD
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2814,7 +2808,7 @@
   - ManageEngine
   - unknown
   - Global Product Delivery Group
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2826,7 +2820,7 @@
   - R3
   - ManageEngineCA
   - DigiCert TLS RSA SHA256 2020 CA1
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2838,7 +2832,7 @@
   - 10.0.0.5
   - 10.0.0.4
   - fe80::84c4:509e:6fdd:5493
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2852,7 +2846,7 @@
   - C5B09EDD-C725-907F-29D9-B8C30D18C48F
   - C05B75AB-B518-BDD0-D2B5-E9CB631C539F
   - 9C28ACD3-D0EC-22A4-B08D-5B0BEFF501FC
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2862,7 +2856,7 @@
   Description_EN: The mail delivery time
   Sample:
   - '1900-1-1 00:00:00'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2872,7 +2866,7 @@
   - sem
   Description_EN: The mail received timestamp
   Sample: []
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2884,7 +2878,7 @@
   - CATEGORY_PROMOTIONS, UNREAD, INBOX
   - UNREAD, CATEGORY_PERSONAL, INBOX
   - UNREAD, CATEGORY_UPDATES, INBOX
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2899,7 +2893,7 @@
   - EQUATED
   - STARTER
   - '0'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2910,7 +2904,7 @@
   Description_EN: The subsidiary virus type
   Sample:
   - Unknown
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2941,7 +2935,7 @@
   - Others
   - Malware
   - Spyware
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2953,7 +2947,7 @@
   - 09dcd06f-2f9c-4bab-8114-f823620fecb6
   - 0ed72c3c-05af-4c16-b2c4-789eaeccb944
   - 0f29cfc3-954a-4fd9-954e-bf14f7253d20
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2970,7 +2964,7 @@
   - Cloud One - Workload Security
   - Apex Central
   - Deep Security Software
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2985,7 +2979,7 @@
   - Microsoft-Windows-Security-Auditing
   - Level -- Medium security
   - TASK1
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -2996,7 +2990,7 @@
   Sample:
   - Quarantine
   - Deliver
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3008,7 +3002,7 @@
   - '2014-11-22T01:45:51-06:00'
   - '2009-07-13T23:31:13-05:00'
   - '2014-11-21T02:43:28-05:00'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3017,7 +3011,7 @@
   - sao
   Description_EN: The UTC time that the object was modified
   Sample: []
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3026,7 +3020,7 @@
   - sao
   Description_EN: The first time that the object appeared
   Sample: []
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3038,7 +3032,7 @@
   Sample:
   - '3'
   - '2'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3050,7 +3044,7 @@
   - any_process
   - exe_file
   - powershell
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3063,7 +3057,7 @@
   Sample: []
   DL_Type: int
   DL_CommonKey:
-  DL_Searchable: true
+  DL_Searchable: false
   DL_Aggregable: false
 - Name: objectRegistryRoot
   ProductCode:
@@ -3074,7 +3068,7 @@
   - HKCR
   - HKLM
   - HKCU
-  DL_Type: int
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3089,7 +3083,7 @@
   - SecureWorks Inc
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: true
+  DL_Searchable: false
   DL_Aggregable: false
 - Name: objectUser
   ProductCode:
@@ -3103,8 +3097,8 @@
   DL_Type: string
   DL_CommonKey:
   - UserAccount
-  DL_Searchable: true
-  DL_Aggregable: true
+  DL_Searchable: false
+  DL_Aggregable: false
 - Name: objectUserDomain
   ProductCode:
   - sds
@@ -3140,7 +3134,7 @@
   - '0'
   - '439'
   - '1314'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3165,7 +3159,7 @@
   - CAV
   - NCIE
   - TMUFE
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3177,7 +3171,7 @@
   - attack-T1059.001, mitre attack detection
   - suppress_alert
   - SMB
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3189,7 +3183,7 @@
   - NCIE CNC Pattern
   - NCIE RR Pattern
   - NCIE User Define Block List
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3203,7 +3197,7 @@
   - 35.1053.00
   - '630'
   - 35.1071.00
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3226,7 +3220,7 @@
   Sample:
   - '1'
   - '0'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3238,7 +3232,7 @@
   - '1645828113585'
   - '1655412594237'
   - '1647162053219'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3293,7 +3287,7 @@
   - '6'
   - TCP
   - '17'
-  DL_Type: int
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3306,7 +3300,7 @@
   - ACK PSH DF=1
   - ACK DF=1
   - DF=1
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3339,7 +3333,7 @@
   - '0'
   - '1'
   - '538'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3351,7 +3345,7 @@
   - Safe
   - Unknown
   - Dangerous
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3363,7 +3357,7 @@
   - Microsoft-Delivery-Optimization/10.0
   - Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
   - philandro Software GmbH
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3376,7 +3370,7 @@
   - '0'
   - '1'
   - '2'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3392,7 +3386,7 @@
   - '1'
   - high
   - No Risk
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3403,7 +3397,7 @@
   Sample:
   - 1
   - 3
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3415,7 +3409,7 @@
   - '0'
   - '-1'
   - '1'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3437,7 +3431,7 @@
   Description_EN: The Unix time of the log generation
   Sample:
   - 1656324260000
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3450,7 +3444,7 @@
   Description_EN: The date of the log generation
   Sample:
   - 1655337600000
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3464,7 +3458,7 @@
   Sample:
   - 9
   - 8
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3479,7 +3473,7 @@
   - Monday
   - Tuesday
   - Friday
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3494,7 +3488,7 @@
   - udso
   - point of entry
   - unknown
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3505,7 +3499,7 @@
   Sample:
   - Lateral Movement
   - Command and Control Communication
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3517,7 +3511,7 @@
   - Windows
   - Windows 10
   - Windows XP
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3527,7 +3521,7 @@
   - sem
   Description_EN: The mail scan time
   Sample: []
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3542,7 +3536,7 @@
   - 71
   - 81
   - 0
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3556,7 +3550,7 @@
   - Unknown
   - N/A
   - Deny Access
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3570,7 +3564,7 @@
   - Unknown
   - N/A
   - Access denied
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3585,7 +3579,7 @@
   - 346648FC-9862-D2F0-F94C-FAB1A838ABD7
   - 36E5239E-EEBA-0100-C10E-C057E0455E1D
   - 9606BBD5-38A7-9024-83C8-9C88A2AF90CC
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3599,7 +3593,7 @@
   - 10.0.0.5
   - 10.0.0.4
   - 10.150.26.18
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3628,7 +3622,7 @@
   - postfix/sendmail
   - CRON
   - sshd
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3679,7 +3673,7 @@
   - '2'
   - '99'
   - '5'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3689,7 +3683,7 @@
   - ptn
   Description_EN: The virtual LAN ID
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3704,7 +3698,7 @@
     Key, objectFilePath:HKLM\SYSTEM\CurrentControlSet\Services\DpsiBSvc\Start, policyId:007,
     objectFileHashSha1:null, objectCmd:null, processFileHashSha1:null, processCmd:null,
     objectRegistryData:null, objectRegistryKeyHandle:null, objectRegistryValue:null
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3730,7 +3724,7 @@
   - COMCEL_DOMINIO
   - HDWA
   - RANDON
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3743,7 +3737,7 @@
   - Cloud Storage (OneDrive)
   - Printer
   - tigoea-my.sharepoint.com/personal/rraragon_tigo_com_gt/_layouts/15/onedrive.aspx?login_hint=rraragon%40tigo%2Ecom%2Egt
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3758,7 +3752,7 @@
     4 - Data da Autorização 5 -, matchedInfo:0,7
   - matchedContentEx:Ta,Ta.append=_a.append,Ta.empty=_a.empty,Ta.node=_a.node,Ta.call=_a.call,Ta.size=_a.size,Ta.select=f,
     matchedInfo:0,5
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3769,7 +3763,7 @@
   Sample:
   - Yes
   - No
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3781,7 +3775,7 @@
   - BANCOAGRARIO\HITACHI
   - SevenGuo
   - ftpuser_service
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3808,7 +3802,7 @@
   Description_EN: The log version
   Sample:
   - 1.0
-  DL_Type: None
+  DL_Type: decimal
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3820,7 +3814,7 @@
   - N/A
   - Web Client Common
   - DCERPC Services
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3832,7 +3826,7 @@
   - 10.0.19041.1
   - 10.0.19041.1766
   - 10.0.18362.1
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3843,7 +3837,7 @@
   Sample:
   - Shenzhen Smartspace Software technology Co.,Limited;Symantec Class 3 SHA256 Code
     Signing CA;1429491600;1492649999
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3868,7 +3862,7 @@
   - Atualiza PJRO
   - Carpeta de archivos
   - 7z Setup SFX (x86)
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3878,7 +3872,7 @@
   Description_EN: The file creation date
   Sample:
   - 1595918517000
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3889,7 +3883,7 @@
     machine learning). Values from 1-99.
   Sample:
   - 94
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3901,7 +3895,7 @@
   - 177844c5927d0f20da06d79d986c7e7f8c7a3b6a
   - da39a3ee5e6b4b0d3255bfef95601890afd80709
   - 8dab234ab6cd96301f9452994f015a449d629edd
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3910,7 +3904,7 @@
   - sao
   Description_EN: Whether the detection comes with a detailed trace footprint
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3939,7 +3933,7 @@
   - 00000001-0001-0001-0001-000000007610
   - 00000001-0001-0001-0001-000000007120
   - 00000001-0001-0001-0001-000000017056
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3954,7 +3948,7 @@
   - Not over SSL/TLS
   - '0'
   - Over SSL/TLS
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -3980,7 +3974,7 @@
   - T1090 (TA0011)
   - T1071 (TA0011)
   - T1071.001 (TA0011)
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4037,7 +4031,7 @@
   Sample: []
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: true
+  DL_Searchable: false
   DL_Aggregable: false
 - Name: objectApiName
   ProductCode:
@@ -4045,7 +4039,7 @@
   Description_EN: The API name
   Sample:
   - GetIpNetTable
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4067,7 +4061,7 @@
   - 72a589da586844d7f0818ce684948eea
   - cd08e31494f9531f560d64c695473da9
   - 6dca00d8741247e245e4f2a632f1e62b
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4080,7 +4074,7 @@
   - e54965894d6b45ecb4323c7ea3d6c115
   - ec74a5c51106f0419184d0dd08fb05bc
   - ba1b42efc7dc57bb43bf81de59791c1b
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4102,7 +4096,7 @@
   - 000D3A920166-5C348B85-05A7-6D6A-DA63_52294e7b-f732-c6e9-b2c3-7a6b6f50d101_88d7575d75e1d7f79d95300dd2cab4a85352a0707ebd43f968ab550991e3e915
   - 000D3A920166-5C348B85-05A7-6D6A-DA63_52294e7b-f732-c6e9-b2c3-7a6b6f50d101_c1802e89c5df3676025af5743a1dfe2d9f6d99da33cf3dcd7c02ad9ceb64e844
   - 000D3A920166-5C348B85-05A7-6D6A-DA63_52294e7b-f732-c6e9-b2c3-7a6b6f50d101_34392932f47013709193001781e05a4b3f78ea17e1618753f79e9436258af004
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4114,7 +4108,7 @@
   - <SN6PR03MB40770D20B897A833A189E1BAB3959@SN6PR03MB4077.namprd03.prod.outlook.com>
   - <SA2PR03MB5692533AF2F5A3060E930F0FABB99@SA2PR03MB5692.namprd03.prod.outlook.com>
   - <SN6PR03MB399864EA5747F28C2275EF8AB0BA9@SN6PR03MB3998.namprd03.prod.outlook.com>
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4126,7 +4120,7 @@
   - AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AKyx0pMp-d0SbD3eaNWuhcQABfyTyLgAA
   - 15c6ec783680d78f
   - 15dd115e3b5de80f
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4140,7 +4134,7 @@
   - Spam Others
   - malware
   - ContentFiltering
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4149,7 +4143,7 @@
   - xes
   Description_EN: The desired access of the event
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4158,7 +4152,7 @@
   - xes
   Description_EN: The disposition of CreateFile
   Sample: []
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4170,7 +4164,7 @@
   - application/octet-stream
   - application/json; charset=utf-8
   - application/json
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4183,7 +4177,7 @@
   Sample:
   - v9
   - v6
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4209,7 +4203,7 @@
   - '{"key":"VSS","type":"Service","attributes":[{"friendlyValue":null,"name":"binaryPathName","value":"C:\\Windows\\system32\\vssvc.exe"},{"friendlyValue":"manual","name":"startType","value":"3"},{"friendlyValue":"stopped","name":"state","value":"1"}]}'
   - '{"key":"VSS","type":"Service","attributes":[{"friendlyValue":null,"name":"binaryPathName","value":"C:\\Windows\\system32\\vssvc.exe"},{"friendlyValue":"manual","name":"startType","value":"3"},{"friendlyValue":"running","name":"state","value":"4"}]}'
   - '{"key":"/etc/hosts","type":"File","attributes":[]}'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4222,7 +4216,7 @@
   - '{"key":"VSS","type":"Service","attributes":[{"friendlyValue":null,"name":"binaryPathName","value":"C:\\Windows\\system32\\vssvc.exe"},{"friendlyValue":"manual","name":"startType","value":"3"},{"friendlyValue":"running","name":"state","value":"4"}]}'
   - '{"key":"VSS","type":"Service","attributes":[{"friendlyValue":null,"name":"binaryPathName","value":"C:\\Windows\\system32\\vssvc.exe"},{"friendlyValue":"manual","name":"startType","value":"3"},{"friendlyValue":"stopped","name":"state","value":"1"}]}'
   - '{"key":"/etc/hosts","type":"File","attributes":[]}'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4237,7 +4231,7 @@
   - jesada.gonkratoke@scb.co.th
   - matias.figini@cencosud.com.ar
   - MONITORING@trendmicro.com
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4249,7 +4243,7 @@
   - fh105.mc.pd25.com
   - repost01.tmes.trendmicro.com
   - smtp15-ukb-sp1.mta.salesforce.com
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4261,7 +4255,7 @@
   - info@moriaa.com
   - return@mundomai.tk
   - mark@usaroadtravel.com
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4273,7 +4267,7 @@
   - customermarketing@flowserve.com
   - vivo@vivo.com.br
   - naoresponder@vivo.com.br
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4285,7 +4279,7 @@
   - customermarketing@flowserve.com
   - vivo@vivo.com.br
   - naoresponder@vivo.com.br
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4297,7 +4291,7 @@
   - noTLS
   - TLS 1.2
   - TLS 1.3
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4309,7 +4303,7 @@
   - 00027ac3-f8f2-cc8f-d078-3a57f12f3d55;00027ac3-f8f2-cc8f-d078-3a57f12f3d55
   - 0005ab64-3992-644c-3592-503c3610cec9;0005ab64-3992-644c-3592-503c3610cec9
   - 00062621-fec4-9e4d-7609-25b2b3189214;00062621-fec4-9e4d-7609-25b2b3189214
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4322,7 +4316,7 @@
   - '{"detail":"4.7.1 \u003ccustomermarketing@flowserve.com\u003e: Recipient address
     rejected: Ratelimit-2"}'
   - '{"detail":"4.7.1 \u003cvivo@vivo.com.br\u003e: Recipient address rejected: Ratelimit-2"}'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4334,7 +4328,7 @@
   - Delivery Status
   - Undelivered Mail Returned to Sender
   - Successful Mail Delivery Report
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4347,7 +4341,7 @@
   - File System
   - Uncategorized
   - Exploit
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4361,7 +4355,7 @@
   Sample:
   - '202207060001'
   - '202207190001'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4373,7 +4367,7 @@
   - '1656400286556'
   - '1656566610259'
   - '1656587180493'
-  DL_Type: real
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4398,9 +4392,9 @@
   - '-2965450813604216022'
   - '7111735426732308768'
   - '-7600358934761747729'
-  DL_Type: long
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: true
+  DL_Searchable: false
   DL_Aggregable: false
 - Name: parentHashId
   ProductCode:
@@ -4410,7 +4404,7 @@
   - '-1364311042632324339'
   - '1879227689087156956'
   - '4246064157470561345'
-  DL_Type: long
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4421,7 +4415,7 @@
   Description_EN: The first time the XDR log appeared
   Sample:
   - 1657195233000
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4432,7 +4426,7 @@
   Description_EN: The last time the XDR log appeared
   Sample:
   - 1657195233000
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4444,6 +4438,7 @@
   Sample:
   - '{"attachmentFileTlsh": "", "attachmentFileName": "testfile.txt","attachmentFileHash":
     "","attachmentFileSize": "-1"}'
+  DL_Type: dynamic
 - Name: highlightedFileName
   ProductCode:
   - sca
@@ -4452,6 +4447,7 @@
   Sample:
   - detect_me.zip
   - covid.zip
+  DL_Type: dynamic
 - Name: attachmentFileHashs
   ProductCode:
   - sca
@@ -4461,7 +4457,7 @@
   Sample:
   - 056a2975edffe7188c03c324ae4335f9380b57e3
   - 05fd3ac8f9d8407e6637e0f91cd2ff5ab076658a
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4474,6 +4470,7 @@
   Sample:
   - 056a2975edffe7188c03c324ae4335f9380b57e3
   - 05fd3ac8f9d8407e6637e0f91cd2ff5ab076658a
+  DL_Type: dynamic
 - Name: attachmentFileTlshs
   ProductCode:
   - sca
@@ -4484,7 +4481,7 @@
   - ''
   - 0FE18E0807B75799EF3ADD7A98D62411FEB31DAB419C913C058068A3A6B33BD114EA39
   - 97D18E86E87A85D1D4137E6DA6FD00580E4CF06F65DB2B2937815E4F3A3013042A2189
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4498,13 +4495,14 @@
   - ''
   - 0FE18E0807B75799EF3ADD7A98D62411FEB31DAB419C913C058068A3A6B33BD114EA39
   - 97D18E86E87A85D1D4137E6DA6FD00580E4CF06F65DB2B2937815E4F3A3013042A2189
+  DL_Type: dynamic
 - Name: schemaVersion
   ProductCode:
   - sca
   Description_EN: The schema version
   Sample:
   - '1.0'
-  DL_AdxType:
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4515,7 +4513,7 @@
   Description_EN: The GUID for Workbench to request report page data
   Sample:
   - 959eaca0-bd45-41a1-9fa2-6a80d2642215
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4525,7 +4523,7 @@
   Description_EN: The number of report indicators
   Sample:
   - 2
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4535,7 +4533,7 @@
   Description_EN: Mobile device model
   Sample:
   - M2101K9G
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4555,7 +4553,7 @@
   Description_EN: App name
   Sample:
   - Mobile Security Virus Test Application
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4569,7 +4567,7 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
-- Name: appDL_DeployedKeySha1
+- Name: appPublicKeySha1
   ProductCode:
   - ams
   Description_EN: The app public key (SHA-1)
@@ -4607,7 +4605,7 @@
   Description_EN: Whether the app is a system app
   Sample:
   - false
-  DL_Type: None
+  DL_Type: bool
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4630,7 +4628,7 @@
   - RANSOMWARE
   - BANKER
   - CREDENTIAL
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4660,7 +4658,7 @@
     Article\\"}, \\"body\\": {\\"value\\": \\"\\"}}"}'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: true
+  DL_Searchable: false
   DL_Aggregable: false
 - Name: denyListFileHashSha256
   ProductCode:
@@ -4701,7 +4699,7 @@
   Description_EN: The session start time, in seconds
   Sample:
   - 1575462989
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4711,7 +4709,7 @@
   Description_EN: The session end time, in seconds
   Sample:
   - 1575462989
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4744,7 +4742,7 @@
     Analytics Engine filter
   Sample:
   - EVENT_SOURCE_TELEMETRY
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4776,7 +4774,7 @@
     and userDomains stores the userDomains value of the original events
   Sample:
   - CORP
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4786,7 +4784,7 @@
   Description_EN: The PCAP file UUID
   Sample:
   - c9ebd33e-4e69-4dff-bd5c-907081e8492c
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4796,7 +4794,7 @@
   Description_EN: The file path of the quarantined object
   Sample:
   - C:\Program Files\TXOne\StellarProtect\private\quarantine\4429d703-9845-4dff-af25-aab707fb0f19
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4820,7 +4818,7 @@
   Sample:
   - network
   - mitre_discovery
-  DL_Type: None
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4870,9 +4868,9 @@
   Description_EN: The Kubernetes pod ID of the container
   Sample:
   - fc550ed4-3b54-402a-a56d-46096c285660
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: containerName
   ProductCode:
@@ -4890,7 +4888,7 @@
   Description_EN: The Kubernetes container ID
   Sample:
   - 4102001853b8
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4910,7 +4908,7 @@
   Description_EN: The Kubernetes container image digest
   Sample:
   - sha256:626ffe58f6e7566e00254b638eb7e0f3b11d4da9675088f4781a50ae288f3322
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4920,7 +4918,7 @@
   Description_EN: The rule set name
   Sample:
   - AllRules
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4930,7 +4928,7 @@
   Description_EN: The rule set ID
   Sample:
   - AllRules-1zSSZPsDqfqkcOt5vNsD6f383HN
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -4967,6 +4965,7 @@
   Description_EN: The direction of the email message
   Sample:
   - 1
+  DL_Type: int
 - Name: processSigner
   ProductCode:
   - xes
@@ -4975,18 +4974,21 @@
   Sample:
   - Microsoft Windows
   - Microsoft Windows Publisher
+  DL_Type: dynamic
 - Name: parentUser
   ProductCode:
   - sds
   Description_EN: The account name of the parent process
   Sample:
   - Administrator
+  DL_Type: string
 - Name: parentUserDomain
   ProductCode:
   - sds
   Description_EN: The domain name of the parent process
   Sample:
   - builtindomain
+  DL_Type: string
 - Name: rawSrcIp
   ProductCode:
   - pdi
@@ -5042,6 +5044,7 @@
   - sharepoint
   - exchange
   - gmail
+  DL_Type: string
 - Name: customFilterTags
   ProductCode:
   - ALL
@@ -5314,3 +5317,14 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
+- Name: mailDirection
+  ProductCode:
+  - sca
+  - sem
+  - xms
+  Description_EN: Email traffic direction
+  Sample:
+  - 1
+  - 3
+  - 25
+  DL_Type: int

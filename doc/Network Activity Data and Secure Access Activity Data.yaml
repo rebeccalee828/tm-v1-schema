@@ -4,7 +4,7 @@
   Description_EN: The event source type
   Sample:
   - 6 - EVENT_SOURCE_NETWORK_ACTIVITY
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -14,7 +14,7 @@
   Description_EN: The version
   Sample:
   - '1.1'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -98,7 +98,7 @@
   - 00001008-d7ef-4066-9d93-55c3d450bf76
   - 0000202f-92ec-4b8d-8df1-5c8551f33e4b
   - 00002778-c203-4d2e-ac0f-d6c84ea9451b
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -172,6 +172,7 @@
   Description_EN: The policy tree path, provided by SAP (endpoint only)
   Sample:
   - policyname1/policyname2/policyname3
+  DL_Type: string
 - Name: endpointHostName
   ProductCode:
   - sig
@@ -285,7 +286,7 @@
   Description_EN: The TLS version between the Service Gateway and server/website
   Sample:
   - TLS 1.2
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -297,7 +298,7 @@
     server/website
   Sample:
   - HTTP/1.1
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -320,7 +321,7 @@
   Description_EN: The UTC timestamp
   Sample:
   - 1599465660
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -396,7 +397,7 @@
   Description_EN: The WRS score
   Sample:
   - 81
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -435,7 +436,7 @@
   Description_EN: The time it took the scanner to complete the scan, in milliseconds
   Sample:
   - 1599465660123
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -498,7 +499,7 @@
   Description_EN: The size of the file that is violating the policy
   Sample:
   - 12134
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -531,7 +532,7 @@
   Description_EN: The MIME type or content type of the response body
   Sample:
   - text/html
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -542,7 +543,7 @@
     web traffic passed
   Sample:
   - ETL VPN
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -574,7 +575,7 @@
   Description_EN: The user department request method
   Sample:
   - Sales
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -608,7 +609,7 @@
   Description_EN: The product version
   Sample:
   - 1.0
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -632,7 +633,7 @@
   Description_EN: The type of request content
   Sample:
   - application/json; charset=utf-8
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -642,7 +643,7 @@
   Description_EN: HTTPS traffic inspection failure
   Sample:
   - true
-  DL_Type: None
+  DL_Type: bool
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -653,7 +654,7 @@
   - xns
   Description_EN: The JA3 fingerprint
   Sample:
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -663,7 +664,7 @@
   Description_EN: The response length
   Sample:
   - 1324
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -673,7 +674,7 @@
   Description_EN: The client protocol
   Sample:
   - HTTP/1.1
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -683,7 +684,7 @@
   Description_EN: The transport layer security of the client
   Sample:
   - TLS 1.2
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -693,7 +694,7 @@
   Description_EN: The content encoding of the request or the response
   Sample:
   - gzip
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -703,7 +704,7 @@
   Description_EN: The authorization type
   Sample:
   - Cookie
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -713,7 +714,7 @@
   Description_EN: The request length
   Sample:
   - 1324
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -723,7 +724,7 @@
   Description_EN: The time the server took to respond to the request, in milliseconds
   Sample:
   - 1599465660123
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -733,7 +734,7 @@
   Description_EN: The traffic type
   Sample:
   - Forward
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -764,7 +765,7 @@
     Secure Access risk control rules
   Sample:
   - 12340518-abd7-43e1-9b73-2f55c4c95a8e
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -774,7 +775,7 @@
   Description_EN: The UUID of the Zero Trust Secure Access private access application
   Sample:
   - 6f1fe071-9636-4c99-9a4d-c9f6d409a4c8
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -817,7 +818,7 @@
   Description_EN: The company name
   Sample:
   - Trend Micro
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -839,7 +840,7 @@
   Description_EN: The session start time, in seconds
   Sample:
   - 1575462989
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -851,7 +852,7 @@
   Description_EN: The session end time, in seconds
   Sample:
   - 1575462989
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -942,7 +943,7 @@
   Description_EN: The network analysis flow session status
   Sample:
   - '2'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -976,7 +977,7 @@
   Description_EN: The HTTP x-forwarded-for header
   Sample:
   - 192.168.1.103, 192.168.1.104, 192.168.1.106
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -999,7 +1000,7 @@
   Description_EN: The HTTP date header
   Sample:
   - Fri, 20 Oct 2017 06:02:09 GMT
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1010,7 +1011,7 @@
   Description_EN: All HTTP headers without sensitive information
   Sample:
   - "Host: 192.168.1.201:8080\r\nUser-Agent: curl/7.78.0\r\nAccept: */*\r\n"
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1021,7 +1022,7 @@
   Description_EN: SSL protocol connection
   Sample:
   - YES
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1044,7 +1045,7 @@
   Description_EN: The HTTP response date header
   Sample:
   - Fri, 20 Oct 2017 06:02:09 GMT
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1069,7 +1070,7 @@
   - "Accept-Ranges: bytes\r\nContent-Length: 68\r\nContent-Type: text/plain; charset=utf-8\r\
     \ \nLast-Modified: Thu, 19 Aug 2021 06:23:54 GMT\r\nDate: Thu, 19 Aug 2021 06:24:00\
     \ GMT\r\n"
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1114,8 +1115,8 @@
   - xns
   Description_EN: The file information extracted from files detected in response direction
   Sample:
-  - 
-  DL_Type: None
+  -
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1140,7 +1141,7 @@
     an x-forwarded-for IP address to use
   Sample:
   - 65535
-  DL_Type: None
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1249,7 +1250,7 @@
   Description_EN: The object transfer direction
   Sample:
   - Download
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1259,8 +1260,8 @@
   - xns
   Description_EN: The file information extracted from detected files
   Sample:
-  - 
-  DL_Type: None
+  -
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1284,7 +1285,7 @@
   Description_EN: The selected cipher of the TLS protocol
   Sample:
   - c02f
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1307,7 +1308,7 @@
   Sample:
   - /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert SHA2 High Assurance Server
     CA
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1318,7 +1319,7 @@
   Description_EN: The certificate validity start time
   Sample:
   - '2014-11-21T02:43:28'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1329,7 +1330,7 @@
   Description_EN: The certificate validity end time
   Sample:
   - '2018-11-21T02:43:28'
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1397,7 +1398,7 @@
   Description_EN: The raw JA3S
   Sample:
   - 771,157,65281-15
-  DL_Type: None
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1407,8 +1408,8 @@
   - xns
   Description_EN: The transaction information of the FTP protocol
   Sample:
-  - 
-  DL_Type: None
+  -
+  DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1464,6 +1465,7 @@
   Description_EN: The data volume transmitted by the client (in bytes)
   Sample:
   - 4655
+  DL_Type: string
 - Name: respScannedBytes
   ProductCode:
   - pdi
@@ -1471,6 +1473,7 @@
   Description_EN: The data volume transmitted by the server (in bytes)
   Sample:
   - 6654
+  DL_Type: string
 - Name: reqDataSize
   ProductCode:
   - xns
@@ -1478,6 +1481,7 @@
     (in bytes)
   Sample:
   - 15688
+  DL_Type: string
 - Name: respDataSize
   ProductCode:
   - xns
@@ -1485,6 +1489,7 @@
     (in bytes)
   Sample:
   - 7856
+  DL_Type: string
 - Name: nTags
   ProductCode:
   - xns
@@ -1496,6 +1501,54 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: clientGroup
+  ProductCode:
+  - xns
+  - pdi
+  Description_EN: The client IP network group
+  Sample:
+  - myCompany
+  - myGroup
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: serverGroup
+  ProductCode:
+  - xns
+  - pdi
+  Description_EN: The server IP network group
+  Sample:
+  - myCompany
+  - myGroup
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: httpXForwardedForGroup
+  ProductCode:
+  - xns
+  - pdi
+  Description_EN: The X-Forwarded-For IP network group
+  Sample:
+  - myCompany
+  - myGroup
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: resolvedUrlGroup
+  ProductCode:
+  - xns
+  - pdi
+  Description_EN: The IP address FQDN network group
+  Sample:
+  - myCompany
+  - myGroup
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
 - Name: customFilterTags
   ProductCode:
   - ALL
@@ -1528,6 +1581,7 @@
   Description_EN: The end-to-end traffic latency time, in milliseconds
   Sample:
   - 10000
+  DL_Type: string
 - Name: tmFilterRiskLevel
   ProductCode:
   - ALL
