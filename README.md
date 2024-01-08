@@ -36,7 +36,7 @@
 | sig  | Zero Trust Secure Access - Internet Access                                                   |
 | szn  | Zero Trust Secure Access - Private Access                                                    |
 | sws  | Trend Micro Web Security                                                                     |
-| sem  | Trend Micro Email Security <br> Cloud Email Gateway Protection (sem_v1_ecs)                  |
+| sem  | Trend Micro Email Security <br> Cloud Email Gateway Protection (sem_v1_ecs_)                 |
 | ams  | Mobile Security                                                                              |
 | pts  | TXOne Stellar                                                                                |
 | ptn  | TXOne EdgeOne                                                                                |
