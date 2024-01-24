@@ -1,0 +1,696 @@
+- Name: uuid
+  ProductCode:
+  - ALL
+  Description_EN: The unique key of the log entry
+  Sample:
+  - 0000116b-ac61-48d2-89e1-3d1ce2d13cdd
+  - 000017f4-ac10-43b4-8aef-97158e0f8533
+  - 0000230c-15d8-428c-b707-ddb77cb9ed33
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: version
+  ProductCode:
+  - ALL
+  Description_EN: The version
+  Sample:
+  - '1.0'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventSourceType
+  ProductCode:
+  - ALL
+  Description_EN: The event source type
+  Sample:
+  - 1 - EVENT_SOURCE_IDENTITY_ACTIVITY
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventTime
+  ProductCode:
+  - aad
+  Description_EN: The time the identity provider detected the event
+  Sample:
+  - 1657781088000
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: customerId
+  ProductCode:
+  - ALL
+  - aad
+  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
+  Sample:
+  - 9011075d-a2d7-4ff0-8660-47645735d0e7
+  - afa7768a-f34d-4ee3-b1db-8dd3592127b7
+  - 7ba4af7b-91f7-4589-9710-5acfd0e70406
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: tags
+  ProductCode:
+  - ALL
+  Description_EN: The attack technique ID detected by Trend Vision One based on the
+    alert filter
+  Sample:
+  - MITREV9.T1057
+  - MITREV9.T1059.003
+  - XSAE.F2924
+  DL_Type: dynamic
+  DL_CommonKey:
+  - Technique
+  - Tactic
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: receivedTime
+  ProductCode:
+  - ALL
+  Description_EN: The time when the XDR log was received
+  Sample:
+  - 1657781088000
+  DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: productCode
+  ProductCode:
+  - ALL
+  - aad
+  Description_EN: The internal product code of the identity provider (aad=Microsoft
+    Entra ID, opa=Microsoft Active Directory)
+  Sample:
+  - aad
+  - opa
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: packageTraceId
+  ProductCode:
+  - ALL
+  Description_EN: The package trace ID
+  Sample:
+  - 353e1e1e-4a80-4f3c-aec1-113d425a28e1
+  - 11b8ae4f-dc54-4c23-9011-7d8cc3be3a7d
+  - d084fed4-67fd-4135-b08e-654c9cdaf709
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: filterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top-level risk level of the event
+  Sample:
+  - info
+  - low
+  - medium
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: groupId
+  ProductCode:
+  - ALL
+  Description_EN: The management group ID
+  Sample:
+  - 00000000-0000-0000-0000-000000000000
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: tenantGuid
+  ProductCode:
+  - aad
+  Description_EN: The tenant GUID
+  Sample:
+  - 00000000-0000-0000-0000-000000000000
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: bitwiseFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The bitwise filter risk level
+  Sample:
+  - 1
+  - 2
+  - 8
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: customFilterTags
+  ProductCode:
+  - ALL
+  Description_EN: The detection filter that matched data based on custom filters
+  Sample:
+  - XCUS.CF0131
+  - USER.HELLOWORLD
+  DL_Type: dynamic
+  DL_CommonKey:
+  - Technique
+  - Tactic
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: mgmtInstanceId
+  ProductCode:
+  - ALL
+  Description_EN: The management instance ID
+  Sample:
+  - f41a9efa-beee-6ff7-319d-e4ffa63f21df
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: eventId
+  ProductCode:
+  - aad
+  Description_EN: The identity provider event ID
+  Sample:
+  - 1 - EVENT_SOURCE_AAD_SIGN_INS
+  - 2 - EVENT_SOURCE_AAD_DIR_AUDIT
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: eventName
+  ProductCode:
+  - aad
+  Description_EN: The identity provider event name
+  Sample:
+  - 4624
+  - aad_signin
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: idpName
+  ProductCode:
+  - aad
+  Description_EN: The identity provider
+  Sample:
+  - Microsoft Entra ID
+  - Microsoft Active Directory
+  - google
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: idpId
+  ProductCode:
+  - aad
+  Description_EN: The internal product code of the identity provider
+  Sample:
+  - aad
+  - opa
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: locationCountry
+  ProductCode:
+  - aad
+  Description_EN: The country where the event happened
+  Sample:
+  - US
+  - TW
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: locationCity
+  ProductCode:
+  - aad
+  Description_EN: The city where the event happened
+  Sample:
+  - Singapore
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: locationState
+  ProductCode:
+  - aad
+  Description_EN: The state where the event happened
+  Sample:
+  - Central Singapore
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: locationLongitude
+  ProductCode:
+  - aad
+  Description_EN: The longitude of the event location
+  Sample:
+  - 121.568
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: locationLatitude
+  ProductCode:
+  - aad
+  Description_EN: The latitude of the event location
+  Sample:
+  - 121.568
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: clientId
+  ProductCode:
+  - aad
+  Description_EN: The unique client device ID
+  Sample:
+  - 9b1c6295-faa8-40f3-95ce-8065c0702e8f
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: clientDisplayName
+  ProductCode:
+  - aad
+  Description_EN: The client display name
+  Sample:
+  - DESKTOP-TKOS222
+  DL_Type: string
+  DL_CommonKey:
+  - EndpointName
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: clientOS
+  ProductCode:
+  - aad
+  Description_EN: The client OS
+  Sample:
+  - Windows
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: clientBrowser
+  ProductCode:
+  - aad
+  Description_EN: The client browser
+  Sample:
+  - Chrome 119.0.0
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: clientApp
+  ProductCode:
+  - aad
+  Description_EN: The app that the client accessed
+  Sample:
+  - browser
+  - Mobile Apps and Desktop clients
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: ipAddress
+  ProductCode:
+  - aad
+  Description_EN: The client IP
+  Sample:
+  - 10.10.10.10
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: userId
+  ProductCode:
+  - aad
+  Description_EN: The user ID
+  Sample:
+  - 9b1c6295-faa8-40f3-95ce-8065c0702e8f
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: userDisplayName
+  ProductCode:
+  - aad
+  Description_EN: The user display name
+  Sample:
+  - Test User(RD-TW)
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: statusDetail
+  ProductCode:
+  - aad
+  Description_EN: The additional information about sign-in status
+  Sample:
+  - MFA requirement satisfied by claim in the token
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: status
+  ProductCode:
+  - aad
+  Description_EN: The sign-in status result
+  Sample:
+  - 0
+  - 50126
+  - 50155
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: statusReason
+  ProductCode:
+  - aad
+  Description_EN: The sign-in status
+  Sample:
+  - Error validating credentials due to invalid username or password.
+  - Others.
+  - ''
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: targetResourceId
+  ProductCode:
+  - aad
+  Description_EN: The target resource ID
+  Sample:
+  - 00000003-0000-0000-c000-000000000000
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: targetResourceDisplayName
+  ProductCode:
+  - aad
+  Description_EN: The target resource display name
+  Sample:
+  - Microsoft Graph
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: requestMethod
+  ProductCode:
+  - aad
+  Description_EN: The sign-in authentication method
+  Sample:
+  - '[{"authenticationStepDateTime": "2023-11-28T03:44:05Z","authenticationMethod":
+    "Previously satisfied","authenticationMethodDetail": null,"succeeded" : true,"authenticationStepResultDetail":
+    "MFA requirement satisfied by claim in the token","authenticationStepRequirement":
+    ""}]'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: eventAdditionalDetails
+  ProductCode:
+  - aad
+  Description_EN: The raw data string that contains additional information
+  Sample:
+  - '[{"key": "User-Agent","value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"}]'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: eventCategory
+  ProductCode:
+  - aad
+  Description_EN: The resource category targeted by the event
+  Sample:
+  - UserManagement
+  - ApplicationManagement
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: initiatedByAppId
+  ProductCode:
+  - aad
+  Description_EN: The resource category targeted by the event
+  Sample:
+  - 00000003-0000-0000-c000-000000000000
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: initiatedByAppDisplayName
+  ProductCode:
+  - aad
+  Description_EN: The application display name
+  Sample:
+  - Microsoft Intune
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: initiatedByServicePrincipalId
+  ProductCode:
+  - aad
+  Description_EN: The unique ID of the service principal
+  Sample:
+  - 00000003-0000-0000-c000-000000000000
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: initiatedByServicePrincipalName
+  ProductCode:
+  - aad
+  Description_EN: The unique ID of the service principal
+  Sample:
+  - ''
+  - Microsoft Intune
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: initiatedByUserId
+  ProductCode:
+  - aad
+  Description_EN: The unique ID of the user who initiated the event
+  Sample:
+  - ''
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: initiatedByUserDisplayName
+  ProductCode:
+  - aad
+  Description_EN: The user display name
+  Sample:
+  - Clark Shao
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: initiatedByUserHomeTenantId
+  ProductCode:
+  - aad
+  Description_EN: The tenant ID of the user
+  Sample:
+  - ''
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: initiatedByUserHomeTenantName
+  ProductCode:
+  - aad
+  Description_EN: The tenant ID of the user
+  Sample:
+  - ''
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: initiatedByUserIpAddress
+  ProductCode:
+  - aad
+  Description_EN: The client IP of the user
+  Sample:
+  - 123.123.123.123
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: initiatedByUserPrincipalName
+  ProductCode:
+  - aad
+  Description_EN: The User Principal Name of the user
+  Sample:
+  - test@trendmicro.com
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: loggedByService
+  ProductCode:
+  - aad
+  Description_EN: The service that initiated the event
+  Sample:
+  - Core Directory
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: operationType
+  ProductCode:
+  - aad
+  Description_EN: The operation performed in the event
+  Sample:
+  - Add
+  - Assign
+  - Update
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: result
+  ProductCode:
+  - aad
+  Description_EN: The event result
+  Sample:
+  - success
+  - failure
+  - timeout
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: resultReason
+  ProductCode:
+  - aad
+  Description_EN: The cause of event failure or timeout
+  Sample:
+  - success
+  - failure
+  - timeout
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: targetResources
+  ProductCode:
+  - aad
+  Description_EN: The targeted resource of the event
+  Sample:
+  - ''
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: userAgent
+  ProductCode:
+  - aad
+  Description_EN: The user agent
+  Sample:
+  - Microsoft.OData.Client/7.12.5
+  - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like
+    Gecko) Chrome/119.0.0.0 Safari/537.36
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: partitionKey
+  ProductCode:
+  - ALL
+  Description_EN: The partition key for a management scope (endpoint only)
+  Sample:
+  - ebb418f0-43b7-fd1e-a8f4-3a1261720071
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: customFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top-level risk level of the event by custom filter
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: tmFilterRiskLevel
+  ProductCode:
+  - ALL
+  Description_EN: The top-level risk level of the event by Security Analytics Engine
+    filter filter
+  Sample:
+  - info
+  - low
+  - medium
+  - high
+  - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: pname
+  ProductCode:
+  - aad
+  Description_EN: The internal product ID
+  Sample:
+  - '2200'
+  - '751'
+  - '533'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: actionName
+  ProductCode:
+  - aad
+  Description_EN: The user or service action
+  Sample:
+  - Create User
+  - Add member to group
+  - Update application
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: correlationId
+  ProductCode:
+  - aad
+  Description_EN: The correlation id
+  Sample:
+  - 7f545dec-5f3b-443f-9f2e-282499deaaef
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: policyTreePath
+  ProductCode:
+  - ALL
+  Description_EN: The policy tree path, provided by SAP (endpoint only)
+  Sample:
+  - policyname1/policyname2/policyname3
+  DL_Type: string
+  DL_Searchable: true
+  DL_Aggregable: false

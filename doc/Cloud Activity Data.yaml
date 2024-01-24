@@ -33,7 +33,7 @@
 - Name: productCode
   ProductCode:
   - ALL
-  Description_EN: Internal product code (sct = Trend Micro Cloud One CloudTrail)
+  Description_EN: The internal product code
   Sample:
   - sct
   DL_Type: string
@@ -43,8 +43,7 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: The attack technique ID detected by Trend Vision One based on the
-    alert filter
+  Description_EN: The detected technique ID based on the alert filter
   Sample:
   - MITREV9.T1090
   - MITRE.T1059
@@ -104,6 +103,7 @@
   Sample:
   - policyname1/policyname2/policyname3
   DL_Type: string
+  DL_Searchable: true
 - Name: customerId
   ProductCode:
   - ALL
@@ -126,7 +126,7 @@
   - kms.amazonaws.com
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventSubId
   ProductCode:
@@ -138,7 +138,7 @@
   - DescribeTable
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventID
   ProductCode:
@@ -282,7 +282,7 @@
   - '{"SignatureVersion":"SigV4","CipherSuite":"ECDHE-RSA-AES128-GCM-SHA256"}'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: apiVersion
   ProductCode:
@@ -292,7 +292,7 @@
   - 2012-08-10
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: awsRegion
   ProductCode:
@@ -304,7 +304,7 @@
   - us-west-1
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: errorCode
   ProductCode:
@@ -316,7 +316,7 @@
   - NoSuchLifecycleConfiguration
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: errorMessage
   ProductCode:
@@ -328,7 +328,7 @@
   - The lifecycle configuration does not exist
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventTime
   ProductCode:
@@ -338,7 +338,7 @@
   - 2022-07-06T22:28:06Z
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventCategory
   ProductCode:
@@ -350,7 +350,7 @@
   - Insight
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventType
   ProductCode:
@@ -362,7 +362,7 @@
   - AwsConsoleAction
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventVersion
   ProductCode:
@@ -372,7 +372,7 @@
   - 1.08
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: recipientAccountId
   ProductCode:
@@ -382,7 +382,7 @@
   - 123456789012
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: requestID
   ProductCode:
@@ -395,7 +395,7 @@
   - 5d975177-e1b8-45f5-8f2e-68bd347f2ec4
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: sharedEventID
   ProductCode:
@@ -408,7 +408,7 @@
   - 0d849be3-cfff-495f-b1c0-066ca7928d04
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: serviceEventDetails
   ProductCode:
@@ -419,7 +419,7 @@
   - '{"lifecycleEventPolicy":{"policyVersion":1,"policyId":"00bf7b21-eab1-39e0-b664-d0acfda1009d"}}'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: customFilterTags
   ProductCode:

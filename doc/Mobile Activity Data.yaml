@@ -163,8 +163,7 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: The attack technique ID detected by Trend Vision One based on the
-    alert filter
+  Description_EN: The detected technique ID based on the alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -189,8 +188,7 @@
 - Name: productCode
   ProductCode:
   - ALL
-  Description_EN: Internal product code (sds = Trend Micro Cloud One Endpoint & Workload
-    Security, xes = Trend Micro Vision One Endpoint Sensor, sao = Apex One as a Service)
+  Description_EN: The internal product code
   Sample:
   - sds
   - xes
@@ -304,6 +302,7 @@
   Sample:
   - policyname1/policyname2/policyname3
   DL_Type: string
+  DL_Searchable: true
 - Name: marsAccount
   ProductCode:
   - ams
@@ -312,7 +311,7 @@
   - XDRv1
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: endpointModel
   ProductCode:
@@ -334,7 +333,7 @@
   - VMware Workspace ONE UEM
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventHashId
   ProductCode:
@@ -346,7 +345,7 @@
   - '-7909265752378976284'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: firstSeen
   ProductCode:
@@ -356,7 +355,7 @@
   - 1656355418449
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: lastSeen
   ProductCode:
@@ -366,7 +365,7 @@
   - 1656355418449
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: pver
   ProductCode:
@@ -378,7 +377,7 @@
   - 1.2.0.2657
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: osName
   ProductCode:
@@ -402,7 +401,7 @@
   - 10.0.19042
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectHashId
   ProductCode:
@@ -415,7 +414,7 @@
   - '2432229257'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectFileSize
   ProductCode:
@@ -427,7 +426,7 @@
   - '60'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectFileCreation
   ProductCode:
@@ -439,7 +438,7 @@
   - '1648279273000'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectFileModifiedTime
   ProductCode:
@@ -451,7 +450,7 @@
   - '1648279273000'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectFirstSeen
   ProductCode:
@@ -463,7 +462,7 @@
   - '0'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectLastSeen
   ProductCode:
@@ -475,7 +474,7 @@
   - '0'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: srcFileHashId
   ProductCode:
@@ -487,7 +486,7 @@
   - '8528955148329941480'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: srcFileSize
   ProductCode:
@@ -499,7 +498,7 @@
   - '196608'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: srcFileCreation
   ProductCode:
@@ -511,7 +510,7 @@
   - '1626201750000'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: srcFileModifiedTime
   ProductCode:
@@ -523,7 +522,7 @@
   - '1577865600000'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: srcFirstSeen
   ProductCode:
@@ -535,7 +534,7 @@
   - '1656714760440'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: srcLastSeen
   ProductCode:
@@ -547,7 +546,7 @@
   - '1656715147313'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: appOrSystemEventHashId
   ProductCode:
@@ -557,7 +556,7 @@
   - 3859886410
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: appLabel
   ProductCode:
@@ -598,7 +597,7 @@
   - 16906043
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: appIsSystem
   ProductCode:
@@ -608,7 +607,7 @@
   - false
   DL_Type: bool
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: appVerCode
   ProductCode:
@@ -618,7 +617,7 @@
   - 0
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: systemEventAttr
   ProductCode:
@@ -628,7 +627,7 @@
   - usbdebugging
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectAppDexSha256
   ProductCode:
@@ -649,7 +648,7 @@
   - 1607935850
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectAppLabel
   ProductCode:
@@ -701,7 +700,7 @@
   - 16906043
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectAppIsSystemApp
   ProductCode:
@@ -711,7 +710,7 @@
   - true
   DL_Type: bool
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectAppVerCode
   ProductCode:
@@ -721,7 +720,7 @@
   - 0
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectAppVerName
   ProductCode:
@@ -763,7 +762,7 @@
   - LOCK_SCREEN
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: extraInfo
   ProductCode:
@@ -775,7 +774,7 @@
   - DCERPC Services
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectCertAttr
   ProductCode:
