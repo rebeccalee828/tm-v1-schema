@@ -73,7 +73,7 @@
   ProductCode:
   - ALL
   - scs
-  Description_EN: The ID detected by Trend Vision One based on the alert filter
+  Description_EN: The detected ID based on the alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -99,7 +99,7 @@
 - Name: productCode
   ProductCode:
   - ALL
-  Description_EN: Internal product code (scs = Trend Micro Cloud One Container Security)
+  Description_EN: The internal product code
   Sample:
   - scs
   DL_Type: string
@@ -194,7 +194,7 @@
   - 1.2.0.2657
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: customFilterTags
   ProductCode:
@@ -350,7 +350,7 @@
 - Name: ruleIdStr
   ProductCode:
   - scs
-  Description_EN: The Trend Cloud One - Container Security rule ID
+  Description_EN: The rule ID
   Sample:
   - TM-00000036
   DL_Type: string
@@ -360,7 +360,7 @@
 - Name: policyId
   ProductCode:
   - scs
-  Description_EN: The Trend Cloud One - Container Security policy ID
+  Description_EN: The policy ID
   Sample:
   - TestPolicy-2HJe25H4GY4upSuNNAG1pci2BIm
   DL_Type: string

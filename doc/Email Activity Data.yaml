@@ -25,8 +25,7 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: The attack technique ID detected by Trend Vision One based on the
-    alert filter
+  Description_EN: The detected technique ID based on the alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -272,7 +271,7 @@
   ProductCode:
   - sca
   - xms
-  Description_EN: Cloud App Security orgnization ID
+  Description_EN: The organization ID
   Sample:
   - 182a3fa0-a3a7-11eb-8590-8d526fa1feaa
   - 4da1fde0-b022-11ea-aa58-cf3ff4ef7956
@@ -389,7 +388,7 @@
   - centraltransporte.al@grupopredial.com.br
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailSmtpRecipients
   ProductCode:
@@ -402,7 +401,7 @@
   - centraltransporte.al@grupopredial.com.br
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: version
   ProductCode:
@@ -513,6 +512,7 @@
   Sample:
   - policyname1/policyname2/policyname3
   DL_Type: string
+  DL_Searchable: true
 - Name: scanType
   ProductCode:
   - sca
@@ -538,7 +538,7 @@
   - Sent Items
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: msgUuidChain
   ProductCode:
@@ -551,7 +551,7 @@
   - 004f276e-8588-49b2-a7ed-eb86567bf2d7;004f276e-8588-49b2-a7ed-eb86567bf2d7
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailMetaTraceId
   ProductCode:
@@ -562,7 +562,7 @@
   - ''
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mExternalUid
   ProductCode:
@@ -575,7 +575,7 @@
   - 00001392@jasperengines.com@@<573186405.1072205.1658257233431.JavaMail.cloud@p2-elasticrender-0bea27432cfd6429e>@@9857ba30b94835e87dedf3aa00a85784@@1
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailMetaData
   ProductCode:
@@ -588,7 +588,7 @@
   - '[{"\n":1}]'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailTagHashRawSignature
   ProductCode:
@@ -601,7 +601,7 @@
   - PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0gY29udGVudD0gY2hhcnNldD0gPjwvaGVhZD48Ym9keT48VEVYVD48L2JvZHk+PC9odG1sPg==
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailXMailer
   ProductCode:
@@ -614,7 +614,7 @@
   - Microsoft CDO for Windows 2000
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailUserAgent
   ProductCode:
@@ -627,7 +627,7 @@
   - Heirloom mailx 12.5 7/5/10
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailFeatureId
   ProductCode:
@@ -638,7 +638,7 @@
   Sample: []
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailRuleId
   ProductCode:
@@ -653,7 +653,7 @@
   - '148140'
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailTagHash
   ProductCode:
@@ -666,7 +666,7 @@
   - cf679dc99042b781106cbaccd4045ed3
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailTextHash
   ProductCode:
@@ -679,7 +679,7 @@
   - f26f3a415103ea083ac49be6bb60f337
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailUrlHash
   ProductCode:
@@ -692,7 +692,7 @@
   - ad50776a891bead6bf222e2b7be17724
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailHeaderHash
   ProductCode:
@@ -706,7 +706,7 @@
   - ad8776382ea4b7cffd0961c70223162e
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailScore
   ProductCode:
@@ -717,7 +717,7 @@
   Sample: []
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailWantedHeaderName
   ProductCode:
@@ -731,7 +731,7 @@
   - Received
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailWantedHeaderValue
   ProductCode:
@@ -744,7 +744,7 @@
   - BCL:0;
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailReplyToAddresses
   ProductCode:
@@ -758,7 +758,7 @@
   - no-reply@sharepointonline.com
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailSmtpFromAddresses
   ProductCode:
@@ -771,7 +771,7 @@
   - noreply@email.teams.microsoft.com
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailThreatType
   ProductCode:
@@ -785,7 +785,7 @@
   - suspected, phishing
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailWholeHeader
   ProductCode:
@@ -800,7 +800,7 @@
   - <EMAILAUTOMATICO@CORREIO.ITAU.COM.BR>
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailHelo
   ProductCode:
@@ -814,7 +814,7 @@
   - HELO us-smtp-1.mimecast.com
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: attachmentTlsh
   ProductCode:
@@ -827,7 +827,7 @@
   - 7C31C9827A71A905CC6B0A73B10FE80C06F01E814AA396347F8B6F979690E9C3D75147
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: attachmentSize
   ProductCode:
@@ -838,7 +838,7 @@
   Sample: []
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: attachmentSource
   ProductCode:
@@ -851,7 +851,7 @@
   - PRODUCT
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailSmtpTls
   ProductCode:
@@ -864,7 +864,7 @@
   - noTLS
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: attachmentFileTlshes
   ProductCode:
@@ -875,7 +875,7 @@
   Sample: []
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventSourceType
   ProductCode:
@@ -896,7 +896,7 @@
   - ''
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailEurekaRuleIds
   ProductCode:
@@ -911,18 +911,18 @@
   - '661267'
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: scanTs
   ProductCode:
   - sca
   - xms
-  Description_EN: The time the email was scanned by Cloud App Security
+  Description_EN: The time the email was scanned
   Sample:
   - 1657135700000
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: mailCacheId
   ProductCode:
@@ -934,7 +934,7 @@
   - <CAAQw8Mj0mFrshPQwS5dwEtFHwdEp2MJfFmMVxe@mail.gmail.com>
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: customFilterTags
   ProductCode:

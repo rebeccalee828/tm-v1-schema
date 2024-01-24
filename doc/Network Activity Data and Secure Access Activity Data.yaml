@@ -46,8 +46,7 @@
 - Name: tags
   ProductCode:
   - ALL
-  Description_EN: The attack technique ID detected by Trend Vision One based on the
-    alert filter
+  Description_EN: The detected technique ID based on the alert filter
   Sample:
   - MITREV9.T1057
   - MITREV9.T1059.003
@@ -173,6 +172,7 @@
   Sample:
   - policyname1/policyname2/policyname3
   DL_Type: string
+  DL_Searchable: true
 - Name: endpointHostName
   ProductCode:
   - sig
@@ -288,7 +288,7 @@
   - TLS 1.2
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: serverProtocol
   ProductCode:
@@ -300,7 +300,7 @@
   - HTTP/1.1
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: userAgent
   ProductCode:
@@ -438,7 +438,7 @@
   - 1599465660123
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: eventSubName
   ProductCode:
@@ -501,7 +501,7 @@
   - 12134
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: fileType
   ProductCode:
@@ -534,7 +534,7 @@
   - text/html
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: sender
   ProductCode:
@@ -545,7 +545,7 @@
   - ETL VPN
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: detectionType
   ProductCode:
@@ -577,7 +577,7 @@
   - Sales
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: requestMethod
   ProductCode:
@@ -611,7 +611,7 @@
   - 1.0
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: deviceGUID
   ProductCode:
@@ -635,7 +635,7 @@
   - application/json; charset=utf-8
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: failedHTTPSInspection
   ProductCode:
@@ -645,7 +645,7 @@
   - true
   DL_Type: bool
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: tlsJA3Fingerprint
   ProductCode:
@@ -656,7 +656,7 @@
   Sample:
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: responseSize
   ProductCode:
@@ -666,7 +666,7 @@
   - 1324
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: clientProtocol
   ProductCode:
@@ -676,7 +676,7 @@
   - HTTP/1.1
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: clientTls
   ProductCode:
@@ -686,7 +686,7 @@
   - TLS 1.2
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: contentEncoding
   ProductCode:
@@ -696,7 +696,7 @@
   - gzip
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: authType
   ProductCode:
@@ -706,7 +706,7 @@
   - Cookie
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: requestSize
   ProductCode:
@@ -716,7 +716,7 @@
   - 1324
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: serverRespTime
   ProductCode:
@@ -726,7 +726,7 @@
   - 1599465660123
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: trafficType
   ProductCode:
@@ -736,7 +736,7 @@
   - Forward
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: urlCat
   ProductCode:
@@ -767,7 +767,7 @@
   - 12340518-abd7-43e1-9b73-2f55c4c95a8e
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectId
   ProductCode:
@@ -777,7 +777,7 @@
   - 6f1fe071-9636-4c99-9a4d-c9f6d409a4c8
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: spt
   ProductCode:
@@ -820,7 +820,7 @@
   - Trend Micro
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: start
   ProductCode:
@@ -842,7 +842,7 @@
   - 1575462989
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: sessionEnd
   ProductCode:
@@ -854,7 +854,7 @@
   - 1575462989
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: policyTemplate
   ProductCode:
@@ -945,7 +945,7 @@
   - '2'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: app
   ProductCode:
@@ -979,7 +979,7 @@
   - 192.168.1.103, 192.168.1.104, 192.168.1.106
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: requestClientApplication
   ProductCode:
@@ -1002,7 +1002,7 @@
   - Fri, 20 Oct 2017 06:02:09 GMT
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: requestHeaders
   ProductCode:
@@ -1013,7 +1013,7 @@
   - "Host: 192.168.1.201:8080\r\nUser-Agent: curl/7.78.0\r\nAccept: */*\r\n"
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: overSsl
   ProductCode:
@@ -1024,7 +1024,7 @@
   - YES
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: respCode
   ProductCode:
@@ -1047,7 +1047,7 @@
   - Fri, 20 Oct 2017 06:02:09 GMT
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: httpLocation
   ProductCode:
@@ -1072,7 +1072,7 @@
     \ GMT\r\n"
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: respFileHash
   ProductCode:
@@ -1118,7 +1118,7 @@
   -
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: httpXForwardedForIp
   ProductCode:
@@ -1252,7 +1252,7 @@
   - Download
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: archFiles
   ProductCode:
@@ -1263,7 +1263,7 @@
   -
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: hostName
   ProductCode:
@@ -1287,7 +1287,7 @@
   - c02f
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: sslCertCommonName
   ProductCode:
@@ -1310,7 +1310,7 @@
     CA
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: sslCertValidFrom
   ProductCode:
@@ -1321,7 +1321,7 @@
   - '2014-11-21T02:43:28'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: sslCertValidUntil
   ProductCode:
@@ -1332,7 +1332,7 @@
   - '2018-11-21T02:43:28'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: sslCertSerialNumber
   ProductCode:
@@ -1400,7 +1400,7 @@
   - 771,157,65281-15
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: ftpTrans
   ProductCode:
@@ -1411,7 +1411,7 @@
   -
   DL_Type: dynamic
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: dnsQueryType
   ProductCode:
@@ -1466,6 +1466,7 @@
   Sample:
   - 4655
   DL_Type: string
+  DL_Searchable: true
 - Name: respScannedBytes
   ProductCode:
   - pdi
@@ -1474,6 +1475,7 @@
   Sample:
   - 6654
   DL_Type: string
+  DL_Searchable: true
 - Name: reqDataSize
   ProductCode:
   - xns
@@ -1482,6 +1484,7 @@
   Sample:
   - 15688
   DL_Type: string
+  DL_Searchable: true
 - Name: respDataSize
   ProductCode:
   - xns
@@ -1490,6 +1493,7 @@
   Sample:
   - 7856
   DL_Type: string
+  DL_Searchable: true
 - Name: nTags
   ProductCode:
   - xns
@@ -1549,6 +1553,38 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
+- Name: clientHost
+  ProductCode:
+  - xns
+  Description_EN: The client IP host name
+  Sample:
+  - sample.compute.amazonaws.com
+  - sample.tw.trendnet.org
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: serverHost
+  ProductCode:
+  - xns
+  Description_EN: The server IP host name
+  Sample:
+  - sample.compute.amazonaws.com
+  - sample.tw.trendnet.org
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: httpXForwardedForHost
+  ProductCode:
+  - xns
+  Description_EN: The X-Forwarded-For IP host name
+  Sample:
+  - sample.compute.amazonaws.com
+  - sample.tw.trendnet.org
+  DL_Type: string
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: customFilterTags
   ProductCode:
   - ALL
@@ -1582,6 +1618,7 @@
   Sample:
   - 10000
   DL_Type: string
+  DL_Searchable: true
 - Name: tmFilterRiskLevel
   ProductCode:
   - ALL
@@ -1593,6 +1630,18 @@
   - medium
   - high
   - critical
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: rawDataStr
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The raw data string that contains additional information
+  Sample:
+  - '[{ "oid": "1.3.6.1.4.1.2699.1.2.1.2.1.1.3.1", "value_type": 4, "value": "MANUFACTURER:FUJI
+    XEROX\nMODEL:ApeosPort-V C3374", "parse": 1}]'
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
