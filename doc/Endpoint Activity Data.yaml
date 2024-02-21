@@ -3004,7 +3004,8 @@
 - Name: codeIntegrityOptionEnabled
   ProductCode:
   - xes
-  Description_EN: Whether the system enforced signed kernel loading according to DSE
+  Description_EN: Whether the system enforced signed kernel loading according to DSE(driver
+    signature enforcement)
   Sample:
   - 1
   - 0
@@ -3015,8 +3016,8 @@
 - Name: codeIntegrityOptionTestsign
   ProductCode:
   - xes
-  Description_EN: Whether the system bypassed DSE checks and permitted loading of
-    test-signed drivers
+  Description_EN: Whether the system bypassed DSE(driver signature enforcement) checks
+    and permitted loading of test-signed drivers
   Sample:
   - 1
   - 0

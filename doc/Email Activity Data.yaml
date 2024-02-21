@@ -411,7 +411,7 @@
   - '1.1'
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: true
+  DL_Searchable: false
   DL_Aggregable: false
 - Name: customerId
   ProductCode:

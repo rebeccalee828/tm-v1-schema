@@ -2116,7 +2116,7 @@
   Sample: []
   DL_Type: int
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: clientFlag
   ProductCode:
@@ -5317,6 +5317,17 @@
   - 3
   - 25
   DL_Type: int
+- Name: authType
+  ProductCode:
+  - sig
+  Description_EN: The authorization type
+  Sample:
+  - Cookie JWT
+  - No Auth
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: rawDataStr
   ProductCode:
   - pdi
