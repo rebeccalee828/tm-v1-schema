@@ -531,7 +531,8 @@
   - 123.123.123.123
   DL_Type: string
   DL_CommonKey:
-  - UserAccount
+  - IPv4
+  - IPv6
   DL_Searchable: true
   DL_Aggregable: false
 - Name: initiatedByUserPrincipalName
@@ -542,6 +543,7 @@
   - test@trendmicro.com
   DL_Type: string
   DL_CommonKey:
+  - UserAccount
   DL_Searchable: true
   DL_Aggregable: true
 - Name: loggedByService
@@ -688,7 +690,7 @@
 - Name: policyTreePath
   ProductCode:
   - ALL
-  Description_EN: The policy tree path, provided by SAP (endpoint only)
+  Description_EN: The policy tree path (endpoint only)
   Sample:
   - policyname1/policyname2/policyname3
   DL_Type: string

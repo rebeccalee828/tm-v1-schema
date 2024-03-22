@@ -508,7 +508,7 @@
 - Name: policyTreePath
   ProductCode:
   - ALL
-  Description_EN: The policy tree path, provided by SAP (endpoint only)
+  Description_EN: The policy tree path (endpoint only)
   Sample:
   - policyname1/policyname2/policyname3
   DL_Type: string

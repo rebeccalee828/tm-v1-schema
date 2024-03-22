@@ -168,7 +168,7 @@
 - Name: policyTreePath
   ProductCode:
   - ALL
-  Description_EN: The policy tree path, provided by SAP (endpoint only)
+  Description_EN: The policy tree path (endpoint only)
   Sample:
   - policyname1/policyname2/policyname3
   DL_Type: string
@@ -1115,7 +1115,7 @@
   - xns
   Description_EN: The file information extracted from files detected in response direction
   Sample:
-  -
+  - 
   DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: true
@@ -1260,7 +1260,7 @@
   - xns
   Description_EN: The file information extracted from detected files
   Sample:
-  -
+  - 
   DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: true
@@ -1408,7 +1408,7 @@
   - xns
   Description_EN: The transaction information of the FTP protocol
   Sample:
-  -
+  - 
   DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: true
