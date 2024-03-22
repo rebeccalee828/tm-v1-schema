@@ -1102,7 +1102,7 @@
 - Name: policyTreePath
   ProductCode:
   - ALL
-  Description_EN: The policy tree path, provided by SAP
+  Description_EN: The policy tree path
   Sample:
   - policyname1/policyname2/policyname3
   DL_Type: string
@@ -1110,6 +1110,7 @@
 - Name: instanceId
   ProductCode:
   - sds
+  - xes
   Description_EN: The virtual machine instance ID on the cloud platform
   Sample:
   - i-0b22a22eec53b9321
@@ -1120,6 +1121,7 @@
 - Name: cloudProvider
   ProductCode:
   - sds
+  - xes
   Description_EN: The cloud provider of the endpoint
   Sample:
   - aws
@@ -1131,6 +1133,7 @@
 - Name: vpcId
   ProductCode:
   - sds
+  - xes
   Description_EN: The virtual private cloud of the endpoint
   Sample:
   - vpc-01234567890abcdef
@@ -1141,6 +1144,7 @@
 - Name: regionId
   ProductCode:
   - sds
+  - xes
   Description_EN: The endpoint region
   Sample:
   - us-east-1
@@ -2352,6 +2356,29 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: publicSrc
+  ProductCode:
+  - xes
+  Description_EN: The public ip of the endpoint making the request
+  Sample:
+  - 54.231.169.40
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: publicSpt
+  ProductCode:
+  - xes
+  Description_EN: The public port of the endpoint making the request
+  Sample:
+  - 57163
+  DL_Type: int
+  DL_CommonKey:
+  - Port
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: hookId
   ProductCode:
   - sao
@@ -2436,7 +2463,7 @@
   - Microsoft-Windows-TaskScheduler
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: providerGUID
   ProductCode:
@@ -2685,7 +2712,7 @@
   - /opt/nimsoft/probes/system/processes/processes
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectSessionId
   ProductCode:
@@ -2803,7 +2830,7 @@
   - c:\synclog\BLAST_SCAN.vbs
   DL_Type: string
   DL_CommonKey:
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: objectRawDataSize
   ProductCode:
@@ -3117,3 +3144,153 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: eventDataServiceFileName
+  ProductCode:
+  - xes
+  Description_EN: The full file path of the service executable file
+  Sample:
+  - '%SystemRoot%\PSEXESVC.exe'
+  - C:\Windows\System32\svchost.exe -k WinSysRestoreGroup
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: eventDataServiceName
+  ProductCode:
+  - xes
+  Description_EN: The service name
+  Sample:
+  - PSEXESVC
+  - WinResSvc
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: cloudServiceName
+  ProductCode:
+  - xes
+  Description_EN: The cloud service
+  Sample:
+  - s3.us-east-1.amazonaws.com
+  - dynamodb.us-west-2.amazonaws.com
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: cloudServiceApiName
+  ProductCode:
+  - xes
+  Description_EN: The cloud service API
+  Sample:
+  - AssumeRole
+  - GetCallerIdentity
+  - ListBuckets
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: cloudIdentityId
+  ProductCode:
+  - xes
+  Description_EN: The Cloud Identity ID used for authorization
+  Sample:
+  - arn:aws:sts::111111111111:assumed-role/eksctl-aws-test-nodegroup-ng-21d38-NodeInstanceRole-3wPxVEo4zHlK/i-0355006acbbde82b8
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: cloudIdentityName
+  ProductCode:
+  - xes
+  Description_EN: The Cloud Identity name used for authorization
+  Sample:
+  - AROA4Q6ORBMG4IN3WF5SN:i-0355006acbbde82b8
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: cloudIdentityAccountId
+  ProductCode:
+  - xes
+  Description_EN: The Cloud Identity account ID used for authorization
+  Sample:
+  - '111111111111'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: instanceName
+  ProductCode:
+  - xes
+  Description_EN: The virtual machine that made the request
+  Sample:
+  - ec2-123-124-0-12.us-west-2.compute.amazonaws.com
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: instanceAccountId
+  ProductCode:
+  - xes
+  Description_EN: The cloud account ID of the virtual machine that made the request
+  Sample:
+  - '111111111111'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: azId
+  ProductCode:
+  - xes
+  Description_EN: The Avaliability Zone ID of the virtual machine that made the request
+  Sample:
+  - us-east-1b
+  - us-west-2a
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: subnetId
+  ProductCode:
+  - xes
+  Description_EN: The subnet ID of the virtual machine that made the request
+  Sample:
+  - subnet-0a1b2c3d4e5f6g7h8
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: networkInterfaceId
+  ProductCode:
+  - xes
+  Description_EN: The network interface of the virtual machine that made the request
+  Sample:
+  - eni-0a1b2c3d4e5f6g7h8
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentUserGroupSids
+  ProductCode:
+  - xes
+  Description_EN: The SIDs of the parent user group
+  Sample:
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  - S-1-5-18
+  - S-1-5-21-3770350686-3666354711-3866293128-513
+- Name: processUserGroupSids
+  ProductCode:
+  - xes
+  Description_EN: The user group SIDs of the process
+  Sample:
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  - S-1-5-18
+  - S-1-5-21-3770350686-3666354711-3866293128-513
+- Name: objectUserGroupSids
+  ProductCode:
+  - xes
+  Description_EN: The user group SIDs of the object
+  Sample:
+  - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
+  - S-1-5-18
+  - S-1-5-21-3770350686-3666354711-3866293128-513

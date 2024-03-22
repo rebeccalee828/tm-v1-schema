@@ -377,6 +377,7 @@
   - sig
   - pts
   - sfs
+  - sfc
   Description_EN: The file name
   Sample:
   - spoolss
@@ -406,6 +407,7 @@
   - pdi
   - sao
   - sfs
+  - sfc
   Description_EN: The file name of the compressed file
   Sample:
   - /proc/32058/fd/150
@@ -440,6 +442,7 @@
   - pdi
   - pts
   - sfs
+  - sfc
   Description_EN: The file path without the file name
   Sample:
   - security
@@ -504,6 +507,7 @@
   - sao
   - sig
   - sfs
+  - sfc
   Description_EN: The SHA-1 of the file that triggered the rule or policy
   Sample:
   - DA39A3EE5E6B4B0D3255BFEF95601890AFD80709
@@ -546,6 +550,7 @@
   ProductCode:
   - pdi
   - sfs
+  - sfc
   Description_EN: The SHA-1 of the decompressed archive
   Sample:
   - 6E2ECB34B7798E179CC704111FB9733FBAAD5ACA
@@ -605,6 +610,7 @@
   - sig
   - sds
   - sfs
+  - sfc
   Description_EN: The SHA-256 of the file (fileName)
   Sample:
   - 6A6EB2D717CEA041B4444193B45EDFB6CA1287518203B7230B3C4B8FFB031EAB
@@ -633,7 +639,8 @@
   ProductCode:
   - pdi
   - sfs
-  Description_EN: The SHA-256 of compressed suspicious file
+  - sfc
+  Description_EN: The SHA-256 of the compressed suspicious file
   Sample:
   - 60C7C5924DD09F7C6B150120FB92DCEE00AE82DB75C7402FA4D9152CF487A94F
   - 482FFC4F87B78C3C7073983CF65B593D9F13F0A3D6DC54B4A3F616F79838F3CE
@@ -1004,6 +1011,7 @@
   - pts
   - xms
   - sfs
+  - sfc
   Description_EN: The name of the detected malware
   Sample:
   - SecurityLevelDrop
@@ -1030,7 +1038,8 @@
   - pts
   - xms
   - sfs
-  Description_EN: The event type name
+  - sfc
+  Description_EN: The event type
   Sample:
   - LOG_INSPECTION_EVENT
   - SECURITY_RISK_DETECTION
@@ -1135,6 +1144,7 @@
   - pds
   - pts
   - sfs
+  - sfc
   Description_EN: The combination of the file path and the file name
   Sample:
   - \etc\hosts
@@ -1800,6 +1810,7 @@
   - ams
   - ptn
   - pts
+  - sfc
   Description_EN: The virus type
   Sample:
   - Virus
@@ -1923,7 +1934,7 @@
 - Name: policyTreePath
   ProductCode:
   - ALL
-  Description_EN: The policy tree path, provided by SAP
+  Description_EN: The policy tree path
   Sample:
   - policyname1/policyname2/policyname3
   DL_Type: string
@@ -1931,6 +1942,7 @@
 - Name: cloudProvider
   ProductCode:
   - sds
+  - sfc
   Description_EN: The cloud provider of the endpoint
   Sample:
   - aws
@@ -2146,7 +2158,8 @@
   ProductCode:
   - pdi
   - sfs
-  Description_EN: The file size of decompressed archive file
+  - sfc
+  Description_EN: The file size of the decompressed archive file
   Sample:
   - '0'
   - '265314'
@@ -2159,7 +2172,8 @@
   ProductCode:
   - pdi
   - sfs
-  Description_EN: The file type of decompressed archive file
+  - sfc
+  Description_EN: The file type of the decompressed archive file
   Sample:
   - EXE
   - JAVA
@@ -2557,6 +2571,7 @@
   - scs
   - xms
   - sfs
+  - sfc
   Description_EN: The event ID from the logs of each product
   Sample:
   - 100116
@@ -2609,6 +2624,7 @@
   - sig
   - sao
   - sfs
+  - sfc
   Description_EN: The file size of the suspicious file
   Sample:
   - '0'
@@ -2623,6 +2639,7 @@
   - pdi
   - sig
   - sfs
+  - sfc
   Description_EN: The file type of the suspicious file
   Sample:
   - EXE
@@ -3313,6 +3330,7 @@
   - ams
   - scs
   - sfs
+  - sfc
   Description_EN: The product version
   Sample:
   - 20.0.0.4726
@@ -5345,3 +5363,23 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: cloudStorageName
+  ProductCode:
+  - sfc
+  Description_EN: The cloud storage name
+  Sample:
+  - my-bucket
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: cloudAccountId
+  ProductCode:
+  - sfc
+  Description_EN: The cloud account ID
+  Sample:
+  - '123456789012'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
