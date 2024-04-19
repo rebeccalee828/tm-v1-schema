@@ -989,3 +989,16 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: mailUrlsOriginalLink
+  ProductCode:
+  - sca
+  - sem
+  - xms
+  Description_EN: The original URL extracted from the email content
+  Sample:
+  - https://aka.ms/JoinTeamsMeeting
+  - http://go.microsoft.com/fwlink/p/?LinkID=512132
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false

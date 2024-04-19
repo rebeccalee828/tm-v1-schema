@@ -696,3 +696,16 @@
   DL_Type: string
   DL_Searchable: true
   DL_Aggregable: false
+- Name: principalName
+  ProductCode:
+  - aad
+  Description_EN: The User Principal Name
+  Sample:
+  - chin.shun@multibank.com.pa
+  - leonelc@edsitrend.com
+  - alcides.cuevas@multibank.com.pa
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: false

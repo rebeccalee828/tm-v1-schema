@@ -1067,7 +1067,7 @@
   - xns
   Description_EN: All HTTP response headers without sensitive information
   Sample:
-  - "Accept-Ranges: bytes\r\nContent-Length: 68\r\nContent-Type: text/plain; charset=utf-8\r\
+  - "Accept-Ranges: bytes\r\nContent-Length: 68\r\nContent-Type: - text/plain; charset=utf-8\r\
     \ \nLast-Modified: Thu, 19 Aug 2021 06:23:54 GMT\r\nDate: Thu, 19 Aug 2021 06:24:00\
     \ GMT\r\n"
   DL_Type: string
@@ -1645,4 +1645,31 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
+  DL_Aggregable: false
+- Name: dvc
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The IP address of the Deep Discovery Inspector or Virtual Network
+    Sensor appliance
+  Sample:
+  - 10.150.26.18
+  - 172.16.0.140
+  - 10.34.168.133
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: dvchost
+  ProductCode:
+  - pdi
+  - xns
+  Description_EN: The host of the deployed Deep Discovery Inspector or Virtual Network
+    Sensor appliance
+  Sample:
+  - my-company-xns
+  - my-ddi
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
   DL_Aggregable: false

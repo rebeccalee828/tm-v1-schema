@@ -4918,6 +4918,8 @@
 - Name: ruleSetName
   ProductCode:
   - scs
+  - stp
+  - ptp
   Description_EN: The rule set name
   Sample:
   - AllRules

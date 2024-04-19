@@ -3278,6 +3278,10 @@
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
   - S-1-5-18
   - S-1-5-21-3770350686-3666354711-3866293128-513
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: processUserGroupSids
   ProductCode:
   - xes
@@ -3286,6 +3290,10 @@
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
   - S-1-5-18
   - S-1-5-21-3770350686-3666354711-3866293128-513
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: objectUserGroupSids
   ProductCode:
   - xes
@@ -3294,3 +3302,7 @@
   - S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464
   - S-1-5-18
   - S-1-5-21-3770350686-3666354711-3866293128-513
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
