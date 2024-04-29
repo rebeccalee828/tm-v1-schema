@@ -1122,7 +1122,7 @@
   ProductCode:
   - sds
   - xes
-  Description_EN: The cloud provider of the endpoint
+  Description_EN: The service provider of the cloud asset
   Sample:
   - aws
   - azure
@@ -1134,7 +1134,7 @@
   ProductCode:
   - sds
   - xes
-  Description_EN: The virtual private cloud of the endpoint
+  Description_EN: The virtual private cloud that contains the cloud asset
   Sample:
   - vpc-01234567890abcdef
   DL_Type: string
@@ -1145,9 +1145,10 @@
   ProductCode:
   - sds
   - xes
-  Description_EN: The endpoint region
+  Description_EN: The cloud asset region
   Sample:
-  - us-east-1
+  - US East (N. Virginia)
+  - Europe (Frankfurt)
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
