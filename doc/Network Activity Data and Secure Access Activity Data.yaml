@@ -8,40 +8,20 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
-- Name: version
-  ProductCode:
-  - ALL
-  Description_EN: The version
-  Sample:
-  - '1.1'
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
 - Name: eventTime
   ProductCode:
   - sig
   - szn
   - pdi
   - xns
-  Description_EN: The time the agent detected the event
+  - qpf
+  - vpc
+  Description_EN: The time the agent or product detected the event
   Sample:
   - 1657135700000
   DL_Type: real
   DL_CommonKey:
   DL_Searchable: true
-  DL_Aggregable: false
-- Name: customerId
-  ProductCode:
-  - ALL
-  Description_EN: The Customer ID, CLP ID, Company ID, or Business ID
-  Sample:
-  - df1fd66c-dea3-40fb-a78b-1442d6154ecc
-  - e0f6a485-204f-4988-9253-f02b6481c205
-  - b48f2239-d797-4967-bf8a-d0861ebb94e9
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: false
   DL_Aggregable: false
 - Name: tags
   ProductCode:
@@ -68,19 +48,10 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
-- Name: receivedTime
-  ProductCode:
-  - ALL
-  Description_EN: The time when the XDR log was received
-  Sample:
-  - 1656324260000
-  DL_Type: real
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
 - Name: productCode
   ProductCode:
   - ALL
+  - qpf
   Description_EN: The product which sent the log
   Sample:
   - sig
@@ -89,18 +60,6 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
-- Name: packageTraceId
-  ProductCode:
-  - ALL
-  Description_EN: The package trace ID
-  Sample:
-  - 00001008-d7ef-4066-9d93-55c3d450bf76
-  - 0000202f-92ec-4b8d-8df1-5c8551f33e4b
-  - 00002778-c203-4d2e-ac0f-d6c84ea9451b
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
 - Name: filterRiskLevel
   ProductCode:
   - ALL
@@ -113,58 +72,6 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
-- Name: groupId
-  ProductCode:
-  - ALL
-  Description_EN: The management scope group ID
-  Sample:
-  - 00000000-0000-0000-0000-000000000000
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
-- Name: tenantGuid
-  ProductCode:
-  - ALL
-  Description_EN: The management scope tenant GUID
-  Sample:
-  - 00000000-0000-0000-0000-000000000000
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
-- Name: bitwiseFilterRiskLevel
-  ProductCode:
-  - ALL
-  Description_EN: The bitwise filter risk level
-  Sample:
-  - 1
-  - 2
-  - 8
-  DL_Type: int
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
-- Name: partitionKey
-  ProductCode:
-  - ALL
-  Description_EN: The partition key for a management scope (endpoint only)
-  Sample:
-  - ebb418f0-43b7-fd1e-a8f4-3a1261720071
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
-- Name: mgmtInstanceId
-  ProductCode:
-  - ALL
-  Description_EN: The management scope instance ID
-  Sample:
-  - f41a9efa-beee-6ff7-319d-e4ffa63f21df
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
 - Name: policyTreePath
   ProductCode:
   - ALL
@@ -202,6 +109,8 @@
   ProductCode:
   - sig
   - szn
+  - qpf
+  - vpc
   Description_EN: The destination IP address
   Sample:
   - 10.10.10.10
@@ -257,6 +166,7 @@
   ProductCode:
   - sig
   - szn
+  - qpf
   Description_EN: The action
   Sample:
   - Allow
@@ -269,7 +179,9 @@
   ProductCode:
   - sig
   - szn
-  Description_EN: The source address
+  - qpf
+  - vpc
+  Description_EN: The source IP address
   Sample:
   - 100.100.100.100
   - 18.162.103.100
@@ -331,9 +243,11 @@
   - szn
   - pdi
   - xns
+  - qpf
   Description_EN: The log type
   Sample:
   - SWG_ACTIVITY_LOG
+  - FIREWALL_ACTIVITY_LOG
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
@@ -342,6 +256,7 @@
   ProductCode:
   - sig
   - szn
+  - qpf
   Description_EN: The name of the requested application
   Sample:
   - Facebook
@@ -443,10 +358,15 @@
 - Name: eventSubName
   ProductCode:
   - sig
-  Description_EN: The cloud app action caused by user control via Zero Trust Secure
-    Access - Internet Access
+  - qpf
+  Description_EN: The Zero Trust Secure Access - Internet Access cloud app action
+    or the Palo Alto Networks firewall log sub-type
   Sample:
   - OneDrive download file
+  - start
+  - end
+  - drop
+  - deny
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
@@ -596,9 +516,12 @@
   - sig
   - pdi
   - xns
+  - qpf
+  - vpc
   Description_EN: The product name
   Sample:
   - Secure Web Gateway
+  - AWS VPC Flow Logs
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
@@ -606,6 +529,7 @@
 - Name: pver
   ProductCode:
   - sig
+  - qpf
   Description_EN: The product version
   Sample:
   - 1.0
@@ -741,6 +665,7 @@
 - Name: urlCat
   ProductCode:
   - sig
+  - qpf
   Description_EN: The URL category
   Sample:
   - Social Networking
@@ -782,6 +707,8 @@
 - Name: spt
   ProductCode:
   - szn
+  - qpf
+  - vpc
   Description_EN: The virtual port of the source assigned to the Secure Access Module
   Sample:
   - 57763
@@ -793,8 +720,8 @@
 - Name: policyUuid
   ProductCode:
   - szn
-  Description_EN: The UUID of the Zero Trust Secure Access private access or risk
-    control rule
+  - qpf
+  Description_EN: The policy UUID
   Sample:
   - afef0518-abd7-43e1-9b73-2f55c4c95a8e
   DL_Type: string
@@ -804,6 +731,8 @@
 - Name: dpt
   ProductCode:
   - szn
+  - qpf
+  - vpc
   Description_EN: The service destination port of the private application server
   Sample:
   - 443
@@ -824,11 +753,21 @@
   DL_Aggregable: false
 - Name: start
   ProductCode:
-  - szn
-  Description_EN: The start time, in milliseconds
+  - vpc
+  Description_EN: The time when the first data packet was received (in Unix seconds)
   Sample:
-  - 1575462989
+  - 1616729292
   DL_Type: real
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: end
+  ProductCode:
+  - vpc
+  Description_EN: The time when the last data packet was received (in Unix seconds)
+  Sample:
+  - 1616729349
+  DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -837,7 +776,8 @@
   - szn
   - pdi
   - xns
-  Description_EN: The session start time, in seconds
+  - qpf
+  Description_EN: The session start time (in seconds)
   Sample:
   - 1575462989
   DL_Type: string
@@ -929,6 +869,7 @@
   ProductCode:
   - pdi
   - xns
+  - qpf
   Description_EN: The network analysis flow ID
   Sample:
   - '6837014561409730558'
@@ -951,7 +892,8 @@
   ProductCode:
   - pdi
   - xns
-  Description_EN: The application layer protocol
+  - qpf
+  Description_EN: The network protocol
   Sample:
   - HTTP
   DL_Type: string
@@ -974,7 +916,8 @@
   ProductCode:
   - pdi
   - xns
-  Description_EN: The HTTP x-forwarded-for header
+  - qpf
+  Description_EN: The HTTP X-Forwarded-For header
   Sample:
   - 192.168.1.103, 192.168.1.104, 192.168.1.106
   DL_Type: string
@@ -1298,6 +1241,8 @@
   - '*.www.yahoo.com'
   DL_Type: string
   DL_CommonKey:
+  - DomainName
+  - HostDomain
   DL_Searchable: true
   DL_Aggregable: true
 - Name: sslCertIssuer
@@ -1479,6 +1424,7 @@
 - Name: reqDataSize
   ProductCode:
   - xns
+  - qpf
   Description_EN: The data volume transmitted over the transport layer by the client
     (in bytes)
   Sample:
@@ -1488,23 +1434,13 @@
 - Name: respDataSize
   ProductCode:
   - xns
+  - qpf
   Description_EN: The data volume transmitted over the transport layer by the server
     (in bytes)
   Sample:
   - 7856
   DL_Type: string
   DL_Searchable: true
-- Name: nTags
-  ProductCode:
-  - xns
-  Description_EN: The related tags for network activity data
-  Sample:
-  - rule.4445
-  - virus.PE_CCFR_CPP_TEST.A
-  DL_Type: dynamic
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
 - Name: clientGroup
   ProductCode:
   - xns
@@ -1585,32 +1521,6 @@
   DL_Type: string
   DL_Searchable: true
   DL_Aggregable: false
-- Name: customFilterTags
-  ProductCode:
-  - ALL
-  Description_EN: The detection filter that matched data based on custom filters
-  Sample:
-  - XCUS.CF0131
-  - USER.HELLOWORLD
-  DL_Type: dynamic
-  DL_CommonKey:
-  - Technique
-  DL_Searchable: false
-  DL_Aggregable: false
-- Name: customFilterRiskLevel
-  ProductCode:
-  - ALL
-  Description_EN: The top-level risk level of the event by custom filter
-  Sample:
-  - info
-  - low
-  - medium
-  - high
-  - critical
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
 - Name: e2eLatency
   ProductCode:
   - sig
@@ -1619,21 +1529,6 @@
   - 10000
   DL_Type: string
   DL_Searchable: true
-- Name: tmFilterRiskLevel
-  ProductCode:
-  - ALL
-  Description_EN: The top-level risk level of the event by Security Analytics Engine
-    filter
-  Sample:
-  - info
-  - low
-  - medium
-  - high
-  - critical
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: false
-  DL_Aggregable: false
 - Name: rawDataStr
   ProductCode:
   - pdi
@@ -1664,12 +1559,467 @@
   ProductCode:
   - pdi
   - xns
-  Description_EN: The host of the deployed Deep Discovery Inspector or Virtual Network
-    Sensor appliance
+  - qpf
+  Description_EN: The network device hostname
   Sample:
   - my-company-xns
   - my-ddi
   DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: eventId
+  ProductCode:
+  - xns
+  - pdi
+  - qpf
+  Description_EN: The event ID
+  Sample:
+  - '200139'
+  - '200140'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: policyName
+  ProductCode:
+  - qpf
+  Description_EN: The name of the triggered policy
+  Sample:
+  - lab-to-dns
+  - small-lab-http-out
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: sUser1
+  ProductCode:
+  - qpf
+  Description_EN: The latest sign-in user of the source
+  Sample:
+  - 000c29edef58
+  - corpdmz.com\ser-desktopcentral
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: dUser1
+  ProductCode:
+  - qpf
+  Description_EN: The latest logon user of the destination
+  Sample:
+  - dhr\m42svc
+  - altsvc
+  DL_Type: string
+  DL_CommonKey:
+  - UserAccount
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: vsysName
+  ProductCode:
+  - qpf
+  Description_EN: The Palo Alto Networks virtual system of the session
+  Sample:
+  - vsys1
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcZone
+  ProductCode:
+  - qpf
+  Description_EN: The source zone of the Palo Alto Networks firewall session
+  Sample:
+  - LAB-Small
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: dstZone
+  ProductCode:
+  - qpf
+  Description_EN: The destination zone of the Palo Alto Networks firewall session
+  Sample:
+  - LAB-Small
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: cnt
+  ProductCode:
+  - qpf
+  Description_EN: The total number of logs
+  Sample:
+  - '1'
+  - '2'
+  - '3'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: sessionElapsedTime
+  ProductCode:
+  - qpf
+  Description_EN: The elapsed time of the session (in seconds)
+  Sample:
+  - 33
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: srcLocation
+  ProductCode:
+  - qpf
+  Description_EN: The source country
+  Sample:
+  - Japan
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: dstLocation
+  ProductCode:
+  - qpf
+  Description_EN: The destination country
+  Sample:
+  - Japan
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: sessionEndReason
+  ProductCode:
+  - qpf
+  Description_EN: The reason why a session was terminated
+  Sample:
+  - tcp-fin
+  - tcp-rst-from-server
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: sOSName
+  ProductCode:
+  - qpf
+  Description_EN: The source OS
+  Sample:
+  - Windows 10
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: shost
+  ProductCode:
+  - qpf
+  Description_EN: The source hostname
+  Sample:
+  - sw_us-east-1a_10-124-17-69
+  - sw_us-east-1c_10-124-21-139
+  DL_Type: string
+  DL_CommonKey:
+  - DomainName
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: smac
+  ProductCode:
+  - qpf
+  Description_EN: The source MAC address
+  Sample:
+  - a8:d0:e5:5c:cb:c5
+  - 00:50:56:b2:93:46
+  - 00:09:0f:09:00:06
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: dOSName
+  ProductCode:
+  - qpf
+  Description_EN: The destination OS
+  Sample:
+  - Windows
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: dhost
+  ProductCode:
+  - qpf
+  Description_EN: The destination hostname
+  Sample:
+  - sw_us-east-1c_10-124-21-139
+  - 8.243.49.4
+  DL_Type: string
+  DL_CommonKey:
+  - DomainName
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: dmac
+  ProductCode:
+  - qpf
+  Description_EN: The destination MAC address
+  Sample:
+  - a8:d0:e5:5c:cb:c5
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: vpcFlowLogsVersion
+  ProductCode:
+  - vpc
+  Description_EN: The VPC Flow Logs version
+  Sample:
+  - 2
+  - 3
+  - 4
+  - 5
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: cloudAccountId
+  ProductCode:
+  - vpc
+  Description_EN: The owner AWS account ID of the source network interface
+  Sample:
+  - 123456789012
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: networkInterfaceId
+  ProductCode:
+  - vpc
+  Description_EN: The network interface ID
+  Sample:
+  - eni-1235b8ca123456789
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: ipProto
+  ProductCode:
+  - vpc
+  Description_EN: The protocol number
+  Sample:
+  - 6
+  - 17
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: packets
+  ProductCode:
+  - vpc
+  Description_EN: The number of transmitted data packets
+  Sample:
+  - 14
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: bytes
+  ProductCode:
+  - vpc
+  Description_EN: The number of transmitted data bytes
+  Sample:
+  - 15044
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: action
+  ProductCode:
+  - vpc
+  Description_EN: The traffic processing action
+  Sample:
+  - ACCEPT
+  - REJECT
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: logStatus
+  ProductCode:
+  - vpc
+  Description_EN: The VPC Flow Log status
+  Sample:
+  - OK
+  - NODATA
+  - SKIPDATA
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: vpcId
+  ProductCode:
+  - vpc
+  Description_EN: The VPC ID
+  Sample:
+  - vpc-abcdefab012345678
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: subnetId
+  ProductCode:
+  - vpc
+  Description_EN: The subnet ID
+  Sample:
+  - subnet-aaaaaaaa012345678
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: instanceId
+  ProductCode:
+  - vpc
+  Description_EN: The instance ID
+  Sample:
+  - i-0c50d5961bcb2d47b
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: tcpFlags
+  ProductCode:
+  - vpc
+  Description_EN: The bitmask value of the FIN/SYN/RST/SYN-ACK TCP flags
+  Sample:
+  - 1
+  - 2
+  - 4
+  - 18
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: flowType
+  ProductCode:
+  - vpc
+  Description_EN: The type of traffic
+  Sample:
+  - IPv4
+  - IPv6
+  - EFA
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: pktSrcAddr
+  ProductCode:
+  - vpc
+  Description_EN: The packet level source IP
+  Sample:
+  - 52.95.128.179
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: pktDstAddr
+  ProductCode:
+  - vpc
+  Description_EN: The packet level destination IP
+  Sample:
+  - 10.0.0.71
+  DL_Type: string
+  DL_CommonKey:
+  - IPv4
+  - IPv6
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: regionId
+  ProductCode:
+  - vpc
+  Description_EN: The network interface AWS Region
+  Sample:
+  - ap-southeast-2
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: azId
+  ProductCode:
+  - vpc
+  Description_EN: The Availability Zone ID
+  Sample:
+  - apse2-az3
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: subLocationType
+  ProductCode:
+  - vpc
+  Description_EN: The sublocation type
+  Sample:
+  - wavelength
+  - outpost
+  - localzone
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: subLocationId
+  ProductCode:
+  - vpc
+  Description_EN: The sublocation ID
+  Sample:
+  - - 
+  - lz-0abcd123efg4567h
+  - op-0abcd123efg4567h
+  - wz-0abcd123efg4567h
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: pktSrcCloudServiceName
+  ProductCode:
+  - vpc
+  Description_EN: The subset IP address range name for cloud service source IP
+  Sample:
+  - AMAZON
+  - EC2
+  - ROUTE53
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: pktDstCloudServiceName
+  ProductCode:
+  - vpc
+  Description_EN: The subset IP address range name for cloud service destination IP
+  Sample:
+  - AMAZON
+  - EC2
+  - ROUTE53
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: flowDirection
+  ProductCode:
+  - vpc
+  Description_EN: The network interface traffic direction
+  Sample:
+  - ingress
+  - egress
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: trafficPath
+  ProductCode:
+  - vpc
+  Description_EN: The egress traffic path number
+  Sample:
+  - 1
+  - 2
+  - 8
+  DL_Type: int
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
