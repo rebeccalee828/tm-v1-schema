@@ -1122,7 +1122,7 @@
   ProductCode:
   - sds
   - xes
-  Description_EN: The cloud provider of the endpoint
+  Description_EN: The service provider of the cloud asset
   Sample:
   - aws
   - azure
@@ -1134,7 +1134,7 @@
   ProductCode:
   - sds
   - xes
-  Description_EN: The virtual private cloud of the endpoint
+  Description_EN: The virtual private cloud that contains the cloud asset
   Sample:
   - vpc-01234567890abcdef
   DL_Type: string
@@ -1145,9 +1145,10 @@
   ProductCode:
   - sds
   - xes
-  Description_EN: The endpoint region
+  Description_EN: The cloud asset region
   Sample:
-  - us-east-1
+  - US East (N. Virginia)
+  - Europe (Frankfurt)
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
@@ -3305,4 +3306,47 @@
   DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: true
+  DL_Aggregable: false
+- Name: coupledTraceId
+  ProductCode:
+  - ALL
+  Description_EN: The Log Coupler trace ID
+  Sample:
+  - 46361272-4f5c-40d1-92c1-910b8caa9833
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: couplerReceivedTime
+  ProductCode:
+  - ALL
+  Description_EN: The time the Log Coupler received the log data from the product
+    (in Unix milliseconds)
+  Sample:
+  - 1708507793689
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: couplerSinkTime
+  ProductCode:
+  - ALL
+  Description_EN: The time the Log Coupler sent the log data to the ETL engine (in
+    Unix milliseconds)
+  Sample:
+  - 1708507793689
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: etlReceivedTime
+  ProductCode:
+  - ALL
+  Description_EN: The time the log data was received by the ETL engine for processing
+    (in Unix milliseconds)
+  Sample:
+  - 1708507793689
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
   DL_Aggregable: false

@@ -28,6 +28,7 @@
   - sds
   - pds
   - ptn
+  - qpf
   Description_EN: The computer name of the client host (The hostname from the suspicious
     URL detected by Deep Discovery Inspector)
   Sample:
@@ -63,6 +64,7 @@
   - sds
   - pdi
   - pds
+  - qpf
   Description_EN: The source hostname
   Sample:
   - dns.google
@@ -76,6 +78,7 @@
 - Name: dhost
   ProductCode:
   - pdi
+  - qpf
   Description_EN: The destination hostname
   Sample:
   - 10.46.91.40
@@ -172,6 +175,7 @@
   - pds
   - ams
   - szn
+  - qpf
   Description_EN: The notable URLs
   Sample:
   - http://detectportal.firefox.com/canonical.html
@@ -221,7 +225,8 @@
   - ptn
   - szn
   - scs
-  Description_EN: The source address
+  - qpf
+  Description_EN: The source IP
   Sample:
   - 8.8.8.8
   - 0.0.0.0
@@ -245,7 +250,8 @@
   - ptn
   - szn
   - scs
-  Description_EN: The destination IP address
+  - qpf
+  Description_EN: The destination IP
   Sample:
   - 239.255.255.250
   - 0.0.0.0
@@ -336,7 +342,8 @@
   - ptn
   - szn
   - scs
-  Description_EN: The destination port number
+  - qpf
+  Description_EN: The destination port
   Sample:
   - 0
   - 445
@@ -358,7 +365,8 @@
   - ptn
   - szn
   - scs
-  Description_EN: The source port number
+  - qpf
+  Description_EN: The source port
   Sample:
   - 53
   - 0
@@ -378,6 +386,7 @@
   - pts
   - sfs
   - sfc
+  - qpf
   Description_EN: The file name
   Sample:
   - spoolss
@@ -611,6 +620,7 @@
   - sds
   - sfs
   - sfc
+  - qpf
   Description_EN: The SHA-256 of the file (fileName)
   Sample:
   - 6A6EB2D717CEA041B4444193B45EDFB6CA1287518203B7230B3C4B8FFB031EAB
@@ -862,7 +872,8 @@
   - pdi
   - sao
   - xms
-  Description_EN: Email sender
+  - qpf
+  Description_EN: The email sender
   Sample:
   - WF-BATCH@ngcp.ph
   - mckinseyrr@evalueserve.com
@@ -881,6 +892,7 @@
   - pdi
   - sao
   - xms
+  - qpf
   Description_EN: The email recipient
   Sample:
   - (no user)
@@ -898,7 +910,8 @@
   - sem
   - sao
   - xms
-  Description_EN: The message subject
+  - qpf
+  Description_EN: The email subject
   Sample:
   - mail.dhr-rgv.com
   - ManageEngine
@@ -977,6 +990,7 @@
   - szn
   - scs
   - xms
+  - qpf
   Description_EN: The name of the rule that triggered the event
   Sample:
   - Directory Server - Microsoft Windows Active Directory
@@ -993,7 +1007,8 @@
   - pdi
   - pds
   - sao
-  Description_EN: The ID of the rule
+  - qpf
+  Description_EN: The rule ID
   Sample:
   - 1002795
   - 1003802
@@ -1039,6 +1054,7 @@
   - xms
   - sfs
   - sfc
+  - qpf
   Description_EN: The event type
   Sample:
   - LOG_INSPECTION_EVENT
@@ -1072,6 +1088,7 @@
   - sem
   - xes
   - sig
+  - qpf
   Description_EN: The event type sub-name
   Sample:
   - IPS Detection
@@ -1314,6 +1331,7 @@
   - ptn
   - szn
   - xms
+  - qpf
   Description_EN: The actions taken to mitigate the event
   Sample:
   - log
@@ -1363,6 +1381,7 @@
 - Name: productCode
   ProductCode:
   - ALL
+  - qpf
   Description_EN: The internal product code
   Sample:
   - sds
@@ -1413,6 +1432,7 @@
   - ams
   - scs
   - xms
+  - qpf
   Description_EN: The internal product ID
   Sample:
   - Trend Micro Deep Security
@@ -1459,6 +1479,7 @@
   - ptp
   - stp
   - scs
+  - qpf
   Description_EN: The severity of the event
   Sample:
   - 2
@@ -1514,6 +1535,7 @@
 - Name: httpReferer
   ProductCode:
   - pdi
+  - qpf
   Description_EN: The HTTP referer
   Sample:
   - http://201.174.161.181/
@@ -1576,13 +1598,15 @@
 - Name: dUser1
   ProductCode:
   - pdi
-  Description_EN: The latest logon user of the destination
+  - qpf
+  Description_EN: The latest sign-in user of the destination
   Sample:
   - dhr\m42svc
   - corp.uhsinc.biz\altsvc
   - coppel.io\host
   DL_Type: string
   DL_CommonKey:
+  - UserAccount
   DL_Searchable: true
   DL_Aggregable: false
 - Name: processUser
@@ -1602,13 +1626,15 @@
 - Name: sUser1
   ProductCode:
   - pdi
-  Description_EN: The latest sign in user of the source
+  - qpf
+  Description_EN: The latest sign-in user of the source
   Sample:
   - corp.uhsinc.biz\altsvc
   - 000c29edef58
   - corpdmz.com\ser-desktopcentral
   DL_Type: string
   DL_CommonKey:
+  - UserAccount
   DL_Searchable: true
   DL_Aggregable: false
 - Name: msgUuid
@@ -1687,7 +1713,8 @@
   - sig
   - sca
   - ams
-  Description_EN: Category of the requested URL
+  - qpf
+  Description_EN: The requested URL category
   Sample:
   - Untested
   - '158'
@@ -1731,6 +1758,7 @@
   - sig
   - ptn
   - scs
+  - qpf
   Description_EN: The name of the triggered policy
   Sample:
   - Steelcase
@@ -1776,6 +1804,7 @@
   - sig
   - szn
   - sao
+  - qpf
   Description_EN: The name of the requested application
   Sample:
   - HyperText Transfer Protocol
@@ -1785,24 +1814,6 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
-- Name: app
-  ProductCode:
-  - pdi
-  - sao
-  - ptp
-  - stp
-  - ptn
-  - xes
-  - scs
-  Description_EN: The network protocol being exploited
-  Sample:
-  - DNS Response
-  - TCP
-  - HTTP
-  DL_Type: string
-  DL_CommonKey:
-  DL_Searchable: true
-  DL_Aggregable: true
 - Name: majorVirusType
   ProductCode:
   - pds
@@ -1843,16 +1854,6 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: false
-  DL_Aggregable: false
-- Name: eventTime
-  ProductCode:
-  - ALL
-  Description_EN: The time the agent detected the event
-  Sample:
-  - 1656324260000
-  DL_Type: real
-  DL_CommonKey:
-  DL_Searchable: true
   DL_Aggregable: false
 - Name: customerId
   ProductCode:
@@ -1943,7 +1944,7 @@
   ProductCode:
   - sds
   - sfc
-  Description_EN: The cloud provider of the endpoint
+  Description_EN: The service provider of the cloud asset
   Sample:
   - aws
   - azure
@@ -1954,7 +1955,7 @@
 - Name: vpcId
   ProductCode:
   - sds
-  Description_EN: The virtual private cloud of the endpoint
+  Description_EN: The virtual private cloud that contains the cloud asset
   Sample:
   - vpc-01234567890abcdef
   DL_Type: string
@@ -1964,9 +1965,10 @@
 - Name: regionId
   ProductCode:
   - sds
-  Description_EN: The region of the endpoint
+  Description_EN: The cloud asset region
   Sample:
-  - us-east-1
+  - US East (N. Virginia)
+  - Europe (Frankfurt)
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
@@ -2145,7 +2147,8 @@
   ProductCode:
   - pdi
   - ptn
-  Description_EN: The total log count
+  - qpf
+  Description_EN: The total number of logs
   Sample:
   - '1'
   - '2'
@@ -2197,6 +2200,7 @@
 - Name: dOSName
   ProductCode:
   - pdi
+  - qpf
   Description_EN: The destination host OS
   Sample:
   - Windows
@@ -2418,7 +2422,8 @@
   ProductCode:
   - sao
   - ptn
-  Description_EN: The incoming or outgoing direction
+  - qpf
+  Description_EN: The direction
   Sample:
   - Incoming
   - Outgoing
@@ -2434,6 +2439,7 @@
   - sds
   - pds
   - ptn
+  - qpf
   Description_EN: The MAC address of the destination IP (dest_ip)
   Sample:
   - 00:09:0f:09:e6:18
@@ -2458,6 +2464,7 @@
 - Name: dstZone
   ProductCode:
   - pdi
+  - qpf
   Description_EN: The network zone defined by the destination administrator
   Sample:
   - '1'
@@ -2483,7 +2490,8 @@
   ProductCode:
   - sao
   - pdi
-  Description_EN: The name of the computer which installed the TrendMicro product
+  - qpf
+  Description_EN: The computer which installed the Trend Micro product
   Sample:
   - CU-PRO1-9039-2
   - LTPF32PMNN
@@ -2549,6 +2557,7 @@
 - Name: eventClass
   ProductCode:
   - pdi
+  - qpf
   Description_EN: The event category
   Sample:
   - Suspicious Traffic
@@ -2572,6 +2581,7 @@
   - xms
   - sfs
   - sfc
+  - qpf
   Description_EN: The event ID from the logs of each product
   Sample:
   - 100116
@@ -2640,6 +2650,7 @@
   - sig
   - sfs
   - sfc
+  - qpf
   Description_EN: The file type of the suspicious file
   Sample:
   - EXE
@@ -3331,6 +3342,7 @@
   - scs
   - sfs
   - sfc
+  - qpf
   Description_EN: The product version
   Sample:
   - 20.0.0.4726
@@ -3367,6 +3379,7 @@
 - Name: requestClientApplication
   ProductCode:
   - pdi
+  - qpf
   Description_EN: The protocol user agent information
   Sample:
   - Microsoft-Delivery-Optimization/10.0
@@ -3521,7 +3534,8 @@
 - Name: sOSName
   ProductCode:
   - pdi
-  Description_EN: The source operating system
+  - qpf
+  Description_EN: The source OS
   Sample:
   - Windows
   - Windows 10
@@ -3619,6 +3633,7 @@
   - sds
   - pds
   - ptn
+  - qpf
   Description_EN: The source MAC address
   Sample:
   - a8:d0:e5:5c:cb:c5
@@ -3656,6 +3671,7 @@
 - Name: srcZone
   ProductCode:
   - pdi
+  - qpf
   Description_EN: The network zone defined by the source administrator
   Sample:
   - '1'
@@ -3894,6 +3910,7 @@
 - Name: confidence
   ProductCode:
   - sao
+  - sfs
   Description_EN: The confidence rating returned from TrendX Hybrid Model (predictive
     machine learning). Values from 1-99.
   Sample:
@@ -3927,8 +3944,9 @@
   ProductCode:
   - sig
   - szn
+  - qpf
   Description_EN: The UUID of the cloud access or risk control policy, or the hard-coded
-    string that indicates the rule of the global blocked/ approved URL list
+    string that indicates the rule of the global blocked/approved URL list
   Sample:
   - 7937cb0b-e598-4c8f-a50f-65c32905ba3a
   - C!7c4433e3-5b2c-449f-b66e-ccaac006b6f1
@@ -4654,7 +4672,8 @@
 - Name: flowId
   ProductCode:
   - sna
-  Description_EN: Connection ID
+  - qpf
+  Description_EN: The connection ID
   Sample:
   - '6717474604962545666'
   - '6915244861077872618'
@@ -5281,6 +5300,8 @@
   - settings-win.data.microsoft.com
   DL_Type: string
   DL_CommonKey:
+  - DomainName
+  - HostDomain
   DL_Searchable: true
   DL_Aggregable: true
 - Name: sslCertIssuerOrgName
@@ -5385,3 +5406,185 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
+- Name: netBiosDomainName
+  ProductCode:
+  - opa
+  Description_EN: The NetBIOS domain name
+  Sample:
+  - TREND
+  DL_Type: string
+  DL_CommonKey:
+  - DomainName
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: regionCode
+  ProductCode:
+  - sfc
+  Description_EN: The AWS Region code
+  Sample:
+  - us-east-1
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: awsResourceArn
+  ProductCode:
+  - sfc
+  Description_EN: The Amazon Resource Name
+  Sample:
+  - arn:aws:s3:::bucket-name/object-key
+  - arn:aws:s3:::user-bucket-name/file-name
+  - arn:aws:s3:::bucket-name/folder-name/file-name
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: winEventId
+  ProductCode:
+  - sds
+  - pds
+  Description_EN: The Windows Event ID
+  Sample:
+  - 11
+  - 4624
+  - 4670
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: coupledTraceId
+  ProductCode:
+  - ALL
+  Description_EN: The Log Coupler trace ID
+  Sample:
+  - 46361272-4f5c-40d1-92c1-910b8caa9833
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: couplerReceivedTime
+  ProductCode:
+  - ALL
+  Description_EN: The time the Log Coupler received the log data from the product
+    (in Unix milliseconds)
+  Sample:
+  - 1708507793689
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: couplerSinkTime
+  ProductCode:
+  - ALL
+  Description_EN: The time the Log Coupler sent the log data to the ETL engine (in
+    Unix milliseconds)
+  Sample:
+  - 1708507793689
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: etlReceivedTime
+  ProductCode:
+  - ALL
+  Description_EN: The time the log data was received by the ETL engine for processing
+    (in Unix milliseconds)
+  Sample:
+  - 1708507793689
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: false
+  DL_Aggregable: false
+- Name: vsysName
+  ProductCode:
+  - qpf
+  Description_EN: The Palo Alto Networks virtual system of the session
+  Sample:
+  - vsys1
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcLocation
+  ProductCode:
+  - qpf
+  Description_EN: The source country
+  Sample:
+  - Japan
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: dstLocation
+  ProductCode:
+  - qpf
+  Description_EN: The destination country
+  Sample:
+  - Japan
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: httpRespContentType
+  ProductCode:
+  - qpf
+  Description_EN: The HTTP response data content type
+  Sample:
+  - Application/json
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: fileHashMd5
+  ProductCode:
+  - qpf
+  Description_EN: The MD5 of the file
+  Sample:
+  - d5120786925038601a77c2e1eB9a3a0a
+  DL_Type: string
+  DL_CommonKey:
+  - FileMD5
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: httpXForwardedFor
+  ProductCode:
+  - qpf
+  Description_EN: The HTTP X-Forwarded-For header
+  Sample:
+  - 192.168.1.103, 192.168.1.104, 192.168.1.106
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: requestMethod
+  ProductCode:
+  - qpf
+  Description_EN: The network protocol request method
+  Sample:
+  - POST
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: requestHeaders
+  ProductCode:
+  - qpf
+  Description_EN: The HTTP headers without sensitive information
+  Sample:
+  - "Host: 192.168.1.201:8080\r\nUser-Agent: curl/7.78.0\r\nAccept: */*\r\n"
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: respHeaders
+  ProductCode:
+  - qpf
+  Description_EN: The HTTP response headers without sensitive information
+  Sample:
+  - "Accept-Ranges: bytes\r\nContent-Length: 68\r\nContent-Type: text/plain; charset=utf-8\r\
+    \ \nLast-Modified: Thu, 19 Aug 2021 06:23:54 GMT\r\nDate: Thu, 19 Aug 2021 06:24:00\
+    \ GMT\r\n"
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
