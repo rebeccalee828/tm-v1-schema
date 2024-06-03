@@ -1787,7 +1787,7 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
-  DL_Aggregable: false
+  DL_Aggregable: true
 - Name: networkInterfaceId
   ProductCode:
   - vpc
@@ -1797,7 +1797,7 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
-  DL_Aggregable: false
+  DL_Aggregable: true
 - Name: ipProto
   ProductCode:
   - vpc
@@ -1808,7 +1808,7 @@
   DL_Type: int
   DL_CommonKey:
   DL_Searchable: true
-  DL_Aggregable: false
+  DL_Aggregable: true
 - Name: packets
   ProductCode:
   - vpc
@@ -1839,7 +1839,7 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
-  DL_Aggregable: false
+  DL_Aggregable: true
 - Name: logStatus
   ProductCode:
   - vpc
@@ -1861,7 +1861,7 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
-  DL_Aggregable: false
+  DL_Aggregable: true
 - Name: subnetId
   ProductCode:
   - vpc
@@ -1871,7 +1871,7 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
-  DL_Aggregable: false
+  DL_Aggregable: true
 - Name: instanceId
   ProductCode:
   - vpc
@@ -1881,7 +1881,7 @@
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
-  DL_Aggregable: false
+  DL_Aggregable: true
 - Name: tcpFlags
   ProductCode:
   - vpc
@@ -1931,7 +1931,7 @@
   - IPv6
   DL_Searchable: true
   DL_Aggregable: false
-- Name: regionId
+- Name: regionCode
   ProductCode:
   - vpc
   Description_EN: The network interface AWS Region
