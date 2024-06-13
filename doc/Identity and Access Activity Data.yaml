@@ -497,7 +497,7 @@
   - aad
   Description_EN: The targeted resource of the event
   Sample:
-  - []
+  - ''
   DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: true

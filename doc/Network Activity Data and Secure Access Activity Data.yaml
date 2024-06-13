@@ -767,7 +767,7 @@
   Description_EN: The time when the last data packet was received (in Unix seconds)
   Sample:
   - 1616729349
-  DL_Type: string
+  DL_Type: long
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
@@ -1968,7 +1968,6 @@
   - vpc
   Description_EN: The sublocation ID
   Sample:
-  - - 
   - lz-0abcd123efg4567h
   - op-0abcd123efg4567h
   - wz-0abcd123efg4567h
