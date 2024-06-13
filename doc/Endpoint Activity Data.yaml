@@ -1813,10 +1813,24 @@
   - sds
   Description_EN: The file size of the object file
   Sample:
-  - '0'
-  - '59456'
-  - '60'
+  - 0
+  - 59456
+  - 60
   DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectCurrentFileSize
+  ProductCode:
+  - xes
+  - sao
+  - sds
+  Description_EN: Previous size of modified object file
+  Sample:
+  - 0
+  - 59456
+  - 60
+  DL_Type: long
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
