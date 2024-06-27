@@ -389,6 +389,37 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: objectSignerFlagsAdhoc
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of object process or file signature adhoc flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectSignerFlagsRuntime
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of object process or file signature runtime flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectSignerFlagsLibValid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of object process or file signature library validation
+    flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: objectSubTrueType
   ProductCode:
   - xes
@@ -1290,6 +1321,36 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: processSignerFlagsAdhoc
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of process signature adhoc flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processSignerFlagsRuntime
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of process signature runtime flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processSignerFlagsLibValid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of process signature library validation flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: processFileSize
   ProductCode:
   - xes
@@ -1607,6 +1668,36 @@
   - sao
   - sds
   Description_EN: The validity of the parent signer
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentSignerFlagsAdhoc
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of parent process signature adhoc flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentSignerFlagsRuntime
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of parent process signature runtime flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentSignerFlagsLibValid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of parent process signature library validation flags
   Sample: []
   DL_Type: dynamic
   DL_CommonKey:
@@ -2025,7 +2116,7 @@
   ProductCode:
   - sao
   - xes
-  Description_EN: The signer of the source process file
+  Description_EN: The signer of the source file
   Sample:
   - Microsoft Windows
   - Microsoft Corporation
@@ -2038,7 +2129,37 @@
   ProductCode:
   - sao
   - xes
-  Description_EN: The validity of the source process signer
+  Description_EN: The validity of the source file signer
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcSignerFlagsAdhoc
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of source file signature adhoc flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcSignerFlagsRuntime
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of source file signature runtime flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: srcSignerFlagsLibValid
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The list of source file signature library validation flags
   Sample: []
   DL_Type: dynamic
   DL_CommonKey:
@@ -3159,6 +3280,149 @@
   - S-1-5-18
   - S-1-5-21-3770350686-3666354711-3866293128-513
   DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: subSystem
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The sub system information
+  Sample:
+  - com.apple.xpc
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: eventMessage
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The event message
+  Sample:
+  - '[0x13bb4e2a0] activating connection: mach=true listener=false peer=false name=com.apple.airportd'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: messageType
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The message type
+  Sample:
+  - Default
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: ruleId
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The rule ID
+  Sample:
+  - 1005566
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: additionalInfo
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The filter rule info
+  Sample:
+  - Default
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectLoginOutHashId
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The FNV of the object sign-in/sign-out meta
+  Sample:
+  - -8981232070268295229
+  DL_Type: long
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectLoginOutFirstSeen
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The first time the object sign-in/sign-out was seen
+  Sample:
+  - '1713903612'
+  DL_Type: long
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectLoginOutLastSeen
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The last time the object sign-in/sign-out was seen
+  Sample:
+  - '1713903612'
+  DL_Type: long
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectLoginOutMetaType
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The sign-in/sign-out meta
+  Sample:
+  - 1 - LOGIN_OUT_META_TYPE_OPENSSH
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectLoginOutSourceAddress
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The sign-in/sign-out source IP
+  Sample:
+  - 10.64.18.49
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectLoginOutStatus
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The sign-in/sign-out status
+  Sample:
+  - -1
+  DL_Type: int
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectLoginOutFailureMessage
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The sign-in/sign-out error message
+  Sample:
+  - Login incorrect
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectLoginOutSessionId
+  ProductCode:
+  - xes
+  - sao
+  Description_EN: The sign-in/sign-out session ID
+  Sample:
+  - 260
+  DL_Type: long
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false

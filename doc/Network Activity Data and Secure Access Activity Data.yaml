@@ -111,7 +111,7 @@
   - szn
   - qpf
   - vpc
-  Description_EN: The destination IP address
+  Description_EN: The destination IP address (dstaddr)
   Sample:
   - 10.10.10.10
   - 10.206.209.64
@@ -181,7 +181,7 @@
   - szn
   - qpf
   - vpc
-  Description_EN: The source IP address
+  Description_EN: The source IP address (srcaddr)
   Sample:
   - 100.100.100.100
   - 18.162.103.100
@@ -244,10 +244,12 @@
   - pdi
   - xns
   - qpf
+  - vpc
   Description_EN: The log type
   Sample:
   - SWG_ACTIVITY_LOG
   - FIREWALL_ACTIVITY_LOG
+  - VPC_ACTIVITY_LOG
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
@@ -521,7 +523,7 @@
   Description_EN: The product name
   Sample:
   - Secure Web Gateway
-  - AWS VPC Flow Logs
+  - XDR for Cloud - AWS VPC Flow Logs
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
@@ -710,12 +712,13 @@
   - qpf
   - vpc
   Description_EN: The virtual port of the source assigned to the Secure Access Module
+    (srcport)
   Sample:
   - 57763
   DL_Type: int
   DL_CommonKey:
   - Port
-  DL_Searchable: false
+  DL_Searchable: true
   DL_Aggregable: true
 - Name: policyUuid
   ProductCode:
@@ -733,7 +736,7 @@
   - szn
   - qpf
   - vpc
-  Description_EN: The service destination port of the private application server
+  Description_EN: The service destination port of the private application server (dstport)
   Sample:
   - 443
   DL_Type: int
@@ -1568,11 +1571,24 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: cloudAppCat
+  ProductCode:
+  - sig
+  Description_EN: The category of the event in Cloud Reputation Service
+  Sample:
+  - All
+  - Online Service
+  - Application Suite
+  - Business Intelligence and Analytics
+  - Cloud Computing Platform
+  DL_Type: string
+  DL_Searchable: true
 - Name: eventId
   ProductCode:
   - xns
   - pdi
   - qpf
+  - vpc
   Description_EN: The event ID
   Sample:
   - '200139'
@@ -1768,7 +1784,7 @@
 - Name: vpcFlowLogsVersion
   ProductCode:
   - vpc
-  Description_EN: The VPC Flow Logs version
+  Description_EN: The VPC Flow Logs version (version)
   Sample:
   - 2
   - 3
@@ -1781,7 +1797,7 @@
 - Name: cloudAccountId
   ProductCode:
   - vpc
-  Description_EN: The owner AWS account ID of the source network interface
+  Description_EN: The owner AWS account ID of the source network interface (account-id)
   Sample:
   - 123456789012
   DL_Type: string
@@ -1791,7 +1807,7 @@
 - Name: networkInterfaceId
   ProductCode:
   - vpc
-  Description_EN: The network interface ID
+  Description_EN: The network interface ID (interface-id)
   Sample:
   - eni-1235b8ca123456789
   DL_Type: string
@@ -1801,7 +1817,7 @@
 - Name: ipProto
   ProductCode:
   - vpc
-  Description_EN: The protocol number
+  Description_EN: The protocol number (protocol)
   Sample:
   - 6
   - 17
@@ -1898,7 +1914,7 @@
 - Name: flowType
   ProductCode:
   - vpc
-  Description_EN: The type of traffic
+  Description_EN: The type of traffic (type)
   Sample:
   - IPv4
   - IPv6
@@ -1978,7 +1994,7 @@
 - Name: pktSrcCloudServiceName
   ProductCode:
   - vpc
-  Description_EN: The subset IP address range name for cloud service source IP
+  Description_EN: The subset IP address range name for cloud service source IP (pkt-src-aws-service)
   Sample:
   - AMAZON
   - EC2
@@ -1991,6 +2007,7 @@
   ProductCode:
   - vpc
   Description_EN: The subset IP address range name for cloud service destination IP
+    (pkt-dst-aws-service)
   Sample:
   - AMAZON
   - EC2

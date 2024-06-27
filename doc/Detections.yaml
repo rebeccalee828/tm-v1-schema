@@ -199,6 +199,19 @@
   - URL
   DL_Searchable: true
   DL_Aggregable: false
+- Name: category
+  ProductCode:
+  - ptp
+  Description_EN: The event category
+  Sample:
+  - Exploits
+  - Reconnaissance
+  - Vulnerabilities
+  - Security Policy
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
 - Name: cccaDestination
   ProductCode:
   - pdi
@@ -290,7 +303,8 @@
   - ptp
   - stp
   - ptn
-  Description_EN: The IP of the endpoint host (For ptp/stp, client IP)
+  - sss
+  Description_EN: IP address of the endpoint on which the event was detected
   Sample:
   - 192.168.204.215
   - 192.168.26.167
@@ -387,6 +401,7 @@
   - sfs
   - sfc
   - qpf
+  - sss
   Description_EN: The file name
   Sample:
   - spoolss
@@ -418,6 +433,7 @@
   - sfs
   - sfc
   - sds
+  - sss
   Description_EN: The file name of the compressed file
   Sample:
   - /proc/32058/fd/150
@@ -453,6 +469,7 @@
   - pts
   - sfs
   - sfc
+  - sss
   Description_EN: The file path without the file name
   Sample:
   - security
@@ -518,6 +535,7 @@
   - sig
   - sfs
   - sfc
+  - sss
   Description_EN: The SHA-1 of the file that triggered the rule or policy
   Sample:
   - DA39A3EE5E6B4B0D3255BFEF95601890AFD80709
@@ -563,6 +581,7 @@
   - sfc
   - sds
   - sao
+  - sss
   Description_EN: The SHA-1 of the decompressed archive
   Sample:
   - 6E2ECB34B7798E179CC704111FB9733FBAAD5ACA
@@ -624,6 +643,7 @@
   - sfs
   - sfc
   - qpf
+  - sss
   Description_EN: The SHA-256 of the file (fileName)
   Sample:
   - 6A6EB2D717CEA041B4444193B45EDFB6CA1287518203B7230B3C4B8FFB031EAB
@@ -655,6 +675,7 @@
   - sfc
   - sds
   - sao
+  - sss
   Description_EN: The SHA-256 of the compressed suspicious file
   Sample:
   - 60C7C5924DD09F7C6B150120FB92DCEE00AE82DB75C7402FA4D9152CF487A94F
@@ -1003,6 +1024,7 @@
   - xms
   - sfs
   - sfc
+  - sss
   Description_EN: The name of the detected malware
   Sample:
   - SecurityLevelDrop
@@ -1031,6 +1053,7 @@
   - sfs
   - sfc
   - qpf
+  - sss
   Description_EN: The event type
   Sample:
   - LOG_INSPECTION_EVENT
@@ -1118,6 +1141,7 @@
   - ptn
   - xms
   - sfs
+  - sss
   Description_EN: The additional information
   Sample:
   - 'warning: fork: Resource temporarily unavailable'
@@ -1138,6 +1162,7 @@
   - pts
   - sfs
   - sfc
+  - sss
   Description_EN: The combination of the file path and the file name
   Sample:
   - \etc\hosts
@@ -1295,6 +1320,7 @@
   - szn
   - xms
   - qpf
+  - ctp
   Description_EN: The actions taken to mitigate the event
   Sample:
   - log
@@ -1303,6 +1329,8 @@
   - not blocked
   - Block
   - Reset
+  - Pass
+  - User Decision
   DL_Type: dynamic
   DL_CommonKey:
   DL_Searchable: true
@@ -1314,6 +1342,7 @@
   - sds
   - pds
   - pts
+  - sss
   Description_EN: The result of an action
   Sample:
   - Dropped
@@ -1332,6 +1361,7 @@
   - pds
   - xms
   - sfs
+  - sss
   Description_EN: The scan type
   Sample:
   - realtime_mailmeta-exchange
@@ -1790,6 +1820,7 @@
   - ptn
   - pts
   - sfc
+  - sss
   Description_EN: The virus type
   Sample:
   - Virus
@@ -1823,6 +1854,7 @@
   ProductCode:
   - sds
   - sfc
+  - sss
   Description_EN: The service provider of the cloud asset
   Sample:
   - aws
@@ -2041,6 +2073,7 @@
   - pdi
   - sfs
   - sfc
+  - sss
   Description_EN: The file size of the decompressed archive file
   Sample:
   - '0'
@@ -2055,6 +2088,7 @@
   - pdi
   - sfs
   - sfc
+  - sss
   Description_EN: The file type of the decompressed archive file
   Sample:
   - EXE
@@ -2461,6 +2495,7 @@
   - sfs
   - sfc
   - qpf
+  - sss
   Description_EN: The event ID from the logs of each product
   Sample:
   - 100116
@@ -2514,6 +2549,7 @@
   - sao
   - sfs
   - sfc
+  - sss
   Description_EN: The file size of the suspicious file
   Sample:
   - '0'
@@ -2530,6 +2566,7 @@
   - sfs
   - sfc
   - qpf
+  - sss
   Description_EN: The file type of the suspicious file
   Sample:
   - EXE
@@ -3224,6 +3261,7 @@
   - sfs
   - sfc
   - qpf
+  - sss
   Description_EN: The product version
   Sample:
   - 20.0.0.4726
@@ -3444,6 +3482,7 @@
   - sca
   - ams
   - sds
+  - ctp
   Description_EN: The Web Reputation Services URL rating
   Sample:
   - 71
@@ -3930,10 +3969,76 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: parentSignerFlagsAdhoc
+  ProductCode:
+  - xes
+  - sao
+  - pao
+  Description_EN: The list of parent process signature adhoc flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentSignerFlagsRuntime
+  ProductCode:
+  - xes
+  - sao
+  - pao
+  Description_EN: The list of parent process signature runtime flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentSignerFlagsLibValid
+  ProductCode:
+  - xes
+  - sao
+  - pao
+  Description_EN: The list of parent process signature library validation flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: objectSignerValid
   ProductCode:
   - xes
   Description_EN: Whether each signer of the object process is valid
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectSignerFlagsAdhoc
+  ProductCode:
+  - xes
+  - sao
+  - pao
+  Description_EN: The list of object process signature adhoc flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectSignerFlagsRuntime
+  ProductCode:
+  - xes
+  - sao
+  - pao
+  Description_EN: The list of object process signature runtime flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: objectSignerFlagsLibValid
+  ProductCode:
+  - xes
+  - sao
+  - pao
+  Description_EN: The list of object process signature library validation flags
   Sample: []
   DL_Type: dynamic
   DL_CommonKey:
@@ -4862,6 +4967,39 @@
   - Microsoft Windows Publisher
   DL_Type: dynamic
   DL_Searchable: true
+- Name: processSignerFlagsAdhoc
+  ProductCode:
+  - xes
+  - sao
+  - pao
+  Description_EN: The list of process signature adhoc flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processSignerFlagsRuntime
+  ProductCode:
+  - xes
+  - sao
+  - pao
+  Description_EN: The list of process signature runtime flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processSignerFlagsLibValid
+  ProductCode:
+  - xes
+  - sao
+  - pao
+  Description_EN: The list of process signature library validation flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: parentUser
   ProductCode:
   - sds
@@ -5219,6 +5357,7 @@
 - Name: cloudAccountId
   ProductCode:
   - sfc
+  - sss
   Description_EN: The cloud account ID
   Sample:
   - '123456789012'
@@ -5237,9 +5376,22 @@
   - DomainName
   DL_Searchable: true
   DL_Aggregable: false
+- Name: cloudAppCat
+  ProductCode:
+  - sig
+  Description_EN: The category of the event in Cloud Reputation Service
+  Sample:
+  - All
+  - Online Service
+  - Application Suite
+  - Business Intelligence and Analytics
+  - Cloud Computing Platform
+  DL_Type: string
+  DL_Searchable: true
 - Name: regionCode
   ProductCode:
   - sfc
+  - sss
   Description_EN: The AWS Region code
   Sample:
   - us-east-1
@@ -5470,22 +5622,22 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
-- Name: dceArtifactFolder
+- Name: detectedBackupFolder
   ProductCode:
   - sds
   - sao
-  Description_EN: The folder path for Damage Cleanup Engine artifacts
+  Description_EN: The folder path for detected backup folders
   Sample:
   - C:\\Program Files (x86)\\Trend Micro\\artifact\\DCE
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
-- Name: dceArtifacts
+- Name: detectedBackupArtifacts
   ProductCode:
   - sds
   - sao
-  Description_EN: The Damage Cleanup Engine artifact information
+  Description_EN: The information about detected artifacts
   Sample:
   - '{"objectArtifactId": "025d9f2a-ac9c-4cdf-b9e4-cf20c6e40281_0.dmp", "action":
     "object_process_dump", "status": 0, "processCreationTime": "1627574338077", "processImageFileName":
@@ -5494,22 +5646,22 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
-- Name: dceVer
+- Name: detectionEngineVersion
   ProductCode:
   - sds
   - sao
-  Description_EN: The Damage Cleanup Engine version
+  Description_EN: The detection engine version
   Sample:
   - 7.6.0
   DL_Type: string
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
-- Name: dctPtn
+- Name: detectedPattern
   ProductCode:
   - sds
   - sao
-  Description_EN: The Damage Cleanup Engine pattern
+  Description_EN: The detected pattern
   Sample:
   - dct.virus
   DL_Type: string
@@ -5598,3 +5750,229 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: true
+- Name: processPayloadSigner
+  ProductCode:
+  - xes
+  Description_EN: The signer name list of the process payload
+  Sample:
+  - Microsoft Windows
+  - Microsoft Windows Publisher
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processPayloadSignerValid
+  ProductCode:
+  - xes
+  Description_EN: Whether each signer of the process payload is valid
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processPayloadSignerFlagsAdhoc
+  ProductCode:
+  - xes
+  Description_EN: The list of process payload signature adhoc flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processPayloadSignerFlagsRuntime
+  ProductCode:
+  - xes
+  Description_EN: The list of process payload signature runtime flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: processPayloadSignerFlagsLibValid
+  ProductCode:
+  - xes
+  Description_EN: The list of process payload signature library validation flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentPayloadSigner
+  ProductCode:
+  - xes
+  Description_EN: The signer name list of the parent process payload
+  Sample:
+  - Microsoft Windows
+  - Microsoft Windows Publisher
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentPayloadSignerValid
+  ProductCode:
+  - xes
+  Description_EN: Whether each signer of the parent process payload is valid
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentPayloadSignerFlagsAdhoc
+  ProductCode:
+  - xes
+  Description_EN: The list of parent process payload signature adhoc flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentPayloadSignerFlagsRuntime
+  ProductCode:
+  - xes
+  Description_EN: The list of parent process payload signature runtime flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: parentPayloadSignerFlagsLibValid
+  ProductCode:
+  - xes
+  Description_EN: The list of parent process payload signature library validation
+    flags
+  Sample: []
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: respCode
+  ProductCode:
+  - ctp
+  Description_EN: The network protocol response code
+  Sample:
+  - '302'
+  - '200'
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: msgTOCUuid
+  ProductCode:
+  - ctp
+  Description_EN: The email unique ID
+  Sample:
+  - b52012c4-6340-11e5-9960-001e4f4ada6e
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: rewrittenUrl
+  ProductCode:
+  - ctp
+  Description_EN: The rewritten URL
+  Sample:
+  - https://cas5-0-urlprotect.trendmicro.com:443/wis/clicktime/v1/query?url=https%3a%2f%2fpageimprove.io%2freact%27&umid=91176188-91a7-474c-b1a0-f5616c525eb5&auth=927c0b1ab45858384aa0e7e4a36abbaf860b921f-1644792ad5ca5887134be3e439c4a8c600000000
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: cloudResourceId
+  ProductCode:
+  - sss
+  Description_EN: The cloud resource ID
+  Sample:
+  - vol-0b00739236ff7faa9
+  - 670666259092.dkr.ecr.us-west-1.amazonaws.com/us-west-1-sentry-scan-samples-ecr
+  - arn:aws:lambda:us-east-1:670666259092:function:StackSet-SentrySetdb47aff3-cc084aaa-5-sideScanVuln-6Dyn7ZcwCSPw
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: cloudResourceType
+  ProductCode:
+  - sss
+  Description_EN: The cloud resource type
+  Sample:
+  - ebs-volume
+  - ecr-repository-image
+  - lambda-function
+  - lambda-layer
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: cloudResourceDigest
+  ProductCode:
+  - sss
+  Description_EN: The cloud resource digest
+  Sample:
+  - sha256:e8759728bdf756c2546bf88d772634d4b746ba2be6da74cb68d2a75fb135e29e
+  - Z29gD6/9+UmEejeSqt4zcqux+1nNIRdGhoffijjkaBc=
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: cloudResourceTags
+  ProductCode:
+  - sss
+  Description_EN: The cloud resource tags
+  Sample:
+  - imageTags: [latest, Tag1, Tag2]
+  - tags: {Service: S3 Updater, Department: Finance, Application: Accounting}
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: cloudResourceVersion
+  ProductCode:
+  - sss
+  Description_EN: The cloud resource version
+  Sample:
+  - 113
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: cloudMachineImageId
+  ProductCode:
+  - sss
+  Description_EN: The cloud machine image ID
+  Sample:
+  - ami-092d1c9fb626c2ba7
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: cloudMachineImageName
+  ProductCode:
+  - sss
+  Description_EN: The cloud machine image name
+  Sample:
+  - Windows_Server-2022-English-Full-SQL_2022_Standard-2024.05.15
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: diskPartitionId
+  ProductCode:
+  - sss
+  Description_EN: The cloud volume partition ID
+  Sample:
+  - 0
+  - 1
+  - 2
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: azId
+  ProductCode:
+  - sss
+  Description_EN: The virtual machine Availability Zone ID
+  Sample:
+  - us-east-1b
+  - us-west-2a
+  DL_Type: string
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
