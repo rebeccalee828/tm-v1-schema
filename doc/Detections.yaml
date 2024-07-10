@@ -1054,6 +1054,7 @@
   - sfc
   - qpf
   - sss
+  - ams
   Description_EN: The event type
   Sample:
   - LOG_INSPECTION_EVENT
@@ -1320,7 +1321,7 @@
   - szn
   - xms
   - qpf
-  - ctp
+  - ams
   Description_EN: The actions taken to mitigate the event
   Sample:
   - log
@@ -1343,6 +1344,7 @@
   - pds
   - pts
   - sss
+  - ams
   Description_EN: The result of an action
   Sample:
   - Dropped
@@ -1841,6 +1843,16 @@
   DL_Type: int
   DL_CommonKey:
   DL_Searchable: false
+  DL_Aggregable: false
+- Name: logReceivedTime
+  ProductCode:
+  - ALL
+  Description_EN: The time when the XDR log was received
+  Sample:
+  - 1656324260000
+  DL_Type: long
+  DL_CommonKey:
+  DL_Searchable: true
   DL_Aggregable: false
 - Name: policyTreePath
   ProductCode:
@@ -2496,8 +2508,11 @@
   - sfc
   - qpf
   - sss
+  - ams
   Description_EN: The event ID from the logs of each product
   Sample:
+  - 100100
+  - 100101
   - 100116
   - 100117
   - 100119
@@ -3482,7 +3497,6 @@
   - sca
   - ams
   - sds
-  - ctp
   Description_EN: The Web Reputation Services URL rating
   Sample:
   - 71
@@ -5847,7 +5861,8 @@
   DL_Aggregable: false
 - Name: respCode
   ProductCode:
-  - ctp
+  - sca
+  - sem
   Description_EN: The network protocol response code
   Sample:
   - '302'
@@ -5858,7 +5873,8 @@
   DL_Aggregable: true
 - Name: msgTOCUuid
   ProductCode:
-  - ctp
+  - sca
+  - sem
   Description_EN: The email unique ID
   Sample:
   - b52012c4-6340-11e5-9960-001e4f4ada6e
@@ -5868,7 +5884,8 @@
   DL_Aggregable: false
 - Name: rewrittenUrl
   ProductCode:
-  - ctp
+  - sca
+  - sem
   Description_EN: The rewritten URL
   Sample:
   - https://cas5-0-urlprotect.trendmicro.com:443/wis/clicktime/v1/query?url=https%3a%2f%2fpageimprove.io%2freact%27&umid=91176188-91a7-474c-b1a0-f5616c525eb5&auth=927c0b1ab45858384aa0e7e4a36abbaf860b921f-1644792ad5ca5887134be3e439c4a8c600000000
@@ -5976,3 +5993,39 @@
   DL_CommonKey:
   DL_Searchable: true
   DL_Aggregable: false
+- Name: detectedActions
+  ProductCode:
+  - sds
+  - sao
+  Description_EN: The actions performed on detected artifacts
+  Sample:
+  - folder_backup
+  - objproc_dump
+  - subproc_dump
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
+- Name: processImageFileNames
+  ProductCode:
+  - sds
+  - sao
+  Description_EN: The process image file names of detected backup artifacts
+  Sample:
+  - C:\Program Files\aaa\bbb\objprocess.exe
+  - C:\Program Files\ccc\ddd\sample.exe
+  DL_Type: dynamic
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
+- Name: isPrivateApp
+  ProductCode:
+  - sig
+  Description_EN: Whether the requested application is private
+  Sample:
+  - true
+  - false
+  DL_Type: bool
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: true
