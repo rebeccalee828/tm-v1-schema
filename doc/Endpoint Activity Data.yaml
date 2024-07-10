@@ -1012,6 +1012,16 @@
   DL_CommonKey:
   DL_Searchable: false
   DL_Aggregable: false
+- Name: logReceivedTime
+  ProductCode:
+  - ALL
+  Description_EN: The time when the XDR log was received
+  Sample:
+  - 1656324260000
+  DL_Type: long
+  DL_CommonKey:
+  DL_Searchable: true
+  DL_Aggregable: false
 - Name: policyTreePath
   ProductCode:
   - ALL
